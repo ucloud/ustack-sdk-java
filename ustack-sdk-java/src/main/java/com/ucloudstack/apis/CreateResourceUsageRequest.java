@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateResourceUsageRequest extends Request {
 
     /** 用量统计开始时间，Unix时间戳(秒)，指定统计的起始时间点 */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID列表，指定要统计的租户范围，若不指定则统计所有租户 */
     
-    @OpenAPIParam("CompanyIDs")
+    @UCloudStackParam("CompanyIDs")
     private List<Integer> companyIDsParam;
 
     /** 用量统计结束时间，Unix时间戳(秒)，指定统计的结束时间点，必须大于开始时间 */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 资源用量报告名称，用于标识和管理资源用量统计任务 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目组ID列表，指定要统计的项目组范围，若不指定则统计所有项目组，ProjectID 采用 project- 前缀加14位随机字符格式 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定要统计资源用量的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源类型列表，指定要统计的资源类型，取值范围：Set（计算集群）、StorageSet（存储集群）、Node(节点)、VM（云主机） */
     @NotEmpty
-    @OpenAPIParam("ResourceTypes")
+    @UCloudStackParam("ResourceTypes")
     private List<String> resourceTypesParam;
 
 

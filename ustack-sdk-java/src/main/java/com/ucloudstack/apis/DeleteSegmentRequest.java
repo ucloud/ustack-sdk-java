@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteSegmentRequest extends Request {
 
     /** 地域ID，指定要删除的外网线路所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 外网线路ID，指定要删除的外网线路资源ID，删除前系统会检查：1）是否有EIP资源在使用该线路（通过CountEIPBySubnet查询）；2）是否允许删除资源（CheckAllowDeleteResource），删除操作会同时删除底层Huanghe VPC中的Segment资源 */
     @NotEmpty
-    @OpenAPIParam("SegmentID")
+    @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
 

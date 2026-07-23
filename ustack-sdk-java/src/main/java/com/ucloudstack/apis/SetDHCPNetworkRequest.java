@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class SetDHCPNetworkRequest extends Request {
 
     /** 探测 IP，绑定到 lo */
     @NotEmpty
-    @OpenAPIParam("EndIP")
+    @UCloudStackParam("EndIP")
     private String endIPParam;
 
     /** 配置模式：single=单网段，multi=多网段（DHCP Relay） */
     @NotEmpty
-    @OpenAPIParam("Mode")
+    @UCloudStackParam("Mode")
     private String modeParam;
 
     /** DHCP Server 所在网段 CIDR，如 192.170.60.64/28 */
     @NotEmpty
-    @OpenAPIParam("Network")
+    @UCloudStackParam("Network")
     private String networkParam;
 
     /** 新增网段地址池列表 */
     
-    @OpenAPIParam("PoolCreates")
+    @UCloudStackParam("PoolCreates")
     private List<DHCPPoolCreate> poolCreatesParam;
 
     /** 删除网段地址池 ID 列表 */
     
-    @OpenAPIParam("PoolDeleteIDs")
+    @UCloudStackParam("PoolDeleteIDs")
     private List<Integer> poolDeleteIDsParam;
 
     /** 地址池开关批量更新 */
     
-    @OpenAPIParam("PoolEnabledUpdates")
+    @UCloudStackParam("PoolEnabledUpdates")
     private List<DHCPPoolEnabledUpdate> poolEnabledUpdatesParam;
 
     /** 单网段模式地址池结束 IP */
     
-    @OpenAPIParam("PoolEndIP")
+    @UCloudStackParam("PoolEndIP")
     private String poolEndIPParam;
 
     /** 单网段模式地址池起始 IP */
     
-    @OpenAPIParam("PoolStartIP")
+    @UCloudStackParam("PoolStartIP")
     private String poolStartIPParam;
 
     /** 修改网段地址池列表 */
     
-    @OpenAPIParam("PoolUpdates")
+    @UCloudStackParam("PoolUpdates")
     private List<DHCPPoolUpdate> poolUpdatesParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** DHCP Server IP，绑定到 bond0 */
     @NotEmpty
-    @OpenAPIParam("StartIP")
+    @UCloudStackParam("StartIP")
     private String startIPParam;
 
     /** VLAN ID */
     
-    @OpenAPIParam("VLANID")
+    @UCloudStackParam("VLANID")
     private Integer vLANIDParam;
 
 

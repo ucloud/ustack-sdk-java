@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class ListPartitionTemplatesRequest extends Request {
 
     /** 是否包含系统模板，指定是否返回系统预定义的分区模板，true：包含系统模板；false：仅返回用户自定义模板 */
     @NotEmpty
-    @OpenAPIParam("IncludeSystem")
+    @UCloudStackParam("IncludeSystem")
     private String includeSystemParam;
 
     /** 搜索关键词，支持按分区模板名称、OSDistribution进行关键词搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 操作系统发行版过滤，指定要查询的操作系统类型，可选 */
     
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 分页偏移，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

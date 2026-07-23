@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdatePaaSDiskQoSRequest extends Request {
 
     /** 租户唯一标识ID，保留字段，当前不会作为后端校验条件 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘带宽（MB/s），0表示不限速，其他值会写入资源注解AK_BandWidth并将状态置为UpdatingQoS */
     
-    @OpenAPIParam("DiskBandwidth")
+    @UCloudStackParam("DiskBandwidth")
     private Integer diskBandwidthParam;
 
     /** 磁盘IOPS，0表示不限速，其他值会写入资源注解AK_IOPS并将状态置为UpdatingQoS */
     
-    @OpenAPIParam("DiskIOPS")
+    @UCloudStackParam("DiskIOPS")
     private Integer diskIOPSParam;
 
     /** 地域ID，保留字段；资源所属地域由ResourceID决定，但仍需按标准传入 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要设置磁盘QoS的PaaS资源，仅支持FS/OSS/MYSQL类型，其余类型会返回错误 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

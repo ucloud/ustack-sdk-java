@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class UpdateNATGWPolicyRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 目标端口，目标虚拟机的端口号，支持单端口或端口范围，取值范围1-65535，协议+目标IP+目标端口组合不能与已有规则重复（排除自身） */
     @NotEmpty
-    @OpenAPIParam("DstPort")
+    @UCloudStackParam("DstPort")
     private String dstPortParam;
 
     /** 目标虚拟机ID，端口转发的目标虚拟机唯一标识 */
     @NotEmpty
-    @OpenAPIParam("DstResourceID")
+    @UCloudStackParam("DstResourceID")
     private String dstResourceIDParam;
 
     /** NAT网关ID，用于定位DNAT规则所属的NAT网关实例，该NAT网关必须处于运行状态 */
     @NotEmpty
-    @OpenAPIParam("NATGWID")
+    @UCloudStackParam("NATGWID")
     private String nATGWIDParam;
 
     /** DNAT规则ID，用于定位需要修改的DNAT规则 */
     @NotEmpty
-    @OpenAPIParam("PolicyID")
+    @UCloudStackParam("PolicyID")
     private String policyIDParam;
 
     /** DNAT协议，端口转发规则使用的协议类型，取值范围：TCP、UDP */
     @NotEmpty
-    @OpenAPIParam("Protocol")
+    @UCloudStackParam("Protocol")
     private String protocolParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 源IP，DNAT规则使用的外网IP地址，必须为该NAT网关已绑定的EIP地址 */
     @NotEmpty
-    @OpenAPIParam("SrcIP")
+    @UCloudStackParam("SrcIP")
     private String srcIPParam;
 
     /** 源端口，DNAT规则的外网端口，支持单端口或端口范围，取值范围1-65535，协议+外部IP+外部端口组合不能与已有规则重复（排除自身） */
     @NotEmpty
-    @OpenAPIParam("SrcPort")
+    @UCloudStackParam("SrcPort")
     private String srcPortParam;
 
 

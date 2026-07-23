@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class ListKickstartTemplatesRequest extends Request {
 
     /** 关键词搜索，支持按模板名称、OSDistribution 进行关键词搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 每页数量，指定每页返回的记录数，默认值为10，最大值为100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 操作系统发行版，支持模糊匹配，如：CentOS、Rocky、Ubuntu、OpenEuler等 */
     
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 偏移量，指定跳过的记录数，最小值为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

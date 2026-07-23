@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class DeleteContainerImageTagRequest extends Request {
 
     /** 租户ID，用于权限验证，仅允许删除该租户拥有的标签 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像名称，镜像名称 */
     @NotEmpty
-    @OpenAPIParam("ContainerImageName")
+    @UCloudStackParam("ContainerImageName")
     private String containerImageNameParam;
 
     /** 镜像仓库ID，镜像所属仓库ID */
     @NotEmpty
-    @OpenAPIParam("ContainerImageRepositoryID")
+    @UCloudStackParam("ContainerImageRepositoryID")
     private String containerImageRepositoryIDParam;
 
     /** 地域，镜像仓库所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 标签名称，待删除的标签名称 */
     @NotEmpty
-    @OpenAPIParam("Tag")
+    @UCloudStackParam("Tag")
     private String tagParam;
 
 

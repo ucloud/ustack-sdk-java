@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateSegmentRouteRequest extends Request {
 
     /** 目的地址，路由的目标网段，必须为CIDR格式，用于定位要更新的路由规则，若该路由不存在则返回错误StatusRouteNotFound */
     @NotEmpty
-    @OpenAPIParam("Destination")
+    @UCloudStackParam("Destination")
     private String destinationParam;
 
     /** 下一跳IP地址，必须为合法的IP地址格式，且必须在外网线路网段范围内 */
     @NotEmpty
-    @OpenAPIParam("NextHop")
+    @UCloudStackParam("NextHop")
     private String nextHopParam;
 
     /** 地域ID，指定要更新的外网线路路由所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于进行说明和注释，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 外网线路ID，指定要更新路由规则的外网线路 */
     @NotEmpty
-    @OpenAPIParam("SegmentID")
+    @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribePriceRequest extends Request {
 
     /** 租户ID，用于标识需查看价格的租户；普通租户需填写自身CompanyID，系统管理员可填写目标租户，传0或留空则返回未叠加折扣的全局价格 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键字搜索，支持按产品名称、集群类型等进行模糊搜索，使用搜索引擎进行全文检索，会在搜索索引中查找匹配的价格记录 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的价格记录数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定从第几条记录开始返回 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 产品ID列表，过滤指定产品的价格信息，不填写默认查询所有产品，支持的产品类型从ListProductResources获取 */
     
-    @OpenAPIParam("ProductIDs")
+    @UCloudStackParam("ProductIDs")
     private List<String> productIDsParam;
 
     /** 地域ID，指定价格所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 集群类型列表，过滤指定集群类型的价格信息，不填写默认查询所有集群类型，集群类型从DescribeSet接口获取 */
     
-    @OpenAPIParam("SetTypes")
+    @UCloudStackParam("SetTypes")
     private List<String> setTypesParam;
 
 

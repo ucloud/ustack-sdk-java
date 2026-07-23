@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateRegionRequest extends Request {
 
     /** 地址，请求传入并更新数据中心详细物理地址 */
     
-    @OpenAPIParam("Address")
+    @UCloudStackParam("Address")
     private String addressParam;
 
     /** 城市，请求传入并更新地域所属行政城市名称 */
     @NotEmpty
-    @OpenAPIParam("City")
+    @UCloudStackParam("City")
     private String cityParam;
 
     /** 地域名称，请求传入并更新地域显示名称，用于展示地域信息，长度为1-30个字符，只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 地域ID，请求传入并定位要更新的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，请求传入并更新地域说明信息，可用于备注用途或状态，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符， */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

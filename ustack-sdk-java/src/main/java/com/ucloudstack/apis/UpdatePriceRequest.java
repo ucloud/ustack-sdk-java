@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdatePriceRequest extends Request {
 
     /** 计费类型，指定计费方式，Dynamic表示按小时计费（兼容传HOUR）、Month表示按月计费（兼容MONTH）、Year表示按年计费（兼容YEAR） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 价格规则信息，由一个或多个JSON对象通过竖线“|”拼接组成，例如："{\"LowerMultiple\":0,\"UpperMultiple\":0,\"Price\":0.6667}|{...}"，每个对象描述一个数量区间及其单价（单位：元），用于配置阶梯定价 */
     @NotEmpty
-    @OpenAPIParam("PriceRuleInfo")
+    @UCloudStackParam("PriceRuleInfo")
     private String priceRuleInfoParam;
 
     /** 产品ID，指定要更新价格的产品唯一标识，从ListProductResources获取 */
     @NotEmpty
-    @OpenAPIParam("ProductID")
+    @UCloudStackParam("ProductID")
     private String productIDParam;
 
     /** 地域ID，指定价格所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 集群类型，指定资源所属的集群类型标识，从DescribeSet接口获取 */
     @NotEmpty
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
 

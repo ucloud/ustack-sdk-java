@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class GetClusterPaymentOfPremiumRequest extends Request {
 
     /** ClusterID */
     
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** GPU的颗数 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU的规格 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 超级节点名称 */
     
-    @OpenAPIParam("SuperNode")
+    @UCloudStackParam("SuperNode")
     private String superNodeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeRechargeRequest extends Request {
 
     /** 查询起始时间，充值记录创建时间的起始时间戳，单位为秒，必须小于结束时间 */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID，过滤指定租户的充值记录，普通租户传自身CompanyID；系统管理员可传0或留空以查询所有租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 查询结束时间，充值记录创建时间的结束时间戳，单位为秒，必须大于起始时间 */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 来源类型，保留字段，当前不会根据该字段过滤，典型值：ALIPAY/WECHAT_PAY/INNER/OFFLINE */
     
-    @OpenAPIParam("FromType")
+    @UCloudStackParam("FromType")
     private String fromTypeParam;
 
     /** 分页大小，指定每页返回的充值记录数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定从第几条记录开始返回 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 充值类型，保留字段，当前接口不会根据该字段过滤，填写1（现金）或2（赠金）不会影响查询结果 */
     
-    @OpenAPIParam("RechargeType")
+    @UCloudStackParam("RechargeType")
     private String rechargeTypeParam;
 
     /** 用户账号ID，保留字段，与CompanyID等价，当前不会影响查询结果 */
     
-    @OpenAPIParam("UserAccountID")
+    @UCloudStackParam("UserAccountID")
     private Integer userAccountIDParam;
 
 

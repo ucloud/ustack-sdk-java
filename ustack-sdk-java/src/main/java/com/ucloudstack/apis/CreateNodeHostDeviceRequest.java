@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class CreateNodeHostDeviceRequest extends Request {
 
     /** 总线编号，设备在节点上的总线编号，来源于扫描结果 */
     @NotEmpty
-    @OpenAPIParam("Bus")
+    @UCloudStackParam("Bus")
     private Integer busParam;
 
     /** 租户唯一标识ID，标识请求发起租户，未指定TargetCompanyID时作为资源归属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 设备编号，设备在节点上的设备编号，来源于扫描结果 */
     @NotEmpty
-    @OpenAPIParam("Device")
+    @UCloudStackParam("Device")
     private Integer deviceParam;
 
     /** 外置设备名称，用于创建资源名称，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("HostDeviceName")
+    @UCloudStackParam("HostDeviceName")
     private String hostDeviceNameParam;
 
     /** 设备类型，用于标识外置设备类型，如USB、GPU */
     
-    @OpenAPIParam("HostDeviceType")
+    @UCloudStackParam("HostDeviceType")
     private String hostDeviceTypeParam;
 
     /** 物理机节点ID，设备所在物理机标识，必须为计算授权通过的节点 */
     @NotEmpty
-    @OpenAPIParam("NodeID")
+    @UCloudStackParam("NodeID")
     private String nodeIDParam;
 
     /** 产品名称，用于设备模板匹配或创建，两者（VendorName与ProductName）都为空则不创建模板 */
     
-    @OpenAPIParam("ProductName")
+    @UCloudStackParam("ProductName")
     private String productNameParam;
 
     /** 项目ID，资源所属的项目分组标识，为空则不关联项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识外置设备资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，用于补充说明，需符合uremark规则（0-100字符，禁止包含<script>/javascript） */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 目标租户ID，指定资源归属的目标租户，填写后覆盖CompanyID */
     
-    @OpenAPIParam("TargetCompanyID")
+    @UCloudStackParam("TargetCompanyID")
     private Integer targetCompanyIDParam;
 
     /** 厂商名称，用于设备模板匹配或创建，两者（VendorName与ProductName）都为空则不创建模板 */
     
-    @OpenAPIParam("VendorName")
+    @UCloudStackParam("VendorName")
     private String vendorNameParam;
 
 

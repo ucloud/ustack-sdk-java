@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateNICTrafficShapingRequest extends Request {
 
     /** 租户ID，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 入向平均带宽，单位Mbps，用于限制入向流量；-1表示取消限速，0表示保持不变，正数表示设置为指定带宽，取值范围由网卡规格配置确定， */
     
-    @OpenAPIParam("InAverageBandwidth")
+    @UCloudStackParam("InAverageBandwidth")
     private Integer inAverageBandwidthParam;
 
     /** 网卡ID，指定要修改流量整形策略的网卡资源；网卡启用SR-IOV时不可修改 */
     @NotEmpty
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 出向平均带宽，单位Mbps，用于限制出向流量；-1表示取消限速，0表示保持不变，正数表示设置为指定带宽，取值范围由网卡规格配置确定， */
     
-    @OpenAPIParam("OutAverageBandwidth")
+    @UCloudStackParam("OutAverageBandwidth")
     private Integer outAverageBandwidthParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class S3LoginRequest extends Request {
 
     /** 桶名称，Scenes=OSS 时指定目标桶；Scenes=ImageUpload 场景固定登录 mirror 桶，可不填 */
     
-    @OpenAPIParam("Bucket")
+    @UCloudStackParam("Bucket")
     private String bucketParam;
 
     /** 租户ID，标识请求所属租户，Scenes=OSS 且当前登录账号为公司级权限时必须填写，用于校验对象存储资源归属 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 目标S3资源ID，Scenes=OSS 时必填且必须以 oss- 开头，对应对象存储实例ID */
     
-    @OpenAPIParam("ID")
+    @UCloudStackParam("ID")
     private String iDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 使用场景，ImageUpload 表示镜像上传使用 S3（系统自动使用 mirror 桶），OSS 表示访问指定对象存储实例并复用请求中的桶信息 */
     @NotEmpty
-    @OpenAPIParam("Scenes")
+    @UCloudStackParam("Scenes")
     private String scenesParam;
 
 

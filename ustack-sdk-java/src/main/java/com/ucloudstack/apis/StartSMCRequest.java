@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class StartSMCRequest extends Request {
 
     /** 地域ID，指定SMC任务所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SMC任务唯一标识ID，仅当任务状态为ONLINE或SYNCED时可以执行启动操作 */
     @NotEmpty
-    @OpenAPIParam("SMCID")
+    @UCloudStackParam("SMCID")
     private String sMCIDParam;
 
 

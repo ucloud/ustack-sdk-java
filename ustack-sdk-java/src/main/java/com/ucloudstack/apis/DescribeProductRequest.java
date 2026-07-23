@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeProductRequest extends Request {
 
     /** 产品类型列表，用于筛选指定产品 */
     
-    @OpenAPIParam("ProductTypes")
+    @UCloudStackParam("ProductTypes")
     private List<String> productTypesParam;
 
     /** 地域ID，用于限定查询范围；为空表示查询全部地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

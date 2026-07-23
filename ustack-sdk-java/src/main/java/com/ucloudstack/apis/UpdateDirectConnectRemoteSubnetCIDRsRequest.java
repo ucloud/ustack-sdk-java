@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateDirectConnectRemoteSubnetCIDRsRequest extends Request {
 
     /** 远端子网网段列表，用户数据中心需要通过专线互连的网段，必须为CIDR格式，此操作会替换专线接入的所有远端子网网段 */
     @NotEmpty
-    @OpenAPIParam("CIDRs")
+    @UCloudStackParam("CIDRs")
     private List<String> cIDRsParam;
 
     /** 专线接入ID，指定要更新远端子网网段的专线接入资源ID */
     @NotEmpty
-    @OpenAPIParam("DirectConnectID")
+    @UCloudStackParam("DirectConnectID")
     private String directConnectIDParam;
 
     /** 地域ID，指定要更新的专线接入所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

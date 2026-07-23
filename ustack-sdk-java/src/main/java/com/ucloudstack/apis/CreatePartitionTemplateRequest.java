@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class CreatePartitionTemplateRequest extends Request {
 
     /** 分区配置，JSON格式字符串，包含分区列表、LVM卷组、RAID配置等信息，前端可提交展开后的点式路径字段（如Config.Scheme）或JSON字符串 */
     @NotEmpty
-    @OpenAPIParam("Config")
+    @UCloudStackParam("Config")
     private String configParam;
 
     /** 模板描述，说明分区模板的用途和特点 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 模板名称，分区模板的唯一标识名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 操作系统发行版，指定该分区模板适用的操作系统类型 */
     @NotEmpty
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 分区方案类型，指定分区管理方式，standard：标准分区；lvm：LVM逻辑卷；raid：RAID阵列；btrfs：Btrfs文件系统 */
     @NotEmpty
-    @OpenAPIParam("SchemeType")
+    @UCloudStackParam("SchemeType")
     private String schemeTypeParam;
 
 

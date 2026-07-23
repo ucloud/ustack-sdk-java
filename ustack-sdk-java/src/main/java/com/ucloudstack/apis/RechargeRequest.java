@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class RechargeRequest extends Request {
 
     /** 充值金额，单位：元；现金充值取值范围：100.00-500000.00，内部赠金充值取值范围：100.00-10000000.00 */
     @NotEmpty
-    @OpenAPIParam("Amount")
+    @UCloudStackParam("Amount")
     private Double amountParam;
 
     /** 租户ID，指定要充值的租户唯一标识 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 来源类型，现金充值时必须明确渠道：ALIPAY/WECHAT_PAY/OFFLINE/SINPAY；内部赠金充值时该字段忽略并自动视为INNER */
     @NotEmpty
-    @OpenAPIParam("FromType")
+    @UCloudStackParam("FromType")
     private String fromTypeParam;
 
     /** 充值类型，1表示现金充值（REAL），2表示内部赠金（FREE），仅当选择现金充值时才会校验凭证唯一性 */
     @NotEmpty
-    @OpenAPIParam("RechargeType")
+    @UCloudStackParam("RechargeType")
     private Integer rechargeTypeParam;
 
     /** 序列号，充值的序列号或凭证号，现金充值必须唯一；若重复会返回序列号重复的错误 */
     
-    @OpenAPIParam("SerialNo")
+    @UCloudStackParam("SerialNo")
     private String serialNoParam;
 
 

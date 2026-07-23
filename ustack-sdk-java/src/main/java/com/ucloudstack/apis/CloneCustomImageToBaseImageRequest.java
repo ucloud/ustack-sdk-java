@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class CloneCustomImageToBaseImageRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 目标镜像名称，用于创建基础镜像资源，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("DestImageName")
+    @UCloudStackParam("DestImageName")
     private String destImageNameParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 源镜像ID，作为复制来源的自制镜像标识，用于生成基础镜像 */
     @NotEmpty
-    @OpenAPIParam("SourceImageID")
+    @UCloudStackParam("SourceImageID")
     private String sourceImageIDParam;
 
 

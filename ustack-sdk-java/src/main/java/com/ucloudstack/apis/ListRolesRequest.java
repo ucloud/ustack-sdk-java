@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class ListRolesRequest extends Request {
 
     /** 租户ID，用于限定角色所属租户范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，控制单次返回数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于分页起点 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 角色ID列表，用于筛选指定的权限角色集合 */
     
-    @OpenAPIParam("RoleIDs")
+    @UCloudStackParam("RoleIDs")
     private List<String> roleIDsParam;
 
     /** 角色类型，标识角色来源，取值：System或Custom */
     
-    @OpenAPIParam("Type")
+    @UCloudStackParam("Type")
     private String typeParam;
 
 

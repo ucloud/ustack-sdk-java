@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateVMCPUModelRequest extends Request {
 
     /** CPU模式，虚拟机的CPU模拟方式，取值：host-passthrough（直通）、custom（自定义） */
     
-    @OpenAPIParam("CPUMode")
+    @UCloudStackParam("CPUMode")
     private String cPUModeParam;
 
     /** CPU型号，仅在CPUMode为custom时生效 */
     
-    @OpenAPIParam("CPUModel")
+    @UCloudStackParam("CPUModel")
     private String cPUModelParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID，待修改配置的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class MigrateVMStorageRequest extends Request {
 
     /** 计费类型，新磁盘的计费模式，取值：Dynamic、Month、Year */
     
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘迁移信息，格式：原盘ID|目标集群ID|目标盘ID，目标盘ID可为空（自动创建） */
     @NotEmpty
-    @OpenAPIParam("Infos")
+    @UCloudStackParam("Infos")
     private List<String> infosParam;
 
     /** 计费周期，购买的时长，按月/年计费时表示月数/年数 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 保留原盘，标识迁移后是否保留源磁盘 */
     
-    @OpenAPIParam("ReserveOriginDisk")
+    @UCloudStackParam("ReserveOriginDisk")
     private Boolean reserveOriginDiskParam;
 
     /** 虚拟机ID，待迁移存储的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

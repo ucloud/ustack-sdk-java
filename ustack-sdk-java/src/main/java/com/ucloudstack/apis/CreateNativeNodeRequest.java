@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,97 +24,97 @@ public class CreateNativeNodeRequest extends Request {
 
     /** 系统盘集群ID */
     @NotEmpty
-    @OpenAPIParam("BootDiskSetType")
+    @UCloudStackParam("BootDiskSetType")
     private String bootDiskSetTypeParam;
 
     /** 系统盘大小 */
     @NotEmpty
-    @OpenAPIParam("BootDiskSpace")
+    @UCloudStackParam("BootDiskSpace")
     private Integer bootDiskSpaceParam;
 
     /** 原生节点CPU数量 */
     
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计算集群类型 */
     @NotEmpty
-    @OpenAPIParam("ComputeclassType")
+    @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
     /** 数据盘集群ID */
     
-    @OpenAPIParam("DataDiskSetType")
+    @UCloudStackParam("DataDiskSetType")
     private String dataDiskSetTypeParam;
 
     /** 数据盘大小 */
     
-    @OpenAPIParam("DataDiskSpace")
+    @UCloudStackParam("DataDiskSpace")
     private Integer dataDiskSpaceParam;
 
     /** 原生节点外网IP */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** GPU数量 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU型号 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** 镜像ID */
     @NotEmpty
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** 原生节点pod数量 */
     
-    @OpenAPIParam("MaxPods")
+    @UCloudStackParam("MaxPods")
     private Integer maxPodsParam;
 
     /** 原生节点内存容量 */
     
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 节点名称 */
     @NotEmpty
-    @OpenAPIParam("NodeName")
+    @UCloudStackParam("NodeName")
     private String nodeNameParam;
 
     /** 密码 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /**  */
     
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
     /** 容器子网Id 列表 */
     
-    @OpenAPIParam("SubnetIDs")
+    @UCloudStackParam("SubnetIDs")
     private List<String> subnetIDsParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateRemoteVPNGWRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 对端网关IP地址，对端VPN网关公网IP，用于建立IPSec隧道连接，需为合法IPv4或IPv6，同一项目内IP不可重复 */
     @NotEmpty
-    @OpenAPIParam("IPAddress")
+    @UCloudStackParam("IPAddress")
     private String iPAddressParam;
 
     /** 对端网关名称，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，用于标识资源所属项目分组，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 标签键值对，格式为Base64编码的key:value字符串，用于资源标记和分类管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
 

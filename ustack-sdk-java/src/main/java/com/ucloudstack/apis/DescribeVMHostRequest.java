@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeVMHostRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 虚拟机ID，用于筛选可运行该虚拟机的宿主机 */
     
-    @OpenAPIParam("FilterRunnableHostsByVMID")
+    @UCloudStackParam("FilterRunnableHostsByVMID")
     private String filterRunnableHostsByVMIDParam;
 
     /** 物理机ID列表，用于精确筛选指定物理机 */
     
-    @OpenAPIParam("HostIDs")
+    @UCloudStackParam("HostIDs")
     private List<String> hostIDsParam;
 
     /** 关键词，用于模糊匹配主机名或IP地址 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于指定返回结果起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，用于筛选指定集群的物理机 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

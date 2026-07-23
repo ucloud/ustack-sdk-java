@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeVIPRequest extends Request {
 
     /** 租户ID，指定查询范围内的租户组织，通常用于跨租户查询 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词，用于模糊搜索VIP名称等字段 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，一次可查询多个项目 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 状态列表，按状态过滤VIP */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
     /** VIPID列表，VIP的唯一标识符 */
     
-    @OpenAPIParam("VIPIDs")
+    @UCloudStackParam("VIPIDs")
     private List<String> vIPIDsParam;
 
     /** VIP类型，LAN为内网VIP，WAN为外网VIP */
     
-    @OpenAPIParam("VIPType")
+    @UCloudStackParam("VIPType")
     private String vIPTypeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateTrafficMirrorSourcesRequest extends Request {
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 源设备信息列表，JSON数组的每个元素都是JSON字符串，需包含srcDevice（从DescribeTrafficMirrorSources返回的网卡ID）和direction（取值inbound、outbound、all），最多支持20个源设备，direction为all时会同时占用该网卡的入/出方向，单网卡同一方向只允许配置一次且不能与其他流量镜像冲突，重复会返回StatusSourceDeviceDirectionHasBeenUsed错误 */
     @NotEmpty
-    @OpenAPIParam("Sources")
+    @UCloudStackParam("Sources")
     private List<String> sourcesParam;
 
     /** 流量镜像ID，待更新的流量镜像唯一标识符，资源状态必须为Available，执行更新前会自动剔除已解绑或已删除虚拟机对应的源设备，若剔除后没有可用源设备会返回StatusNoAvailableSrcDevice错误 */
     @NotEmpty
-    @OpenAPIParam("TrafficMirrorID")
+    @UCloudStackParam("TrafficMirrorID")
     private String trafficMirrorIDParam;
 
 

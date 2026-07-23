@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,67 +24,67 @@ public class DescribeIsolationGroupsRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 隔离组ID列表，用于按ID筛选隔离组 */
     
-    @OpenAPIParam("IGIDs")
+    @UCloudStackParam("IGIDs")
     private List<String> iGIDsParam;
 
     /** 关键词，用于匹配隔离组名称或备注 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于指定返回结果起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 策略对象，用于筛选隔离组，PolicyToVG时为隔离组ID，PolicyToNode时为节点标识 */
     
-    @OpenAPIParam("PolicyObj")
+    @UCloudStackParam("PolicyObj")
     private String policyObjParam;
 
     /** 策略对象类型，用于筛选隔离组，取值PolicyToNode/PolicyToVG */
     
-    @OpenAPIParam("PolicyObjType")
+    @UCloudStackParam("PolicyObjType")
     private String policyObjTypeParam;
 
     /** 策略类型，用于筛选隔离组，取值VMAffinity/VMAntiAffinity */
     
-    @OpenAPIParam("PolicyType")
+    @UCloudStackParam("PolicyType")
     private String policyTypeParam;
 
     /** 项目ID列表，用于按项目筛选隔离组 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，用于按计算集群筛选隔离组 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 计算集群类型，用于按类型筛选隔离组 */
     
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
     /** 状态列表，过滤隔离组状态 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
 

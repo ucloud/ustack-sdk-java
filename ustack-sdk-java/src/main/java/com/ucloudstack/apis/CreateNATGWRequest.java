@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,82 +24,82 @@ public class CreateNATGWRequest extends Request {
 
     /** 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群类型，用于指定NAT网关系统盘所属存储集群，租户需具备集群权限且资源充足，高可用模式需80GB，单机模式需40GB，且需与所选计算集群兼容 */
     @NotEmpty
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 弹性公网IPID，用于绑定NAT网关公网出口，EIP需存在且支持默认网关（CanDefaultGW=1），且未绑定其他资源 */
     @NotEmpty
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** 高可用模式，NAT网关部署方式，ActiveStandy为主备高可用（2个实例），Standalone为单机模式（1个实例），为空时默认ActiveStandy */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** NAT网关名称，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，用于标识NAT网关所属项目分组，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1， */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 安全组ID，用于绑定NAT网关公网网卡的安全组 */
     @NotEmpty
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
     /** 子网ID，NAT网关所属子网，子网需有足够可用IP（高可用模式需3个IP，单机模式需2个IP） */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 标签键值对，格式为Base64编码的key:value字符串，用于资源标记和分类管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 删除保护开关，用于防止误删除；0表示开启删除保护，1表示关闭删除保护，默认开启 */
     
-    @OpenAPIParam("TerminationPolicy")
+    @UCloudStackParam("TerminationPolicy")
     private Integer terminationPolicyParam;
 
     /** 计算集群类型，用于指定NAT网关虚拟机运行的计算集群，租户需具备集群权限且资源充足，高可用模式需4核8GB，单机模式需2核4GB */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** VPCID，NAT网关所属VPC，同一VPC内最多可创建20个NAT网关 */
     @NotEmpty
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
 

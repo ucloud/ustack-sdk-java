@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeSMCRequest extends Request {
 
     /** 租户唯一标识ID，用于筛选指定租户的SMC任务，确保多租户隔离 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键字，用于模糊搜索匹配SMC任务的名称或备注信息，不区分大小写 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，取值范围1-100，超出范围会被限制 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，用于分页查询，从0开始计数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于筛选指定项目下的SMC任务，支持跨项目查询 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定查询的物理区域，只返回该地域下的SMC任务 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SMC任务ID列表，用于精确查询指定的一个或多个SMC任务，当指定此参数时忽略其他筛选条件 */
     
-    @OpenAPIParam("SMCIDs")
+    @UCloudStackParam("SMCIDs")
     private List<String> sMCIDsParam;
 
     /** 任务状态列表，用于筛选指定状态的SMC任务，如CREATING、ONLINE、SYNCING等，空表示不筛选 */
     
-    @OpenAPIParam("States")
+    @UCloudStackParam("States")
     private List<String> statesParam;
 
 

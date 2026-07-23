@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,82 +24,82 @@ public class CreateSlaveRedisRequest extends Request {
 
     /** 计费类型，取值Dynamic/Month/Year，分别对应HOUR/MONTH/YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，从库实例所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群类型，从库实例数据盘所属存储集群类型 */
     
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 外网IP资源ID，用于绑定公网IP */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** 内存容量，单位MiB，且不得小于主库内存 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 名称，从库实例名称，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 密码，从库登录密码 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 主库ID，从库所属主库实例ID；必须为主库实例且状态为Running，单主库最多5个从库 */
     @NotEmpty
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
     /** 地域ID，从库实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 描述，从库实例备注，长度为0-100个英文或中文字符，不能包含<script>、<a javascript:>等非法字符，用于XSS防护 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 标签键值对，资源标签键值对列表，格式为Base64编码的key:value */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 线程数量，Redis7.0有效 */
     
-    @OpenAPIParam("Threads")
+    @UCloudStackParam("Threads")
     private Integer threadsParam;
 
     /** 计算集群类型，从库实例所属计算集群类型 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** Redis版本，取值4.0或7.0，默认4.0；主库为7.0时从库版本必须为7.0 */
     
-    @OpenAPIParam("Version")
+    @UCloudStackParam("Version")
     private String versionParam;
 
     /** 安全组ID，用于外网访问控制 */
     
-    @OpenAPIParam("WANSGID")
+    @UCloudStackParam("WANSGID")
     private String wANSGIDParam;
 
 

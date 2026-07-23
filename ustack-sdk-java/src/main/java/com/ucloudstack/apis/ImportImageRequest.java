@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,92 +24,92 @@ public class ImportImageRequest extends Request {
 
     /** 引导类型，取值bios、uefi，未指定时默认bios */
     
-    @OpenAPIParam("BootloaderType")
+    @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像描述，用于补充说明，需符合uremark规则（0-100字符，禁止包含<script>/javascript） */
     
-    @OpenAPIParam("ImageDescription")
+    @UCloudStackParam("ImageDescription")
     private String imageDescriptionParam;
 
     /** 镜像格式，指定导入的虚拟化文件格式，取值qcow2、iso、vmdk、raw */
     @NotEmpty
-    @OpenAPIParam("ImageFormat")
+    @UCloudStackParam("ImageFormat")
     private String imageFormatParam;
 
     /** 镜像名称，用于标识导入的镜像资源 */
     @NotEmpty
-    @OpenAPIParam("ImageName")
+    @UCloudStackParam("ImageName")
     private String imageNameParam;
 
     /** 镜像大小，单位GiB，最大不超过2000，Remote模式下由系统根据URL探测 */
     
-    @OpenAPIParam("ImageSize")
+    @UCloudStackParam("ImageSize")
     private Integer imageSizeParam;
 
     /** 上传类型，Remote表示远程URL，Local表示本地分片上传 */
     @NotEmpty
-    @OpenAPIParam("ImportType")
+    @UCloudStackParam("ImportType")
     private String importTypeParam;
 
     /** 来源URL，仅在远程模式下有效，当ImportType为Remote时必填，用于拉取镜像文件 */
     
-    @OpenAPIParam("LoadURL")
+    @UCloudStackParam("LoadURL")
     private String loadURLParam;
 
     /** 操作系统发行版，如Ubuntu、CentOS */
     @NotEmpty
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 操作系统类型，如Linux、Windows */
     @NotEmpty
-    @OpenAPIParam("OSType")
+    @UCloudStackParam("OSType")
     private String oSTypeParam;
 
     /** 操作系统版本，指定镜像内部安装的具体发行版本号 */
     
-    @OpenAPIParam("OSVersion")
+    @UCloudStackParam("OSVersion")
     private String oSVersionParam;
 
     /** 项目ID，资源所属的项目分组标识 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 镜像密钥，用于镜像在存储层的解密与使用 */
     
-    @OpenAPIParam("Secret")
+    @UCloudStackParam("Secret")
     private String secretParam;
 
     /** 架构类型，基于计算集群支持的指令集，如x86_64、aarch64 */
     
-    @OpenAPIParam("SetArch")
+    @UCloudStackParam("SetArch")
     private String setArchParam;
 
     /** Cloud-Init支持，标识镜像是否支持自动化初始化配置 */
     
-    @OpenAPIParam("SupportCloudInit")
+    @UCloudStackParam("SupportCloudInit")
     private Boolean supportCloudInitParam;
 
     /** QEMU Guest Agent支持，标识镜像内是否预装QGA组件 */
     
-    @OpenAPIParam("SupportQGA")
+    @UCloudStackParam("SupportQGA")
     private Boolean supportQGAParam;
 
     /** 标签键值对，用于资源标签管理与检索，格式为Base64的key:value，列表项不能为空且key不可重复 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
 

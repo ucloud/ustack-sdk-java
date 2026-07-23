@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class ListOSMediaV2Request extends Request {
 
     /** 租户ID，过滤指定租户下的系统镜像，若不指定则返回所有租户的镜像 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词搜索，支持按 MediaID、Name、OSName、OSDistribution、ImageID(系统镜像ID) 进行关键词搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 每页数量，指定每页返回的记录数，默认值为20，最大值为100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 系统镜像类型，可选值：ISO */
     
-    @OpenAPIParam("MediaType")
+    @UCloudStackParam("MediaType")
     private String mediaTypeParam;
 
     /** 操作系统发行版（如：CentOS、OpenEuler），支持模糊匹配 */
     
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 操作系统完整名称（如：CentOS 7.4 x86_64），支持模糊匹配 */
     
-    @OpenAPIParam("OSName")
+    @UCloudStackParam("OSName")
     private String oSNameParam;
 
     /** 偏移量，指定跳过的记录数，最小值为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，过滤指定项目下的系统镜像 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

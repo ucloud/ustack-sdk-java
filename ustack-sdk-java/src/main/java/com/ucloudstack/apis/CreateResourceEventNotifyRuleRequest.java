@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class CreateResourceEventNotifyRuleRequest extends Request {
 
     /** 租户ID，资源事件通知规则所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 监控级别列表，取值：info/warning/error */
     @NotEmpty
-    @OpenAPIParam("MonitorLevel")
+    @UCloudStackParam("MonitorLevel")
     private List<String> monitorLevelParam;
 
     /** 监控模块列表，指定监控哪些资源模块的事件 */
     @NotEmpty
-    @OpenAPIParam("MonitorModule")
+    @UCloudStackParam("MonitorModule")
     private List<String> monitorModuleParam;
 
     /** 监控地域，指定监控地域的资源事件 */
     @NotEmpty
-    @OpenAPIParam("MonitorRegion")
+    @UCloudStackParam("MonitorRegion")
     private String monitorRegionParam;
 
     /** 通知组ID，资源事件触发通知目标组ID */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
 

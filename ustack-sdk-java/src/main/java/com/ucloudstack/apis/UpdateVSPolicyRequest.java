@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class UpdateVSPolicyRequest extends Request {
 
     /** CA证书ID，SNI协议开启时的CA证书ID */
     
-    @OpenAPIParam("CACertificateID")
+    @UCloudStackParam("CACertificateID")
     private String cACertificateIDParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 请求域名，转发规则关联的请求域名，值可为空表示仅匹配路径，若填写必须符合Nginx server_name规则（最长30字符，支持*.example.com或mail.*一类通配格式） */
     
-    @OpenAPIParam("Domain")
+    @UCloudStackParam("Domain")
     private String domainParam;
 
     /** 负载均衡ID，用于定位需要更新转发规则的负载均衡实例 */
     @NotEmpty
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** 请求访问路径，转发规则关联的请求访问路径，如'/'，域名和路径至少需要指定一项 */
     
-    @OpenAPIParam("Path")
+    @UCloudStackParam("Path")
     private String pathParam;
 
     /** 转发规则ID，用于定位需要更新的转发规则 */
     @NotEmpty
-    @OpenAPIParam("PolicyID")
+    @UCloudStackParam("PolicyID")
     private String policyIDParam;
 
     /** 真实服务器ID列表，用于更新转发规则关联的服务节点 */
     
-    @OpenAPIParam("RSIDs")
+    @UCloudStackParam("RSIDs")
     private List<String> rSIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SSL认证模式，SNI协议开启时的SSL模式，取值范围：simplex、duplex */
     
-    @OpenAPIParam("SSLMode")
+    @UCloudStackParam("SSLMode")
     private String sSLModeParam;
 
     /** 服务器证书ID，SNI协议开启时的服务器证书ID */
     
-    @OpenAPIParam("ServerCertificateID")
+    @UCloudStackParam("ServerCertificateID")
     private String serverCertificateIDParam;
 
     /** 虚拟服务器ID，用于定位需要更新转发规则的监听器，仅支持来源为Default的监听器（Service/Ingress来源由容器系统管理，调用会返回StatusCanNotModifyNoDefaultOriginVS错误） */
     @NotEmpty
-    @OpenAPIParam("VSID")
+    @UCloudStackParam("VSID")
     private String vSIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class BindSecurityGroupRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 网卡ID，绑定安全组时指定的网络接口唯一标识符，Flat时传入,其他场景传空字符串 */
     
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 网卡类型，取值LAN/WAN；对于MySQL/Redis/OSS/FS仅支持WAN */
     @NotEmpty
-    @OpenAPIParam("NICType")
+    @UCloudStackParam("NICType")
     private String nICTypeParam;
 
     /** 地域ID，用于标识资源和安全组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要绑定安全组的资源唯一标识符，支持VM、ELASTIC_NIC、OSS、FS、MySQL、Redis等资源类型 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 安全组ID，指定要绑定的安全组唯一标识符；安全组需处于Available状态 */
     @NotEmpty
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
 

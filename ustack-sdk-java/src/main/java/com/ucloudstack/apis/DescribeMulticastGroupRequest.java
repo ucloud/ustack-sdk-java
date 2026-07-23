@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeMulticastGroupRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词，用于模糊匹配组播组名称进行搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量，取值范围：1-100，默认值：10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 组播组ID列表，用于精确查询指定组播组的集合；当同时指定VPCID时，底层接口不支持组合查询会返回参数不支持错误，因此建议二者只选择其一 */
     
-    @OpenAPIParam("MulticastGroupIDs")
+    @UCloudStackParam("MulticastGroupIDs")
     private List<String> multicastGroupIDsParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询，取值范围：≥0，默认值：0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于按项目维度筛选资源集合 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VPC ID，虚拟私有网络的唯一标识符，用于筛选指定VPC的全部组播组；与MulticastGroupIDs不能复合使用，否则底层会返回查询条件不支持错误 */
     
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
 

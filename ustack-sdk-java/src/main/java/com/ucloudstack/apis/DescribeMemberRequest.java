@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeMemberRequest extends Request {
 
     /** 租户ID，用于限定查询的租户范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 账号邮箱，用于按邮箱筛选账号 */
     
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
     /** 关键词，用于按名称或邮箱模糊检索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，控制单次返回数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 成员ID列表，筛选指定账号的查询条件，为空则不过滤 */
     
-    @OpenAPIParam("MemberIDs")
+    @UCloudStackParam("MemberIDs")
     private List<Integer> memberIDsParam;
 
     /** 账号公钥，用于按公钥筛选账号 */
     
-    @OpenAPIParam("MemberPubKey")
+    @UCloudStackParam("MemberPubKey")
     private String memberPubKeyParam;
 
     /** 分页偏移量，用于分页起点 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
 

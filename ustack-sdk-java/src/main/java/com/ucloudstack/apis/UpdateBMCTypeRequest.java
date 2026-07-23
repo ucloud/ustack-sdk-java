@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,87 +24,87 @@ public class UpdateBMCTypeRequest extends Request {
 
     /** 描述 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 初始数据准备规则 */
     
-    @OpenAPIParam("InitialDataRules")
+    @UCloudStackParam("InitialDataRules")
     private String initialDataRulesParam;
 
     /** JNLP模板 */
     
-    @OpenAPIParam("JNLPTemplate")
+    @UCloudStackParam("JNLPTemplate")
     private String jNLPTemplateParam;
 
     /** JNLP请求体模板 */
     
-    @OpenAPIParam("JnlpBodyTpl")
+    @UCloudStackParam("JnlpBodyTpl")
     private String jnlpBodyTplParam;
 
     /** JNLP文件类型 */
     
-    @OpenAPIParam("JnlpFileType")
+    @UCloudStackParam("JnlpFileType")
     private String jnlpFileTypeParam;
 
     /** JNLP请求头 */
     
-    @OpenAPIParam("JnlpHeaders")
+    @UCloudStackParam("JnlpHeaders")
     private String jnlpHeadersParam;
 
     /** JNLP请求方法 */
     
-    @OpenAPIParam("JnlpMethod")
+    @UCloudStackParam("JnlpMethod")
     private String jnlpMethodParam;
 
     /** JNLP获取方式类型 */
     
-    @OpenAPIParam("JnlpProcessType")
+    @UCloudStackParam("JnlpProcessType")
     private String jnlpProcessTypeParam;
 
     /** JNLP URL */
     
-    @OpenAPIParam("JnlpURL")
+    @UCloudStackParam("JnlpURL")
     private String jnlpURLParam;
 
     /** 登录请求体模板 */
     
-    @OpenAPIParam("LoginBodyTpl")
+    @UCloudStackParam("LoginBodyTpl")
     private String loginBodyTplParam;
 
     /** 登录请求头 */
     
-    @OpenAPIParam("LoginHeaders")
+    @UCloudStackParam("LoginHeaders")
     private String loginHeadersParam;
 
     /** 登录方法 */
     
-    @OpenAPIParam("LoginMethod")
+    @UCloudStackParam("LoginMethod")
     private String loginMethodParam;
 
     /** 登录URL */
     
-    @OpenAPIParam("LoginURL")
+    @UCloudStackParam("LoginURL")
     private String loginURLParam;
 
     /** BMC类型名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 会话提取器 */
     
-    @OpenAPIParam("SessionExtractor")
+    @UCloudStackParam("SessionExtractor")
     private String sessionExtractorParam;
 
     /** 多步流程定义 */
     
-    @OpenAPIParam("Steps")
+    @UCloudStackParam("Steps")
     private String stepsParam;
 
 

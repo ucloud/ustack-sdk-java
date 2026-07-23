@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,107 +24,107 @@ public class UpdateVSRequest extends Request {
 
     /** 后端协议，后端使用的协议，取值范围：空（默认HTTP）、HTTP、HTTPS，仅在协议为HTTPS时有效 */
     
-    @OpenAPIParam("BackendProtocol")
+    @UCloudStackParam("BackendProtocol")
     private String backendProtocolParam;
 
     /** CA证书ID，用于验证客户端证书的签名，仅当协议为HTTPS且SSLMode为双向认证时有效 */
     
-    @OpenAPIParam("CACertificateID")
+    @UCloudStackParam("CACertificateID")
     private String cACertificateIDParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** HTTP健康检查域名，HTTP检查时校验的HOST字段域名，当健康检查类型为Path时可配置，且需满足validate.IsValidDomain规则（与Nginx server_name一致，支持*.example.com/mail.*等通配） */
     
-    @OpenAPIParam("Domain")
+    @UCloudStackParam("Domain")
     private String domainParam;
 
     /** 健康检查类型，健康检查的类型，取值范围：Port、Path，TCP和UDP协议只支持Port类型 */
     
-    @OpenAPIParam("HealthcheckType")
+    @UCloudStackParam("HealthcheckType")
     private String healthcheckTypeParam;
 
     /** 请求体大小限制，单位MB，最大512；仅HTTP/HTTPS协议有效，0表示保留原值 */
     
-    @OpenAPIParam("HttpClientMaxBodySizeMB")
+    @UCloudStackParam("HttpClientMaxBodySizeMB")
     private Integer httpClientMaxBodySizeMBParam;
 
     /** 请求头大小限制，单位KB，最大512；仅HTTP/HTTPS协议有效，0表示保留原值 */
     
-    @OpenAPIParam("HttpClientMaxHeaderSizeKB")
+    @UCloudStackParam("HttpClientMaxHeaderSizeKB")
     private Integer httpClientMaxHeaderSizeKBParam;
 
     /** 连接空闲超时时间，负载均衡的连接空闲超时时间，单位为秒，默认值为60s */
     
-    @OpenAPIParam("KeepaliveTimeout")
+    @UCloudStackParam("KeepaliveTimeout")
     private Integer keepaliveTimeoutParam;
 
     /** 负载均衡ID，用于定位需要更新监听器的负载均衡实例 */
     @NotEmpty
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** HTTP健康检查路径，HTTP检查时的请求路径，当健康检查类型为Path时可配置，且必须指定以/开头的合法URL路径 */
     
-    @OpenAPIParam("Path")
+    @UCloudStackParam("Path")
     private String pathParam;
 
     /** 会话保持KEY，会话保持的键，当类型为Manual时为必填，仅当协议为HTTP时有效 */
     
-    @OpenAPIParam("PersistenceKey")
+    @UCloudStackParam("PersistenceKey")
     private String persistenceKeyParam;
 
     /** 会话保持类型，会话保持的类型，取值范围：None、Auto、Manual，若不指定则默认为None */
     
-    @OpenAPIParam("PersistenceType")
+    @UCloudStackParam("PersistenceType")
     private String persistenceTypeParam;
 
     /** 虚拟服务器端口，VServer的监听端口，端口范围为1~65535，其中323、9102~9105、60909~60910被系统占用 */
     
-    @OpenAPIParam("Port")
+    @UCloudStackParam("Port")
     private Integer portParam;
 
     /** TCP Proxy Protocol开关，是否开启TCP Proxy Protocol，取值范围：On、Off */
     
-    @OpenAPIParam("ProxyProtocolEnable")
+    @UCloudStackParam("ProxyProtocolEnable")
     private String proxyProtocolEnableParam;
 
     /** HTTP重定向开关，是否开启HTTP重定向，仅HTTP协议有效；取值范围：On、Off */
     
-    @OpenAPIParam("RedirectEnable")
+    @UCloudStackParam("RedirectEnable")
     private String redirectEnableParam;
 
     /** HTTP重定向目标VSID，重定向到的虚拟服务器ID，仅当RedirectEnable=On时必填，其余情况下必须为空 */
     
-    @OpenAPIParam("RedirectVsID")
+    @UCloudStackParam("RedirectVsID")
     private String redirectVsIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SSL认证模式，SSL的认证模式，取值范围：simplex（单向认证）、duplex（双向认证），必填字段，仅HTTPS协议时生效 */
     @NotEmpty
-    @OpenAPIParam("SSLMode")
+    @UCloudStackParam("SSLMode")
     private String sSLModeParam;
 
     /** 调度算法，负载均衡的调度算法，取值范围：wrr、least_conn、hash、ip_hash */
     
-    @OpenAPIParam("Scheduler")
+    @UCloudStackParam("Scheduler")
     private String schedulerParam;
 
     /** 服务器证书ID，用于证明服务器的身份，仅当协议为HTTPS时有效 */
     
-    @OpenAPIParam("ServerCertificateID")
+    @UCloudStackParam("ServerCertificateID")
     private String serverCertificateIDParam;
 
     /** 虚拟服务器ID，用于定位需要更新的监听器实例，仅支持来源为Default的监听器（Service/Ingress来源由容器系统管理，调用会返回StatusCanNotModifyNoDefaultOriginVS错误） */
     @NotEmpty
-    @OpenAPIParam("VSID")
+    @UCloudStackParam("VSID")
     private String vSIDParam;
 
 

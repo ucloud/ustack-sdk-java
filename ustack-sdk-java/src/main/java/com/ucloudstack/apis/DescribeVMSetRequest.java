@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DescribeVMSetRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，普通租户需填写自身CompanyID；管理员租户（CompanyID=200000231）或留空时系统按管理员权限返回全部可见计算集群 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 虚拟机ID，用于过滤支持该虚拟机迁移的可运行计算集群，根据虚拟机的资源需求筛选符合条件的集群 */
     
-    @OpenAPIParam("FilterRunnableSetsByVMID")
+    @UCloudStackParam("FilterRunnableSetsByVMID")
     private String filterRunnableSetsByVMIDParam;
 
     /** 分页大小，指定每页返回的记录数，默认为10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，默认为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定计算集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 集群ID列表，指定要查询的计算集群ID，支持批量查询 */
     
-    @OpenAPIParam("SetIDs")
+    @UCloudStackParam("SetIDs")
     private List<String> setIDsParam;
 
 

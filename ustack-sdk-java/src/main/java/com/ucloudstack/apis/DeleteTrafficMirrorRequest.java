@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteTrafficMirrorRequest extends Request {
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 流量镜像ID，待删除的流量镜像唯一标识符，资源状态必须为Available或Failed */
     @NotEmpty
-    @OpenAPIParam("TrafficMirrorID")
+    @UCloudStackParam("TrafficMirrorID")
     private String trafficMirrorIDParam;
 
 

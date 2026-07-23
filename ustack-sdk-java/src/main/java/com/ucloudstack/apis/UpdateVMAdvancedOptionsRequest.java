@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class UpdateVMAdvancedOptionsRequest extends Request {
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("BootloaderType")
+    @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("CPUMode")
+    @UCloudStackParam("CPUMode")
     private String cPUModeParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("CPUModel")
+    @UCloudStackParam("CPUModel")
     private String cPUModelParam;
 
     /** DNS配置，虚拟机使用的DNS服务器列表 */
     
-    @OpenAPIParam("DNS")
+    @UCloudStackParam("DNS")
     private String dNSParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("DiskCacheMode")
+    @UCloudStackParam("DiskCacheMode")
     private String diskCacheModeParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("ISOTotal")
+    @UCloudStackParam("ISOTotal")
     private Integer iSOTotalParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 已废弃，不生效 */
     
-    @OpenAPIParam("UninstallISO")
+    @UCloudStackParam("UninstallISO")
     private Boolean uninstallISOParam;
 
     /** 自定义数据，需 base64 编码后传入 */
     
-    @OpenAPIParam("UserData")
+    @UCloudStackParam("UserData")
     private String userDataParam;
 
     /** 虚拟机ID，待修改配置的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

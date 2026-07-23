@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class UpdateDigitalCertRequest extends Request {
 
     /** 证书ID列表，多个ID用逗号分隔，总长度不超过255字符且数量不超过系统限制 */
     
-    @OpenAPIParam("CertIDs")
+    @UCloudStackParam("CertIDs")
     private String certIDsParam;
 
 

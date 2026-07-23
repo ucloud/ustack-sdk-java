@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class CloneBMCTypeRequest extends Request {
 
     /** 源BMC类型名称，需为已有的BMC类型名称（可通过ListBMCTypes/GetBMCType获取），克隆时会复制其登录脚本和校验步骤 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 新BMC类型名称，为克隆后生成的BMC类型唯一标识，需保证未被占用 */
     @NotEmpty
-    @OpenAPIParam("NewName")
+    @UCloudStackParam("NewName")
     private String newNameParam;
 
     /** 地域ID，指定要操作的Kunlun集群地域，确保在对应地域克隆BMC类型 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

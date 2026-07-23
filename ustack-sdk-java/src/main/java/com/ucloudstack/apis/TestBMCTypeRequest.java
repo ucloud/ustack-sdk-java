@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class TestBMCTypeRequest extends Request {
 
     /** IPMI IP地址 */
     @NotEmpty
-    @OpenAPIParam("IPMIIP")
+    @UCloudStackParam("IPMIIP")
     private String iPMIIPParam;
 
     /** IPMI密码 */
     @NotEmpty
-    @OpenAPIParam("IPMIPassword")
+    @UCloudStackParam("IPMIPassword")
     private String iPMIPasswordParam;
 
     /** IPMI用户名 */
     @NotEmpty
-    @OpenAPIParam("IPMIUsername")
+    @UCloudStackParam("IPMIUsername")
     private String iPMIUsernameParam;
 
     /** BMC类型名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 是否分步骤测试, true, false */
     
-    @OpenAPIParam("StepByStep")
+    @UCloudStackParam("StepByStep")
     private String stepByStepParam;
 
     /** 步骤索引, 从 0 开始 (StepByStep为true时必填) */
     
-    @OpenAPIParam("StepIndex")
+    @UCloudStackParam("StepIndex")
     private Integer stepIndexParam;
 
 

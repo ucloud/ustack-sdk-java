@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class GetInstallStatusByTaskIDV2Request extends Request {
 
     /** 地域ID，指定装机任务所在地域，系统会在对应Kunlun集群查询最新状态 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 装机任务ID，接口根据该ID返回任务状态及最近一次执行信息 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

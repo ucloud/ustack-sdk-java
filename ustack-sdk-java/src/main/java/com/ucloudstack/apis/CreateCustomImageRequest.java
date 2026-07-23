@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class CreateCustomImageRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，用于指定制作镜像的源磁盘 */
     
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 镜像描述，用于补充说明，长度0-100个字符，禁止包含<script>标签或javascript链接 */
     
-    @OpenAPIParam("ImageDescription")
+    @UCloudStackParam("ImageDescription")
     private String imageDescriptionParam;
 
     /** 镜像名称，用于新建自制镜像资源，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("ImageName")
+    @UCloudStackParam("ImageName")
     private String imageNameParam;
 
     /** 项目ID，资源所属的项目分组标识 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群类型，用于指定镜像落盘的目标存储集群 */
     
-    @OpenAPIParam("StorageSetType")
+    @UCloudStackParam("StorageSetType")
     private String storageSetTypeParam;
 
     /** 标签键值对，用于资源标签管理与检索，格式为Base64的key:value，列表项不能为空且key不可重复 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 虚拟机ID，用于指定制作镜像的源虚拟机 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

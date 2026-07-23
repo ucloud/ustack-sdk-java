@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateApplicationNodeRequest extends Request {
 
     /** 审批工单ID，指定需要更新的审批工单，必须是已存在的审批工单ID，必填 */
     @NotEmpty
-    @OpenAPIParam("ApplicationID")
+    @UCloudStackParam("ApplicationID")
     private String applicationIDParam;
 
     /** 审批节点ID，指定需要更新的审批节点编号，必须是该工单下的有效节点ID，必填 */
     @NotEmpty
-    @OpenAPIParam("NodeID")
+    @UCloudStackParam("NodeID")
     private String nodeIDParam;
 
     /** 审批节点状态，更新后的节点状态，Approved：批准通过，Rejected：拒绝，可进行的状态变更为：Handling->Approved、Handling->Rejected，必填 */
     @NotEmpty
-    @OpenAPIParam("NodeState")
+    @UCloudStackParam("NodeState")
     private String nodeStateParam;
 
     /** 备注信息，审批人填写的审批意见或理由，如果是代他人审批，系统会自动在备注后追加代审批说明（通过trans.WRF0009格式化，如：【代xxx@example.com审批】） */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

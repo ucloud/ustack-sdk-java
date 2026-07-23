@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class ResetMySQLPasswordRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** MySQL实例ID，指定要修改密码的MySQL实例；注意：资源必须为AVAILABLE且状态为Running */
     @NotEmpty
-    @OpenAPIParam("MySQLID")
+    @UCloudStackParam("MySQLID")
     private String mySQLIDParam;
 
     /** root密码，满足paaspassword校验规则 */
     @NotEmpty
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

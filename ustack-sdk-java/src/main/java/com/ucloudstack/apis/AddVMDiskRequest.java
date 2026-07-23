@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,77 +24,77 @@ public class AddVMDiskRequest extends Request {
 
     /** 总线类型，取值 virtio，ide，scsi */
     
-    @OpenAPIParam("Bus")
+    @UCloudStackParam("Bus")
     private String busParam;
 
     /** 磁盘缓存模式，当前生效的磁盘I/O缓存策略 */
     
-    @OpenAPIParam("CacheMode")
+    @UCloudStackParam("CacheMode")
     private String cacheModeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，需挂载的已有数据盘标识 */
     
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 磁盘集群类型，指定新建数据盘所属的存储集群 */
     
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 磁盘容量，指定新建数据盘的大小，单位：GiB */
     
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 磁盘镜像ID */
     
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** QoS限速读带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("ReadBandwidth")
+    @UCloudStackParam("ReadBandwidth")
     private Integer readBandwidthParam;
 
     /** QoS限速读IOPS，0表示不限制 */
     
-    @OpenAPIParam("ReadIOPS")
+    @UCloudStackParam("ReadIOPS")
     private Integer readIOPSParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** QoS限速总带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("TotalBandwidth")
+    @UCloudStackParam("TotalBandwidth")
     private Integer totalBandwidthParam;
 
     /** QoS限速总IOPS，0表示不限制 */
     
-    @OpenAPIParam("TotalIOPS")
+    @UCloudStackParam("TotalIOPS")
     private Integer totalIOPSParam;
 
     /** 虚拟机ID */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
     /** QoS限速写带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("WriteBandwidth")
+    @UCloudStackParam("WriteBandwidth")
     private Integer writeBandwidthParam;
 
     /** QoS限速写IOPS，0表示不限制 */
     
-    @OpenAPIParam("WriteIOPS")
+    @UCloudStackParam("WriteIOPS")
     private Integer writeIOPSParam;
 
 

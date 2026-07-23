@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class AttachDiskRequest extends Request {
 
     /** 缓存类型，取值 directsync、none、writeback */
     
-    @OpenAPIParam("CacheMode")
+    @UCloudStackParam("CacheMode")
     private String cacheModeParam;
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，要挂载的磁盘标识，共享盘仅在Detached/Shareabling/Shareabled状态下允许绑定，否则会返回StatusDiskStatusNotStable；共享盘绑定数量受到RegionConfigKeyDiskShareAbleLimit限制，超限返回StatusDiskShareAbleLimit */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，要挂载磁盘的目标资源标识；根据磁盘和虚拟机状态，底层接口可能返回StatusDiskOverflowAttachLimit等挂载限制错误 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 资源类型，挂载目标的资源类型，当前仅用于兼容调用 */
     
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateNATGWRuleRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private String companyIDParam;
 
     /** 弹性公网IPID，SNAT规则使用的新EIP，必须已绑定到该NAT网关 */
     @NotEmpty
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** NAT网关ID，用于定位SNAT规则所属的NAT网关实例，该NAT网关必须处于运行状态 */
     @NotEmpty
-    @OpenAPIParam("NATGWID")
+    @UCloudStackParam("NATGWID")
     private String nATGWIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SNAT规则ID，用于定位需要修改的SNAT规则 */
     @NotEmpty
-    @OpenAPIParam("RuleID")
+    @UCloudStackParam("RuleID")
     private String ruleIDParam;
 
 

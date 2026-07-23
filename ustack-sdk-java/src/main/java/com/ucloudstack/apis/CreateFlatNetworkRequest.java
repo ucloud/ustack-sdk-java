@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,72 +24,72 @@ public class CreateFlatNetworkRequest extends Request {
 
     /** 网段CIDR，定义扁平网络的IP地址范围 */
     
-    @OpenAPIParam("CIDR")
+    @UCloudStackParam("CIDR")
     private String cIDRParam;
 
     /** DHCP服务器IP地址，指定DHCP服务监听的IP地址，启用DHCP时建议传入，不启用时为空 */
     
-    @OpenAPIParam("DHCPServerIP")
+    @UCloudStackParam("DHCPServerIP")
     private String dHCPServerIPParam;
 
     /** DNS配置，指定DNS服务器地址，多个服务器用逗号分隔，格式为IP地址列表 */
     
-    @OpenAPIParam("DNS")
+    @UCloudStackParam("DNS")
     private String dNSParam;
 
     /** 物理网卡设备名称，指定扁平网络绑定的物理网络接口 */
     @NotEmpty
-    @OpenAPIParam("Device")
+    @UCloudStackParam("Device")
     private String deviceParam;
 
     /** 是否开启DHCP服务，启用后将为接入网络的主机自动分配IP地址 */
     
-    @OpenAPIParam("EnableDHCP")
+    @UCloudStackParam("EnableDHCP")
     private Boolean enableDHCPParam;
 
     /** 网关IP地址，指定网络的默认网关IP，必须在网段CIDR范围内 */
     
-    @OpenAPIParam("GatewayIP")
+    @UCloudStackParam("GatewayIP")
     private String gatewayIPParam;
 
     /** 可用IP范围，指定从网段中可分配的IP地址范围，支持多个范围用逗号分隔，格式为192.168.1.10-192.168.1.20 */
     
-    @OpenAPIParam("IPRange")
+    @UCloudStackParam("IPRange")
     private String iPRangeParam;
 
     /** 扁平网络名称，用于标识扁平网络资源，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 权限配置，指定可访问该扁平网络的租户范围；传all表示所有租户可用，传租户ID列表(逗号分隔)表示仅指定租户可用 */
     @NotEmpty
-    @OpenAPIParam("Permission")
+    @UCloudStackParam("Permission")
     private String permissionParam;
 
     /** 权限模式，控制租户访问权限的模式，可选值：all（所有租户可用，默认值）、whitelist（白名单，仅指定租户可用）、blacklist（黑名单，仅指定租户不可用） */
     
-    @OpenAPIParam("PermissionMode")
+    @UCloudStackParam("PermissionMode")
     private String permissionModeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，用于说明和注释，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 标签键值对，格式为Base64编码的key:value字符串，用于资源标记和分类管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** VLAN标识，用于网络隔离和流量标记，可选，取值范围1-4094，不传或传0表示不设置VLAN */
     
-    @OpenAPIParam("Vlan")
+    @UCloudStackParam("Vlan")
     private String vlanParam;
 
 

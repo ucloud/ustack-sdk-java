@@ -16,7 +16,7 @@ package com.ucloudstack.client;
 import com.ucloudstack.common.client.DefaultClient;
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.apis.BindAlertTemplateRequest;
 import com.ucloudstack.apis.BindAlertTemplateResponse;
 import com.ucloudstack.apis.CreateAlertNotifyGroupRequest;
@@ -1492,10 +1492,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindAlertTemplate - 绑定告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindAlertTemplateResponse bindAlertTemplate(BindAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindAlertTemplate");
         return (BindAlertTemplateResponse)
                 this.invoke(request, BindAlertTemplateResponse.class);
@@ -1506,10 +1506,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAlertNotifyGroup - 创建告警通知组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAlertNotifyGroupResponse createAlertNotifyGroup(CreateAlertNotifyGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAlertNotifyGroup");
         return (CreateAlertNotifyGroupResponse)
                 this.invoke(request, CreateAlertNotifyGroupResponse.class);
@@ -1520,10 +1520,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAlertNotifyReceiver - 创建告警通知人
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAlertNotifyReceiverResponse createAlertNotifyReceiver(CreateAlertNotifyReceiverRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAlertNotifyReceiver");
         return (CreateAlertNotifyReceiverResponse)
                 this.invoke(request, CreateAlertNotifyReceiverResponse.class);
@@ -1534,10 +1534,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAlertNotifyWebhook - 创建告警回调接口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAlertNotifyWebhookResponse createAlertNotifyWebhook(CreateAlertNotifyWebhookRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAlertNotifyWebhook");
         return (CreateAlertNotifyWebhookResponse)
                 this.invoke(request, CreateAlertNotifyWebhookResponse.class);
@@ -1548,10 +1548,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAlertTemplate - 创建告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAlertTemplateResponse createAlertTemplate(CreateAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAlertTemplate");
         return (CreateAlertTemplateResponse)
                 this.invoke(request, CreateAlertTemplateResponse.class);
@@ -1562,10 +1562,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAlertTemplateRule - 创建告警模版规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAlertTemplateRuleResponse createAlertTemplateRule(CreateAlertTemplateRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAlertTemplateRule");
         return (CreateAlertTemplateRuleResponse)
                 this.invoke(request, CreateAlertTemplateRuleResponse.class);
@@ -1576,10 +1576,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateOPLogNotifyRule - 创建操作日志通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateOPLogNotifyRuleResponse createOPLogNotifyRule(CreateOPLogNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateOPLogNotifyRule");
         return (CreateOPLogNotifyRuleResponse)
                 this.invoke(request, CreateOPLogNotifyRuleResponse.class);
@@ -1590,10 +1590,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateResourceEventNotifyRule - 创建资源事件通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateResourceEventNotifyRuleResponse createResourceEventNotifyRule(CreateResourceEventNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateResourceEventNotifyRule");
         return (CreateResourceEventNotifyRuleResponse)
                 this.invoke(request, CreateResourceEventNotifyRuleResponse.class);
@@ -1604,10 +1604,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAlertNotifyGroup - 删除告警通知组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAlertNotifyGroupResponse deleteAlertNotifyGroup(DeleteAlertNotifyGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAlertNotifyGroup");
         return (DeleteAlertNotifyGroupResponse)
                 this.invoke(request, DeleteAlertNotifyGroupResponse.class);
@@ -1618,10 +1618,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAlertNotifyReceiver - 删除告警通知人
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAlertNotifyReceiverResponse deleteAlertNotifyReceiver(DeleteAlertNotifyReceiverRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAlertNotifyReceiver");
         return (DeleteAlertNotifyReceiverResponse)
                 this.invoke(request, DeleteAlertNotifyReceiverResponse.class);
@@ -1632,10 +1632,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAlertNotifyWebhook - 删除告警回调接口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAlertNotifyWebhookResponse deleteAlertNotifyWebhook(DeleteAlertNotifyWebhookRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAlertNotifyWebhook");
         return (DeleteAlertNotifyWebhookResponse)
                 this.invoke(request, DeleteAlertNotifyWebhookResponse.class);
@@ -1646,10 +1646,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAlertTemplate - 删除告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAlertTemplateResponse deleteAlertTemplate(DeleteAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAlertTemplate");
         return (DeleteAlertTemplateResponse)
                 this.invoke(request, DeleteAlertTemplateResponse.class);
@@ -1660,10 +1660,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAlertTemplateRule - 删除告警模版规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAlertTemplateRuleResponse deleteAlertTemplateRule(DeleteAlertTemplateRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAlertTemplateRule");
         return (DeleteAlertTemplateRuleResponse)
                 this.invoke(request, DeleteAlertTemplateRuleResponse.class);
@@ -1674,10 +1674,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteOPLogNotifyRule - 删除操作日志通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteOPLogNotifyRuleResponse deleteOPLogNotifyRule(DeleteOPLogNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteOPLogNotifyRule");
         return (DeleteOPLogNotifyRuleResponse)
                 this.invoke(request, DeleteOPLogNotifyRuleResponse.class);
@@ -1688,10 +1688,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteResourceEventNotifyRule - 删除资源事件通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteResourceEventNotifyRuleResponse deleteResourceEventNotifyRule(DeleteResourceEventNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteResourceEventNotifyRule");
         return (DeleteResourceEventNotifyRuleResponse)
                 this.invoke(request, DeleteResourceEventNotifyRuleResponse.class);
@@ -1702,10 +1702,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlert - 查询告警
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertResponse describeAlert(DescribeAlertRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlert");
         return (DescribeAlertResponse)
                 this.invoke(request, DescribeAlertResponse.class);
@@ -1716,10 +1716,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertNotifyGroup - 获取告警通知组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertNotifyGroupResponse describeAlertNotifyGroup(DescribeAlertNotifyGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertNotifyGroup");
         return (DescribeAlertNotifyGroupResponse)
                 this.invoke(request, DescribeAlertNotifyGroupResponse.class);
@@ -1730,10 +1730,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertNotifyReceiver - 获取告警通知人
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertNotifyReceiverResponse describeAlertNotifyReceiver(DescribeAlertNotifyReceiverRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertNotifyReceiver");
         return (DescribeAlertNotifyReceiverResponse)
                 this.invoke(request, DescribeAlertNotifyReceiverResponse.class);
@@ -1744,10 +1744,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertNotifyWebhook - 获取告警回调接口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertNotifyWebhookResponse describeAlertNotifyWebhook(DescribeAlertNotifyWebhookRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertNotifyWebhook");
         return (DescribeAlertNotifyWebhookResponse)
                 this.invoke(request, DescribeAlertNotifyWebhookResponse.class);
@@ -1758,10 +1758,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertTemplate - 获取告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertTemplateResponse describeAlertTemplate(DescribeAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertTemplate");
         return (DescribeAlertTemplateResponse)
                 this.invoke(request, DescribeAlertTemplateResponse.class);
@@ -1772,10 +1772,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertTemplateRule - 获取告警模版规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertTemplateRuleResponse describeAlertTemplateRule(DescribeAlertTemplateRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertTemplateRule");
         return (DescribeAlertTemplateRuleResponse)
                 this.invoke(request, DescribeAlertTemplateRuleResponse.class);
@@ -1786,10 +1786,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAlertTemplateTarget - 获取告警模版绑定目标
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAlertTemplateTargetResponse describeAlertTemplateTarget(DescribeAlertTemplateTargetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAlertTemplateTarget");
         return (DescribeAlertTemplateTargetResponse)
                 this.invoke(request, DescribeAlertTemplateTargetResponse.class);
@@ -1800,10 +1800,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMetric - 获取监控指标
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMetricResponse describeMetric(DescribeMetricRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMetric");
         return (DescribeMetricResponse)
                 this.invoke(request, DescribeMetricResponse.class);
@@ -1814,10 +1814,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOPLogNotifyRule - 获取操作日志通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOPLogNotifyRuleResponse describeOPLogNotifyRule(DescribeOPLogNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOPLogNotifyRule");
         return (DescribeOPLogNotifyRuleResponse)
                 this.invoke(request, DescribeOPLogNotifyRuleResponse.class);
@@ -1828,10 +1828,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceEventNotifyRule - 获取资源事件通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceEventNotifyRuleResponse describeResourceEventNotifyRule(DescribeResourceEventNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceEventNotifyRule");
         return (DescribeResourceEventNotifyRuleResponse)
                 this.invoke(request, DescribeResourceEventNotifyRuleResponse.class);
@@ -1842,10 +1842,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * OperateAlert - 操作告警处理状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public OperateAlertResponse operateAlert(OperateAlertRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("OperateAlert");
         return (OperateAlertResponse)
                 this.invoke(request, OperateAlertResponse.class);
@@ -1856,10 +1856,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PrometheusQuery - 获取即时查询监控数据
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PrometheusQueryResponse prometheusQuery(PrometheusQueryRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PrometheusQuery");
         return (PrometheusQueryResponse)
                 this.invoke(request, PrometheusQueryResponse.class);
@@ -1870,10 +1870,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PrometheusQueryRange - 获取范围查询监控数据
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PrometheusQueryRangeResponse prometheusQueryRange(PrometheusQueryRangeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PrometheusQueryRange");
         return (PrometheusQueryRangeResponse)
                 this.invoke(request, PrometheusQueryRangeResponse.class);
@@ -1884,10 +1884,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnbindAlertTemplate - 解绑告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnbindAlertTemplateResponse unbindAlertTemplate(UnbindAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnbindAlertTemplate");
         return (UnbindAlertTemplateResponse)
                 this.invoke(request, UnbindAlertTemplateResponse.class);
@@ -1898,10 +1898,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAlertNotifyGroup - 更新告警通知组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAlertNotifyGroupResponse updateAlertNotifyGroup(UpdateAlertNotifyGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAlertNotifyGroup");
         return (UpdateAlertNotifyGroupResponse)
                 this.invoke(request, UpdateAlertNotifyGroupResponse.class);
@@ -1912,10 +1912,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAlertNotifyReceiver - 更新告警通知人
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAlertNotifyReceiverResponse updateAlertNotifyReceiver(UpdateAlertNotifyReceiverRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAlertNotifyReceiver");
         return (UpdateAlertNotifyReceiverResponse)
                 this.invoke(request, UpdateAlertNotifyReceiverResponse.class);
@@ -1926,10 +1926,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAlertNotifyWebhook - 更新告警回调接口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAlertNotifyWebhookResponse updateAlertNotifyWebhook(UpdateAlertNotifyWebhookRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAlertNotifyWebhook");
         return (UpdateAlertNotifyWebhookResponse)
                 this.invoke(request, UpdateAlertNotifyWebhookResponse.class);
@@ -1940,10 +1940,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAlertTemplate - 更新告警模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAlertTemplateResponse updateAlertTemplate(UpdateAlertTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAlertTemplate");
         return (UpdateAlertTemplateResponse)
                 this.invoke(request, UpdateAlertTemplateResponse.class);
@@ -1954,10 +1954,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAlertTemplateRule - 更新告警通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAlertTemplateRuleResponse updateAlertTemplateRule(UpdateAlertTemplateRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAlertTemplateRule");
         return (UpdateAlertTemplateRuleResponse)
                 this.invoke(request, UpdateAlertTemplateRuleResponse.class);
@@ -1968,10 +1968,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateOPLogNotifyRule - 更新操作日志通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateOPLogNotifyRuleResponse updateOPLogNotifyRule(UpdateOPLogNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateOPLogNotifyRule");
         return (UpdateOPLogNotifyRuleResponse)
                 this.invoke(request, UpdateOPLogNotifyRuleResponse.class);
@@ -1982,10 +1982,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateResourceEventNotifyRule - 更新资源事件通知规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateResourceEventNotifyRuleResponse updateResourceEventNotifyRule(UpdateResourceEventNotifyRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateResourceEventNotifyRule");
         return (UpdateResourceEventNotifyRuleResponse)
                 this.invoke(request, UpdateResourceEventNotifyRuleResponse.class);
@@ -1996,10 +1996,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddASMember - 添加伸缩成员
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddASMemberResponse addASMember(AddASMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddASMember");
         return (AddASMemberResponse)
                 this.invoke(request, AddASMemberResponse.class);
@@ -2010,10 +2010,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachLoadBalancer - 伸缩组关联lb
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachLoadBalancerResponse attachLoadBalancer(AttachLoadBalancerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachLoadBalancer");
         return (AttachLoadBalancerResponse)
                 this.invoke(request, AttachLoadBalancerResponse.class);
@@ -2024,10 +2024,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateASGroup - 创建伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateASGroupResponse createASGroup(CreateASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateASGroup");
         return (CreateASGroupResponse)
                 this.invoke(request, CreateASGroupResponse.class);
@@ -2038,10 +2038,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteASGroup - 删除伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteASGroupResponse deleteASGroup(DeleteASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteASGroup");
         return (DeleteASGroupResponse)
                 this.invoke(request, DeleteASGroupResponse.class);
@@ -2052,10 +2052,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeASGroup - 查询伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeASGroupResponse describeASGroup(DescribeASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeASGroup");
         return (DescribeASGroupResponse)
                 this.invoke(request, DescribeASGroupResponse.class);
@@ -2066,10 +2066,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachLoadBalancer - 伸缩组解关联lb
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachLoadBalancerResponse detachLoadBalancer(DetachLoadBalancerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachLoadBalancer");
         return (DetachLoadBalancerResponse)
                 this.invoke(request, DetachLoadBalancerResponse.class);
@@ -2080,10 +2080,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DisableASGroup - 禁用伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DisableASGroupResponse disableASGroup(DisableASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DisableASGroup");
         return (DisableASGroupResponse)
                 this.invoke(request, DisableASGroupResponse.class);
@@ -2094,10 +2094,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * EnableASGroup - 启用伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public EnableASGroupResponse enableASGroup(EnableASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("EnableASGroup");
         return (EnableASGroupResponse)
                 this.invoke(request, EnableASGroupResponse.class);
@@ -2108,10 +2108,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RemoveASMember - 移除伸缩成员
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RemoveASMemberResponse removeASMember(RemoveASMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RemoveASMember");
         return (RemoveASMemberResponse)
                 this.invoke(request, RemoveASMemberResponse.class);
@@ -2122,10 +2122,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateASGroup - 更新伸缩组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateASGroupResponse updateASGroup(UpdateASGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateASGroup");
         return (UpdateASGroupResponse)
                 this.invoke(request, UpdateASGroupResponse.class);
@@ -2136,10 +2136,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBillDetail - 获取账单详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBillDetailResponse describeBillDetail(DescribeBillDetailRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBillDetail");
         return (DescribeBillDetailResponse)
                 this.invoke(request, DescribeBillDetailResponse.class);
@@ -2150,10 +2150,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBillOverView - 获取账单总览
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBillOverViewResponse describeBillOverView(DescribeBillOverViewRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBillOverView");
         return (DescribeBillOverViewResponse)
                 this.invoke(request, DescribeBillOverViewResponse.class);
@@ -2164,10 +2164,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBillResource - 获取资源账单详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBillResourceResponse describeBillResource(DescribeBillResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBillResource");
         return (DescribeBillResourceResponse)
                 this.invoke(request, DescribeBillResourceResponse.class);
@@ -2178,10 +2178,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOrder - 获取订单信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOrderResponse describeOrder(DescribeOrderRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOrder");
         return (DescribeOrderResponse)
                 this.invoke(request, DescribeOrderResponse.class);
@@ -2192,10 +2192,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePrice - 获取价格信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePriceResponse describePrice(DescribePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePrice");
         return (DescribePriceResponse)
                 this.invoke(request, DescribePriceResponse.class);
@@ -2206,10 +2206,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRecharge - 获取充值信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRechargeResponse describeRecharge(DescribeRechargeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRecharge");
         return (DescribeRechargeResponse)
                 this.invoke(request, DescribeRechargeResponse.class);
@@ -2220,10 +2220,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTransaction - 获取交易记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTransactionResponse describeTransaction(DescribeTransactionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTransaction");
         return (DescribeTransactionResponse)
                 this.invoke(request, DescribeTransactionResponse.class);
@@ -2234,10 +2234,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeWithdraw - 获取提现流水列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeWithdrawResponse describeWithdraw(DescribeWithdrawRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeWithdraw");
         return (DescribeWithdrawResponse)
                 this.invoke(request, DescribeWithdrawResponse.class);
@@ -2248,10 +2248,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetRenewPrice - 获取续费价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetRenewPriceResponse getRenewPrice(GetRenewPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetRenewPrice");
         return (GetRenewPriceResponse)
                 this.invoke(request, GetRenewPriceResponse.class);
@@ -2262,10 +2262,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetWithdrawableAmount - 获取账户可提现金额等信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetWithdrawableAmountResponse getWithdrawableAmount(GetWithdrawableAmountRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetWithdrawableAmount");
         return (GetWithdrawableAmountResponse)
                 this.invoke(request, GetWithdrawableAmountResponse.class);
@@ -2276,10 +2276,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * Recharge - 充值
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RechargeResponse recharge(RechargeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("Recharge");
         return (RechargeResponse)
                 this.invoke(request, RechargeResponse.class);
@@ -2290,10 +2290,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RenewResource - 续费
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RenewResourceResponse renewResource(RenewResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RenewResource");
         return (RenewResourceResponse)
                 this.invoke(request, RenewResourceResponse.class);
@@ -2304,10 +2304,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDiscount - 更新折扣
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDiscountResponse updateDiscount(UpdateDiscountRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDiscount");
         return (UpdateDiscountResponse)
                 this.invoke(request, UpdateDiscountResponse.class);
@@ -2318,10 +2318,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdatePrice - 更新价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdatePriceResponse updatePrice(UpdatePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdatePrice");
         return (UpdatePriceResponse)
                 this.invoke(request, UpdatePriceResponse.class);
@@ -2332,10 +2332,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * Withdraw - 申请提现
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public WithdrawResponse withdraw(WithdrawRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("Withdraw");
         return (WithdrawResponse)
                 this.invoke(request, WithdrawResponse.class);
@@ -2346,10 +2346,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateBucket - 创建桶
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateBucketResponse createBucket(CreateBucketRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateBucket");
         return (CreateBucketResponse)
                 this.invoke(request, CreateBucketResponse.class);
@@ -2360,10 +2360,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateBucketLifecycleRule - 创建桶的生命周期
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateBucketLifecycleRuleResponse createBucketLifecycleRule(CreateBucketLifecycleRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateBucketLifecycleRule");
         return (CreateBucketLifecycleRuleResponse)
                 this.invoke(request, CreateBucketLifecycleRuleResponse.class);
@@ -2374,10 +2374,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDOSToken - 创建令牌
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDOSTokenResponse createDOSToken(CreateDOSTokenRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDOSToken");
         return (CreateDOSTokenResponse)
                 this.invoke(request, CreateDOSTokenResponse.class);
@@ -2388,10 +2388,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DOSLogin - 获取S3登录信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DOSLoginResponse dOSLogin(DOSLoginRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DOSLogin");
         return (DOSLoginResponse)
                 this.invoke(request, DOSLoginResponse.class);
@@ -2402,10 +2402,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteBucket - 删除桶
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteBucketResponse deleteBucket(DeleteBucketRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteBucket");
         return (DeleteBucketResponse)
                 this.invoke(request, DeleteBucketResponse.class);
@@ -2416,10 +2416,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteBucketLifecycleRule - 删除桶的生命周期
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteBucketLifecycleRuleResponse deleteBucketLifecycleRule(DeleteBucketLifecycleRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteBucketLifecycleRule");
         return (DeleteBucketLifecycleRuleResponse)
                 this.invoke(request, DeleteBucketLifecycleRuleResponse.class);
@@ -2430,10 +2430,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDOSToken - 删除令牌
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDOSTokenResponse deleteDOSToken(DeleteDOSTokenRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDOSToken");
         return (DeleteDOSTokenResponse)
                 this.invoke(request, DeleteDOSTokenResponse.class);
@@ -2444,10 +2444,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBucketLifecycleRules - 桶的生命周期列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBucketLifecycleRulesResponse describeBucketLifecycleRules(DescribeBucketLifecycleRulesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBucketLifecycleRules");
         return (DescribeBucketLifecycleRulesResponse)
                 this.invoke(request, DescribeBucketLifecycleRulesResponse.class);
@@ -2458,10 +2458,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBuckets - 桶列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBucketsResponse describeBuckets(DescribeBucketsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBuckets");
         return (DescribeBucketsResponse)
                 this.invoke(request, DescribeBucketsResponse.class);
@@ -2472,10 +2472,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDOSToken - 获取令牌列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDOSTokenResponse describeDOSToken(DescribeDOSTokenRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDOSToken");
         return (DescribeDOSTokenResponse)
                 this.invoke(request, DescribeDOSTokenResponse.class);
@@ -2486,10 +2486,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * FlushBucket - 清空桶数据
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public FlushBucketResponse flushBucket(FlushBucketRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("FlushBucket");
         return (FlushBucketResponse)
                 this.invoke(request, FlushBucketResponse.class);
@@ -2500,10 +2500,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketAccessType - 更新桶访问类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketAccessTypeResponse updateBucketAccessType(UpdateBucketAccessTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketAccessType");
         return (UpdateBucketAccessTypeResponse)
                 this.invoke(request, UpdateBucketAccessTypeResponse.class);
@@ -2514,10 +2514,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketEventLogging - 更新对象存储桶是否开启事件日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketEventLoggingResponse updateBucketEventLogging(UpdateBucketEventLoggingRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketEventLogging");
         return (UpdateBucketEventLoggingResponse)
                 this.invoke(request, UpdateBucketEventLoggingResponse.class);
@@ -2528,10 +2528,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketLifecycleRule - 更新桶的生命周期
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketLifecycleRuleResponse updateBucketLifecycleRule(UpdateBucketLifecycleRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketLifecycleRule");
         return (UpdateBucketLifecycleRuleResponse)
                 this.invoke(request, UpdateBucketLifecycleRuleResponse.class);
@@ -2542,10 +2542,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketObjectLock - 更新桶的对象锁定开关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketObjectLockResponse updateBucketObjectLock(UpdateBucketObjectLockRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketObjectLock");
         return (UpdateBucketObjectLockResponse)
                 this.invoke(request, UpdateBucketObjectLockResponse.class);
@@ -2556,10 +2556,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketQuota - 更新存储桶配额
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketQuotaResponse updateBucketQuota(UpdateBucketQuotaRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketQuota");
         return (UpdateBucketQuotaResponse)
                 this.invoke(request, UpdateBucketQuotaResponse.class);
@@ -2570,10 +2570,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBucketVersioning - 更新桶的多版本开关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBucketVersioningResponse updateBucketVersioning(UpdateBucketVersioningRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBucketVersioning");
         return (UpdateBucketVersioningResponse)
                 this.invoke(request, UpdateBucketVersioningResponse.class);
@@ -2584,10 +2584,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDOSToken - 更新令牌
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDOSTokenResponse updateDOSToken(UpdateDOSTokenRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDOSToken");
         return (UpdateDOSTokenResponse)
                 this.invoke(request, UpdateDOSTokenResponse.class);
@@ -2598,10 +2598,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateUser - 创建租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateUserResponse createUser(CreateUserRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateUser");
         return (CreateUserResponse)
                 this.invoke(request, CreateUserResponse.class);
@@ -2612,10 +2612,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteCompany - 删除租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteCompanyResponse deleteCompany(DeleteCompanyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteCompany");
         return (DeleteCompanyResponse)
                 this.invoke(request, DeleteCompanyResponse.class);
@@ -2626,10 +2626,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeLoginWhitelist - 获取用户登录IP白名单
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeLoginWhitelistResponse describeLoginWhitelist(DescribeLoginWhitelistRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeLoginWhitelist");
         return (DescribeLoginWhitelistResponse)
                 this.invoke(request, DescribeLoginWhitelistResponse.class);
@@ -2640,10 +2640,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTenantResources - 获取租户资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTenantResourcesResponse describeTenantResources(DescribeTenantResourcesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTenantResources");
         return (DescribeTenantResourcesResponse)
                 this.invoke(request, DescribeTenantResourcesResponse.class);
@@ -2654,10 +2654,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeUser - 获取租户列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeUserResponse describeUser(DescribeUserRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeUser");
         return (DescribeUserResponse)
                 this.invoke(request, DescribeUserResponse.class);
@@ -2668,10 +2668,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * FreezeUser - 冻结租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public FreezeUserResponse freezeUser(FreezeUserRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("FreezeUser");
         return (FreezeUserResponse)
                 this.invoke(request, FreezeUserResponse.class);
@@ -2682,10 +2682,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RenameCompany - 重命名租户名称备注
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RenameCompanyResponse renameCompany(RenameCompanyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RenameCompany");
         return (RenameCompanyResponse)
                 this.invoke(request, RenameCompanyResponse.class);
@@ -2696,10 +2696,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnFreezeUser - 解冻租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnFreezeUserResponse unFreezeUser(UnFreezeUserRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnFreezeUser");
         return (UnFreezeUserResponse)
                 this.invoke(request, UnFreezeUserResponse.class);
@@ -2710,10 +2710,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateCompanyEmail - 修改租户邮箱
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateCompanyEmailResponse updateCompanyEmail(UpdateCompanyEmailRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateCompanyEmail");
         return (UpdateCompanyEmailResponse)
                 this.invoke(request, UpdateCompanyEmailResponse.class);
@@ -2724,10 +2724,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateCompanyName - 更新租户名称
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateCompanyNameResponse updateCompanyName(UpdateCompanyNameRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateCompanyName");
         return (UpdateCompanyNameResponse)
                 this.invoke(request, UpdateCompanyNameResponse.class);
@@ -2738,10 +2738,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateLoginWhitelist - 设置用户登录IP白名单
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateLoginWhitelistResponse updateLoginWhitelist(UpdateLoginWhitelistRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateLoginWhitelist");
         return (UpdateLoginWhitelistResponse)
                 this.invoke(request, UpdateLoginWhitelistResponse.class);
@@ -2752,10 +2752,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateProductSpecification - 创建产品规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateProductSpecificationResponse createProductSpecification(CreateProductSpecificationRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateProductSpecification");
         return (CreateProductSpecificationResponse)
                 this.invoke(request, CreateProductSpecificationResponse.class);
@@ -2766,10 +2766,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteProductSpecification - 删除产品规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteProductSpecificationResponse deleteProductSpecification(DeleteProductSpecificationRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteProductSpecification");
         return (DeleteProductSpecificationResponse)
                 this.invoke(request, DeleteProductSpecificationResponse.class);
@@ -2780,10 +2780,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeProductSpecification - 查询产品规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeProductSpecificationResponse describeProductSpecification(DescribeProductSpecificationRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeProductSpecification");
         return (DescribeProductSpecificationResponse)
                 this.invoke(request, DescribeProductSpecificationResponse.class);
@@ -2794,10 +2794,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeProductSpecificationTemplate - 查询产品规格模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeProductSpecificationTemplateResponse describeProductSpecificationTemplate(DescribeProductSpecificationTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeProductSpecificationTemplate");
         return (DescribeProductSpecificationTemplateResponse)
                 this.invoke(request, DescribeProductSpecificationTemplateResponse.class);
@@ -2808,10 +2808,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeQuota - 查询配额列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeQuotaResponse describeQuota(DescribeQuotaRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeQuota");
         return (DescribeQuotaResponse)
                 this.invoke(request, DescribeQuotaResponse.class);
@@ -2822,10 +2822,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeQuotaUsage - 查询配额资源用量列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeQuotaUsageResponse describeQuotaUsage(DescribeQuotaUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeQuotaUsage");
         return (DescribeQuotaUsageResponse)
                 this.invoke(request, DescribeQuotaUsageResponse.class);
@@ -2836,10 +2836,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceInfo - 获取资源信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceInfoResponse describeResourceInfo(DescribeResourceInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceInfo");
         return (DescribeResourceInfoResponse)
                 this.invoke(request, DescribeResourceInfoResponse.class);
@@ -2850,10 +2850,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSetAllocateUsage - 查询集群资源用量列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSetAllocateUsageResponse describeSetAllocateUsage(DescribeSetAllocateUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSetAllocateUsage");
         return (DescribeSetAllocateUsageResponse)
                 this.invoke(request, DescribeSetAllocateUsageResponse.class);
@@ -2864,10 +2864,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetConfig - 获取指定配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetConfigResponse getConfig(GetConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetConfig");
         return (GetConfigResponse)
                 this.invoke(request, GetConfigResponse.class);
@@ -2878,10 +2878,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetFilterKeywords - 获取规格/价格/配额分类筛选关键字
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetFilterKeywordsResponse getFilterKeywords(GetFilterKeywordsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetFilterKeywords");
         return (GetFilterKeywordsResponse)
                 this.invoke(request, GetFilterKeywordsResponse.class);
@@ -2892,10 +2892,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetRegionConfig - 获取地域指定配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetRegionConfigResponse getRegionConfig(GetRegionConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetRegionConfig");
         return (GetRegionConfigResponse)
                 this.invoke(request, GetRegionConfigResponse.class);
@@ -2906,10 +2906,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetSSOConfig - 获取sso配置信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetSSOConfigResponse getSSOConfig(GetSSOConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetSSOConfig");
         return (GetSSOConfigResponse)
                 this.invoke(request, GetSSOConfigResponse.class);
@@ -2920,10 +2920,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListGlobalConfigs - 按照类型和地域获取全局配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListGlobalConfigsResponse listGlobalConfigs(ListGlobalConfigsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListGlobalConfigs");
         return (ListGlobalConfigsResponse)
                 this.invoke(request, ListGlobalConfigsResponse.class);
@@ -2934,10 +2934,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListRegionConfigSyncStatus - 查询地域配置同步状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListRegionConfigSyncStatusResponse listRegionConfigSyncStatus(ListRegionConfigSyncStatusRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListRegionConfigSyncStatus");
         return (ListRegionConfigSyncStatusResponse)
                 this.invoke(request, ListRegionConfigSyncStatusResponse.class);
@@ -2948,10 +2948,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListRegionConfigs - 按照类型和地域获取地域配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListRegionConfigsResponse listRegionConfigs(ListRegionConfigsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListRegionConfigs");
         return (ListRegionConfigsResponse)
                 this.invoke(request, ListRegionConfigsResponse.class);
@@ -2962,10 +2962,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetAccountQuota - 设置资源配额
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetAccountQuotaResponse setAccountQuota(SetAccountQuotaRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetAccountQuota");
         return (SetAccountQuotaResponse)
                 this.invoke(request, SetAccountQuotaResponse.class);
@@ -2976,10 +2976,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateConfig - 更新配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateConfigResponse updateConfig(UpdateConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateConfig");
         return (UpdateConfigResponse)
                 this.invoke(request, UpdateConfigResponse.class);
@@ -2990,10 +2990,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateProductSpecification - 更新产品规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateProductSpecificationResponse updateProductSpecification(UpdateProductSpecificationRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateProductSpecification");
         return (UpdateProductSpecificationResponse)
                 this.invoke(request, UpdateProductSpecificationResponse.class);
@@ -3004,10 +3004,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRegionConfig - 更新地域配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRegionConfigResponse updateRegionConfig(UpdateRegionConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRegionConfig");
         return (UpdateRegionConfigResponse)
                 this.invoke(request, UpdateRegionConfigResponse.class);
@@ -3018,10 +3018,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * VerifyEmailAvailability - 验证邮箱服务器可用性
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public VerifyEmailAvailabilityResponse verifyEmailAvailability(VerifyEmailAvailabilityRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("VerifyEmailAvailability");
         return (VerifyEmailAvailabilityResponse)
                 this.invoke(request, VerifyEmailAvailabilityResponse.class);
@@ -3032,10 +3032,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateContainerImageRepository - 创建镜像仓库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateContainerImageRepositoryResponse createContainerImageRepository(CreateContainerImageRepositoryRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateContainerImageRepository");
         return (CreateContainerImageRepositoryResponse)
                 this.invoke(request, CreateContainerImageRepositoryResponse.class);
@@ -3046,10 +3046,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteContainerImage - 删除容器镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteContainerImageResponse deleteContainerImage(DeleteContainerImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteContainerImage");
         return (DeleteContainerImageResponse)
                 this.invoke(request, DeleteContainerImageResponse.class);
@@ -3060,10 +3060,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteContainerImageRepository - 删除镜像仓库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteContainerImageRepositoryResponse deleteContainerImageRepository(DeleteContainerImageRepositoryRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteContainerImageRepository");
         return (DeleteContainerImageRepositoryResponse)
                 this.invoke(request, DeleteContainerImageRepositoryResponse.class);
@@ -3074,10 +3074,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteContainerImageTag - 删除容器镜像tag
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteContainerImageTagResponse deleteContainerImageTag(DeleteContainerImageTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteContainerImageTag");
         return (DeleteContainerImageTagResponse)
                 this.invoke(request, DeleteContainerImageTagResponse.class);
@@ -3088,10 +3088,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeContainerImage - 查询容器镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeContainerImageResponse describeContainerImage(DescribeContainerImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeContainerImage");
         return (DescribeContainerImageResponse)
                 this.invoke(request, DescribeContainerImageResponse.class);
@@ -3102,10 +3102,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeContainerImageRepository - 查询镜像仓库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeContainerImageRepositoryResponse describeContainerImageRepository(DescribeContainerImageRepositoryRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeContainerImageRepository");
         return (DescribeContainerImageRepositoryResponse)
                 this.invoke(request, DescribeContainerImageRepositoryResponse.class);
@@ -3116,10 +3116,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeContainerImageTag - 查询容器镜像tags
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeContainerImageTagResponse describeContainerImageTag(DescribeContainerImageTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeContainerImageTag");
         return (DescribeContainerImageTagResponse)
                 this.invoke(request, DescribeContainerImageTagResponse.class);
@@ -3130,10 +3130,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateContainerImageRepository - 更新镜像仓库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateContainerImageRepositoryResponse updateContainerImageRepository(UpdateContainerImageRepositoryRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateContainerImageRepository");
         return (UpdateContainerImageRepositoryResponse)
                 this.invoke(request, UpdateContainerImageRepositoryResponse.class);
@@ -3144,10 +3144,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindStorageToDBS - 绑定存储系统到DBS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindStorageToDBSResponse bindStorageToDBS(BindStorageToDBSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindStorageToDBS");
         return (BindStorageToDBSResponse)
                 this.invoke(request, BindStorageToDBSResponse.class);
@@ -3158,10 +3158,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ChangeDBSGatewayEIP - 换绑备份网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ChangeDBSGatewayEIPResponse changeDBSGatewayEIP(ChangeDBSGatewayEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ChangeDBSGatewayEIP");
         return (ChangeDBSGatewayEIPResponse)
                 this.invoke(request, ChangeDBSGatewayEIPResponse.class);
@@ -3172,10 +3172,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDBSBackupPlan - 创建备份计划
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDBSBackupPlanResponse createDBSBackupPlan(CreateDBSBackupPlanRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDBSBackupPlan");
         return (CreateDBSBackupPlanResponse)
                 this.invoke(request, CreateDBSBackupPlanResponse.class);
@@ -3186,10 +3186,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDBSGateway - 创建DBS网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDBSGatewayResponse createDBSGateway(CreateDBSGatewayRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDBSGateway");
         return (CreateDBSGatewayResponse)
                 this.invoke(request, CreateDBSGatewayResponse.class);
@@ -3200,10 +3200,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDBSBackup - 删除备份
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDBSBackupResponse deleteDBSBackup(DeleteDBSBackupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDBSBackup");
         return (DeleteDBSBackupResponse)
                 this.invoke(request, DeleteDBSBackupResponse.class);
@@ -3214,10 +3214,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDBSBackupPlan - 删除备份计划
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDBSBackupPlanResponse deleteDBSBackupPlan(DeleteDBSBackupPlanRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDBSBackupPlan");
         return (DeleteDBSBackupPlanResponse)
                 this.invoke(request, DeleteDBSBackupPlanResponse.class);
@@ -3228,10 +3228,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDBSGateway - 解绑备份网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDBSGatewayResponse deleteDBSGateway(DeleteDBSGatewayRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDBSGateway");
         return (DeleteDBSGatewayResponse)
                 this.invoke(request, DeleteDBSGatewayResponse.class);
@@ -3242,10 +3242,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDBSBackup - 获取备份
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDBSBackupResponse describeDBSBackup(DescribeDBSBackupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDBSBackup");
         return (DescribeDBSBackupResponse)
                 this.invoke(request, DescribeDBSBackupResponse.class);
@@ -3256,10 +3256,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDBSBackupPlan - 获取备份计划
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDBSBackupPlanResponse describeDBSBackupPlan(DescribeDBSBackupPlanRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDBSBackupPlan");
         return (DescribeDBSBackupPlanResponse)
                 this.invoke(request, DescribeDBSBackupPlanResponse.class);
@@ -3270,10 +3270,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDBSGateway - 获取DBS网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDBSGatewayResponse describeDBSGateway(DescribeDBSGatewayRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDBSGateway");
         return (DescribeDBSGatewayResponse)
                 this.invoke(request, DescribeDBSGatewayResponse.class);
@@ -3284,10 +3284,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDBSRestoreRangeInfo - 查看可恢复时间段详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDBSRestoreRangeInfoResponse describeDBSRestoreRangeInfo(DescribeDBSRestoreRangeInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDBSRestoreRangeInfo");
         return (DescribeDBSRestoreRangeInfoResponse)
                 this.invoke(request, DescribeDBSRestoreRangeInfoResponse.class);
@@ -3298,10 +3298,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDBSStorage - 获取DBS存储系统
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDBSStorageResponse describeDBSStorage(DescribeDBSStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDBSStorage");
         return (DescribeDBSStorageResponse)
                 this.invoke(request, DescribeDBSStorageResponse.class);
@@ -3312,10 +3312,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ExecDBSBackupPlan - 手动执行备份计划
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ExecDBSBackupPlanResponse execDBSBackupPlan(ExecDBSBackupPlanRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ExecDBSBackupPlan");
         return (ExecDBSBackupPlanResponse)
                 this.invoke(request, ExecDBSBackupPlanResponse.class);
@@ -3326,10 +3326,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PauseDBSBackup - 暂停备份
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PauseDBSBackupResponse pauseDBSBackup(PauseDBSBackupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PauseDBSBackup");
         return (PauseDBSBackupResponse)
                 this.invoke(request, PauseDBSBackupResponse.class);
@@ -3340,10 +3340,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResumeDBSBackup - 恢复定时备份
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResumeDBSBackupResponse resumeDBSBackup(ResumeDBSBackupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResumeDBSBackup");
         return (ResumeDBSBackupResponse)
                 this.invoke(request, ResumeDBSBackupResponse.class);
@@ -3354,10 +3354,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnbindStorageFromDBS - 从DBS解绑存储系统
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnbindStorageFromDBSResponse unbindStorageFromDBS(UnbindStorageFromDBSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnbindStorageFromDBS");
         return (UnbindStorageFromDBSResponse)
                 this.invoke(request, UnbindStorageFromDBSResponse.class);
@@ -3368,10 +3368,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDBSBackupPlan - 更新备份计划
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDBSBackupPlanResponse updateDBSBackupPlan(UpdateDBSBackupPlanRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDBSBackupPlan");
         return (UpdateDBSBackupPlanResponse)
                 this.invoke(request, UpdateDBSBackupPlanResponse.class);
@@ -3382,10 +3382,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDBSBackupPlanSimple - 更新备份计划的名称和remark
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDBSBackupPlanSimpleResponse updateDBSBackupPlanSimple(UpdateDBSBackupPlanSimpleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDBSBackupPlanSimple");
         return (UpdateDBSBackupPlanSimpleResponse)
                 this.invoke(request, UpdateDBSBackupPlanSimpleResponse.class);
@@ -3396,10 +3396,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDBSStorage - 更新DBS存储系统
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDBSStorageResponse updateDBSStorage(UpdateDBSStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDBSStorage");
         return (UpdateDBSStorageResponse)
                 this.invoke(request, UpdateDBSStorageResponse.class);
@@ -3410,10 +3410,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachDisk - 绑定磁盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachDiskResponse attachDisk(AttachDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachDisk");
         return (AttachDiskResponse)
                 this.invoke(request, AttachDiskResponse.class);
@@ -3424,10 +3424,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachISO - 绑定iso
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachISOResponse attachISO(AttachISORequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachISO");
         return (AttachISOResponse)
                 this.invoke(request, AttachISOResponse.class);
@@ -3438,10 +3438,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloneDisk - 克隆硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloneDiskResponse cloneDisk(CloneDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloneDisk");
         return (CloneDiskResponse)
                 this.invoke(request, CloneDiskResponse.class);
@@ -3452,10 +3452,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDisk - 创建数据盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDiskResponse createDisk(CreateDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDisk");
         return (CreateDiskResponse)
                 this.invoke(request, CreateDiskResponse.class);
@@ -3466,10 +3466,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDiskFromSnapshot - 从快照创建数据盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDiskFromSnapshotResponse createDiskFromSnapshot(CreateDiskFromSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDiskFromSnapshot");
         return (CreateDiskFromSnapshotResponse)
                 this.invoke(request, CreateDiskFromSnapshotResponse.class);
@@ -3480,10 +3480,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDisk - 删除磁盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDiskResponse deleteDisk(DeleteDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDisk");
         return (DeleteDiskResponse)
                 this.invoke(request, DeleteDiskResponse.class);
@@ -3494,10 +3494,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDisk - 查询磁盘信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDiskResponse describeDisk(DescribeDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDisk");
         return (DescribeDiskResponse)
                 this.invoke(request, DescribeDiskResponse.class);
@@ -3508,10 +3508,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMISO - 查询iso信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMISOResponse describeVMISO(DescribeVMISORequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMISO");
         return (DescribeVMISOResponse)
                 this.invoke(request, DescribeVMISOResponse.class);
@@ -3522,10 +3522,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachDisk - 解绑磁盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachDiskResponse detachDisk(DetachDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachDisk");
         return (DetachDiskResponse)
                 this.invoke(request, DetachDiskResponse.class);
@@ -3536,10 +3536,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachISO - 解绑iso
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachISOResponse detachISO(DetachISORequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachISO");
         return (DetachISOResponse)
                 this.invoke(request, DetachISOResponse.class);
@@ -3550,10 +3550,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetCreateDiskPrice - 获取创建硬盘价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetCreateDiskPriceResponse getCreateDiskPrice(GetCreateDiskPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetCreateDiskPrice");
         return (GetCreateDiskPriceResponse)
                 this.invoke(request, GetCreateDiskPriceResponse.class);
@@ -3564,10 +3564,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDiskPrice - 获取数据盘的价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDiskPriceResponse getDiskPrice(GetDiskPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDiskPrice");
         return (GetDiskPriceResponse)
                 this.invoke(request, GetDiskPriceResponse.class);
@@ -3578,10 +3578,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetUpgradeDiskPrice - 获取升级虚拟硬盘的差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetUpgradeDiskPriceResponse getUpgradeDiskPrice(GetUpgradeDiskPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetUpgradeDiskPrice");
         return (GetUpgradeDiskPriceResponse)
                 this.invoke(request, GetUpgradeDiskPriceResponse.class);
@@ -3592,10 +3592,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDiskQoS - 设置硬盘QoS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDiskQoSResponse updateDiskQoS(UpdateDiskQoSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDiskQoS");
         return (UpdateDiskQoSResponse)
                 this.invoke(request, UpdateDiskQoSResponse.class);
@@ -3606,10 +3606,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeDisk - 升级虚拟硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeDiskResponse upgradeDisk(UpgradeDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeDisk");
         return (UpgradeDiskResponse)
                 this.invoke(request, UpgradeDiskResponse.class);
@@ -3620,10 +3620,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSnapshot - 创建快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSnapshot");
         return (CreateSnapshotResponse)
                 this.invoke(request, CreateSnapshotResponse.class);
@@ -3634,10 +3634,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSnapshot - 删除快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSnapshot");
         return (DeleteSnapshotResponse)
                 this.invoke(request, DeleteSnapshotResponse.class);
@@ -3648,10 +3648,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSnapshot - 查询快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSnapshotResponse describeSnapshot(DescribeSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSnapshot");
         return (DescribeSnapshotResponse)
                 this.invoke(request, DescribeSnapshotResponse.class);
@@ -3662,10 +3662,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RollbackSnapshot - 快照回滚
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RollbackSnapshotResponse rollbackSnapshot(RollbackSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RollbackSnapshot");
         return (RollbackSnapshotResponse)
                 this.invoke(request, RollbackSnapshotResponse.class);
@@ -3676,10 +3676,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteComputeClassDRS - 删除计算集群DRS规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteComputeClassDRSResponse deleteComputeClassDRS(DeleteComputeClassDRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteComputeClassDRS");
         return (DeleteComputeClassDRSResponse)
                 this.invoke(request, DeleteComputeClassDRSResponse.class);
@@ -3690,10 +3690,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeComputeClassDRS - 查看计算集群DRS规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeComputeClassDRSResponse describeComputeClassDRS(DescribeComputeClassDRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeComputeClassDRS");
         return (DescribeComputeClassDRSResponse)
                 this.invoke(request, DescribeComputeClassDRSResponse.class);
@@ -3704,10 +3704,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeComputeClassDRSRecords - 查看计算集群DRS记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeComputeClassDRSRecordsResponse describeComputeClassDRSRecords(DescribeComputeClassDRSRecordsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeComputeClassDRSRecords");
         return (DescribeComputeClassDRSRecordsResponse)
                 this.invoke(request, DescribeComputeClassDRSRecordsResponse.class);
@@ -3718,10 +3718,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeComputeClassDRSScore - 查看计算集群DRS评分
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeComputeClassDRSScoreResponse describeComputeClassDRSScore(DescribeComputeClassDRSScoreRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeComputeClassDRSScore");
         return (DescribeComputeClassDRSScoreResponse)
                 this.invoke(request, DescribeComputeClassDRSScoreResponse.class);
@@ -3732,10 +3732,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeComputeClassDRSSuggestions - 查看计算集群DRS建议
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeComputeClassDRSSuggestionsResponse describeComputeClassDRSSuggestions(DescribeComputeClassDRSSuggestionsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeComputeClassDRSSuggestions");
         return (DescribeComputeClassDRSSuggestionsResponse)
                 this.invoke(request, DescribeComputeClassDRSSuggestionsResponse.class);
@@ -3746,10 +3746,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeComputeClassVMsAddToDRSRule - 查看可加入计算集群规则的虚拟机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeComputeClassVMsAddToDRSRuleResponse describeComputeClassVMsAddToDRSRule(DescribeComputeClassVMsAddToDRSRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeComputeClassVMsAddToDRSRule");
         return (DescribeComputeClassVMsAddToDRSRuleResponse)
                 this.invoke(request, DescribeComputeClassVMsAddToDRSRuleResponse.class);
@@ -3760,10 +3760,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetComputeClassDRS - 设置计算集群DRS规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetComputeClassDRSResponse setComputeClassDRS(SetComputeClassDRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetComputeClassDRS");
         return (SetComputeClassDRSResponse)
                 this.invoke(request, SetComputeClassDRSResponse.class);
@@ -3774,10 +3774,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetComputeClassDRSSuspend - 设置计算集群DRS是否暂停
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetComputeClassDRSSuspendResponse setComputeClassDRSSuspend(SetComputeClassDRSSuspendRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetComputeClassDRSSuspend");
         return (SetComputeClassDRSSuspendResponse)
                 this.invoke(request, SetComputeClassDRSSuspendResponse.class);
@@ -3788,10 +3788,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetComputeClassDRSVMRule - 设置计算集群DRS虚拟机规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetComputeClassDRSVMRuleResponse setComputeClassDRSVMRule(SetComputeClassDRSVMRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetComputeClassDRSVMRule");
         return (SetComputeClassDRSVMRuleResponse)
                 this.invoke(request, SetComputeClassDRSVMRuleResponse.class);
@@ -3802,10 +3802,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * TriggerDRSOnce - 触发一次drs任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public TriggerDRSOnceResponse triggerDRSOnce(TriggerDRSOnceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("TriggerDRSOnce");
         return (TriggerDRSOnceResponse)
                 this.invoke(request, TriggerDRSOnceResponse.class);
@@ -3816,10 +3816,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDTSTask - 创建数据传输任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDTSTaskResponse createDTSTask(CreateDTSTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDTSTask");
         return (CreateDTSTaskResponse)
                 this.invoke(request, CreateDTSTaskResponse.class);
@@ -3830,10 +3830,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDataCheckTask - 创建数据校验任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDataCheckTaskResponse createDataCheckTask(CreateDataCheckTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDataCheckTask");
         return (CreateDataCheckTaskResponse)
                 this.invoke(request, CreateDataCheckTaskResponse.class);
@@ -3844,10 +3844,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDTSTask - 删除 DTS 任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDTSTaskResponse deleteDTSTask(DeleteDTSTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDTSTask");
         return (DeleteDTSTaskResponse)
                 this.invoke(request, DeleteDTSTaskResponse.class);
@@ -3858,10 +3858,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDTSLog - 获取任务日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDTSLogResponse describeDTSLog(DescribeDTSLogRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDTSLog");
         return (DescribeDTSLogResponse)
                 this.invoke(request, DescribeDTSLogResponse.class);
@@ -3872,10 +3872,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDTSTask - 获取传输任务列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDTSTaskResponse describeDTSTask(DescribeDTSTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDTSTask");
         return (DescribeDTSTaskResponse)
                 this.invoke(request, DescribeDTSTaskResponse.class);
@@ -3886,10 +3886,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDataCheckTask - 获取数据校验任务列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDataCheckTaskResponse describeDataCheckTask(DescribeDataCheckTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDataCheckTask");
         return (DescribeDataCheckTaskResponse)
                 this.invoke(request, DescribeDataCheckTaskResponse.class);
@@ -3900,10 +3900,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDTSPrice - 获取数据传输任务价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDTSPriceResponse getDTSPrice(GetDTSPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDTSPrice");
         return (GetDTSPriceResponse)
                 this.invoke(request, GetDTSPriceResponse.class);
@@ -3914,10 +3914,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDTSTaskConfigure - 获取传输任务配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDTSTaskConfigureResponse getDTSTaskConfigure(GetDTSTaskConfigureRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDTSTaskConfigure");
         return (GetDTSTaskConfigureResponse)
                 this.invoke(request, GetDTSTaskConfigureResponse.class);
@@ -3928,10 +3928,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDataCheckTaskResult - 获取数据校验任务详细结果
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDataCheckTaskResultResponse getDataCheckTaskResult(GetDataCheckTaskResultRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDataCheckTaskResult");
         return (GetDataCheckTaskResultResponse)
                 this.invoke(request, GetDataCheckTaskResultResponse.class);
@@ -3942,10 +3942,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RunDTSPrecheck - 执行数据传输预检查
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RunDTSPrecheckResponse runDTSPrecheck(RunDTSPrecheckRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RunDTSPrecheck");
         return (RunDTSPrecheckResponse)
                 this.invoke(request, RunDTSPrecheckResponse.class);
@@ -3956,10 +3956,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StartDTSTask - 启动 DTS 任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StartDTSTaskResponse startDTSTask(StartDTSTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StartDTSTask");
         return (StartDTSTaskResponse)
                 this.invoke(request, StartDTSTaskResponse.class);
@@ -3970,10 +3970,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SuspendDTSTask - 暂停 DTS 任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SuspendDTSTaskResponse suspendDTSTask(SuspendDTSTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SuspendDTSTask");
         return (SuspendDTSTaskResponse)
                 this.invoke(request, SuspendDTSTaskResponse.class);
@@ -3984,10 +3984,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDTSInstanceSpec - 更新 DTS 实例规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDTSInstanceSpecResponse updateDTSInstanceSpec(UpdateDTSInstanceSpecRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDTSInstanceSpec");
         return (UpdateDTSInstanceSpecResponse)
                 this.invoke(request, UpdateDTSInstanceSpecResponse.class);
@@ -3998,10 +3998,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDTSTaskConfigure - 更新数据传输任务配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDTSTaskConfigureResponse updateDTSTaskConfigure(UpdateDTSTaskConfigureRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDTSTaskConfigure");
         return (UpdateDTSTaskConfigureResponse)
                 this.invoke(request, UpdateDTSTaskConfigureResponse.class);
@@ -4012,10 +4012,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateFlatNetwork - 创建扁平网络
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateFlatNetworkResponse createFlatNetwork(CreateFlatNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateFlatNetwork");
         return (CreateFlatNetworkResponse)
                 this.invoke(request, CreateFlatNetworkResponse.class);
@@ -4026,10 +4026,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateFlatNetworkRoute - 创建扁平网络路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateFlatNetworkRouteResponse createFlatNetworkRoute(CreateFlatNetworkRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateFlatNetworkRoute");
         return (CreateFlatNetworkRouteResponse)
                 this.invoke(request, CreateFlatNetworkRouteResponse.class);
@@ -4040,10 +4040,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteFlatNetwork - 删除扁平网络
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteFlatNetworkResponse deleteFlatNetwork(DeleteFlatNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteFlatNetwork");
         return (DeleteFlatNetworkResponse)
                 this.invoke(request, DeleteFlatNetworkResponse.class);
@@ -4054,10 +4054,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteFlatNetworkRoute - 删除扁平网络路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteFlatNetworkRouteResponse deleteFlatNetworkRoute(DeleteFlatNetworkRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteFlatNetworkRoute");
         return (DeleteFlatNetworkRouteResponse)
                 this.invoke(request, DeleteFlatNetworkRouteResponse.class);
@@ -4068,10 +4068,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeFlatNetwork - 查询扁平网络
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeFlatNetworkResponse describeFlatNetwork(DescribeFlatNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeFlatNetwork");
         return (DescribeFlatNetworkResponse)
                 this.invoke(request, DescribeFlatNetworkResponse.class);
@@ -4082,10 +4082,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeFlatNetworkRoute - 查询扁平网络路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeFlatNetworkRouteResponse describeFlatNetworkRoute(DescribeFlatNetworkRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeFlatNetworkRoute");
         return (DescribeFlatNetworkRouteResponse)
                 this.invoke(request, DescribeFlatNetworkRouteResponse.class);
@@ -4096,10 +4096,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateFlatNetwork - 更新扁平网络
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateFlatNetworkResponse updateFlatNetwork(UpdateFlatNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateFlatNetwork");
         return (UpdateFlatNetworkResponse)
                 this.invoke(request, UpdateFlatNetworkResponse.class);
@@ -4110,10 +4110,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateFlatNetworkRoute - 更新扁平网络路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateFlatNetworkRouteResponse updateFlatNetworkRoute(UpdateFlatNetworkRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateFlatNetworkRoute");
         return (UpdateFlatNetworkRouteResponse)
                 this.invoke(request, UpdateFlatNetworkRouteResponse.class);
@@ -4124,10 +4124,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateFS - 创建文件存储服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateFSResponse createFS(CreateFSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateFS");
         return (CreateFSResponse)
                 this.invoke(request, CreateFSResponse.class);
@@ -4138,10 +4138,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateFSDir - 创建目录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateFSDirResponse createFSDir(CreateFSDirRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateFSDir");
         return (CreateFSDirResponse)
                 this.invoke(request, CreateFSDirResponse.class);
@@ -4152,10 +4152,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteFS - 删除文件存储服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteFSResponse deleteFS(DeleteFSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteFS");
         return (DeleteFSResponse)
                 this.invoke(request, DeleteFSResponse.class);
@@ -4166,10 +4166,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteFSFile - 删除文件存储目录文件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteFSFileResponse deleteFSFile(DeleteFSFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteFSFile");
         return (DeleteFSFileResponse)
                 this.invoke(request, DeleteFSFileResponse.class);
@@ -4180,10 +4180,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeFS - 获取文件存储列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeFSResponse describeFS(DescribeFSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeFS");
         return (DescribeFSResponse)
                 this.invoke(request, DescribeFSResponse.class);
@@ -4194,10 +4194,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeFSFile - 获取文件存储目录文件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeFSFileResponse describeFSFile(DescribeFSFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeFSFile");
         return (DescribeFSFileResponse)
                 this.invoke(request, DescribeFSFileResponse.class);
@@ -4208,10 +4208,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * FSLogin - 创建文件存储会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public FSLoginResponse fSLogin(FSLoginRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("FSLogin");
         return (FSLoginResponse)
                 this.invoke(request, FSLoginResponse.class);
@@ -4222,10 +4222,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetFSPrice - 获取文件存储价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetFSPriceResponse getFSPrice(GetFSPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetFSPrice");
         return (GetFSPriceResponse)
                 this.invoke(request, GetFSPriceResponse.class);
@@ -4236,10 +4236,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeFS - 文件存储扩容
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeFSResponse upgradeFS(UpgradeFSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeFS");
         return (UpgradeFSResponse)
                 this.invoke(request, UpgradeFSResponse.class);
@@ -4250,10 +4250,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortMigrateVMInstance - 取消虚机迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortMigrateVMInstanceResponse abortMigrateVMInstance(AbortMigrateVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortMigrateVMInstance");
         return (AbortMigrateVMInstanceResponse)
                 this.invoke(request, AbortMigrateVMInstanceResponse.class);
@@ -4264,10 +4264,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloseHostNUMASchedule - 关闭节点NUMA调度
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloseHostNUMAScheduleResponse closeHostNUMASchedule(CloseHostNUMAScheduleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloseHostNUMASchedule");
         return (CloseHostNUMAScheduleResponse)
                 this.invoke(request, CloseHostNUMAScheduleResponse.class);
@@ -4278,10 +4278,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeHostPods - 获取物理机上Pod信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeHostPodsResponse describeHostPods(DescribeHostPodsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeHostPods");
         return (DescribeHostPodsResponse)
                 this.invoke(request, DescribeHostPodsResponse.class);
@@ -4292,10 +4292,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeHostVMInstance - 获取物理机上虚拟机信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeHostVMInstanceResponse describeHostVMInstance(DescribeHostVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeHostVMInstance");
         return (DescribeHostVMInstanceResponse)
                 this.invoke(request, DescribeHostVMInstanceResponse.class);
@@ -4306,10 +4306,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNode - 获取物理机节点信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNodeResponse describeNode(DescribeNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNode");
         return (DescribeNodeResponse)
                 this.invoke(request, DescribeNodeResponse.class);
@@ -4320,10 +4320,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNodeNUMAInfo - 获取节点NUMANode信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNodeNUMAInfoResponse describeNodeNUMAInfo(DescribeNodeNUMAInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNodeNUMAInfo");
         return (DescribeNodeNUMAInfoResponse)
                 this.invoke(request, DescribeNodeNUMAInfoResponse.class);
@@ -4334,10 +4334,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMHost - 获取虚拟机物理机信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMHostResponse describeVMHost(DescribeVMHostRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMHost");
         return (DescribeVMHostResponse)
                 this.invoke(request, DescribeVMHostResponse.class);
@@ -4348,10 +4348,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DiskLightOff - 磁盘关灯
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DiskLightOffResponse diskLightOff(DiskLightOffRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DiskLightOff");
         return (DiskLightOffResponse)
                 this.invoke(request, DiskLightOffResponse.class);
@@ -4362,10 +4362,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DiskLightOn - 磁盘点灯
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DiskLightOnResponse diskLightOn(DiskLightOnRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DiskLightOn");
         return (DiskLightOnResponse)
                 this.invoke(request, DiskLightOnResponse.class);
@@ -4376,10 +4376,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetNodeCPUGovernor - 获取节点 CPU 电源模式
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetNodeCPUGovernorResponse getNodeCPUGovernor(GetNodeCPUGovernorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetNodeCPUGovernor");
         return (GetNodeCPUGovernorResponse)
                 this.invoke(request, GetNodeCPUGovernorResponse.class);
@@ -4390,10 +4390,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListGPUs - 获取GPU信息列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListGPUsResponse listGPUs(ListGPUsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListGPUs");
         return (ListGPUsResponse)
                 this.invoke(request, ListGPUsResponse.class);
@@ -4404,10 +4404,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * LockHost - 锁定物理机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public LockHostResponse lockHost(LockHostRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("LockHost");
         return (LockHostResponse)
                 this.invoke(request, LockHostResponse.class);
@@ -4418,10 +4418,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigrateVMInstance - 虚机迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigrateVMInstanceResponse migrateVMInstance(MigrateVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigrateVMInstance");
         return (MigrateVMInstanceResponse)
                 this.invoke(request, MigrateVMInstanceResponse.class);
@@ -4432,10 +4432,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * OpenHostNUMASchedule - 开启节点NUMA调度
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public OpenHostNUMAScheduleResponse openHostNUMASchedule(OpenHostNUMAScheduleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("OpenHostNUMASchedule");
         return (OpenHostNUMAScheduleResponse)
                 this.invoke(request, OpenHostNUMAScheduleResponse.class);
@@ -4446,10 +4446,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnlockHost - 解锁物理机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnlockHostResponse unlockHost(UnlockHostRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnlockHost");
         return (UnlockHostResponse)
                 this.invoke(request, UnlockHostResponse.class);
@@ -4460,10 +4460,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNodeCPUGovernor - 更新节点 CPU 电源模式
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNodeCPUGovernorResponse updateNodeCPUGovernor(UpdateNodeCPUGovernorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNodeCPUGovernor");
         return (UpdateNodeCPUGovernorResponse)
                 this.invoke(request, UpdateNodeCPUGovernorResponse.class);
@@ -4474,10 +4474,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVFLogicCount - 调整逻辑VF数量限制
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVFLogicCountResponse updateVFLogicCount(UpdateVFLogicCountRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVFLogicCount");
         return (UpdateVFLogicCountResponse)
                 this.invoke(request, UpdateVFLogicCountResponse.class);
@@ -4488,10 +4488,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateNodeHostDevice - 分配外置设备给租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateNodeHostDeviceResponse allocateNodeHostDevice(AllocateNodeHostDeviceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateNodeHostDevice");
         return (AllocateNodeHostDeviceResponse)
                 this.invoke(request, AllocateNodeHostDeviceResponse.class);
@@ -4502,10 +4502,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNodeHostDevice - 创建外置设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNodeHostDeviceResponse createNodeHostDevice(CreateNodeHostDeviceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNodeHostDevice");
         return (CreateNodeHostDeviceResponse)
                 this.invoke(request, CreateNodeHostDeviceResponse.class);
@@ -4516,10 +4516,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNodeHostDevice - 弹出/删除外置设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNodeHostDeviceResponse deleteNodeHostDevice(DeleteNodeHostDeviceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNodeHostDevice");
         return (DeleteNodeHostDeviceResponse)
                 this.invoke(request, DeleteNodeHostDeviceResponse.class);
@@ -4530,10 +4530,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNodeHostDevice - 扫描外置设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNodeHostDeviceResponse describeNodeHostDevice(DescribeNodeHostDeviceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNodeHostDevice");
         return (DescribeNodeHostDeviceResponse)
                 this.invoke(request, DescribeNodeHostDeviceResponse.class);
@@ -4544,10 +4544,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortCustomImage - 取消制作虚拟机镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortCustomImageResponse abortCustomImage(AbortCustomImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortCustomImage");
         return (AbortCustomImageResponse)
                 this.invoke(request, AbortCustomImageResponse.class);
@@ -4558,10 +4558,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortImageMultipartUpload - 取消本地上传镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortImageMultipartUploadResponse abortImageMultipartUpload(AbortImageMultipartUploadRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortImageMultipartUpload");
         return (AbortImageMultipartUploadResponse)
                 this.invoke(request, AbortImageMultipartUploadResponse.class);
@@ -4572,10 +4572,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloneCustomImageToBaseImage - 自制镜像复制成基础镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloneCustomImageToBaseImageResponse cloneCustomImageToBaseImage(CloneCustomImageToBaseImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloneCustomImageToBaseImage");
         return (CloneCustomImageToBaseImageResponse)
                 this.invoke(request, CloneCustomImageToBaseImageResponse.class);
@@ -4586,10 +4586,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CompleteImageMultipartUpload - 合并本地上传镜像分片
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CompleteImageMultipartUploadResponse completeImageMultipartUpload(CompleteImageMultipartUploadRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CompleteImageMultipartUpload");
         return (CompleteImageMultipartUploadResponse)
                 this.invoke(request, CompleteImageMultipartUploadResponse.class);
@@ -4600,10 +4600,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateCustomImage - 制作虚拟机镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateCustomImageResponse createCustomImage(CreateCustomImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateCustomImage");
         return (CreateCustomImageResponse)
                 this.invoke(request, CreateCustomImageResponse.class);
@@ -4614,10 +4614,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteBaseImage - 删除基础镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteBaseImageResponse deleteBaseImage(DeleteBaseImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteBaseImage");
         return (DeleteBaseImageResponse)
                 this.invoke(request, DeleteBaseImageResponse.class);
@@ -4628,10 +4628,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteCustomImage - 删除主机镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteCustomImageResponse deleteCustomImage(DeleteCustomImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteCustomImage");
         return (DeleteCustomImageResponse)
                 this.invoke(request, DeleteCustomImageResponse.class);
@@ -4642,10 +4642,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBaseImage - 获取基础镜像权限信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBaseImageResponse describeBaseImage(DescribeBaseImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBaseImage");
         return (DescribeBaseImageResponse)
                 this.invoke(request, DescribeBaseImageResponse.class);
@@ -4656,10 +4656,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeImage - 获取镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeImageResponse describeImage(DescribeImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeImage");
         return (DescribeImageResponse)
                 this.invoke(request, DescribeImageResponse.class);
@@ -4670,10 +4670,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeImageOSVersions - 查询镜像系统规格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeImageOSVersionsResponse describeImageOSVersions(DescribeImageOSVersionsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeImageOSVersions");
         return (DescribeImageOSVersionsResponse)
                 this.invoke(request, DescribeImageOSVersionsResponse.class);
@@ -4684,10 +4684,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetImageDownloadURL - 获取镜像下载地址
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetImageDownloadURLResponse getImageDownloadURL(GetImageDownloadURLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetImageDownloadURL");
         return (GetImageDownloadURLResponse)
                 this.invoke(request, GetImageDownloadURLResponse.class);
@@ -4698,10 +4698,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ImportImage - 上传镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ImportImageResponse importImage(ImportImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ImportImage");
         return (ImportImageResponse)
                 this.invoke(request, ImportImageResponse.class);
@@ -4712,10 +4712,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateImage - 修改镜像属性
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateImageResponse updateImage(UpdateImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateImage");
         return (UpdateImageResponse)
                 this.invoke(request, UpdateImageResponse.class);
@@ -4726,10 +4726,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CountTenantResourceByStatus - 获取资源状态统计图表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CountTenantResourceByStatusResponse countTenantResourceByStatus(CountTenantResourceByStatusRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CountTenantResourceByStatus");
         return (CountTenantResourceByStatusResponse)
                 this.invoke(request, CountTenantResourceByStatusResponse.class);
@@ -4740,10 +4740,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateOnSiteInspection - 创建一键巡检报告
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateOnSiteInspectionResponse createOnSiteInspection(CreateOnSiteInspectionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateOnSiteInspection");
         return (CreateOnSiteInspectionResponse)
                 this.invoke(request, CreateOnSiteInspectionResponse.class);
@@ -4754,10 +4754,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateResourceUsage - 创建资源使用情况报告
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateResourceUsageResponse createResourceUsage(CreateResourceUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateResourceUsage");
         return (CreateResourceUsageResponse)
                 this.invoke(request, CreateResourceUsageResponse.class);
@@ -4768,10 +4768,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteOnSiteInspection - 删除一键巡检报告
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteOnSiteInspectionResponse deleteOnSiteInspection(DeleteOnSiteInspectionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteOnSiteInspection");
         return (DeleteOnSiteInspectionResponse)
                 this.invoke(request, DeleteOnSiteInspectionResponse.class);
@@ -4782,10 +4782,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteResourceUsage - 删除资源使用情况报告
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteResourceUsageResponse deleteResourceUsage(DeleteResourceUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteResourceUsage");
         return (DeleteResourceUsageResponse)
                 this.invoke(request, DeleteResourceUsageResponse.class);
@@ -4796,10 +4796,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNetworkTopology - 获取网络拓扑信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNetworkTopologyResponse describeNetworkTopology(DescribeNetworkTopologyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNetworkTopology");
         return (DescribeNetworkTopologyResponse)
                 this.invoke(request, DescribeNetworkTopologyResponse.class);
@@ -4810,10 +4810,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceChart - 获取资源用量图表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceChartResponse describeResourceChart(DescribeResourceChartRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceChart");
         return (DescribeResourceChartResponse)
                 this.invoke(request, DescribeResourceChartResponse.class);
@@ -4824,10 +4824,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceCondition - 获取资源事件状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceConditionResponse describeResourceCondition(DescribeResourceConditionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceCondition");
         return (DescribeResourceConditionResponse)
                 this.invoke(request, DescribeResourceConditionResponse.class);
@@ -4838,10 +4838,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceEvent - 获取资源事件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceEventResponse describeResourceEvent(DescribeResourceEventRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceEvent");
         return (DescribeResourceEventResponse)
                 this.invoke(request, DescribeResourceEventResponse.class);
@@ -4852,10 +4852,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetOnSiteInspection - 获取巡检报告详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetOnSiteInspectionResponse getOnSiteInspection(GetOnSiteInspectionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetOnSiteInspection");
         return (GetOnSiteInspectionResponse)
                 this.invoke(request, GetOnSiteInspectionResponse.class);
@@ -4866,10 +4866,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetResourceUsage - 获取资源使用情况详细信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetResourceUsageResponse getResourceUsage(GetResourceUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetResourceUsage");
         return (GetResourceUsageResponse)
                 this.invoke(request, GetResourceUsageResponse.class);
@@ -4880,10 +4880,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListExpiredResources - 查询过期资源，根据资源类型过滤，排除销毁、销毁中和已删除的资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListExpiredResourcesResponse listExpiredResources(ListExpiredResourcesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListExpiredResources");
         return (ListExpiredResourcesResponse)
                 this.invoke(request, ListExpiredResourcesResponse.class);
@@ -4894,10 +4894,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListOnSiteInspections - 获取巡检报告列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListOnSiteInspectionsResponse listOnSiteInspections(ListOnSiteInspectionsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListOnSiteInspections");
         return (ListOnSiteInspectionsResponse)
                 this.invoke(request, ListOnSiteInspectionsResponse.class);
@@ -4908,10 +4908,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListResourceUsages - 获取资源使用情况列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListResourceUsagesResponse listResourceUsages(ListResourceUsagesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListResourceUsages");
         return (ListResourceUsagesResponse)
                 this.invoke(request, ListResourceUsagesResponse.class);
@@ -4922,10 +4922,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RetryResourceUsage - 重试重新生成资源使用情况报告
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RetryResourceUsageResponse retryResourceUsage(RetryResourceUsageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RetryResourceUsage");
         return (RetryResourceUsageResponse)
                 this.invoke(request, RetryResourceUsageResponse.class);
@@ -4936,10 +4936,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateEIP - 申请弹性IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateEIPResponse allocateEIP(AllocateEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateEIP");
         return (AllocateEIPResponse)
                 this.invoke(request, AllocateEIPResponse.class);
@@ -4950,10 +4950,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindEIP - 绑定弹性IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindEIPResponse bindEIP(BindEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindEIP");
         return (BindEIPResponse)
                 this.invoke(request, BindEIPResponse.class);
@@ -4964,10 +4964,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CheckIPInuse - 查询IP是否使用中
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CheckIPInuseResponse checkIPInuse(CheckIPInuseRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CheckIPInuse");
         return (CheckIPInuseResponse)
                 this.invoke(request, CheckIPInuseResponse.class);
@@ -4978,10 +4978,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeEIP - 获取弹性IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeEIPResponse describeEIP(DescribeEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeEIP");
         return (DescribeEIPResponse)
                 this.invoke(request, DescribeEIPResponse.class);
@@ -4992,10 +4992,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetEIPDiffPrice - 获取EIP差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetEIPDiffPriceResponse getEIPDiffPrice(GetEIPDiffPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetEIPDiffPrice");
         return (GetEIPDiffPriceResponse)
                 this.invoke(request, GetEIPDiffPriceResponse.class);
@@ -5006,10 +5006,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetEIPPrice - 获取弹性IP价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetEIPPriceResponse getEIPPrice(GetEIPPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetEIPPrice");
         return (GetEIPPriceResponse)
                 this.invoke(request, GetEIPPriceResponse.class);
@@ -5020,10 +5020,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ModifyEIPBandwidth - 调整带宽
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ModifyEIPBandwidthResponse modifyEIPBandwidth(ModifyEIPBandwidthRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ModifyEIPBandwidth");
         return (ModifyEIPBandwidthResponse)
                 this.invoke(request, ModifyEIPBandwidthResponse.class);
@@ -5034,10 +5034,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ReleaseEIP - 释放弹性IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ReleaseEIPResponse releaseEIP(ReleaseEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ReleaseEIP");
         return (ReleaseEIPResponse)
                 this.invoke(request, ReleaseEIPResponse.class);
@@ -5048,10 +5048,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnBindEIP - 解绑弹性IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnBindEIPResponse unBindEIP(UnBindEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnBindEIP");
         return (UnBindEIPResponse)
                 this.invoke(request, UnBindEIPResponse.class);
@@ -5062,10 +5062,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddNodesToIsolationGroup - 添加节点到隔离组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddNodesToIsolationGroupResponse addNodesToIsolationGroup(AddNodesToIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddNodesToIsolationGroup");
         return (AddNodesToIsolationGroupResponse)
                 this.invoke(request, AddNodesToIsolationGroupResponse.class);
@@ -5076,10 +5076,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddVMToIsolationGroup - 添加VM到隔离组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddVMToIsolationGroupResponse addVMToIsolationGroup(AddVMToIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddVMToIsolationGroup");
         return (AddVMToIsolationGroupResponse)
                 this.invoke(request, AddVMToIsolationGroupResponse.class);
@@ -5090,10 +5090,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateIsolationGroup - 创建隔离组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateIsolationGroupResponse createIsolationGroup(CreateIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateIsolationGroup");
         return (CreateIsolationGroupResponse)
                 this.invoke(request, CreateIsolationGroupResponse.class);
@@ -5104,10 +5104,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteIsolationGroup - 删除隔离组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteIsolationGroupResponse deleteIsolationGroup(DeleteIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteIsolationGroup");
         return (DeleteIsolationGroupResponse)
                 this.invoke(request, DeleteIsolationGroupResponse.class);
@@ -5118,10 +5118,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeIsolationGroups - 获取隔离组信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeIsolationGroupsResponse describeIsolationGroups(DescribeIsolationGroupsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeIsolationGroups");
         return (DescribeIsolationGroupsResponse)
                 this.invoke(request, DescribeIsolationGroupsResponse.class);
@@ -5132,10 +5132,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMAddToVMGroup - 获取可加入隔离组的虚拟机信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMAddToVMGroupResponse describeVMAddToVMGroup(DescribeVMAddToVMGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMAddToVMGroup");
         return (DescribeVMAddToVMGroupResponse)
                 this.invoke(request, DescribeVMAddToVMGroupResponse.class);
@@ -5146,10 +5146,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RemoveNodesFromIsolationGroup - 从隔离组移除节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RemoveNodesFromIsolationGroupResponse removeNodesFromIsolationGroup(RemoveNodesFromIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RemoveNodesFromIsolationGroup");
         return (RemoveNodesFromIsolationGroupResponse)
                 this.invoke(request, RemoveNodesFromIsolationGroupResponse.class);
@@ -5160,10 +5160,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RemoveVMFromIsolationGroup - 从隔离组移除VM
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RemoveVMFromIsolationGroupResponse removeVMFromIsolationGroup(RemoveVMFromIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RemoveVMFromIsolationGroup");
         return (RemoveVMFromIsolationGroupResponse)
                 this.invoke(request, RemoveVMFromIsolationGroupResponse.class);
@@ -5174,10 +5174,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateIsolationGroup - 更新隔离组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateIsolationGroupResponse updateIsolationGroup(UpdateIsolationGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateIsolationGroup");
         return (UpdateIsolationGroupResponse)
                 this.invoke(request, UpdateIsolationGroupResponse.class);
@@ -5188,10 +5188,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateK8SSession - 申请console会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateK8SSessionResponse allocateK8SSession(AllocateK8SSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateK8SSession");
         return (AllocateK8SSessionResponse)
                 this.invoke(request, AllocateK8SSessionResponse.class);
@@ -5202,10 +5202,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateK8STerminal - 申请console会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateK8STerminalResponse allocateK8STerminal(AllocateK8STerminalRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateK8STerminal");
         return (AllocateK8STerminalResponse)
                 this.invoke(request, AllocateK8STerminalResponse.class);
@@ -5216,10 +5216,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateNativeNodeSSHSession - 申请原生节点SSH会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateNativeNodeSSHSessionResponse allocateNativeNodeSSHSession(AllocateNativeNodeSSHSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateNativeNodeSSHSession");
         return (AllocateNativeNodeSSHSessionResponse)
                 this.invoke(request, AllocateNativeNodeSSHSessionResponse.class);
@@ -5230,10 +5230,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateNativeNodeVNCSession - 申请原生节点VNC会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateNativeNodeVNCSessionResponse allocateNativeNodeVNCSession(AllocateNativeNodeVNCSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateNativeNodeVNCSession");
         return (AllocateNativeNodeVNCSessionResponse)
                 this.invoke(request, AllocateNativeNodeVNCSessionResponse.class);
@@ -5244,10 +5244,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachClusterEIP - 绑定k8s集群外网IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachClusterEIPResponse attachClusterEIP(AttachClusterEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachClusterEIP");
         return (AttachClusterEIPResponse)
                 this.invoke(request, AttachClusterEIPResponse.class);
@@ -5258,10 +5258,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateCluster - 创建k8s集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateClusterResponse createCluster(CreateClusterRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateCluster");
         return (CreateClusterResponse)
                 this.invoke(request, CreateClusterResponse.class);
@@ -5272,10 +5272,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNativeNode - 创建k8s集群原生节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNativeNodeResponse createNativeNode(CreateNativeNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNativeNode");
         return (CreateNativeNodeResponse)
                 this.invoke(request, CreateNativeNodeResponse.class);
@@ -5286,10 +5286,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteCluster - 删除k8s集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteClusterResponse deleteCluster(DeleteClusterRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteCluster");
         return (DeleteClusterResponse)
                 this.invoke(request, DeleteClusterResponse.class);
@@ -5300,10 +5300,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNativeNode - 删除k8s集群原生节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNativeNodeResponse deleteNativeNode(DeleteNativeNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNativeNode");
         return (DeleteNativeNodeResponse)
                 this.invoke(request, DeleteNativeNodeResponse.class);
@@ -5314,10 +5314,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeCluster - 查询k8s集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeClusterResponse describeCluster(DescribeClusterRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeCluster");
         return (DescribeClusterResponse)
                 this.invoke(request, DescribeClusterResponse.class);
@@ -5328,10 +5328,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNativeNode - 查询k8s集群原生节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNativeNodeResponse describeNativeNode(DescribeNativeNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNativeNode");
         return (DescribeNativeNodeResponse)
                 this.invoke(request, DescribeNativeNodeResponse.class);
@@ -5342,10 +5342,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachClusterEIP - 解绑k8s集群外网IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachClusterEIPResponse detachClusterEIP(DetachClusterEIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachClusterEIP");
         return (DetachClusterEIPResponse)
                 this.invoke(request, DetachClusterEIPResponse.class);
@@ -5356,10 +5356,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ForwardCluster - 代理k8s集群请求
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ForwardClusterResponse forwardCluster(ForwardClusterRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ForwardCluster");
         return (ForwardClusterResponse)
                 this.invoke(request, ForwardClusterResponse.class);
@@ -5370,10 +5370,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetClusterPaymentOfPremium - 获取K8S修改配置后的差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetClusterPaymentOfPremiumResponse getClusterPaymentOfPremium(GetClusterPaymentOfPremiumRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetClusterPaymentOfPremium");
         return (GetClusterPaymentOfPremiumResponse)
                 this.invoke(request, GetClusterPaymentOfPremiumResponse.class);
@@ -5384,10 +5384,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetClusterPrice - 获取K8S价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetClusterPriceResponse getClusterPrice(GetClusterPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetClusterPrice");
         return (GetClusterPriceResponse)
                 this.invoke(request, GetClusterPriceResponse.class);
@@ -5398,10 +5398,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetContainerLogs - 查询容器日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetContainerLogsResponse getContainerLogs(GetContainerLogsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetContainerLogs");
         return (GetContainerLogsResponse)
                 this.invoke(request, GetContainerLogsResponse.class);
@@ -5412,10 +5412,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetNativeNodePrice - 获取K8S原生节点价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetNativeNodePriceResponse getNativeNodePrice(GetNativeNodePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetNativeNodePrice");
         return (GetNativeNodePriceResponse)
                 this.invoke(request, GetNativeNodePriceResponse.class);
@@ -5426,10 +5426,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateCluster - 更新k8s集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateClusterResponse updateCluster(UpdateClusterRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateCluster");
         return (UpdateClusterResponse)
                 this.invoke(request, UpdateClusterResponse.class);
@@ -5440,10 +5440,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateClusterCapacity - 更新k8s集群容量配额
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateClusterCapacityResponse updateClusterCapacity(UpdateClusterCapacityRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateClusterCapacity");
         return (UpdateClusterCapacityResponse)
                 this.invoke(request, UpdateClusterCapacityResponse.class);
@@ -5454,10 +5454,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNativeNodeInstanceStatus - 更新k8s集群NativeNode实例状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNativeNodeInstanceStatusResponse updateNativeNodeInstanceStatus(UpdateNativeNodeInstanceStatusRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNativeNodeInstanceStatus");
         return (UpdateNativeNodeInstanceStatusResponse)
                 this.invoke(request, UpdateNativeNodeInstanceStatusResponse.class);
@@ -5468,10 +5468,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNativeNodeWAN - 更新k8s集群NativeNode外网
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNativeNodeWANResponse updateNativeNodeWAN(UpdateNativeNodeWANRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNativeNodeWAN");
         return (UpdateNativeNodeWANResponse)
                 this.invoke(request, UpdateNativeNodeWANResponse.class);
@@ -5482,10 +5482,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindEIPToLB - 绑定 eip 到 LB
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindEIPToLBResponse bindEIPToLB(BindEIPToLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindEIPToLB");
         return (BindEIPToLBResponse)
                 this.invoke(request, BindEIPToLBResponse.class);
@@ -5496,10 +5496,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateCertificate - 创建证书
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateCertificateResponse createCertificate(CreateCertificateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateCertificate");
         return (CreateCertificateResponse)
                 this.invoke(request, CreateCertificateResponse.class);
@@ -5510,10 +5510,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateLB - 创建负载均衡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateLBResponse createLB(CreateLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateLB");
         return (CreateLBResponse)
                 this.invoke(request, CreateLBResponse.class);
@@ -5524,10 +5524,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateRS - 添加服务节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateRSResponse createRS(CreateRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateRS");
         return (CreateRSResponse)
                 this.invoke(request, CreateRSResponse.class);
@@ -5538,10 +5538,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVS - 创建VS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVSResponse createVS(CreateVSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVS");
         return (CreateVSResponse)
                 this.invoke(request, CreateVSResponse.class);
@@ -5552,10 +5552,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVSPolicy - 创建转发规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVSPolicyResponse createVSPolicy(CreateVSPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVSPolicy");
         return (CreateVSPolicyResponse)
                 this.invoke(request, CreateVSPolicyResponse.class);
@@ -5566,10 +5566,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteCertificate - 删除证书
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteCertificateResponse deleteCertificate(DeleteCertificateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteCertificate");
         return (DeleteCertificateResponse)
                 this.invoke(request, DeleteCertificateResponse.class);
@@ -5580,10 +5580,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteLB - 删除负载均衡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteLBResponse deleteLB(DeleteLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteLB");
         return (DeleteLBResponse)
                 this.invoke(request, DeleteLBResponse.class);
@@ -5594,10 +5594,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteRS - 删除服务节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteRSResponse deleteRS(DeleteRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteRS");
         return (DeleteRSResponse)
                 this.invoke(request, DeleteRSResponse.class);
@@ -5608,10 +5608,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVS - 删除VS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVSResponse deleteVS(DeleteVSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVS");
         return (DeleteVSResponse)
                 this.invoke(request, DeleteVSResponse.class);
@@ -5622,10 +5622,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVSPolicy - 删除转发规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVSPolicyResponse deleteVSPolicy(DeleteVSPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVSPolicy");
         return (DeleteVSPolicyResponse)
                 this.invoke(request, DeleteVSPolicyResponse.class);
@@ -5636,10 +5636,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeCertificate - 查询证书
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeCertificateResponse describeCertificate(DescribeCertificateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeCertificate");
         return (DescribeCertificateResponse)
                 this.invoke(request, DescribeCertificateResponse.class);
@@ -5650,10 +5650,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeLB - 获取负载均衡信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeLBResponse describeLB(DescribeLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeLB");
         return (DescribeLBResponse)
                 this.invoke(request, DescribeLBResponse.class);
@@ -5664,10 +5664,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRS - 获取RS信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRSResponse describeRS(DescribeRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRS");
         return (DescribeRSResponse)
                 this.invoke(request, DescribeRSResponse.class);
@@ -5678,10 +5678,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVS - 获取VS信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVSResponse describeVS(DescribeVSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVS");
         return (DescribeVSResponse)
                 this.invoke(request, DescribeVSResponse.class);
@@ -5692,10 +5692,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVSPolicy - 查询转发规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVSPolicyResponse describeVSPolicy(DescribeVSPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVSPolicy");
         return (DescribeVSPolicyResponse)
                 this.invoke(request, DescribeVSPolicyResponse.class);
@@ -5706,10 +5706,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DisableRS - 禁用节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DisableRSResponse disableRS(DisableRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DisableRS");
         return (DisableRSResponse)
                 this.invoke(request, DisableRSResponse.class);
@@ -5720,10 +5720,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DowngradeLB - 降级LB
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DowngradeLBResponse downgradeLB(DowngradeLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DowngradeLB");
         return (DowngradeLBResponse)
                 this.invoke(request, DowngradeLBResponse.class);
@@ -5734,10 +5734,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * EnableRS - 启用节点
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public EnableRSResponse enableRS(EnableRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("EnableRS");
         return (EnableRSResponse)
                 this.invoke(request, EnableRSResponse.class);
@@ -5748,10 +5748,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetLBPrice - 获取负载均衡价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetLBPriceResponse getLBPrice(GetLBPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetLBPrice");
         return (GetLBPriceResponse)
                 this.invoke(request, GetLBPriceResponse.class);
@@ -5762,10 +5762,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnbindEIPFromLB - 从 LB 解绑 eip
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnbindEIPFromLBResponse unbindEIPFromLB(UnbindEIPFromLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnbindEIPFromLB");
         return (UnbindEIPFromLBResponse)
                 this.invoke(request, UnbindEIPFromLBResponse.class);
@@ -5776,10 +5776,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateLBAccessLogForLive - 负载均衡日志实时查看开关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateLBAccessLogForLiveResponse updateLBAccessLogForLive(UpdateLBAccessLogForLiveRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateLBAccessLogForLive");
         return (UpdateLBAccessLogForLiveResponse)
                 this.invoke(request, UpdateLBAccessLogForLiveResponse.class);
@@ -5790,10 +5790,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateLBLog - 更新负载均衡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateLBLogResponse updateLBLog(UpdateLBLogRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateLBLog");
         return (UpdateLBLogResponse)
                 this.invoke(request, UpdateLBLogResponse.class);
@@ -5804,10 +5804,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRS - 更改RS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRSResponse updateRS(UpdateRSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRS");
         return (UpdateRSResponse)
                 this.invoke(request, UpdateRSResponse.class);
@@ -5818,10 +5818,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSGFromLB - 新增/更新 SG 到 LB
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSGFromLBResponse updateSGFromLB(UpdateSGFromLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSGFromLB");
         return (UpdateSGFromLBResponse)
                 this.invoke(request, UpdateSGFromLBResponse.class);
@@ -5832,10 +5832,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVS - 更新VS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVSResponse updateVS(UpdateVSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVS");
         return (UpdateVSResponse)
                 this.invoke(request, UpdateVSResponse.class);
@@ -5846,10 +5846,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVSPolicy - 更新VS转发规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVSPolicyResponse updateVSPolicy(UpdateVSPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVSPolicy");
         return (UpdateVSPolicyResponse)
                 this.invoke(request, UpdateVSPolicyResponse.class);
@@ -5860,10 +5860,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeLB - 升级LB
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeLBResponse upgradeLB(UpgradeLBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeLB");
         return (UpgradeLBResponse)
                 this.invoke(request, UpgradeLBResponse.class);
@@ -5874,10 +5874,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeLBToHA - 升级为高可用版本
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeLBToHAResponse upgradeLBToHA(UpgradeLBToHARequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeLBToHA");
         return (UpgradeLBToHAResponse)
                 this.invoke(request, UpgradeLBToHAResponse.class);
@@ -5888,10 +5888,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOPLogs - 获取操作日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOPLogsResponse describeOPLogs(DescribeOPLogsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOPLogs");
         return (DescribeOPLogsResponse)
                 this.invoke(request, DescribeOPLogsResponse.class);
@@ -5902,10 +5902,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ChangeMemberPassword - 由管理员为子账号更改密码
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ChangeMemberPasswordResponse changeMemberPassword(ChangeMemberPasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ChangeMemberPassword");
         return (ChangeMemberPasswordResponse)
                 this.invoke(request, ChangeMemberPasswordResponse.class);
@@ -5916,10 +5916,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateAdmin - 创建管理员
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateAdminResponse createAdmin(CreateAdminRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateAdmin");
         return (CreateAdminResponse)
                 this.invoke(request, CreateAdminResponse.class);
@@ -5930,10 +5930,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSubMember - 创建用户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSubMemberResponse createSubMember(CreateSubMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSubMember");
         return (CreateSubMemberResponse)
                 this.invoke(request, CreateSubMemberResponse.class);
@@ -5944,10 +5944,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteAdmin - 删除管理员
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteAdminResponse deleteAdmin(DeleteAdminRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteAdmin");
         return (DeleteAdminResponse)
                 this.invoke(request, DeleteAdminResponse.class);
@@ -5958,10 +5958,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteMember - 删除用户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteMemberResponse deleteMember(DeleteMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteMember");
         return (DeleteMemberResponse)
                 this.invoke(request, DeleteMemberResponse.class);
@@ -5972,10 +5972,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMember - 获取账号列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMemberResponse describeMember(DescribeMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMember");
         return (DescribeMemberResponse)
                 this.invoke(request, DescribeMemberResponse.class);
@@ -5986,10 +5986,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePermission - 获取用户访问控制接口信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePermissionResponse describePermission(DescribePermissionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePermission");
         return (DescribePermissionResponse)
                 this.invoke(request, DescribePermissionResponse.class);
@@ -6000,10 +6000,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * FreezeSubMember - 冻结子账号
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public FreezeSubMemberResponse freezeSubMember(FreezeSubMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("FreezeSubMember");
         return (FreezeSubMemberResponse)
                 this.invoke(request, FreezeSubMemberResponse.class);
@@ -6014,10 +6014,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetMemberInfo - 获取用户访问控制信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetMemberInfoResponse getMemberInfo(GetMemberInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetMemberInfo");
         return (GetMemberInfoResponse)
                 this.invoke(request, GetMemberInfoResponse.class);
@@ -6028,10 +6028,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListAdmin - 列出管理员
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListAdminResponse listAdmin(ListAdminRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListAdmin");
         return (ListAdminResponse)
                 this.invoke(request, ListAdminResponse.class);
@@ -6042,10 +6042,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * LoginByPassword - 密码登录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public LoginByPasswordResponse loginByPassword(LoginByPasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("LoginByPassword");
         return (LoginByPasswordResponse)
                 this.invoke(request, LoginByPasswordResponse.class);
@@ -6056,10 +6056,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * LogoutToken - 登出
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public LogoutTokenResponse logoutToken(LogoutTokenRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("LogoutToken");
         return (LogoutTokenResponse)
                 this.invoke(request, LogoutTokenResponse.class);
@@ -6070,10 +6070,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnFreezeSubMember - 解冻子账号
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnFreezeSubMemberResponse unFreezeSubMember(UnFreezeSubMemberRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnFreezeSubMember");
         return (UnFreezeSubMemberResponse)
                 this.invoke(request, UnFreezeSubMemberResponse.class);
@@ -6084,10 +6084,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDigitalCert - 更新数字证书
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDigitalCertResponse updateDigitalCert(UpdateDigitalCertRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDigitalCert");
         return (UpdateDigitalCertResponse)
                 this.invoke(request, UpdateDigitalCertResponse.class);
@@ -6098,10 +6098,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMemberEmail - 修改账号邮箱
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMemberEmailResponse updateMemberEmail(UpdateMemberEmailRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMemberEmail");
         return (UpdateMemberEmailResponse)
                 this.invoke(request, UpdateMemberEmailResponse.class);
@@ -6112,10 +6112,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMemberName - 修改账号名称
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMemberNameResponse updateMemberName(UpdateMemberNameRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMemberName");
         return (UpdateMemberNameResponse)
                 this.invoke(request, UpdateMemberNameResponse.class);
@@ -6126,10 +6126,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMemberOAuth2UniqueID - 修改账号OAuth2唯一标识ID
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMemberOAuth2UniqueIDResponse updateMemberOAuth2UniqueID(UpdateMemberOAuth2UniqueIDRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMemberOAuth2UniqueID");
         return (UpdateMemberOAuth2UniqueIDResponse)
                 this.invoke(request, UpdateMemberOAuth2UniqueIDResponse.class);
@@ -6140,10 +6140,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMemberPhone - 修改账号安全手机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMemberPhoneResponse updateMemberPhone(UpdateMemberPhoneRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMemberPhone");
         return (UpdateMemberPhoneResponse)
                 this.invoke(request, UpdateMemberPhoneResponse.class);
@@ -6154,10 +6154,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateMulticastGroup - 创建组播组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateMulticastGroupResponse createMulticastGroup(CreateMulticastGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateMulticastGroup");
         return (CreateMulticastGroupResponse)
                 this.invoke(request, CreateMulticastGroupResponse.class);
@@ -6168,10 +6168,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteMulticastGroup - 删除组播组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteMulticastGroupResponse deleteMulticastGroup(DeleteMulticastGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteMulticastGroup");
         return (DeleteMulticastGroupResponse)
                 this.invoke(request, DeleteMulticastGroupResponse.class);
@@ -6182,10 +6182,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMulticastGroup - 获取组播组列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMulticastGroupResponse describeMulticastGroup(DescribeMulticastGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMulticastGroup");
         return (DescribeMulticastGroupResponse)
                 this.invoke(request, DescribeMulticastGroupResponse.class);
@@ -6196,10 +6196,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMulticastGroup - 更新组播组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMulticastGroupResponse updateMulticastGroup(UpdateMulticastGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMulticastGroup");
         return (UpdateMulticastGroupResponse)
                 this.invoke(request, UpdateMulticastGroupResponse.class);
@@ -6210,10 +6210,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ApplyMySQLParamTpl - 应用MySQL参数模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ApplyMySQLParamTplResponse applyMySQLParamTpl(ApplyMySQLParamTplRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ApplyMySQLParamTpl");
         return (ApplyMySQLParamTplResponse)
                 this.invoke(request, ApplyMySQLParamTplResponse.class);
@@ -6224,10 +6224,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateMySQL - 创建MySQL
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateMySQLResponse createMySQL(CreateMySQLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateMySQL");
         return (CreateMySQLResponse)
                 this.invoke(request, CreateMySQLResponse.class);
@@ -6238,10 +6238,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateMySQLParamTpl - 创建MySQL参数模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateMySQLParamTplResponse createMySQLParamTpl(CreateMySQLParamTplRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateMySQLParamTpl");
         return (CreateMySQLParamTplResponse)
                 this.invoke(request, CreateMySQLParamTplResponse.class);
@@ -6252,10 +6252,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateMySQLSlave - 创建MySQL从库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateMySQLSlaveResponse createMySQLSlave(CreateMySQLSlaveRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateMySQLSlave");
         return (CreateMySQLSlaveResponse)
                 this.invoke(request, CreateMySQLSlaveResponse.class);
@@ -6266,10 +6266,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteMySQL - 删除MySQL
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteMySQLResponse deleteMySQL(DeleteMySQLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteMySQL");
         return (DeleteMySQLResponse)
                 this.invoke(request, DeleteMySQLResponse.class);
@@ -6280,10 +6280,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteMySQLParamTpl - 删除MySQL参数模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteMySQLParamTplResponse deleteMySQLParamTpl(DeleteMySQLParamTplRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteMySQLParamTpl");
         return (DeleteMySQLParamTplResponse)
                 this.invoke(request, DeleteMySQLParamTplResponse.class);
@@ -6294,10 +6294,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQL - 查询MySQL信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLResponse describeMySQL(DescribeMySQLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQL");
         return (DescribeMySQLResponse)
                 this.invoke(request, DescribeMySQLResponse.class);
@@ -6308,10 +6308,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQLConfigParam - 获取MySQL配置参数
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLConfigParamResponse describeMySQLConfigParam(DescribeMySQLConfigParamRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQLConfigParam");
         return (DescribeMySQLConfigParamResponse)
                 this.invoke(request, DescribeMySQLConfigParamResponse.class);
@@ -6322,10 +6322,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQLErrorLogs - 查询 MySQL 错误日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLErrorLogsResponse describeMySQLErrorLogs(DescribeMySQLErrorLogsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQLErrorLogs");
         return (DescribeMySQLErrorLogsResponse)
                 this.invoke(request, DescribeMySQLErrorLogsResponse.class);
@@ -6336,10 +6336,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQLParamTpl - 查询MySQL参数模板详细信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLParamTplResponse describeMySQLParamTpl(DescribeMySQLParamTplRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQLParamTpl");
         return (DescribeMySQLParamTplResponse)
                 this.invoke(request, DescribeMySQLParamTplResponse.class);
@@ -6350,10 +6350,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQLParamTpls - 查询MySQL参数模板列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLParamTplsResponse describeMySQLParamTpls(DescribeMySQLParamTplsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQLParamTpls");
         return (DescribeMySQLParamTplsResponse)
                 this.invoke(request, DescribeMySQLParamTplsResponse.class);
@@ -6364,10 +6364,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeMySQLSlowLogRecords - 查询 MySQL 慢日志记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeMySQLSlowLogRecordsResponse describeMySQLSlowLogRecords(DescribeMySQLSlowLogRecordsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeMySQLSlowLogRecords");
         return (DescribeMySQLSlowLogRecordsResponse)
                 this.invoke(request, DescribeMySQLSlowLogRecordsResponse.class);
@@ -6378,10 +6378,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePMAURL - 获取 PMA URL
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePMAURLResponse describePMAURL(DescribePMAURLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePMAURL");
         return (DescribePMAURLResponse)
                 this.invoke(request, DescribePMAURLResponse.class);
@@ -6392,10 +6392,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DowngradeMySQL - 降级MySQL
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DowngradeMySQLResponse downgradeMySQL(DowngradeMySQLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DowngradeMySQL");
         return (DowngradeMySQLResponse)
                 this.invoke(request, DowngradeMySQLResponse.class);
@@ -6406,10 +6406,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetMySQLPrice - 查询MySQL价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetMySQLPriceResponse getMySQLPrice(GetMySQLPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetMySQLPrice");
         return (GetMySQLPriceResponse)
                 this.invoke(request, GetMySQLPriceResponse.class);
@@ -6420,10 +6420,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResetMySQLPassword - 修改MySQL密码
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResetMySQLPasswordResponse resetMySQLPassword(ResetMySQLPasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResetMySQLPassword");
         return (ResetMySQLPasswordResponse)
                 this.invoke(request, ResetMySQLPasswordResponse.class);
@@ -6434,10 +6434,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RestartMySQLInstance - 重启 MySQL 实例
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RestartMySQLInstanceResponse restartMySQLInstance(RestartMySQLInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RestartMySQLInstance");
         return (RestartMySQLInstanceResponse)
                 this.invoke(request, RestartMySQLInstanceResponse.class);
@@ -6448,10 +6448,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMySQLConfigParam - 更新MySQL配置参数
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMySQLConfigParamResponse updateMySQLConfigParam(UpdateMySQLConfigParamRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMySQLConfigParam");
         return (UpdateMySQLConfigParamResponse)
                 this.invoke(request, UpdateMySQLConfigParamResponse.class);
@@ -6462,10 +6462,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateMySQLParamTpl - 更新MySQL参数模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateMySQLParamTplResponse updateMySQLParamTpl(UpdateMySQLParamTplRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateMySQLParamTpl");
         return (UpdateMySQLParamTplResponse)
                 this.invoke(request, UpdateMySQLParamTplResponse.class);
@@ -6476,10 +6476,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeMySQL - 升级MySQL
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeMySQLResponse upgradeMySQL(UpgradeMySQLRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeMySQL");
         return (UpgradeMySQLResponse)
                 this.invoke(request, UpgradeMySQLResponse.class);
@@ -6490,10 +6490,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeMySQLToHA - 升级为高可用版本
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeMySQLToHAResponse upgradeMySQLToHA(UpgradeMySQLToHARequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeMySQLToHA");
         return (UpgradeMySQLToHAResponse)
                 this.invoke(request, UpgradeMySQLToHAResponse.class);
@@ -6504,10 +6504,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindEIPToNATGW - 绑定EIP到NAT网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindEIPToNATGWResponse bindEIPToNATGW(BindEIPToNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindEIPToNATGW");
         return (BindEIPToNATGWResponse)
                 this.invoke(request, BindEIPToNATGWResponse.class);
@@ -6518,10 +6518,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNATGW - 创建NAT网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNATGWResponse createNATGW(CreateNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNATGW");
         return (CreateNATGWResponse)
                 this.invoke(request, CreateNATGWResponse.class);
@@ -6532,10 +6532,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNATGWPolicy - 创建端口转发
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNATGWPolicyResponse createNATGWPolicy(CreateNATGWPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNATGWPolicy");
         return (CreateNATGWPolicyResponse)
                 this.invoke(request, CreateNATGWPolicyResponse.class);
@@ -6546,10 +6546,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNATGWRule - 添加NAT网关规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNATGWRuleResponse createNATGWRule(CreateNATGWRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNATGWRule");
         return (CreateNATGWRuleResponse)
                 this.invoke(request, CreateNATGWRuleResponse.class);
@@ -6560,10 +6560,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNATGW - 删除NAT网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNATGWResponse deleteNATGW(DeleteNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNATGW");
         return (DeleteNATGWResponse)
                 this.invoke(request, DeleteNATGWResponse.class);
@@ -6574,10 +6574,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNATGWPolicy - 删除端口转发
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNATGWPolicyResponse deleteNATGWPolicy(DeleteNATGWPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNATGWPolicy");
         return (DeleteNATGWPolicyResponse)
                 this.invoke(request, DeleteNATGWPolicyResponse.class);
@@ -6588,10 +6588,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNATGWRule - 删除NAT网关规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNATGWRuleResponse deleteNATGWRule(DeleteNATGWRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNATGWRule");
         return (DeleteNATGWRuleResponse)
                 this.invoke(request, DeleteNATGWRuleResponse.class);
@@ -6602,10 +6602,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNATGW - 获取NAT网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNATGWResponse describeNATGW(DescribeNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNATGW");
         return (DescribeNATGWResponse)
                 this.invoke(request, DescribeNATGWResponse.class);
@@ -6616,10 +6616,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNATGWPolicy - 查询端口转发
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNATGWPolicyResponse describeNATGWPolicy(DescribeNATGWPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNATGWPolicy");
         return (DescribeNATGWPolicyResponse)
                 this.invoke(request, DescribeNATGWPolicyResponse.class);
@@ -6630,10 +6630,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNATGWRule - 获取NAT网关规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNATGWRuleResponse describeNATGWRule(DescribeNATGWRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNATGWRule");
         return (DescribeNATGWRuleResponse)
                 this.invoke(request, DescribeNATGWRuleResponse.class);
@@ -6644,10 +6644,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetNATGWPrice - 获取NAT网关价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetNATGWPriceResponse getNATGWPrice(GetNATGWPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetNATGWPrice");
         return (GetNATGWPriceResponse)
                 this.invoke(request, GetNATGWPriceResponse.class);
@@ -6658,10 +6658,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnbindEIPFromNATGW - 从NAT网关上解绑EIP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnbindEIPFromNATGWResponse unbindEIPFromNATGW(UnbindEIPFromNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnbindEIPFromNATGW");
         return (UnbindEIPFromNATGWResponse)
                 this.invoke(request, UnbindEIPFromNATGWResponse.class);
@@ -6672,10 +6672,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNATGWPolicy - 更新端口转发
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNATGWPolicyResponse updateNATGWPolicy(UpdateNATGWPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNATGWPolicy");
         return (UpdateNATGWPolicyResponse)
                 this.invoke(request, UpdateNATGWPolicyResponse.class);
@@ -6686,10 +6686,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNATGWRule - 修改NAT网关规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNATGWRuleResponse updateNATGWRule(UpdateNATGWRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNATGWRule");
         return (UpdateNATGWRuleResponse)
                 this.invoke(request, UpdateNATGWRuleResponse.class);
@@ -6700,10 +6700,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSGFromNATGW - 修改NAT网关的安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSGFromNATGWResponse updateSGFromNATGW(UpdateSGFromNATGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSGFromNATGW");
         return (UpdateSGFromNATGWResponse)
                 this.invoke(request, UpdateSGFromNATGWResponse.class);
@@ -6714,10 +6714,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeNATGWToHA - 升级为高可用版本
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeNATGWToHAResponse upgradeNATGWToHA(UpgradeNATGWToHARequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeNATGWToHA");
         return (UpgradeNATGWToHAResponse)
                 this.invoke(request, UpgradeNATGWToHAResponse.class);
@@ -6728,10 +6728,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachNIC - 绑定网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachNICResponse attachNIC(AttachNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachNIC");
         return (AttachNICResponse)
                 this.invoke(request, AttachNICResponse.class);
@@ -6742,10 +6742,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CheckMACInUse - 查询MAC是否使用中
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CheckMACInUseResponse checkMACInUse(CheckMACInUseRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CheckMACInUse");
         return (CheckMACInUseResponse)
                 this.invoke(request, CheckMACInUseResponse.class);
@@ -6756,10 +6756,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateNIC - 创建弹性网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateNICResponse createNIC(CreateNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateNIC");
         return (CreateNICResponse)
                 this.invoke(request, CreateNICResponse.class);
@@ -6770,10 +6770,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteNIC - 删除弹性网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteNICResponse deleteNIC(DeleteNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteNIC");
         return (DeleteNICResponse)
                 this.invoke(request, DeleteNICResponse.class);
@@ -6784,10 +6784,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeNIC - 查询弹性网卡信息,如果指定资源查询就是查询资源绑定的所有网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeNICResponse describeNIC(DescribeNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeNIC");
         return (DescribeNICResponse)
                 this.invoke(request, DescribeNICResponse.class);
@@ -6798,10 +6798,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachNIC - 解绑网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachNICResponse detachNIC(DetachNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachNIC");
         return (DetachNICResponse)
                 this.invoke(request, DetachNICResponse.class);
@@ -6812,10 +6812,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetCreateNICPrice - 获取弹性IP价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetCreateNICPriceResponse getCreateNICPrice(GetCreateNICPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetCreateNICPrice");
         return (GetCreateNICPriceResponse)
                 this.invoke(request, GetCreateNICPriceResponse.class);
@@ -6826,10 +6826,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetUpdateNICPrice - 获取更新弹性网卡价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetUpdateNICPriceResponse getUpdateNICPrice(GetUpdateNICPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetUpdateNICPrice");
         return (GetUpdateNICPriceResponse)
                 this.invoke(request, GetUpdateNICPriceResponse.class);
@@ -6840,10 +6840,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNICIP - 更新网卡的IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNICIPResponse updateNICIP(UpdateNICIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNICIP");
         return (UpdateNICIPResponse)
                 this.invoke(request, UpdateNICIPResponse.class);
@@ -6854,10 +6854,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNICIPBandwidth - 修改弹性外网网卡的IP带宽
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNICIPBandwidthResponse updateNICIPBandwidth(UpdateNICIPBandwidthRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNICIPBandwidth");
         return (UpdateNICIPBandwidthResponse)
                 this.invoke(request, UpdateNICIPBandwidthResponse.class);
@@ -6868,10 +6868,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNICMAC - 修改网卡的MAC
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNICMACResponse updateNICMAC(UpdateNICMACRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNICMAC");
         return (UpdateNICMACResponse)
                 this.invoke(request, UpdateNICMACResponse.class);
@@ -6882,10 +6882,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNICPF - 修改网卡的物理型号
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNICPFResponse updateNICPF(UpdateNICPFRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNICPF");
         return (UpdateNICPFResponse)
                 this.invoke(request, UpdateNICPFResponse.class);
@@ -6896,10 +6896,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateNICTrafficShaping - 更新网卡流量整形信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateNICTrafficShapingResponse updateNICTrafficShaping(UpdateNICTrafficShapingRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateNICTrafficShaping");
         return (UpdateNICTrafficShapingResponse)
                 this.invoke(request, UpdateNICTrafficShapingResponse.class);
@@ -6910,10 +6910,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortMigratePaaSInstance - PaaS 取消计算迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortMigratePaaSInstanceResponse abortMigratePaaSInstance(AbortMigratePaaSInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortMigratePaaSInstance");
         return (AbortMigratePaaSInstanceResponse)
                 this.invoke(request, AbortMigratePaaSInstanceResponse.class);
@@ -6924,10 +6924,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeAuditLog - 获取审计日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeAuditLogResponse describeAuditLog(DescribeAuditLogRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeAuditLog");
         return (DescribeAuditLogResponse)
                 this.invoke(request, DescribeAuditLogResponse.class);
@@ -6938,10 +6938,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePaaSInstance - 获取 PaaS 实例信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePaaSInstanceResponse describePaaSInstance(DescribePaaSInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePaaSInstance");
         return (DescribePaaSInstanceResponse)
                 this.invoke(request, DescribePaaSInstanceResponse.class);
@@ -6952,10 +6952,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeParametersHistories - 查询参数修改记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeParametersHistoriesResponse describeParametersHistories(DescribeParametersHistoriesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeParametersHistories");
         return (DescribeParametersHistoriesResponse)
                 this.invoke(request, DescribeParametersHistoriesResponse.class);
@@ -6966,10 +6966,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetConnectionInfo - 获取连接信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetConnectionInfoResponse getConnectionInfo(GetConnectionInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetConnectionInfo");
         return (GetConnectionInfoResponse)
                 this.invoke(request, GetConnectionInfoResponse.class);
@@ -6980,10 +6980,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetMigratePaaSInstancePrice - 获取PaaS 计算迁移差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetMigratePaaSInstancePriceResponse getMigratePaaSInstancePrice(GetMigratePaaSInstancePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetMigratePaaSInstancePrice");
         return (GetMigratePaaSInstancePriceResponse)
                 this.invoke(request, GetMigratePaaSInstancePriceResponse.class);
@@ -6994,10 +6994,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetMigratePaaSStoragePrice - 获取PaaS产品存储热迁移差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetMigratePaaSStoragePriceResponse getMigratePaaSStoragePrice(GetMigratePaaSStoragePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetMigratePaaSStoragePrice");
         return (GetMigratePaaSStoragePriceResponse)
                 this.invoke(request, GetMigratePaaSStoragePriceResponse.class);
@@ -7008,10 +7008,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigratePaaSInstance - PaaS 计算迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigratePaaSInstanceResponse migratePaaSInstance(MigratePaaSInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigratePaaSInstance");
         return (MigratePaaSInstanceResponse)
                 this.invoke(request, MigratePaaSInstanceResponse.class);
@@ -7022,10 +7022,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigratePaaSStorage - PaaS产品存储热迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigratePaaSStorageResponse migratePaaSStorage(MigratePaaSStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigratePaaSStorage");
         return (MigratePaaSStorageResponse)
                 this.invoke(request, MigratePaaSStorageResponse.class);
@@ -7036,10 +7036,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RecoverPaaSConfig - 恢复 PaaS 产品配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RecoverPaaSConfigResponse recoverPaaSConfig(RecoverPaaSConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RecoverPaaSConfig");
         return (RecoverPaaSConfigResponse)
                 this.invoke(request, RecoverPaaSConfigResponse.class);
@@ -7050,10 +7050,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StartPaaSInstance - Paas 实例开机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StartPaaSInstanceResponse startPaaSInstance(StartPaaSInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StartPaaSInstance");
         return (StartPaaSInstanceResponse)
                 this.invoke(request, StartPaaSInstanceResponse.class);
@@ -7064,10 +7064,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StopPaaSInstance - Paas 实例关机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StopPaaSInstanceResponse stopPaaSInstance(StopPaaSInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StopPaaSInstance");
         return (StopPaaSInstanceResponse)
                 this.invoke(request, StopPaaSInstanceResponse.class);
@@ -7078,10 +7078,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAuditLog - 开关数据库审计
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAuditLogResponse updateAuditLog(UpdateAuditLogRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAuditLog");
         return (UpdateAuditLogResponse)
                 this.invoke(request, UpdateAuditLogResponse.class);
@@ -7092,10 +7092,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdatePaaSDiskQoS - 设置PaaS产品硬盘QoS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdatePaaSDiskQoSResponse updatePaaSDiskQoS(UpdatePaaSDiskQoSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdatePaaSDiskQoS");
         return (UpdatePaaSDiskQoSResponse)
                 this.invoke(request, UpdatePaaSDiskQoSResponse.class);
@@ -7106,10 +7106,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTerminationPolicy - 修改 PaaS产品 删除保护
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTerminationPolicyResponse updateTerminationPolicy(UpdateTerminationPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTerminationPolicy");
         return (UpdateTerminationPolicyResponse)
                 this.invoke(request, UpdateTerminationPolicyResponse.class);
@@ -7120,10 +7120,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateOrchTask - 创建编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateOrchTaskResponse createOrchTask(CreateOrchTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateOrchTask");
         return (CreateOrchTaskResponse)
                 this.invoke(request, CreateOrchTaskResponse.class);
@@ -7134,10 +7134,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteOrchTask - 删除编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteOrchTaskResponse deleteOrchTask(DeleteOrchTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteOrchTask");
         return (DeleteOrchTaskResponse)
                 this.invoke(request, DeleteOrchTaskResponse.class);
@@ -7148,10 +7148,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOrchTask - 查询编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOrchTaskResponse describeOrchTask(DescribeOrchTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOrchTask");
         return (DescribeOrchTaskResponse)
                 this.invoke(request, DescribeOrchTaskResponse.class);
@@ -7162,10 +7162,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOrchTaskType - 查询支持的编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOrchTaskTypeResponse describeOrchTaskType(DescribeOrchTaskTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOrchTaskType");
         return (DescribeOrchTaskTypeResponse)
                 this.invoke(request, DescribeOrchTaskTypeResponse.class);
@@ -7176,10 +7176,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * OperateOrchTask - 操作编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public OperateOrchTaskResponse operateOrchTask(OperateOrchTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("OperateOrchTask");
         return (OperateOrchTaskResponse)
                 this.invoke(request, OperateOrchTaskResponse.class);
@@ -7190,10 +7190,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateOrchTask - 更新编排任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateOrchTaskResponse updateOrchTask(UpdateOrchTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateOrchTask");
         return (UpdateOrchTaskResponse)
                 this.invoke(request, UpdateOrchTaskResponse.class);
@@ -7204,10 +7204,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateOSS - 创建对象存储服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateOSSResponse createOSS(CreateOSSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateOSS");
         return (CreateOSSResponse)
                 this.invoke(request, CreateOSSResponse.class);
@@ -7218,10 +7218,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteOSS - 删除对象存储服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteOSSResponse deleteOSS(DeleteOSSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteOSS");
         return (DeleteOSSResponse)
                 this.invoke(request, DeleteOSSResponse.class);
@@ -7232,10 +7232,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeOSS - 获取对象存储列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeOSSResponse describeOSS(DescribeOSSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeOSS");
         return (DescribeOSSResponse)
                 this.invoke(request, DescribeOSSResponse.class);
@@ -7246,10 +7246,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DowngradeOSS - 对象存储降配
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DowngradeOSSResponse downgradeOSS(DowngradeOSSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DowngradeOSS");
         return (DowngradeOSSResponse)
                 this.invoke(request, DowngradeOSSResponse.class);
@@ -7260,10 +7260,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetOSSPrice - 获取对象存储价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetOSSPriceResponse getOSSPrice(GetOSSPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetOSSPrice");
         return (GetOSSPriceResponse)
                 this.invoke(request, GetOSSPriceResponse.class);
@@ -7274,10 +7274,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResetOSSPassword - 重置对象存储密码
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResetOSSPasswordResponse resetOSSPassword(ResetOSSPasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResetOSSPassword");
         return (ResetOSSPasswordResponse)
                 this.invoke(request, ResetOSSPasswordResponse.class);
@@ -7288,10 +7288,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeOSS - 对象存储升级
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeOSSResponse upgradeOSS(UpgradeOSSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeOSS");
         return (UpgradeOSSResponse)
                 this.invoke(request, UpgradeOSSResponse.class);
@@ -7302,10 +7302,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachPlatformStorageDisk - 绑定平台通用存储云盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachPlatformStorageDiskResponse attachPlatformStorageDisk(AttachPlatformStorageDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachPlatformStorageDisk");
         return (AttachPlatformStorageDiskResponse)
                 this.invoke(request, AttachPlatformStorageDiskResponse.class);
@@ -7316,10 +7316,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreatePlatformStorageDisk - 创建平台通用存储云盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreatePlatformStorageDiskResponse createPlatformStorageDisk(CreatePlatformStorageDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreatePlatformStorageDisk");
         return (CreatePlatformStorageDiskResponse)
                 this.invoke(request, CreatePlatformStorageDiskResponse.class);
@@ -7330,10 +7330,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeletePlatformStorageDisk - 删除平台通用存储云盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeletePlatformStorageDiskResponse deletePlatformStorageDisk(DeletePlatformStorageDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeletePlatformStorageDisk");
         return (DeletePlatformStorageDiskResponse)
                 this.invoke(request, DeletePlatformStorageDiskResponse.class);
@@ -7344,10 +7344,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePlatformStorage - 查询平台通用存储状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePlatformStorageResponse describePlatformStorage(DescribePlatformStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePlatformStorage");
         return (DescribePlatformStorageResponse)
                 this.invoke(request, DescribePlatformStorageResponse.class);
@@ -7358,10 +7358,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePlatformStorageDisk - 查询平台通用存储云盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePlatformStorageDiskResponse describePlatformStorageDisk(DescribePlatformStorageDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePlatformStorageDisk");
         return (DescribePlatformStorageDiskResponse)
                 this.invoke(request, DescribePlatformStorageDiskResponse.class);
@@ -7372,10 +7372,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResizePlatformStorageDisk - 扩容平台通用存储云盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResizePlatformStorageDiskResponse resizePlatformStorageDisk(ResizePlatformStorageDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResizePlatformStorageDisk");
         return (ResizePlatformStorageDiskResponse)
                 this.invoke(request, ResizePlatformStorageDiskResponse.class);
@@ -7386,10 +7386,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocatePM - 分配裸金属给租户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocatePMResponse allocatePM(AllocatePMRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocatePM");
         return (AllocatePMResponse)
                 this.invoke(request, AllocatePMResponse.class);
@@ -7400,10 +7400,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocatePMVNCSession - 申请裸金属VNC远程控制会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocatePMVNCSessionResponse allocatePMVNCSession(AllocatePMVNCSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocatePMVNCSession");
         return (AllocatePMVNCSessionResponse)
                 this.invoke(request, AllocatePMVNCSessionResponse.class);
@@ -7414,10 +7414,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CancelInstallTaskV2 - 取消装机任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CancelInstallTaskV2Response cancelInstallTaskV2(CancelInstallTaskV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CancelInstallTaskV2");
         return (CancelInstallTaskV2Response)
                 this.invoke(request, CancelInstallTaskV2Response.class);
@@ -7428,10 +7428,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CleanPXE - 清理PXE环境
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CleanPXEResponse cleanPXE(CleanPXERequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CleanPXE");
         return (CleanPXEResponse)
                 this.invoke(request, CleanPXEResponse.class);
@@ -7442,10 +7442,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloneBMCType - 克隆BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloneBMCTypeResponse cloneBMCType(CloneBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloneBMCType");
         return (CloneBMCTypeResponse)
                 this.invoke(request, CloneBMCTypeResponse.class);
@@ -7456,10 +7456,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloneKickstartTemplate - 克隆Kickstart模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloneKickstartTemplateResponse cloneKickstartTemplate(CloneKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloneKickstartTemplate");
         return (CloneKickstartTemplateResponse)
                 this.invoke(request, CloneKickstartTemplateResponse.class);
@@ -7470,10 +7470,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ClonePartitionTemplate - 克隆分区模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ClonePartitionTemplateResponse clonePartitionTemplate(ClonePartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ClonePartitionTemplate");
         return (ClonePartitionTemplateResponse)
                 this.invoke(request, ClonePartitionTemplateResponse.class);
@@ -7484,10 +7484,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloseKVMSessionV2 - 关闭KVM会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloseKVMSessionV2Response closeKVMSessionV2(CloseKVMSessionV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloseKVMSessionV2");
         return (CloseKVMSessionV2Response)
                 this.invoke(request, CloseKVMSessionV2Response.class);
@@ -7498,10 +7498,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateBMCType - 创建BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateBMCTypeResponse createBMCType(CreateBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateBMCType");
         return (CreateBMCTypeResponse)
                 this.invoke(request, CreateBMCTypeResponse.class);
@@ -7512,10 +7512,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateInstallProfile - 创建装机配置模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateInstallProfileResponse createInstallProfile(CreateInstallProfileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateInstallProfile");
         return (CreateInstallProfileResponse)
                 this.invoke(request, CreateInstallProfileResponse.class);
@@ -7526,10 +7526,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateInstallTaskV2 - 创建装机任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateInstallTaskV2Response createInstallTaskV2(CreateInstallTaskV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateInstallTaskV2");
         return (CreateInstallTaskV2Response)
                 this.invoke(request, CreateInstallTaskV2Response.class);
@@ -7540,10 +7540,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateKVMSessionV2 - 创建KVM会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateKVMSessionV2Response createKVMSessionV2(CreateKVMSessionV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateKVMSessionV2");
         return (CreateKVMSessionV2Response)
                 this.invoke(request, CreateKVMSessionV2Response.class);
@@ -7554,10 +7554,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateKickstartTemplate - 创建Kickstart模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateKickstartTemplateResponse createKickstartTemplate(CreateKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateKickstartTemplate");
         return (CreateKickstartTemplateResponse)
                 this.invoke(request, CreateKickstartTemplateResponse.class);
@@ -7568,10 +7568,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateOSMediaV2 - 创建系统镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateOSMediaV2Response createOSMediaV2(CreateOSMediaV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateOSMediaV2");
         return (CreateOSMediaV2Response)
                 this.invoke(request, CreateOSMediaV2Response.class);
@@ -7582,10 +7582,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreatePMV2 - 创建裸金属
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreatePMV2Response createPMV2(CreatePMV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreatePMV2");
         return (CreatePMV2Response)
                 this.invoke(request, CreatePMV2Response.class);
@@ -7596,10 +7596,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreatePartitionTemplate - 创建分区模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreatePartitionTemplateResponse createPartitionTemplate(CreatePartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreatePartitionTemplate");
         return (CreatePartitionTemplateResponse)
                 this.invoke(request, CreatePartitionTemplateResponse.class);
@@ -7610,10 +7610,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteBMCType - 删除BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteBMCTypeResponse deleteBMCType(DeleteBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteBMCType");
         return (DeleteBMCTypeResponse)
                 this.invoke(request, DeleteBMCTypeResponse.class);
@@ -7624,10 +7624,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteInstallProfile - 删除装机配置模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteInstallProfileResponse deleteInstallProfile(DeleteInstallProfileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteInstallProfile");
         return (DeleteInstallProfileResponse)
                 this.invoke(request, DeleteInstallProfileResponse.class);
@@ -7638,10 +7638,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteInstallTaskV2 - 删除装机任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteInstallTaskV2Response deleteInstallTaskV2(DeleteInstallTaskV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteInstallTaskV2");
         return (DeleteInstallTaskV2Response)
                 this.invoke(request, DeleteInstallTaskV2Response.class);
@@ -7652,10 +7652,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteKickstartTemplate - 删除Kickstart模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteKickstartTemplateResponse deleteKickstartTemplate(DeleteKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteKickstartTemplate");
         return (DeleteKickstartTemplateResponse)
                 this.invoke(request, DeleteKickstartTemplateResponse.class);
@@ -7666,10 +7666,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteOSMediaV2 - 删除系统镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteOSMediaV2Response deleteOSMediaV2(DeleteOSMediaV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteOSMediaV2");
         return (DeleteOSMediaV2Response)
                 this.invoke(request, DeleteOSMediaV2Response.class);
@@ -7680,10 +7680,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeletePMV2 - 删除裸金属
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeletePMV2Response deletePMV2(DeletePMV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeletePMV2");
         return (DeletePMV2Response)
                 this.invoke(request, DeletePMV2Response.class);
@@ -7694,10 +7694,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeletePartitionTemplate - 删除分区模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeletePartitionTemplateResponse deletePartitionTemplate(DeletePartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeletePartitionTemplate");
         return (DeletePartitionTemplateResponse)
                 this.invoke(request, DeletePartitionTemplateResponse.class);
@@ -7708,10 +7708,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetectBMCTypeV2 - 检测BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetectBMCTypeV2Response detectBMCTypeV2(DetectBMCTypeV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetectBMCTypeV2");
         return (DetectBMCTypeV2Response)
                 this.invoke(request, DetectBMCTypeV2Response.class);
@@ -7722,10 +7722,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DiscoverDHCPServers - 发现DHCP服务器
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DiscoverDHCPServersResponse discoverDHCPServers(DiscoverDHCPServersRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DiscoverDHCPServers");
         return (DiscoverDHCPServersResponse)
                 this.invoke(request, DiscoverDHCPServersResponse.class);
@@ -7736,10 +7736,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DiscoverPMHardwareV2 - 硬件发现
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DiscoverPMHardwareV2Response discoverPMHardwareV2(DiscoverPMHardwareV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DiscoverPMHardwareV2");
         return (DiscoverPMHardwareV2Response)
                 this.invoke(request, DiscoverPMHardwareV2Response.class);
@@ -7750,10 +7750,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetBMCType - 获取BMC类型详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetBMCTypeResponse getBMCType(GetBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetBMCType");
         return (GetBMCTypeResponse)
                 this.invoke(request, GetBMCTypeResponse.class);
@@ -7764,10 +7764,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDHCPNetwork - 获取DHCP网络配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDHCPNetworkResponse getDHCPNetwork(GetDHCPNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDHCPNetwork");
         return (GetDHCPNetworkResponse)
                 this.invoke(request, GetDHCPNetworkResponse.class);
@@ -7778,10 +7778,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetDHCPServerState - 获取DHCP服务器状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetDHCPServerStateResponse getDHCPServerState(GetDHCPServerStateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetDHCPServerState");
         return (GetDHCPServerStateResponse)
                 this.invoke(request, GetDHCPServerStateResponse.class);
@@ -7792,10 +7792,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetInstallLogsV2 - 获取装机日志
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetInstallLogsV2Response getInstallLogsV2(GetInstallLogsV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetInstallLogsV2");
         return (GetInstallLogsV2Response)
                 this.invoke(request, GetInstallLogsV2Response.class);
@@ -7806,10 +7806,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetInstallStatusByTaskIDV2 - 按任务ID获取装机状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetInstallStatusByTaskIDV2Response getInstallStatusByTaskIDV2(GetInstallStatusByTaskIDV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetInstallStatusByTaskIDV2");
         return (GetInstallStatusByTaskIDV2Response)
                 this.invoke(request, GetInstallStatusByTaskIDV2Response.class);
@@ -7820,10 +7820,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetInstallTaskV2 - 获取装机任务详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetInstallTaskV2Response getInstallTaskV2(GetInstallTaskV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetInstallTaskV2");
         return (GetInstallTaskV2Response)
                 this.invoke(request, GetInstallTaskV2Response.class);
@@ -7834,10 +7834,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetKickstartTemplate - 获取Kickstart模板详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetKickstartTemplateResponse getKickstartTemplate(GetKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetKickstartTemplate");
         return (GetKickstartTemplateResponse)
                 this.invoke(request, GetKickstartTemplateResponse.class);
@@ -7848,10 +7848,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetLatestInstallConfig - 获取裸金属最近一次安装配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetLatestInstallConfigResponse getLatestInstallConfig(GetLatestInstallConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetLatestInstallConfig");
         return (GetLatestInstallConfigResponse)
                 this.invoke(request, GetLatestInstallConfigResponse.class);
@@ -7862,10 +7862,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetOSMediaV2 - 获取系统镜像详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetOSMediaV2Response getOSMediaV2(GetOSMediaV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetOSMediaV2");
         return (GetOSMediaV2Response)
                 this.invoke(request, GetOSMediaV2Response.class);
@@ -7876,10 +7876,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPMHardwareV2 - 获取硬件信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPMHardwareV2Response getPMHardwareV2(GetPMHardwareV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPMHardwareV2");
         return (GetPMHardwareV2Response)
                 this.invoke(request, GetPMHardwareV2Response.class);
@@ -7890,10 +7890,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPMJNLPFileV2 - 获取JNLP文件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPMJNLPFileV2Response getPMJNLPFileV2(GetPMJNLPFileV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPMJNLPFileV2");
         return (GetPMJNLPFileV2Response)
                 this.invoke(request, GetPMJNLPFileV2Response.class);
@@ -7904,10 +7904,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPMPowerStatusV2 - 获取电源状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPMPowerStatusV2Response getPMPowerStatusV2(GetPMPowerStatusV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPMPowerStatusV2");
         return (GetPMPowerStatusV2Response)
                 this.invoke(request, GetPMPowerStatusV2Response.class);
@@ -7918,10 +7918,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPartitionTemplate - 获取分区模板详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPartitionTemplateResponse getPartitionTemplate(GetPartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPartitionTemplate");
         return (GetPartitionTemplateResponse)
                 this.invoke(request, GetPartitionTemplateResponse.class);
@@ -7932,10 +7932,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListBMCTypes - 获取BMC类型列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListBMCTypesResponse listBMCTypes(ListBMCTypesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListBMCTypes");
         return (ListBMCTypesResponse)
                 this.invoke(request, ListBMCTypesResponse.class);
@@ -7946,10 +7946,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListInstallProfiles - 获取装机配置模板列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListInstallProfilesResponse listInstallProfiles(ListInstallProfilesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListInstallProfiles");
         return (ListInstallProfilesResponse)
                 this.invoke(request, ListInstallProfilesResponse.class);
@@ -7960,10 +7960,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListInstallTasksV2 - 获取装机任务列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListInstallTasksV2Response listInstallTasksV2(ListInstallTasksV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListInstallTasksV2");
         return (ListInstallTasksV2Response)
                 this.invoke(request, ListInstallTasksV2Response.class);
@@ -7974,10 +7974,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListKVMSessionsV2 - 获取KVM会话列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListKVMSessionsV2Response listKVMSessionsV2(ListKVMSessionsV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListKVMSessionsV2");
         return (ListKVMSessionsV2Response)
                 this.invoke(request, ListKVMSessionsV2Response.class);
@@ -7988,10 +7988,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListKickstartTemplates - 获取Kickstart模板列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListKickstartTemplatesResponse listKickstartTemplates(ListKickstartTemplatesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListKickstartTemplates");
         return (ListKickstartTemplatesResponse)
                 this.invoke(request, ListKickstartTemplatesResponse.class);
@@ -8002,10 +8002,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListOSMediaV2 - 获取系统镜像列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListOSMediaV2Response listOSMediaV2(ListOSMediaV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListOSMediaV2");
         return (ListOSMediaV2Response)
                 this.invoke(request, ListOSMediaV2Response.class);
@@ -8016,10 +8016,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListPMV2 - 获取裸金属列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListPMV2Response listPMV2(ListPMV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListPMV2");
         return (ListPMV2Response)
                 this.invoke(request, ListPMV2Response.class);
@@ -8030,10 +8030,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListPartitionTemplates - 获取分区模板列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListPartitionTemplatesResponse listPartitionTemplates(ListPartitionTemplatesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListPartitionTemplates");
         return (ListPartitionTemplatesResponse)
                 this.invoke(request, ListPartitionTemplatesResponse.class);
@@ -8044,10 +8044,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PowerControlPMV2 - 电源控制
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PowerControlPMV2Response powerControlPMV2(PowerControlPMV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PowerControlPMV2");
         return (PowerControlPMV2Response)
                 this.invoke(request, PowerControlPMV2Response.class);
@@ -8058,10 +8058,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PreviewKickstartCommands - 预览Kickstart分区命令
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PreviewKickstartCommandsResponse previewKickstartCommands(PreviewKickstartCommandsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PreviewKickstartCommands");
         return (PreviewKickstartCommandsResponse)
                 this.invoke(request, PreviewKickstartCommandsResponse.class);
@@ -8072,10 +8072,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PreviewKickstartTemplate - 预览Kickstart模板渲染结果
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PreviewKickstartTemplateResponse previewKickstartTemplate(PreviewKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PreviewKickstartTemplate");
         return (PreviewKickstartTemplateResponse)
                 this.invoke(request, PreviewKickstartTemplateResponse.class);
@@ -8086,10 +8086,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RecyclePM - 从租户回收裸金属
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RecyclePMResponse recyclePM(RecyclePMRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RecyclePM");
         return (RecyclePMResponse)
                 this.invoke(request, RecyclePMResponse.class);
@@ -8100,10 +8100,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RetryInstallTaskV2 - 重试装机任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RetryInstallTaskV2Response retryInstallTaskV2(RetryInstallTaskV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RetryInstallTaskV2");
         return (RetryInstallTaskV2Response)
                 this.invoke(request, RetryInstallTaskV2Response.class);
@@ -8114,10 +8114,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetDHCPNetwork - 设置DHCP网络配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetDHCPNetworkResponse setDHCPNetwork(SetDHCPNetworkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetDHCPNetwork");
         return (SetDHCPNetworkResponse)
                 this.invoke(request, SetDHCPNetworkResponse.class);
@@ -8128,10 +8128,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetDefaultPartitionTemplate - 设置默认分区模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetDefaultPartitionTemplateResponse setDefaultPartitionTemplate(SetDefaultPartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetDefaultPartitionTemplate");
         return (SetDefaultPartitionTemplateResponse)
                 this.invoke(request, SetDefaultPartitionTemplateResponse.class);
@@ -8142,10 +8142,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * TestBMCType - 测试BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public TestBMCTypeResponse testBMCType(TestBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("TestBMCType");
         return (TestBMCTypeResponse)
                 this.invoke(request, TestBMCTypeResponse.class);
@@ -8156,10 +8156,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * TestPMIPMIV2 - 测试IPMI连接
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public TestPMIPMIV2Response testPMIPMIV2(TestPMIPMIV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("TestPMIPMIV2");
         return (TestPMIPMIV2Response)
                 this.invoke(request, TestPMIPMIV2Response.class);
@@ -8170,10 +8170,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateBMCType - 更新BMC类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateBMCTypeResponse updateBMCType(UpdateBMCTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateBMCType");
         return (UpdateBMCTypeResponse)
                 this.invoke(request, UpdateBMCTypeResponse.class);
@@ -8184,10 +8184,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateInstallProfile - 更新装机配置模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateInstallProfileResponse updateInstallProfile(UpdateInstallProfileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateInstallProfile");
         return (UpdateInstallProfileResponse)
                 this.invoke(request, UpdateInstallProfileResponse.class);
@@ -8198,10 +8198,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateKickstartTemplate - 更新Kickstart模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateKickstartTemplateResponse updateKickstartTemplate(UpdateKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateKickstartTemplate");
         return (UpdateKickstartTemplateResponse)
                 this.invoke(request, UpdateKickstartTemplateResponse.class);
@@ -8212,10 +8212,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdatePMV2 - 更新裸金属
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdatePMV2Response updatePMV2(UpdatePMV2Request request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdatePMV2");
         return (UpdatePMV2Response)
                 this.invoke(request, UpdatePMV2Response.class);
@@ -8226,10 +8226,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdatePartitionTemplate - 更新分区模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdatePartitionTemplateResponse updatePartitionTemplate(UpdatePartitionTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdatePartitionTemplate");
         return (UpdatePartitionTemplateResponse)
                 this.invoke(request, UpdatePartitionTemplateResponse.class);
@@ -8240,10 +8240,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ValidateKickstartTemplate - 验证Kickstart模板语法
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ValidateKickstartTemplateResponse validateKickstartTemplate(ValidateKickstartTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ValidateKickstartTemplate");
         return (ValidateKickstartTemplateResponse)
                 this.invoke(request, ValidateKickstartTemplateResponse.class);
@@ -8254,10 +8254,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ValidatePartitionConfig - 验证分区配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ValidatePartitionConfigResponse validatePartitionConfig(ValidatePartitionConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ValidatePartitionConfig");
         return (ValidatePartitionConfigResponse)
                 this.invoke(request, ValidatePartitionConfigResponse.class);
@@ -8268,10 +8268,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateMemberTag - 添加角色授权
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateMemberTagResponse createMemberTag(CreateMemberTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateMemberTag");
         return (CreateMemberTagResponse)
                 this.invoke(request, CreateMemberTagResponse.class);
@@ -8282,10 +8282,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateProject - 创建项目
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateProjectResponse createProject(CreateProjectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateProject");
         return (CreateProjectResponse)
                 this.invoke(request, CreateProjectResponse.class);
@@ -8296,10 +8296,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateRole - 创建租户级自定义角色
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateRoleResponse createRole(CreateRoleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateRole");
         return (CreateRoleResponse)
                 this.invoke(request, CreateRoleResponse.class);
@@ -8310,10 +8310,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteMemberTag - 删除角色授权
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteMemberTagResponse deleteMemberTag(DeleteMemberTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteMemberTag");
         return (DeleteMemberTagResponse)
                 this.invoke(request, DeleteMemberTagResponse.class);
@@ -8324,10 +8324,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteProject - 删除项目
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteProjectResponse deleteProject(DeleteProjectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteProject");
         return (DeleteProjectResponse)
                 this.invoke(request, DeleteProjectResponse.class);
@@ -8338,10 +8338,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteRole - 删除租户级自定义角色
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteRoleResponse deleteRole(DeleteRoleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteRole");
         return (DeleteRoleResponse)
                 this.invoke(request, DeleteRoleResponse.class);
@@ -8352,10 +8352,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeProduct - 获取产品类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeProductResponse describeProduct(DescribeProductRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeProduct");
         return (DescribeProductResponse)
                 this.invoke(request, DescribeProductResponse.class);
@@ -8366,10 +8366,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DisableCompanyProductType - 租户关闭服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DisableCompanyProductTypeResponse disableCompanyProductType(DisableCompanyProductTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DisableCompanyProductType");
         return (DisableCompanyProductTypeResponse)
                 this.invoke(request, DisableCompanyProductTypeResponse.class);
@@ -8380,10 +8380,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * EnableCompanyProductType - 租户启用服务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public EnableCompanyProductTypeResponse enableCompanyProductType(EnableCompanyProductTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("EnableCompanyProductType");
         return (EnableCompanyProductTypeResponse)
                 this.invoke(request, EnableCompanyProductTypeResponse.class);
@@ -8394,10 +8394,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetProject - 获取项目详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetProjectResponse getProject(GetProjectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetProject");
         return (GetProjectResponse)
                 this.invoke(request, GetProjectResponse.class);
@@ -8408,10 +8408,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetRole - 查询角色详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetRoleResponse getRole(GetRoleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetRole");
         return (GetRoleResponse)
                 this.invoke(request, GetRoleResponse.class);
@@ -8422,10 +8422,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListMemberTags - 查询角色授权列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListMemberTagsResponse listMemberTags(ListMemberTagsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListMemberTags");
         return (ListMemberTagsResponse)
                 this.invoke(request, ListMemberTagsResponse.class);
@@ -8436,10 +8436,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListProductPermissions - 获取租户可用接口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListProductPermissionsResponse listProductPermissions(ListProductPermissionsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListProductPermissions");
         return (ListProductPermissionsResponse)
                 this.invoke(request, ListProductPermissionsResponse.class);
@@ -8450,10 +8450,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListProductResources - 获取产品资源关系
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListProductResourcesResponse listProductResources(ListProductResourcesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListProductResources");
         return (ListProductResourcesResponse)
                 this.invoke(request, ListProductResourcesResponse.class);
@@ -8464,10 +8464,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListProductTypeCompanys - 获取某产品已授权的租户信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListProductTypeCompanysResponse listProductTypeCompanys(ListProductTypeCompanysRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListProductTypeCompanys");
         return (ListProductTypeCompanysResponse)
                 this.invoke(request, ListProductTypeCompanysResponse.class);
@@ -8478,10 +8478,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListProjects - 查询项目列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListProjectsResponse listProjects(ListProjectsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListProjects");
         return (ListProjectsResponse)
                 this.invoke(request, ListProjectsResponse.class);
@@ -8492,10 +8492,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListRoles - 查询租户级角色列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListRolesResponse listRoles(ListRolesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListRoles");
         return (ListRolesResponse)
                 this.invoke(request, ListRolesResponse.class);
@@ -8506,10 +8506,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MoveProjectResource - 修改资源所在的项目
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MoveProjectResourceResponse moveProjectResource(MoveProjectResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MoveProjectResource");
         return (MoveProjectResourceResponse)
                 this.invoke(request, MoveProjectResourceResponse.class);
@@ -8520,10 +8520,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RenameProject - 重命名项目名称备注
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RenameProjectResponse renameProject(RenameProjectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RenameProject");
         return (RenameProjectResponse)
                 this.invoke(request, RenameProjectResponse.class);
@@ -8534,10 +8534,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RenameRole - 重命名角色名称备注
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RenameRoleResponse renameRole(RenameRoleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RenameRole");
         return (RenameRoleResponse)
                 this.invoke(request, RenameRoleResponse.class);
@@ -8548,10 +8548,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRolePermission - 修改角色权限
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRolePermissionResponse updateRolePermission(UpdateRolePermissionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRolePermission");
         return (UpdateRolePermissionResponse)
                 this.invoke(request, UpdateRolePermissionResponse.class);
@@ -8562,10 +8562,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRecycledResource - 获取回收站资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRecycledResourceResponse describeRecycledResource(DescribeRecycledResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRecycledResource");
         return (DescribeRecycledResourceResponse)
                 this.invoke(request, DescribeRecycledResourceResponse.class);
@@ -8576,10 +8576,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RollbackResource - 恢复资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RollbackResourceResponse rollbackResource(RollbackResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RollbackResource");
         return (RollbackResourceResponse)
                 this.invoke(request, RollbackResourceResponse.class);
@@ -8590,10 +8590,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * TerminateResource - 销毁资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public TerminateResourceResponse terminateResource(TerminateResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("TerminateResource");
         return (TerminateResourceResponse)
                 this.invoke(request, TerminateResourceResponse.class);
@@ -8604,10 +8604,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateRedisConsoleSession - 申请redis控制台会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateRedisConsoleSessionResponse allocateRedisConsoleSession(AllocateRedisConsoleSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateRedisConsoleSession");
         return (AllocateRedisConsoleSessionResponse)
                 this.invoke(request, AllocateRedisConsoleSessionResponse.class);
@@ -8618,10 +8618,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ApplyRedisConfigFile - 应用Redis参数模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ApplyRedisConfigFileResponse applyRedisConfigFile(ApplyRedisConfigFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ApplyRedisConfigFile");
         return (ApplyRedisConfigFileResponse)
                 this.invoke(request, ApplyRedisConfigFileResponse.class);
@@ -8632,10 +8632,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateRedis - 创建redis实例
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateRedisResponse createRedis(CreateRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateRedis");
         return (CreateRedisResponse)
                 this.invoke(request, CreateRedisResponse.class);
@@ -8646,10 +8646,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateRedisConfigFile - 创建配置文件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateRedisConfigFileResponse createRedisConfigFile(CreateRedisConfigFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateRedisConfigFile");
         return (CreateRedisConfigFileResponse)
                 this.invoke(request, CreateRedisConfigFileResponse.class);
@@ -8660,10 +8660,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSlaveRedis - 创建Redis从库
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSlaveRedisResponse createSlaveRedis(CreateSlaveRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSlaveRedis");
         return (CreateSlaveRedisResponse)
                 this.invoke(request, CreateSlaveRedisResponse.class);
@@ -8674,10 +8674,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteRedis - 删除redis实例
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteRedisResponse deleteRedis(DeleteRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteRedis");
         return (DeleteRedisResponse)
                 this.invoke(request, DeleteRedisResponse.class);
@@ -8688,10 +8688,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteRedisConfigFile - 删除配置文件
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteRedisConfigFileResponse deleteRedisConfigFile(DeleteRedisConfigFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteRedisConfigFile");
         return (DeleteRedisConfigFileResponse)
                 this.invoke(request, DeleteRedisConfigFileResponse.class);
@@ -8702,10 +8702,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRedis - 查询redis实例
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRedisResponse describeRedis(DescribeRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRedis");
         return (DescribeRedisResponse)
                 this.invoke(request, DescribeRedisResponse.class);
@@ -8716,10 +8716,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRedisConfigFile - 查询配置文件列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRedisConfigFileResponse describeRedisConfigFile(DescribeRedisConfigFileRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRedisConfigFile");
         return (DescribeRedisConfigFileResponse)
                 this.invoke(request, DescribeRedisConfigFileResponse.class);
@@ -8730,10 +8730,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRedisConfigParams - 查询配置文件详情
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRedisConfigParamsResponse describeRedisConfigParams(DescribeRedisConfigParamsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRedisConfigParams");
         return (DescribeRedisConfigParamsResponse)
                 this.invoke(request, DescribeRedisConfigParamsResponse.class);
@@ -8744,10 +8744,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRedisSlowlog - 慢日志查询
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRedisSlowlogResponse describeRedisSlowlog(DescribeRedisSlowlogRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRedisSlowlog");
         return (DescribeRedisSlowlogResponse)
                 this.invoke(request, DescribeRedisSlowlogResponse.class);
@@ -8758,10 +8758,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DowngradeRedis - 降级redis内存
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DowngradeRedisResponse downgradeRedis(DowngradeRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DowngradeRedis");
         return (DowngradeRedisResponse)
                 this.invoke(request, DowngradeRedisResponse.class);
@@ -8772,10 +8772,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * FlushRedis - 清空数据
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public FlushRedisResponse flushRedis(FlushRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("FlushRedis");
         return (FlushRedisResponse)
                 this.invoke(request, FlushRedisResponse.class);
@@ -8786,10 +8786,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetRedisPrice - 获取redis创建升级价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetRedisPriceResponse getRedisPrice(GetRedisPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetRedisPrice");
         return (GetRedisPriceResponse)
                 this.invoke(request, GetRedisPriceResponse.class);
@@ -8800,10 +8800,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRedisConfigParams - 更新配置项
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRedisConfigParamsResponse updateRedisConfigParams(UpdateRedisConfigParamsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRedisConfigParams");
         return (UpdateRedisConfigParamsResponse)
                 this.invoke(request, UpdateRedisConfigParamsResponse.class);
@@ -8814,10 +8814,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRedisPassword - 更新redis密码
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRedisPasswordResponse updateRedisPassword(UpdateRedisPasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRedisPassword");
         return (UpdateRedisPasswordResponse)
                 this.invoke(request, UpdateRedisPasswordResponse.class);
@@ -8828,10 +8828,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeRedis - 升级redis内存
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeRedisResponse upgradeRedis(UpgradeRedisRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeRedis");
         return (UpgradeRedisResponse)
                 this.invoke(request, UpgradeRedisResponse.class);
@@ -8842,10 +8842,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeRedisToHA - 升级至主备版本
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeRedisToHAResponse upgradeRedisToHA(UpgradeRedisToHARequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeRedisToHA");
         return (UpgradeRedisToHAResponse)
                 this.invoke(request, UpgradeRedisToHAResponse.class);
@@ -8856,10 +8856,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddRegion - 纳管新地域
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddRegionResponse addRegion(AddRegionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddRegion");
         return (AddRegionResponse)
                 this.invoke(request, AddRegionResponse.class);
@@ -8870,10 +8870,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRegion - 获取租户已授权地域
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRegionResponse describeRegion(DescribeRegionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRegion");
         return (DescribeRegionResponse)
                 this.invoke(request, DescribeRegionResponse.class);
@@ -8884,10 +8884,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ModifyNameAndRemark - 修改地域下资源名称和备注
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ModifyNameAndRemarkResponse modifyNameAndRemark(ModifyNameAndRemarkRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ModifyNameAndRemark");
         return (ModifyNameAndRemarkResponse)
                 this.invoke(request, ModifyNameAndRemarkResponse.class);
@@ -8898,10 +8898,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateAdminRegion - 修改管理员地域授权
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateAdminRegionResponse updateAdminRegion(UpdateAdminRegionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateAdminRegion");
         return (UpdateAdminRegionResponse)
                 this.invoke(request, UpdateAdminRegionResponse.class);
@@ -8912,10 +8912,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateCompanyRegion - 修改租户地域授权
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateCompanyRegionResponse updateCompanyRegion(UpdateCompanyRegionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateCompanyRegion");
         return (UpdateCompanyRegionResponse)
                 this.invoke(request, UpdateCompanyRegionResponse.class);
@@ -8926,10 +8926,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateRegion - 更新地域
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateRegionResponse updateRegion(UpdateRegionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateRegion");
         return (UpdateRegionResponse)
                 this.invoke(request, UpdateRegionResponse.class);
@@ -8940,10 +8940,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateResourceFromTemplate - 通过模板创建资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateResourceFromTemplateResponse createResourceFromTemplate(CreateResourceFromTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateResourceFromTemplate");
         return (CreateResourceFromTemplateResponse)
                 this.invoke(request, CreateResourceFromTemplateResponse.class);
@@ -8954,10 +8954,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateResourceTemplate - 创建资源模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateResourceTemplateResponse createResourceTemplate(CreateResourceTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateResourceTemplate");
         return (CreateResourceTemplateResponse)
                 this.invoke(request, CreateResourceTemplateResponse.class);
@@ -8968,10 +8968,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteResourceTemplate - 删除资源模版
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteResourceTemplateResponse deleteResourceTemplate(DeleteResourceTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteResourceTemplate");
         return (DeleteResourceTemplateResponse)
                 this.invoke(request, DeleteResourceTemplateResponse.class);
@@ -8982,10 +8982,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceTemplate - 查询资源模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceTemplateResponse describeResourceTemplate(DescribeResourceTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceTemplate");
         return (DescribeResourceTemplateResponse)
                 this.invoke(request, DescribeResourceTemplateResponse.class);
@@ -8996,10 +8996,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateResourceTemplate - 更新资源模板
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateResourceTemplateResponse updateResourceTemplate(UpdateResourceTemplateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateResourceTemplate");
         return (UpdateResourceTemplateResponse)
                 this.invoke(request, UpdateResourceTemplateResponse.class);
@@ -9010,10 +9010,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * S3Login - 获取S3登录信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public S3LoginResponse s3Login(S3LoginRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("S3Login");
         return (S3LoginResponse)
                 this.invoke(request, S3LoginResponse.class);
@@ -9024,10 +9024,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateDirectConnect - 创建DirectConnect专线接入
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateDirectConnectResponse createDirectConnect(CreateDirectConnectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateDirectConnect");
         return (CreateDirectConnectResponse)
                 this.invoke(request, CreateDirectConnectResponse.class);
@@ -9038,10 +9038,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSegment - 创建外网线路
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSegmentResponse createSegment(CreateSegmentRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSegment");
         return (CreateSegmentResponse)
                 this.invoke(request, CreateSegmentResponse.class);
@@ -9052,10 +9052,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSegmentRoute - 创建外网线路路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSegmentRouteResponse createSegmentRoute(CreateSegmentRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSegmentRoute");
         return (CreateSegmentRouteResponse)
                 this.invoke(request, CreateSegmentRouteResponse.class);
@@ -9066,10 +9066,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteDirectConnect - 删除DirectConnect专线接入
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteDirectConnectResponse deleteDirectConnect(DeleteDirectConnectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteDirectConnect");
         return (DeleteDirectConnectResponse)
                 this.invoke(request, DeleteDirectConnectResponse.class);
@@ -9080,10 +9080,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSegment - 删除外网线路
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSegmentResponse deleteSegment(DeleteSegmentRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSegment");
         return (DeleteSegmentResponse)
                 this.invoke(request, DeleteSegmentResponse.class);
@@ -9094,10 +9094,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSegmentRoute - 删除外网线路路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSegmentRouteResponse deleteSegmentRoute(DeleteSegmentRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSegmentRoute");
         return (DeleteSegmentRouteResponse)
                 this.invoke(request, DeleteSegmentRouteResponse.class);
@@ -9108,10 +9108,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeDirectConnect - 查询DirectConnect专线接入
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeDirectConnectResponse describeDirectConnect(DescribeDirectConnectRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeDirectConnect");
         return (DescribeDirectConnectResponse)
                 this.invoke(request, DescribeDirectConnectResponse.class);
@@ -9122,10 +9122,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSegment - 查询线路
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSegmentResponse describeSegment(DescribeSegmentRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSegment");
         return (DescribeSegmentResponse)
                 this.invoke(request, DescribeSegmentResponse.class);
@@ -9136,10 +9136,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSegmentRoute - 查询外网线路路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSegmentRouteResponse describeSegmentRoute(DescribeSegmentRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSegmentRoute");
         return (DescribeSegmentRouteResponse)
                 this.invoke(request, DescribeSegmentRouteResponse.class);
@@ -9150,10 +9150,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDirectConnectBandwidth - 修改DirectConnect专线接入限速
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDirectConnectBandwidthResponse updateDirectConnectBandwidth(UpdateDirectConnectBandwidthRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDirectConnectBandwidth");
         return (UpdateDirectConnectBandwidthResponse)
                 this.invoke(request, UpdateDirectConnectBandwidthResponse.class);
@@ -9164,10 +9164,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateDirectConnectRemoteSubnetCIDRs - 修改DirectConnect专线接入远端子网网段
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateDirectConnectRemoteSubnetCIDRsResponse updateDirectConnectRemoteSubnetCIDRs(UpdateDirectConnectRemoteSubnetCIDRsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateDirectConnectRemoteSubnetCIDRs");
         return (UpdateDirectConnectRemoteSubnetCIDRsResponse)
                 this.invoke(request, UpdateDirectConnectRemoteSubnetCIDRsResponse.class);
@@ -9178,10 +9178,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSegment - 更新外网线路
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSegmentResponse updateSegment(UpdateSegmentRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSegment");
         return (UpdateSegmentResponse)
                 this.invoke(request, UpdateSegmentResponse.class);
@@ -9192,10 +9192,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSegmentRoute - 更新外网线路路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSegmentRouteResponse updateSegmentRoute(UpdateSegmentRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSegmentRoute");
         return (UpdateSegmentRouteResponse)
                 this.invoke(request, UpdateSegmentRouteResponse.class);
@@ -9206,10 +9206,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AliasSet - 设置计算集群别名
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AliasSetResponse aliasSet(AliasSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AliasSet");
         return (AliasSetResponse)
                 this.invoke(request, AliasSetResponse.class);
@@ -9220,10 +9220,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AliasStorageSet - 设置存储集群别名
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AliasStorageSetResponse aliasStorageSet(AliasStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AliasStorageSet");
         return (AliasStorageSetResponse)
                 this.invoke(request, AliasStorageSetResponse.class);
@@ -9234,10 +9234,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeResourceUsers - 查询正在使用资源的用户
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeResourceUsersResponse describeResourceUsers(DescribeResourceUsersRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeResourceUsers");
         return (DescribeResourceUsersResponse)
                 this.invoke(request, DescribeResourceUsersResponse.class);
@@ -9248,10 +9248,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeStorageSet - 查询存储集群信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeStorageSetResponse describeStorageSet(DescribeStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeStorageSet");
         return (DescribeStorageSetResponse)
                 this.invoke(request, DescribeStorageSetResponse.class);
@@ -9262,10 +9262,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeStorageSetSortPolicy - 获取存储集群排序策略
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeStorageSetSortPolicyResponse describeStorageSetSortPolicy(DescribeStorageSetSortPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeStorageSetSortPolicy");
         return (DescribeStorageSetSortPolicyResponse)
                 this.invoke(request, DescribeStorageSetSortPolicyResponse.class);
@@ -9276,10 +9276,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeStorageType - 查询存储类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeStorageTypeResponse describeStorageType(DescribeStorageTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeStorageType");
         return (DescribeStorageTypeResponse)
                 this.invoke(request, DescribeStorageTypeResponse.class);
@@ -9290,10 +9290,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMSet - 获取虚拟机Set信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMSetResponse describeVMSet(DescribeVMSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMSet");
         return (DescribeVMSetResponse)
                 this.invoke(request, DescribeVMSetResponse.class);
@@ -9304,10 +9304,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMType - 查询主机机型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMTypeResponse describeVMType(DescribeVMTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMType");
         return (DescribeVMTypeResponse)
                 this.invoke(request, DescribeVMTypeResponse.class);
@@ -9318,10 +9318,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateComputeSetCPUAllocationRatio - 设置计算集群的超分比例
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateComputeSetCPUAllocationRatioResponse updateComputeSetCPUAllocationRatio(UpdateComputeSetCPUAllocationRatioRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateComputeSetCPUAllocationRatio");
         return (UpdateComputeSetCPUAllocationRatioResponse)
                 this.invoke(request, UpdateComputeSetCPUAllocationRatioResponse.class);
@@ -9332,10 +9332,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateComputeSetCPUModels - 设置计算CPU模型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateComputeSetCPUModelsResponse updateComputeSetCPUModels(UpdateComputeSetCPUModelsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateComputeSetCPUModels");
         return (UpdateComputeSetCPUModelsResponse)
                 this.invoke(request, UpdateComputeSetCPUModelsResponse.class);
@@ -9346,10 +9346,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateResourcePermission - 修改资源权限
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateResourcePermissionResponse updateResourcePermission(UpdateResourcePermissionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateResourcePermission");
         return (UpdateResourcePermissionResponse)
                 this.invoke(request, UpdateResourcePermissionResponse.class);
@@ -9360,10 +9360,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateStorageSetSortPolicy - 修改存储集群排序策略
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateStorageSetSortPolicyResponse updateStorageSetSortPolicy(UpdateStorageSetSortPolicyRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateStorageSetSortPolicy");
         return (UpdateStorageSetSortPolicyResponse)
                 this.invoke(request, UpdateStorageSetSortPolicyResponse.class);
@@ -9374,10 +9374,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMSetBoundImage - 更新计算集群绑定的镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMSetBoundImageResponse updateVMSetBoundImage(UpdateVMSetBoundImageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMSetBoundImage");
         return (UpdateVMSetBoundImageResponse)
                 this.invoke(request, UpdateVMSetBoundImageResponse.class);
@@ -9388,10 +9388,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMSetBoundStorageSet - 更新计算集群绑定的存储集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMSetBoundStorageSetResponse updateVMSetBoundStorageSet(UpdateVMSetBoundStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMSetBoundStorageSet");
         return (UpdateVMSetBoundStorageSetResponse)
                 this.invoke(request, UpdateVMSetBoundStorageSetResponse.class);
@@ -9402,10 +9402,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindSecurityGroup - 绑定安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindSecurityGroupResponse bindSecurityGroup(BindSecurityGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindSecurityGroup");
         return (BindSecurityGroupResponse)
                 this.invoke(request, BindSecurityGroupResponse.class);
@@ -9416,10 +9416,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateIPGroup - 创建IP组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateIPGroupResponse createIPGroup(CreateIPGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateIPGroup");
         return (CreateIPGroupResponse)
                 this.invoke(request, CreateIPGroupResponse.class);
@@ -9430,10 +9430,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreatePortGroup - 创建端口组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreatePortGroupResponse createPortGroup(CreatePortGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreatePortGroup");
         return (CreatePortGroupResponse)
                 this.invoke(request, CreatePortGroupResponse.class);
@@ -9444,10 +9444,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSecurityGroup - 创建安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSecurityGroupResponse createSecurityGroup(CreateSecurityGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSecurityGroup");
         return (CreateSecurityGroupResponse)
                 this.invoke(request, CreateSecurityGroupResponse.class);
@@ -9458,10 +9458,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSecurityGroupRule - 新建安全组规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSecurityGroupRuleResponse createSecurityGroupRule(CreateSecurityGroupRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSecurityGroupRule");
         return (CreateSecurityGroupRuleResponse)
                 this.invoke(request, CreateSecurityGroupRuleResponse.class);
@@ -9472,10 +9472,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteIPGroup - 删除IP组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteIPGroupResponse deleteIPGroup(DeleteIPGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteIPGroup");
         return (DeleteIPGroupResponse)
                 this.invoke(request, DeleteIPGroupResponse.class);
@@ -9486,10 +9486,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeletePortGroup - 删除端口组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeletePortGroupResponse deletePortGroup(DeletePortGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeletePortGroup");
         return (DeletePortGroupResponse)
                 this.invoke(request, DeletePortGroupResponse.class);
@@ -9500,10 +9500,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSecurityGroup - 删除安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSecurityGroupResponse deleteSecurityGroup(DeleteSecurityGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSecurityGroup");
         return (DeleteSecurityGroupResponse)
                 this.invoke(request, DeleteSecurityGroupResponse.class);
@@ -9514,10 +9514,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSecurityGroupRule - 删除安全组规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSecurityGroupRuleResponse deleteSecurityGroupRule(DeleteSecurityGroupRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSecurityGroupRule");
         return (DeleteSecurityGroupRuleResponse)
                 this.invoke(request, DeleteSecurityGroupRuleResponse.class);
@@ -9528,10 +9528,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeIPGroup - 查询IP组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeIPGroupResponse describeIPGroup(DescribeIPGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeIPGroup");
         return (DescribeIPGroupResponse)
                 this.invoke(request, DescribeIPGroupResponse.class);
@@ -9542,10 +9542,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribePortGroup - 查询端口组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribePortGroupResponse describePortGroup(DescribePortGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribePortGroup");
         return (DescribePortGroupResponse)
                 this.invoke(request, DescribePortGroupResponse.class);
@@ -9556,10 +9556,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSecurityGroup - 获取安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSecurityGroupResponse describeSecurityGroup(DescribeSecurityGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSecurityGroup");
         return (DescribeSecurityGroupResponse)
                 this.invoke(request, DescribeSecurityGroupResponse.class);
@@ -9570,10 +9570,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSecurityGroupResource - 获取安全组关联资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSecurityGroupResourceResponse describeSecurityGroupResource(DescribeSecurityGroupResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSecurityGroupResource");
         return (DescribeSecurityGroupResourceResponse)
                 this.invoke(request, DescribeSecurityGroupResourceResponse.class);
@@ -9584,10 +9584,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSecurityGroupRule - 获取安全组规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSecurityGroupRuleResponse describeSecurityGroupRule(DescribeSecurityGroupRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSecurityGroupRule");
         return (DescribeSecurityGroupRuleResponse)
                 this.invoke(request, DescribeSecurityGroupRuleResponse.class);
@@ -9598,10 +9598,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnBindSecurityGroup - 解绑安全组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnBindSecurityGroupResponse unBindSecurityGroup(UnBindSecurityGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnBindSecurityGroup");
         return (UnBindSecurityGroupResponse)
                 this.invoke(request, UnBindSecurityGroupResponse.class);
@@ -9612,10 +9612,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateIPGroup - 更新IP组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateIPGroupResponse updateIPGroup(UpdateIPGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateIPGroup");
         return (UpdateIPGroupResponse)
                 this.invoke(request, UpdateIPGroupResponse.class);
@@ -9626,10 +9626,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdatePortGroup - 更新端口组
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdatePortGroupResponse updatePortGroup(UpdatePortGroupRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdatePortGroup");
         return (UpdatePortGroupResponse)
                 this.invoke(request, UpdatePortGroupResponse.class);
@@ -9640,10 +9640,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSecurityGroupRule - 更新安全组规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSecurityGroupRuleResponse updateSecurityGroupRule(UpdateSecurityGroupRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSecurityGroupRule");
         return (UpdateSecurityGroupRuleResponse)
                 this.invoke(request, UpdateSecurityGroupRuleResponse.class);
@@ -9654,10 +9654,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateExternalStorageSetDisk - 分配外置存储集群硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateExternalStorageSetDiskResponse allocateExternalStorageSetDisk(AllocateExternalStorageSetDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateExternalStorageSetDisk");
         return (AllocateExternalStorageSetDiskResponse)
                 this.invoke(request, AllocateExternalStorageSetDiskResponse.class);
@@ -9668,10 +9668,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachExternalDisk - 绑定外置存储
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachExternalDiskResponse attachExternalDisk(AttachExternalDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachExternalDisk");
         return (AttachExternalDiskResponse)
                 this.invoke(request, AttachExternalDiskResponse.class);
@@ -9682,10 +9682,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateExternalStorageSet - 创建外置存储集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateExternalStorageSetResponse createExternalStorageSet(CreateExternalStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateExternalStorageSet");
         return (CreateExternalStorageSetResponse)
                 this.invoke(request, CreateExternalStorageSetResponse.class);
@@ -9696,10 +9696,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteExternalStorageSet - 删除外置存储集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteExternalStorageSetResponse deleteExternalStorageSet(DeleteExternalStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteExternalStorageSet");
         return (DeleteExternalStorageSetResponse)
                 this.invoke(request, DeleteExternalStorageSetResponse.class);
@@ -9710,10 +9710,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeExternalDisk - 查询外置存储集群硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeExternalDiskResponse describeExternalDisk(DescribeExternalDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeExternalDisk");
         return (DescribeExternalDiskResponse)
                 this.invoke(request, DescribeExternalDiskResponse.class);
@@ -9724,10 +9724,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeExternalStorageSet - 查询外置存储集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeExternalStorageSetResponse describeExternalStorageSet(DescribeExternalStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeExternalStorageSet");
         return (DescribeExternalStorageSetResponse)
                 this.invoke(request, DescribeExternalStorageSetResponse.class);
@@ -9738,10 +9738,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeExternalStorageType - 查询外置存储集群类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeExternalStorageTypeResponse describeExternalStorageType(DescribeExternalStorageTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeExternalStorageType");
         return (DescribeExternalStorageTypeResponse)
                 this.invoke(request, DescribeExternalStorageTypeResponse.class);
@@ -9752,10 +9752,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachExternalDisk - 解绑外置存储
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachExternalDiskResponse detachExternalDisk(DetachExternalDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachExternalDisk");
         return (DetachExternalDiskResponse)
                 this.invoke(request, DetachExternalDiskResponse.class);
@@ -9766,10 +9766,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ScanFCSAN - 扫描 FCSAN 外置存储集群硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ScanFCSANResponse scanFCSAN(ScanFCSANRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ScanFCSAN");
         return (ScanFCSANResponse)
                 this.invoke(request, ScanFCSANResponse.class);
@@ -9780,10 +9780,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ScanISCSIDisk - 扫描外置存储集群硬盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ScanISCSIDiskResponse scanISCSIDisk(ScanISCSIDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ScanISCSIDisk");
         return (ScanISCSIDiskResponse)
                 this.invoke(request, ScanISCSIDiskResponse.class);
@@ -9794,10 +9794,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetShareAbleExternalStorage - 外置存储盘设置为可共享的磁盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetShareAbleExternalStorageResponse setShareAbleExternalStorage(SetShareAbleExternalStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetShareAbleExternalStorage");
         return (SetShareAbleExternalStorageResponse)
                 this.invoke(request, SetShareAbleExternalStorageResponse.class);
@@ -9808,10 +9808,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateExternalStorageSet - 更新外置存储集群
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateExternalStorageSetResponse updateExternalStorageSet(UpdateExternalStorageSetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateExternalStorageSet");
         return (UpdateExternalStorageSetResponse)
                 this.invoke(request, UpdateExternalStorageSetResponse.class);
@@ -9822,10 +9822,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CompleteSMC - 完成迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CompleteSMCResponse completeSMC(CompleteSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CompleteSMC");
         return (CompleteSMCResponse)
                 this.invoke(request, CompleteSMCResponse.class);
@@ -9836,10 +9836,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSMC - 创建SMC任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSMCResponse createSMC(CreateSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSMC");
         return (CreateSMCResponse)
                 this.invoke(request, CreateSMCResponse.class);
@@ -9850,10 +9850,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSMC - 删除SMC任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSMCResponse deleteSMC(DeleteSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSMC");
         return (DeleteSMCResponse)
                 this.invoke(request, DeleteSMCResponse.class);
@@ -9864,10 +9864,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSMC - 获取SMC信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSMCResponse describeSMC(DescribeSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSMC");
         return (DescribeSMCResponse)
                 this.invoke(request, DescribeSMCResponse.class);
@@ -9878,10 +9878,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SMCHeartbeat - smc心跳
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SMCHeartbeatResponse sMCHeartbeat(SMCHeartbeatRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SMCHeartbeat");
         return (SMCHeartbeatResponse)
                 this.invoke(request, SMCHeartbeatResponse.class);
@@ -9892,10 +9892,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetupSMC - 设置SMC任务
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetupSMCResponse setupSMC(SetupSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetupSMC");
         return (SetupSMCResponse)
                 this.invoke(request, SetupSMCResponse.class);
@@ -9906,10 +9906,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StartSMC - 开始迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StartSMCResponse startSMC(StartSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StartSMC");
         return (StartSMCResponse)
                 this.invoke(request, StartSMCResponse.class);
@@ -9920,10 +9920,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StopSMC - 停止迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StopSMCResponse stopSMC(StopSMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StopSMC");
         return (StopSMCResponse)
                 this.invoke(request, StopSMCResponse.class);
@@ -9934,10 +9934,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindTag - 绑定标签
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindTagResponse bindTag(BindTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindTag");
         return (BindTagResponse)
                 this.invoke(request, BindTagResponse.class);
@@ -9948,10 +9948,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateTag - 创建标签
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateTagResponse createTag(CreateTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateTag");
         return (CreateTagResponse)
                 this.invoke(request, CreateTagResponse.class);
@@ -9962,10 +9962,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteTag - 删除标签
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteTagResponse deleteTag(DeleteTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteTag");
         return (DeleteTagResponse)
                 this.invoke(request, DeleteTagResponse.class);
@@ -9976,10 +9976,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeBindableTagResource - 查询可绑定标签的资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeBindableTagResourceResponse describeBindableTagResource(DescribeBindableTagResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeBindableTagResource");
         return (DescribeBindableTagResourceResponse)
                 this.invoke(request, DescribeBindableTagResourceResponse.class);
@@ -9990,10 +9990,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTag - 查询标签
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTagResponse describeTag(DescribeTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTag");
         return (DescribeTagResponse)
                 this.invoke(request, DescribeTagResponse.class);
@@ -10004,10 +10004,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTagResource - 查询标签资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTagResourceResponse describeTagResource(DescribeTagResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTagResource");
         return (DescribeTagResourceResponse)
                 this.invoke(request, DescribeTagResourceResponse.class);
@@ -10018,10 +10018,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetResourceTags - 设置资源最终绑定的所有标签
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetResourceTagsResponse setResourceTags(SetResourceTagsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetResourceTags");
         return (SetResourceTagsResponse)
                 this.invoke(request, SetResourceTagsResponse.class);
@@ -10032,10 +10032,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnBindTag - 标签解绑
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnBindTagResponse unBindTag(UnBindTagRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnBindTag");
         return (UnBindTagResponse)
                 this.invoke(request, UnBindTagResponse.class);
@@ -10046,10 +10046,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateTimer - 创建定时器
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateTimerResponse createTimer(CreateTimerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateTimer");
         return (CreateTimerResponse)
                 this.invoke(request, CreateTimerResponse.class);
@@ -10060,10 +10060,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteTimer - 删除定时器
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteTimerResponse deleteTimer(DeleteTimerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteTimer");
         return (DeleteTimerResponse)
                 this.invoke(request, DeleteTimerResponse.class);
@@ -10074,10 +10074,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTimer - 查询定时器
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTimerResponse describeTimer(DescribeTimerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTimer");
         return (DescribeTimerResponse)
                 this.invoke(request, DescribeTimerResponse.class);
@@ -10088,10 +10088,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTimerTask - 查询定时器执行记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTimerTaskResponse describeTimerTask(DescribeTimerTaskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTimerTask");
         return (DescribeTimerTaskResponse)
                 this.invoke(request, DescribeTimerTaskResponse.class);
@@ -10102,10 +10102,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTimer - 更新定时器
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTimerResponse updateTimer(UpdateTimerRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTimer");
         return (UpdateTimerResponse)
                 this.invoke(request, UpdateTimerResponse.class);
@@ -10116,10 +10116,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateTrafficMirror - 创建流量镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateTrafficMirrorResponse createTrafficMirror(CreateTrafficMirrorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateTrafficMirror");
         return (CreateTrafficMirrorResponse)
                 this.invoke(request, CreateTrafficMirrorResponse.class);
@@ -10130,10 +10130,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteTrafficMirror - 删除流量镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteTrafficMirrorResponse deleteTrafficMirror(DeleteTrafficMirrorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteTrafficMirror");
         return (DeleteTrafficMirrorResponse)
                 this.invoke(request, DeleteTrafficMirrorResponse.class);
@@ -10144,10 +10144,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTrafficMirror - 查询流量镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTrafficMirrorResponse describeTrafficMirror(DescribeTrafficMirrorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTrafficMirror");
         return (DescribeTrafficMirrorResponse)
                 this.invoke(request, DescribeTrafficMirrorResponse.class);
@@ -10158,10 +10158,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeTrafficMirrorSources - 查询流量镜像源设备信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeTrafficMirrorSourcesResponse describeTrafficMirrorSources(DescribeTrafficMirrorSourcesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeTrafficMirrorSources");
         return (DescribeTrafficMirrorSourcesResponse)
                 this.invoke(request, DescribeTrafficMirrorSourcesResponse.class);
@@ -10172,10 +10172,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTrafficMirror - 更新流量镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTrafficMirrorResponse updateTrafficMirror(UpdateTrafficMirrorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTrafficMirror");
         return (UpdateTrafficMirrorResponse)
                 this.invoke(request, UpdateTrafficMirrorResponse.class);
@@ -10186,10 +10186,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTrafficMirrorEnable - 是否启用流量镜像
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTrafficMirrorEnableResponse updateTrafficMirrorEnable(UpdateTrafficMirrorEnableRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTrafficMirrorEnable");
         return (UpdateTrafficMirrorEnableResponse)
                 this.invoke(request, UpdateTrafficMirrorEnableResponse.class);
@@ -10200,10 +10200,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTrafficMirrorRule - 更新流量镜像规则
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTrafficMirrorRuleResponse updateTrafficMirrorRule(UpdateTrafficMirrorRuleRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTrafficMirrorRule");
         return (UpdateTrafficMirrorRuleResponse)
                 this.invoke(request, UpdateTrafficMirrorRuleResponse.class);
@@ -10214,10 +10214,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateTrafficMirrorSources - 更新流量镜像源设备信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateTrafficMirrorSourcesResponse updateTrafficMirrorSources(UpdateTrafficMirrorSourcesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateTrafficMirrorSources");
         return (UpdateTrafficMirrorSourcesResponse)
                 this.invoke(request, UpdateTrafficMirrorSourcesResponse.class);
@@ -10228,10 +10228,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateUSB - 分配USB设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateUSBResponse allocateUSB(AllocateUSBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateUSB");
         return (AllocateUSBResponse)
                 this.invoke(request, AllocateUSBResponse.class);
@@ -10242,10 +10242,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AttachUSB - 加载USB设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AttachUSBResponse attachUSB(AttachUSBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AttachUSB");
         return (AttachUSBResponse)
                 this.invoke(request, AttachUSBResponse.class);
@@ -10256,10 +10256,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DetachUSB - 卸载USB设备
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DetachUSBResponse detachUSB(DetachUSBRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DetachUSB");
         return (DetachUSBResponse)
                 this.invoke(request, DetachUSBResponse.class);
@@ -10270,10 +10270,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListUSBs - 获取USB设备信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListUSBsResponse listUSBs(ListUSBsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListUSBs");
         return (ListUSBsResponse)
                 this.invoke(request, ListUSBsResponse.class);
@@ -10284,10 +10284,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateVIP - 申请VIP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateVIPResponse allocateVIP(AllocateVIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateVIP");
         return (AllocateVIPResponse)
                 this.invoke(request, AllocateVIPResponse.class);
@@ -10298,10 +10298,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVIP - 获取VIP列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVIPResponse describeVIP(DescribeVIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVIP");
         return (DescribeVIPResponse)
                 this.invoke(request, DescribeVIPResponse.class);
@@ -10312,10 +10312,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVIPDiffPrice - 获取外网VIP差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVIPDiffPriceResponse getVIPDiffPrice(GetVIPDiffPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVIPDiffPrice");
         return (GetVIPDiffPriceResponse)
                 this.invoke(request, GetVIPDiffPriceResponse.class);
@@ -10326,10 +10326,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVIPPrice - 获取外网VIP价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVIPPriceResponse getVIPPrice(GetVIPPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVIPPrice");
         return (GetVIPPriceResponse)
                 this.invoke(request, GetVIPPriceResponse.class);
@@ -10340,10 +10340,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ReleaseVIP - 释放VIP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ReleaseVIPResponse releaseVIP(ReleaseVIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ReleaseVIP");
         return (ReleaseVIPResponse)
                 this.invoke(request, ReleaseVIPResponse.class);
@@ -10354,10 +10354,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVIPBandwidth - 修改外网VIP的带宽
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVIPBandwidthResponse updateVIPBandwidth(UpdateVIPBandwidthRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVIPBandwidth");
         return (UpdateVIPBandwidthResponse)
                 this.invoke(request, UpdateVIPBandwidthResponse.class);
@@ -10368,10 +10368,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVIPBindResource - 更新VIP绑定资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVIPBindResourceResponse updateVIPBindResource(UpdateVIPBindResourceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVIPBindResource");
         return (UpdateVIPBindResourceResponse)
                 this.invoke(request, UpdateVIPBindResourceResponse.class);
@@ -10382,10 +10382,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortMigrateVMDisk - 取消虚拟机热存储迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortMigrateVMDiskResponse abortMigrateVMDisk(AbortMigrateVMDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortMigrateVMDisk");
         return (AbortMigrateVMDiskResponse)
                 this.invoke(request, AbortMigrateVMDiskResponse.class);
@@ -10396,10 +10396,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AbortVMSnapshot - 取消虚拟机整机快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AbortVMSnapshotResponse abortVMSnapshot(AbortVMSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AbortVMSnapshot");
         return (AbortVMSnapshotResponse)
                 this.invoke(request, AbortVMSnapshotResponse.class);
@@ -10410,10 +10410,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddVMDisk - 添加虚拟机磁盘
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddVMDiskResponse addVMDisk(AddVMDiskRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddVMDisk");
         return (AddVMDiskResponse)
                 this.invoke(request, AddVMDiskResponse.class);
@@ -10424,10 +10424,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AddVMNIC - 添加虚拟机网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AddVMNICResponse addVMNIC(AddVMNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AddVMNIC");
         return (AddVMNICResponse)
                 this.invoke(request, AddVMNICResponse.class);
@@ -10438,10 +10438,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateVMSSHSession - 申请虚拟机SSH会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateVMSSHSessionResponse allocateVMSSHSession(AllocateVMSSHSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateVMSSHSession");
         return (AllocateVMSSHSessionResponse)
                 this.invoke(request, AllocateVMSSHSessionResponse.class);
@@ -10452,10 +10452,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AllocateVMVNCSession - 申请VNC会话
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AllocateVMVNCSessionResponse allocateVMVNCSession(AllocateVMVNCSessionRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AllocateVMVNCSession");
         return (AllocateVMVNCSessionResponse)
                 this.invoke(request, AllocateVMVNCSessionResponse.class);
@@ -10466,10 +10466,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CancelCloneVMInstance - 取消整机克隆
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CancelCloneVMInstanceResponse cancelCloneVMInstance(CancelCloneVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CancelCloneVMInstance");
         return (CancelCloneVMInstanceResponse)
                 this.invoke(request, CancelCloneVMInstanceResponse.class);
@@ -10480,10 +10480,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CloneVMInstance - 整机克隆
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CloneVMInstanceResponse cloneVMInstance(CloneVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CloneVMInstance");
         return (CloneVMInstanceResponse)
                 this.invoke(request, CloneVMInstanceResponse.class);
@@ -10494,10 +10494,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVMInstance - 创建虚拟机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVMInstanceResponse createVMInstance(CreateVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVMInstance");
         return (CreateVMInstanceResponse)
                 this.invoke(request, CreateVMInstanceResponse.class);
@@ -10508,10 +10508,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVMC - 删除 VMC 资源
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVMCResponse deleteVMC(DeleteVMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVMC");
         return (DeleteVMCResponse)
                 this.invoke(request, DeleteVMCResponse.class);
@@ -10522,10 +10522,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVMInstance - 删除虚拟机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVMInstanceResponse deleteVMInstance(DeleteVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVMInstance");
         return (DeleteVMInstanceResponse)
                 this.invoke(request, DeleteVMInstanceResponse.class);
@@ -10536,10 +10536,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVMNIC - 删除虚拟机网卡
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVMNICResponse deleteVMNIC(DeleteVMNICRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVMNIC");
         return (DeleteVMNICResponse)
                 this.invoke(request, DeleteVMNICResponse.class);
@@ -10550,10 +10550,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVMSnapshot - 虚拟机删除快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVMSnapshotResponse deleteVMSnapshot(DeleteVMSnapshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVMSnapshot");
         return (DeleteVMSnapshotResponse)
                 this.invoke(request, DeleteVMSnapshotResponse.class);
@@ -10564,10 +10564,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeCIStatus - 查询CI状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeCIStatusResponse describeCIStatus(DescribeCIStatusRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeCIStatus");
         return (DescribeCIStatusResponse)
                 this.invoke(request, DescribeCIStatusResponse.class);
@@ -10578,10 +10578,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMC - 获取 VMC 资源信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMCResponse describeVMC(DescribeVMCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMC");
         return (DescribeVMCResponse)
                 this.invoke(request, DescribeVMCResponse.class);
@@ -10592,10 +10592,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMInstance - 获取虚拟机信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMInstanceResponse describeVMInstance(DescribeVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMInstance");
         return (DescribeVMInstanceResponse)
                 this.invoke(request, DescribeVMInstanceResponse.class);
@@ -10606,10 +10606,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVMWareVMs - 获取 vmware 虚拟机信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVMWareVMsResponse describeVMWareVMs(DescribeVMWareVMsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVMWareVMs");
         return (DescribeVMWareVMsResponse)
                 this.invoke(request, DescribeVMWareVMsResponse.class);
@@ -10620,10 +10620,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GenerateVMWareConsoleTicket - 创建 vmware 虚拟机控制台凭证
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GenerateVMWareConsoleTicketResponse generateVMWareConsoleTicket(GenerateVMWareConsoleTicketRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GenerateVMWareConsoleTicket");
         return (GenerateVMWareConsoleTicketResponse)
                 this.invoke(request, GenerateVMWareConsoleTicketResponse.class);
@@ -10634,10 +10634,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPaymentOfPremium - 获取修改配置后的差价
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPaymentOfPremiumResponse getPaymentOfPremium(GetPaymentOfPremiumRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPaymentOfPremium");
         return (GetPaymentOfPremiumResponse)
                 this.invoke(request, GetPaymentOfPremiumResponse.class);
@@ -10648,10 +10648,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVMInstancePrice - 获取虚拟机价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVMInstancePriceResponse getVMInstancePrice(GetVMInstancePriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVMInstancePrice");
         return (GetVMInstancePriceResponse)
                 this.invoke(request, GetVMInstancePriceResponse.class);
@@ -10662,10 +10662,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVMScreenshot - 获取截屏
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVMScreenshotResponse getVMScreenshot(GetVMScreenshotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVMScreenshot");
         return (GetVMScreenshotResponse)
                 this.invoke(request, GetVMScreenshotResponse.class);
@@ -10676,10 +10676,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVMSpiceInfo - 获取Spice信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVMSpiceInfoResponse getVMSpiceInfo(GetVMSpiceInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVMSpiceInfo");
         return (GetVMSpiceInfoResponse)
                 this.invoke(request, GetVMSpiceInfoResponse.class);
@@ -10690,10 +10690,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVMVNCInfo - 获取VNC信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVMVNCInfoResponse getVMVNCInfo(GetVMVNCInfoRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVMVNCInfo");
         return (GetVMVNCInfoResponse)
                 this.invoke(request, GetVMVNCInfoResponse.class);
@@ -10704,10 +10704,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVMWareClusterDatastore - 获取 vmware 计算集群的信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVMWareClusterDatastoreResponse getVMWareClusterDatastore(GetVMWareClusterDatastoreRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVMWareClusterDatastore");
         return (GetVMWareClusterDatastoreResponse)
                 this.invoke(request, GetVMWareClusterDatastoreResponse.class);
@@ -10718,10 +10718,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigrateMgrVMStorage - 虚拟机热存储迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigrateMgrVMStorageResponse migrateMgrVMStorage(MigrateMgrVMStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigrateMgrVMStorage");
         return (MigrateMgrVMStorageResponse)
                 this.invoke(request, MigrateMgrVMStorageResponse.class);
@@ -10732,10 +10732,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigrateStorageBandWidth - 虚拟机热存储迁移带宽设置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigrateStorageBandWidthResponse migrateStorageBandWidth(MigrateStorageBandWidthRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigrateStorageBandWidth");
         return (MigrateStorageBandWidthResponse)
                 this.invoke(request, MigrateStorageBandWidthResponse.class);
@@ -10746,10 +10746,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * MigrateVMStorage - 虚拟机热存储迁移
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public MigrateVMStorageResponse migrateVMStorage(MigrateVMStorageRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("MigrateVMStorage");
         return (MigrateVMStorageResponse)
                 this.invoke(request, MigrateVMStorageResponse.class);
@@ -10760,10 +10760,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * PoweroffVMInstance - 断电主机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public PoweroffVMInstanceResponse poweroffVMInstance(PoweroffVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("PoweroffVMInstance");
         return (PoweroffVMInstanceResponse)
                 this.invoke(request, PoweroffVMInstanceResponse.class);
@@ -10774,10 +10774,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ReinstallVMInstance - 重装系统
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ReinstallVMInstanceResponse reinstallVMInstance(ReinstallVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ReinstallVMInstance");
         return (ReinstallVMInstanceResponse)
                 this.invoke(request, ReinstallVMInstanceResponse.class);
@@ -10788,10 +10788,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResetVMInstancePassword - 重置主机密码
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResetVMInstancePasswordResponse resetVMInstancePassword(ResetVMInstancePasswordRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResetVMInstancePassword");
         return (ResetVMInstancePasswordResponse)
                 this.invoke(request, ResetVMInstancePasswordResponse.class);
@@ -10802,10 +10802,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResetVMNetConfig - 虚拟机网络参数重置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResetVMNetConfigResponse resetVMNetConfig(ResetVMNetConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResetVMNetConfig");
         return (ResetVMNetConfigResponse)
                 this.invoke(request, ResetVMNetConfigResponse.class);
@@ -10816,10 +10816,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ResizeVMConfig - 修改虚拟机配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ResizeVMConfigResponse resizeVMConfig(ResizeVMConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ResizeVMConfig");
         return (ResizeVMConfigResponse)
                 this.invoke(request, ResizeVMConfigResponse.class);
@@ -10830,10 +10830,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RestartVMInstance - 重启主机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RestartVMInstanceResponse restartVMInstance(RestartVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RestartVMInstance");
         return (RestartVMInstanceResponse)
                 this.invoke(request, RestartVMInstanceResponse.class);
@@ -10844,10 +10844,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * RestoreVMInstance - 虚拟机恢复快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public RestoreVMInstanceResponse restoreVMInstance(RestoreVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("RestoreVMInstance");
         return (RestoreVMInstanceResponse)
                 this.invoke(request, RestoreVMInstanceResponse.class);
@@ -10858,10 +10858,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SaveVMInstance - 虚拟机整机快照
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SaveVMInstanceResponse saveVMInstance(SaveVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SaveVMInstance");
         return (SaveVMInstanceResponse)
                 this.invoke(request, SaveVMInstanceResponse.class);
@@ -10872,10 +10872,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * SetBootFromCdrom - 设置虚拟机从Cdrom启动
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public SetBootFromCdromResponse setBootFromCdrom(SetBootFromCdromRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("SetBootFromCdrom");
         return (SetBootFromCdromResponse)
                 this.invoke(request, SetBootFromCdromResponse.class);
@@ -10886,10 +10886,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StartVMInstance - 启动主机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StartVMInstanceResponse startVMInstance(StartVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StartVMInstance");
         return (StartVMInstanceResponse)
                 this.invoke(request, StartVMInstanceResponse.class);
@@ -10900,10 +10900,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * StopVMInstance - 关闭主机
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public StopVMInstanceResponse stopVMInstance(StopVMInstanceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("StopVMInstance");
         return (StopVMInstanceResponse)
                 this.invoke(request, StopVMInstanceResponse.class);
@@ -10914,10 +10914,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnSetBootFromCdrom - 设置虚拟机不从Cdrom启动
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnSetBootFromCdromResponse unSetBootFromCdrom(UnSetBootFromCdromRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnSetBootFromCdrom");
         return (UnSetBootFromCdromResponse)
                 this.invoke(request, UnSetBootFromCdromResponse.class);
@@ -10928,10 +10928,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMAdvancedOptions - 设置虚拟机高级参数(DNS)
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMAdvancedOptionsResponse updateVMAdvancedOptions(UpdateVMAdvancedOptionsRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMAdvancedOptions");
         return (UpdateVMAdvancedOptionsResponse)
                 this.invoke(request, UpdateVMAdvancedOptionsResponse.class);
@@ -10942,10 +10942,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMBootBootLoaderType - 设置虚拟机引导方式
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMBootBootLoaderTypeResponse updateVMBootBootLoaderType(UpdateVMBootBootLoaderTypeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMBootBootLoaderType");
         return (UpdateVMBootBootLoaderTypeResponse)
                 this.invoke(request, UpdateVMBootBootLoaderTypeResponse.class);
@@ -10956,10 +10956,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMBootDevices - 设置虚拟机引导顺序
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMBootDevicesResponse updateVMBootDevices(UpdateVMBootDevicesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMBootDevices");
         return (UpdateVMBootDevicesResponse)
                 this.invoke(request, UpdateVMBootDevicesResponse.class);
@@ -10970,10 +10970,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMCPUHypervisor - 设置虚拟机CPU虚拟化隐藏标记
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMCPUHypervisorResponse updateVMCPUHypervisor(UpdateVMCPUHypervisorRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMCPUHypervisor");
         return (UpdateVMCPUHypervisorResponse)
                 this.invoke(request, UpdateVMCPUHypervisorResponse.class);
@@ -10984,10 +10984,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMCPULimitPercent - 修改虚拟机CPU资源限制
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMCPULimitPercentResponse updateVMCPULimitPercent(UpdateVMCPULimitPercentRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMCPULimitPercent");
         return (UpdateVMCPULimitPercentResponse)
                 this.invoke(request, UpdateVMCPULimitPercentResponse.class);
@@ -10998,10 +10998,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMCPUModel - 设置虚拟机cpu模型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMCPUModelResponse updateVMCPUModel(UpdateVMCPUModelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMCPUModel");
         return (UpdateVMCPUModelResponse)
                 this.invoke(request, UpdateVMCPUModelResponse.class);
@@ -11012,10 +11012,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMCPUPriority - 修改虚拟机CPU资源优先级
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMCPUPriorityResponse updateVMCPUPriority(UpdateVMCPUPriorityRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMCPUPriority");
         return (UpdateVMCPUPriorityResponse)
                 this.invoke(request, UpdateVMCPUPriorityResponse.class);
@@ -11026,10 +11026,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMDNS - 设置虚拟机DNS
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMDNSResponse updateVMDNS(UpdateVMDNSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMDNS");
         return (UpdateVMDNSResponse)
                 this.invoke(request, UpdateVMDNSResponse.class);
@@ -11040,10 +11040,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMDefaultGW - 设置虚拟机出口
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMDefaultGWResponse updateVMDefaultGW(UpdateVMDefaultGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMDefaultGW");
         return (UpdateVMDefaultGWResponse)
                 this.invoke(request, UpdateVMDefaultGWResponse.class);
@@ -11054,10 +11054,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMDiskBus - 更新磁盘总线类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMDiskBusResponse updateVMDiskBus(UpdateVMDiskBusRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMDiskBus");
         return (UpdateVMDiskBusResponse)
                 this.invoke(request, UpdateVMDiskBusResponse.class);
@@ -11068,10 +11068,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMDiskCacheMode - 设置虚拟机磁盘缓存类型
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMDiskCacheModeResponse updateVMDiskCacheMode(UpdateVMDiskCacheModeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMDiskCacheMode");
         return (UpdateVMDiskCacheModeResponse)
                 this.invoke(request, UpdateVMDiskCacheModeResponse.class);
@@ -11082,10 +11082,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMHighAvailability - 设置虚拟机高可用
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMHighAvailabilityResponse updateVMHighAvailability(UpdateVMHighAvailabilityRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMHighAvailability");
         return (UpdateVMHighAvailabilityResponse)
                 this.invoke(request, UpdateVMHighAvailabilityResponse.class);
@@ -11096,10 +11096,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMISOSlot - 设置虚拟机iso插槽数量
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMISOSlotResponse updateVMISOSlot(UpdateVMISOSlotRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMISOSlot");
         return (UpdateVMISOSlotResponse)
                 this.invoke(request, UpdateVMISOSlotResponse.class);
@@ -11110,10 +11110,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMMAC - 修改网卡的MAC
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMMACResponse updateVMMAC(UpdateVMMACRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMMAC");
         return (UpdateVMMACResponse)
                 this.invoke(request, UpdateVMMACResponse.class);
@@ -11124,10 +11124,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMNICLinkState - 更新虚拟机网卡启用状态
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMNICLinkStateResponse updateVMNICLinkState(UpdateVMNICLinkStateRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMNICLinkState");
         return (UpdateVMNICLinkStateResponse)
                 this.invoke(request, UpdateVMNICLinkStateResponse.class);
@@ -11138,10 +11138,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMNICModel - 更新虚拟机网卡型号
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMNICModelResponse updateVMNICModel(UpdateVMNICModelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMNICModel");
         return (UpdateVMNICModelResponse)
                 this.invoke(request, UpdateVMNICModelResponse.class);
@@ -11152,10 +11152,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMNICQueues - 更新虚拟机网卡队列
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMNICQueuesResponse updateVMNICQueues(UpdateVMNICQueuesRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMNICQueues");
         return (UpdateVMNICQueuesResponse)
                 this.invoke(request, UpdateVMNICQueuesResponse.class);
@@ -11166,10 +11166,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMOS - 更新虚拟机操作系统
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMOSResponse updateVMOS(UpdateVMOSRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMOS");
         return (UpdateVMOSResponse)
                 this.invoke(request, UpdateVMOSResponse.class);
@@ -11180,10 +11180,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMSupportHotPlug - 更新虚拟机热插拔
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMSupportHotPlugResponse updateVMSupportHotPlug(UpdateVMSupportHotPlugRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMSupportHotPlug");
         return (UpdateVMSupportHotPlugResponse)
                 this.invoke(request, UpdateVMSupportHotPlugResponse.class);
@@ -11194,10 +11194,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMUserData - 设置虚拟机用户数据
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMUserDataResponse updateVMUserData(UpdateVMUserDataRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMUserData");
         return (UpdateVMUserDataResponse)
                 this.invoke(request, UpdateVMUserDataResponse.class);
@@ -11208,10 +11208,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVMVCPUBinding - 虚拟机更新VCPU绑定
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVMVCPUBindingResponse updateVMVCPUBinding(UpdateVMVCPUBindingRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVMVCPUBinding");
         return (UpdateVMVCPUBindingResponse)
                 this.invoke(request, UpdateVMVCPUBindingResponse.class);
@@ -11222,10 +11222,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * AssociateVPCPeering - 创建VPC对等连接
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public AssociateVPCPeeringResponse associateVPCPeering(AssociateVPCPeeringRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("AssociateVPCPeering");
         return (AssociateVPCPeeringResponse)
                 this.invoke(request, AssociateVPCPeeringResponse.class);
@@ -11236,10 +11236,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSubnet - 创建子网
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSubnetResponse createSubnet(CreateSubnetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSubnet");
         return (CreateSubnetResponse)
                 this.invoke(request, CreateSubnetResponse.class);
@@ -11250,10 +11250,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateSubnetRoute - 创建子网路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateSubnetRouteResponse createSubnetRoute(CreateSubnetRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateSubnetRoute");
         return (CreateSubnetRouteResponse)
                 this.invoke(request, CreateSubnetRouteResponse.class);
@@ -11264,10 +11264,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVPC - 创建VPC
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVPCResponse createVPC(CreateVPCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVPC");
         return (CreateVPCResponse)
                 this.invoke(request, CreateVPCResponse.class);
@@ -11278,10 +11278,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSubnet - 删除子网
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSubnet");
         return (DeleteSubnetResponse)
                 this.invoke(request, DeleteSubnetResponse.class);
@@ -11292,10 +11292,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteSubnetRoute - 删除子网路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteSubnetRouteResponse deleteSubnetRoute(DeleteSubnetRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteSubnetRoute");
         return (DeleteSubnetRouteResponse)
                 this.invoke(request, DeleteSubnetRouteResponse.class);
@@ -11306,10 +11306,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVPC - 删除VPC
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVPCResponse deleteVPC(DeleteVPCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVPC");
         return (DeleteVPCResponse)
                 this.invoke(request, DeleteVPCResponse.class);
@@ -11320,10 +11320,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSubnet - 获取子网
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSubnetResponse describeSubnet(DescribeSubnetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSubnet");
         return (DescribeSubnetResponse)
                 this.invoke(request, DescribeSubnetResponse.class);
@@ -11334,10 +11334,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeSubnetRoute - 查询子网路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeSubnetRouteResponse describeSubnetRoute(DescribeSubnetRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeSubnetRoute");
         return (DescribeSubnetRouteResponse)
                 this.invoke(request, DescribeSubnetRouteResponse.class);
@@ -11348,10 +11348,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVPC - 获取VPC信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVPCResponse describeVPC(DescribeVPCRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVPC");
         return (DescribeVPCResponse)
                 this.invoke(request, DescribeVPCResponse.class);
@@ -11362,10 +11362,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DissociateVPCPeering - 删除VPC对等连接
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DissociateVPCPeeringResponse dissociateVPCPeering(DissociateVPCPeeringRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DissociateVPCPeering");
         return (DissociateVPCPeeringResponse)
                 this.invoke(request, DissociateVPCPeeringResponse.class);
@@ -11376,10 +11376,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetSubnetAvailableIPQuota - 获取子网可用IP数量
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetSubnetAvailableIPQuotaResponse getSubnetAvailableIPQuota(GetSubnetAvailableIPQuotaRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetSubnetAvailableIPQuota");
         return (GetSubnetAvailableIPQuotaResponse)
                 this.invoke(request, GetSubnetAvailableIPQuotaResponse.class);
@@ -11390,10 +11390,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ListAllocatedIPsInSubnet - 获取子网中申请出来的IP列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ListAllocatedIPsInSubnetResponse listAllocatedIPsInSubnet(ListAllocatedIPsInSubnetRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ListAllocatedIPsInSubnet");
         return (ListAllocatedIPsInSubnetResponse)
                 this.invoke(request, ListAllocatedIPsInSubnetResponse.class);
@@ -11404,10 +11404,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * ReplaceIP - 更新产品内网IP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public ReplaceIPResponse replaceIP(ReplaceIPRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("ReplaceIP");
         return (ReplaceIPResponse)
                 this.invoke(request, ReplaceIPResponse.class);
@@ -11418,10 +11418,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateSubnetRoute - 更新子网路由
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateSubnetRouteResponse updateSubnetRoute(UpdateSubnetRouteRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateSubnetRoute");
         return (UpdateSubnetRouteResponse)
                 this.invoke(request, UpdateSubnetRouteResponse.class);
@@ -11432,10 +11432,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * BindEIPToVPN - 绑定EIP到VPN
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public BindEIPToVPNResponse bindEIPToVPN(BindEIPToVPNRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("BindEIPToVPN");
         return (BindEIPToVPNResponse)
                 this.invoke(request, BindEIPToVPNResponse.class);
@@ -11446,10 +11446,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateRemoteVPNGW - 创建对端网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateRemoteVPNGWResponse createRemoteVPNGW(CreateRemoteVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateRemoteVPNGW");
         return (CreateRemoteVPNGWResponse)
                 this.invoke(request, CreateRemoteVPNGWResponse.class);
@@ -11460,10 +11460,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVPNGW - 创建网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVPNGWResponse createVPNGW(CreateVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVPNGW");
         return (CreateVPNGWResponse)
                 this.invoke(request, CreateVPNGWResponse.class);
@@ -11474,10 +11474,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateVPNTunnel - 创建隧道
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateVPNTunnelResponse createVPNTunnel(CreateVPNTunnelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateVPNTunnel");
         return (CreateVPNTunnelResponse)
                 this.invoke(request, CreateVPNTunnelResponse.class);
@@ -11488,10 +11488,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteRemoteVPNGW - 删除对端网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteRemoteVPNGWResponse deleteRemoteVPNGW(DeleteRemoteVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteRemoteVPNGW");
         return (DeleteRemoteVPNGWResponse)
                 this.invoke(request, DeleteRemoteVPNGWResponse.class);
@@ -11502,10 +11502,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVPNGW - 删除网关
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVPNGWResponse deleteVPNGW(DeleteVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVPNGW");
         return (DeleteVPNGWResponse)
                 this.invoke(request, DeleteVPNGWResponse.class);
@@ -11516,10 +11516,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteVPNTunnel - 删除隧道
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteVPNTunnelResponse deleteVPNTunnel(DeleteVPNTunnelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteVPNTunnel");
         return (DeleteVPNTunnelResponse)
                 this.invoke(request, DeleteVPNTunnelResponse.class);
@@ -11530,10 +11530,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeRemoteVPNGW - 获取对端网关信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeRemoteVPNGWResponse describeRemoteVPNGW(DescribeRemoteVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeRemoteVPNGW");
         return (DescribeRemoteVPNGWResponse)
                 this.invoke(request, DescribeRemoteVPNGWResponse.class);
@@ -11544,10 +11544,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVPNGW - 获取网关信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVPNGWResponse describeVPNGW(DescribeVPNGWRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVPNGW");
         return (DescribeVPNGWResponse)
                 this.invoke(request, DescribeVPNGWResponse.class);
@@ -11558,10 +11558,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeVPNTunnel - 获取隧道信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeVPNTunnelResponse describeVPNTunnel(DescribeVPNTunnelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeVPNTunnel");
         return (DescribeVPNTunnelResponse)
                 this.invoke(request, DescribeVPNTunnelResponse.class);
@@ -11572,10 +11572,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetPrice - 获取价格
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetPriceResponse getPrice(GetPriceRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetPrice");
         return (GetPriceResponse)
                 this.invoke(request, GetPriceResponse.class);
@@ -11586,10 +11586,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * GetVPNTunnelConfig - 获取隧道配置
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public GetVPNTunnelConfigResponse getVPNTunnelConfig(GetVPNTunnelConfigRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("GetVPNTunnelConfig");
         return (GetVPNTunnelConfigResponse)
                 this.invoke(request, GetVPNTunnelConfigResponse.class);
@@ -11600,10 +11600,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UnbindEIPFromVPN - 从VPN解绑EIP
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UnbindEIPFromVPNResponse unbindEIPFromVPN(UnbindEIPFromVPNRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UnbindEIPFromVPN");
         return (UnbindEIPFromVPNResponse)
                 this.invoke(request, UnbindEIPFromVPNResponse.class);
@@ -11614,10 +11614,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateVPNTunnel - 更新隧道信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateVPNTunnelResponse updateVPNTunnel(UpdateVPNTunnelRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateVPNTunnel");
         return (UpdateVPNTunnelResponse)
                 this.invoke(request, UpdateVPNTunnelResponse.class);
@@ -11628,10 +11628,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpgradeVPNGWToHA - 升级为高可用版本
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpgradeVPNGWToHAResponse upgradeVPNGWToHA(UpgradeVPNGWToHARequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpgradeVPNGWToHA");
         return (UpgradeVPNGWToHAResponse)
                 this.invoke(request, UpgradeVPNGWToHAResponse.class);
@@ -11642,10 +11642,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * CreateWorkflow - 创建自定义流程
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public CreateWorkflowResponse createWorkflow(CreateWorkflowRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("CreateWorkflow");
         return (CreateWorkflowResponse)
                 this.invoke(request, CreateWorkflowResponse.class);
@@ -11656,10 +11656,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DeleteWorkflow - 删除自定义流程
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DeleteWorkflowResponse deleteWorkflow(DeleteWorkflowRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DeleteWorkflow");
         return (DeleteWorkflowResponse)
                 this.invoke(request, DeleteWorkflowResponse.class);
@@ -11670,10 +11670,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeApplication - 查询审批记录
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeApplicationResponse describeApplication(DescribeApplicationRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeApplication");
         return (DescribeApplicationResponse)
                 this.invoke(request, DescribeApplicationResponse.class);
@@ -11684,10 +11684,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeApplicationNode - 查询审批列表
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeApplicationNodeResponse describeApplicationNode(DescribeApplicationNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeApplicationNode");
         return (DescribeApplicationNodeResponse)
                 this.invoke(request, DescribeApplicationNodeResponse.class);
@@ -11698,10 +11698,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * DescribeWorkflow - 查询自定义流程
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public DescribeWorkflowResponse describeWorkflow(DescribeWorkflowRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("DescribeWorkflow");
         return (DescribeWorkflowResponse)
                 this.invoke(request, DescribeWorkflowResponse.class);
@@ -11712,10 +11712,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateApplicationNode - 更新审批节点信息
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateApplicationNodeResponse updateApplicationNode(UpdateApplicationNodeRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateApplicationNode");
         return (UpdateApplicationNodeResponse)
                 this.invoke(request, UpdateApplicationNodeResponse.class);
@@ -11726,10 +11726,10 @@ public class Client extends DefaultClient implements ClientInterface {
      * UpdateWorkflow - 更新自定义流程
      *
      * @param request Request object
-     * @throws OpenAPIException Exception
+     * @throws UCloudStackException Exception
      */
     public UpdateWorkflowResponse updateWorkflow(UpdateWorkflowRequest request)
-            throws OpenAPIException {
+            throws UCloudStackException {
         request.setAction("UpdateWorkflow");
         return (UpdateWorkflowResponse)
                 this.invoke(request, UpdateWorkflowResponse.class);

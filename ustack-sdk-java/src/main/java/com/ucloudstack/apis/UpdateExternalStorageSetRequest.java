@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class UpdateExternalStorageSetRequest extends Request {
 
     /** IQN新增列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("AddTargetIQNs")
+    @UCloudStackParam("AddTargetIQNs")
     private List<String> addTargetIQNsParam;
 
     /** 租户ID，存储集群所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** IQN禁用列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("DisableTargetIQNs")
+    @UCloudStackParam("DisableTargetIQNs")
     private List<String> disableTargetIQNsParam;
 
     /** IQN启用列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("EnableTargetIQNs")
+    @UCloudStackParam("EnableTargetIQNs")
     private List<String> enableTargetIQNsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** IQN移除列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("RemoveTargetIQNs")
+    @UCloudStackParam("RemoveTargetIQNs")
     private List<String> removeTargetIQNsParam;
 
     /** 存储集群ID，待更新的外置存储集群ID */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

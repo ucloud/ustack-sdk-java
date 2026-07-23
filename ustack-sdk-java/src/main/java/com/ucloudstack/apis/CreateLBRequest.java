@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,102 +24,102 @@ public class CreateLBRequest extends Request {
 
     /** 审批名称，用于标识此次资源申请的审批流程 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由，说明申请此负载均衡资源的业务原因 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** CPU核数，指定负载均衡实例的CPU规格，取值范围：1、2、4、8，若不指定则默认为2核 */
     
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR，hour->HOUR、month->MONTH、year->YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群类型，指定负载均衡实例使用的存储集群，若不指定则系统自动选择最空闲的存储集群 */
     
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 弹性公网IP的ID，为WAN类型负载均衡提供公网访问能力；LBType为WAN时必填且EIP必须未绑定 */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** 高可用模式，指定负载均衡部署架构；取值ActiveStandy（双活高可用）、Standalone（单机模式） */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 负载均衡类型，决定负载均衡的网络访问范围；取值LAN（内网，仅VPC内部访问）、WAN（外网，可从公网访问） */
     @NotEmpty
-    @OpenAPIParam("LBType")
+    @UCloudStackParam("LBType")
     private String lBTypeParam;
 
     /** 负载均衡名称，用于标识负载均衡，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，负载均衡所属项目分组标识，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费数量，用于指定购买时长的数量；按月/年计费时表示购买的月/年数 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 安全组ID，用于控制负载均衡的网络访问规则，当LBType为WAN时必填，LBType为LAN时必须为空 */
     
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
     /** 子网ID，指定负载均衡所属的子网，决定负载均衡的内网IP地址段 */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 标签键值对，格式为Base64编码的key:value字符串，用于资源标记和分类管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 删除保护开关，用于防止误删除；0表示开启删除保护，1表示关闭删除保护 */
     
-    @OpenAPIParam("TerminationPolicy")
+    @UCloudStackParam("TerminationPolicy")
     private Integer terminationPolicyParam;
 
     /** 计算集群类型，指定负载均衡实例运行的计算集群 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** VPCID，指定负载均衡所属的私有网络 */
     @NotEmpty
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
 

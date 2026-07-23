@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class UpdateClusterCapacityRequest extends Request {
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 集群最大CPU数量 */
     
-    @OpenAPIParam("MaxCPU")
+    @UCloudStackParam("MaxCPU")
     private Integer maxCPUParam;
 
     /** 集群最大内存容量 */
     
-    @OpenAPIParam("MaxMemory")
+    @UCloudStackParam("MaxMemory")
     private Integer maxMemoryParam;
 
     /** 集群最大内存容量 */
     
-    @OpenAPIParam("MaxPods")
+    @UCloudStackParam("MaxPods")
     private Integer maxPodsParam;
 
     /** 集群最大存储容量 */
     
-    @OpenAPIParam("MaxStorage")
+    @UCloudStackParam("MaxStorage")
     private Integer maxStorageParam;
 
     /** 集群最大存储容量分配策略 */
     
-    @OpenAPIParam("MaxStorageAllocation")
+    @UCloudStackParam("MaxStorageAllocation")
     private String maxStorageAllocationParam;
 
     /** Region */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

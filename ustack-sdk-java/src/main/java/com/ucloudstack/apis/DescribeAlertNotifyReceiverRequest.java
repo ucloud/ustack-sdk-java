@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DescribeAlertNotifyReceiverRequest extends Request {
 
     /** 分页大小，指定每页返回的记录数，取值范围1-100，Limit为0时默认10，结果按创建时间倒序返回 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 通知组ID，查询指定通知组下的接收人，若指定则查询该组的所有接收人 */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
     /** 分页偏移量，指定跳过的记录数，与Limit配合遍历所有接收人 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
 

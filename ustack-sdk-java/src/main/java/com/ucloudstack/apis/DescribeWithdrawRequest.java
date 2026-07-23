@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class DescribeWithdrawRequest extends Request {
 
     /** 查询起始时间，提现记录创建时间的起始时间戳，单位为秒，必须小于结束时间 */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID，过滤指定租户的提现记录，不指定则查询所有租户（需系统管理员权限） */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 查询结束时间，提现记录创建时间的结束时间戳，单位为秒，必须大于起始时间 */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 分页大小，指定每页返回的提现记录数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定从第几条记录开始返回 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
 

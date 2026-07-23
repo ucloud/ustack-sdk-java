@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class CancelCloneVMInstanceRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 源虚拟机ID，克隆源虚拟机标识 */
     
-    @OpenAPIParam("SourceVMID")
+    @UCloudStackParam("SourceVMID")
     private String sourceVMIDParam;
 
     /** 任务ID，待取消的克隆任务标识 */
     @NotEmpty
-    @OpenAPIParam("VMCID")
+    @UCloudStackParam("VMCID")
     private String vMCIDParam;
 
     /** 虚拟机ID，待取消的虚拟机资源标识 */
     
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateVMVCPUBindingRequest extends Request {
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 允许降级，标识在宕机迁移时是否允许解绑 */
     
-    @OpenAPIParam("VCPUBindingDegrandable")
+    @UCloudStackParam("VCPUBindingDegrandable")
     private Boolean vCPUBindingDegrandableParam;
 
     /** 绑定信息，vCPU与pCPU的绑定关系列表 */
     
-    @OpenAPIParam("VCPUBindingInfos")
+    @UCloudStackParam("VCPUBindingInfos")
     private List<String> vCPUBindingInfosParam;
 
     /** 绑定节点，vCPU绑定的物理NUMA节点 */
     
-    @OpenAPIParam("VCPUBindingNode")
+    @UCloudStackParam("VCPUBindingNode")
     private String vCPUBindingNodeParam;
 
     /** 虚拟机ID，待调整绑定的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

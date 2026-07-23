@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeResourceInfoRequest extends Request {
 
     /** 地域ID，指定要查询资源的地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID列表，要查询信息的资源ID集合，支持批量查询 */
     @NotEmpty
-    @OpenAPIParam("ResourceIDs")
+    @UCloudStackParam("ResourceIDs")
     private List<String> resourceIDsParam;
 
 

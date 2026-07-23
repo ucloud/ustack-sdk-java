@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeDBSBackupRequest extends Request {
 
     /** 备份ID列表，筛选指定备份 */
     
-    @OpenAPIParam("BackupIDs")
+    @UCloudStackParam("BackupIDs")
     private List<String> backupIDsParam;
 
     /** 备份类型，取值Logical/Physical/Snapshot/Incremental */
     
-    @OpenAPIParam("BackupType")
+    @UCloudStackParam("BackupType")
     private String backupTypeParam;
 
     /** 租户ID，用于筛选指定租户的备份 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，指定每页返回的记录数，默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，默认0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 计划ID，筛选指定备份计划 */
     
-    @OpenAPIParam("PlanID")
+    @UCloudStackParam("PlanID")
     private String planIDParam;
 
     /** 源资源ID，备份源资源ID */
     
-    @OpenAPIParam("SrcResourceID")
+    @UCloudStackParam("SrcResourceID")
     private String srcResourceIDParam;
 
     /** 源数据地域，备份源资源所属地域 */
     
-    @OpenAPIParam("SrcResourceRegion")
+    @UCloudStackParam("SrcResourceRegion")
     private String srcResourceRegionParam;
 
     /** 存储池ID，筛选指定存储池 */
     
-    @OpenAPIParam("StorageID")
+    @UCloudStackParam("StorageID")
     private String storageIDParam;
 
 

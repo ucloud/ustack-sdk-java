@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,67 +24,67 @@ public class DescribeDiskRequest extends Request {
 
     /** 挂载的资源ID，用于筛选已挂载到指定资源（目前仅支持虚拟机）的磁盘；指定后会先查询该资源绑定的磁盘并以其DiskIDs为筛选条件 */
     
-    @OpenAPIParam("AttachResourceID")
+    @UCloudStackParam("AttachResourceID")
     private String attachResourceIDParam;
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 硬盘ID列表，用于查询指定磁盘信息 */
     
-    @OpenAPIParam("DiskIDs")
+    @UCloudStackParam("DiskIDs")
     private List<String> diskIDsParam;
 
     /** 硬盘类型（已废弃参数），保留向后兼容，传值时会自动转换为DiskTypes */
     
-    @OpenAPIParam("DiskType")
+    @UCloudStackParam("DiskType")
     private String diskTypeParam;
 
     /** 硬盘类型列表，多值过滤字段，取值范围：Boot、Data、cdrom、SaveMem、BootImage */
     
-    @OpenAPIParam("DiskTypes")
+    @UCloudStackParam("DiskTypes")
     private List<String> diskTypesParam;
 
     /** 搜索关键词，用于模糊匹配磁盘名称或备注 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，用于筛选指定项目组下的磁盘资源 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群ID列表，用于筛选指定存储集群下的磁盘资源 */
     
-    @OpenAPIParam("SetIDs")
+    @UCloudStackParam("SetIDs")
     private List<String> setIDsParam;
 
     /** 筛选共享盘，取值true（仅返回共享盘）或false（仅返回普通盘），空值表示返回所有类型 */
     
-    @OpenAPIParam("ShareAbleFilter")
+    @UCloudStackParam("ShareAbleFilter")
     private String shareAbleFilterParam;
 
     /** 状态列表，用于筛选指定状态的磁盘资源 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
 

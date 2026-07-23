@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class SaveVMInstanceRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，对快照的补充说明，长度0-100个字符，禁止包含<script>标签或javascript链接 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 快照名称，自定义的快照标识，长度1-128，支持中英文、数字、点、下划线、中划线 */
     
-    @OpenAPIParam("SPName")
+    @UCloudStackParam("SPName")
     private String sPNameParam;
 
     /** 虚拟机ID，待暂存/快照的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
     /** 排除磁盘，标识是否暂存虚拟机而不创建快照，true：暂存虚拟机；false：创建快照 */
     
-    @OpenAPIParam("WithoutDisk")
+    @UCloudStackParam("WithoutDisk")
     private Boolean withoutDiskParam;
 
     /** 排除内存，标识是否不包含内存数据，暂存虚拟机时需设为false */
     
-    @OpenAPIParam("WithoutMemory")
+    @UCloudStackParam("WithoutMemory")
     private Boolean withoutMemoryParam;
 
 

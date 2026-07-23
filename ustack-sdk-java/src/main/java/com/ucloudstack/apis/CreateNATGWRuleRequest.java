@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class CreateNATGWRuleRequest extends Request {
 
     /** 绑定资源ID，根据BindResourceType取VMID/VPCID/SubnetID，同一资源仅允许创建一条SNAT规则，资源地址范围不得与已有规则重叠，VM类型时该VM不能已绑定EIP */
     @NotEmpty
-    @OpenAPIParam("BindResourceID")
+    @UCloudStackParam("BindResourceID")
     private String bindResourceIDParam;
 
     /** 绑定资源类型，SNAT规则绑定的资源类型，取值范围：VM（虚拟机）、VPC（虚拟私有云）、Subnet（子网） */
     @NotEmpty
-    @OpenAPIParam("BindResourceType")
+    @UCloudStackParam("BindResourceType")
     private String bindResourceTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 弹性公网IPID，SNAT规则使用的EIP，必须已绑定到该NAT网关 */
     @NotEmpty
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** NAT网关ID，用于定位需要添加SNAT规则的NAT网关实例，该NAT网关必须处于运行状态，同一NAT网关最多可创建100条SNAT规则 */
     @NotEmpty
-    @OpenAPIParam("NATGWID")
+    @UCloudStackParam("NATGWID")
     private String nATGWIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

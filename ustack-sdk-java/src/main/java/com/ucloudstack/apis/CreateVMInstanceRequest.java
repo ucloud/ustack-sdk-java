@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,422 +24,422 @@ public class CreateVMInstanceRequest extends Request {
 
     /** 审批名称，启用审批流程时的标题 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由，启用审批流程时的说明 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** 外网带宽，指定外网IP的带宽上限，单位：Mbps，0表示不限制，仅在指定外网时有效 */
     
-    @OpenAPIParam("Bandwidth")
+    @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
     /** 引导顺序，可选字段，支持：hd（硬盘），cdrom（光驱），network（网络） */
     
-    @OpenAPIParam("BootDevices")
+    @UCloudStackParam("BootDevices")
     private List<String> bootDevicesParam;
 
     /** 系统盘总线类型，取值 virtio，ide，scsi */
     
-    @OpenAPIParam("BootDiskBus")
+    @UCloudStackParam("BootDiskBus")
     private String bootDiskBusParam;
 
     /** 系统盘磁盘缓存模式，当前生效的磁盘I/O缓存策略 */
     
-    @OpenAPIParam("BootDiskCacheMode")
+    @UCloudStackParam("BootDiskCacheMode")
     private String bootDiskCacheModeParam;
 
     /** 系统盘ID，作为系统启动盘的已有云盘标识，与BootDiskSpace互斥 */
     
-    @OpenAPIParam("BootDiskID")
+    @UCloudStackParam("BootDiskID")
     private String bootDiskIDParam;
 
     /** 系统盘QoS限速读带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("BootDiskReadBandwidth")
+    @UCloudStackParam("BootDiskReadBandwidth")
     private Integer bootDiskReadBandwidthParam;
 
     /** 系统盘QoS限速读IOPS，0表示不限制 */
     
-    @OpenAPIParam("BootDiskReadIOPS")
+    @UCloudStackParam("BootDiskReadIOPS")
     private Integer bootDiskReadIOPSParam;
 
     /** 启动盘加密密钥，用于加密系统盘的密钥信息，可选字段 */
     
-    @OpenAPIParam("BootDiskSecret")
+    @UCloudStackParam("BootDiskSecret")
     private String bootDiskSecretParam;
 
     /** 系统盘集群类型，指定新建系统盘所属的存储集群，仅在BootDiskID为空时有效，影响系统盘的I/O性能，租户必须有访问权限 */
     
-    @OpenAPIParam("BootDiskSetType")
+    @UCloudStackParam("BootDiskSetType")
     private String bootDiskSetTypeParam;
 
     /** 系统盘容量，指定新建系统盘的大小，单位：GiB，仅在BootDiskID为空时有效，调整此值可扩容系统盘 */
     
-    @OpenAPIParam("BootDiskSpace")
+    @UCloudStackParam("BootDiskSpace")
     private Integer bootDiskSpaceParam;
 
     /** 系统盘QoS限速总带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("BootDiskTotalBandwidth")
+    @UCloudStackParam("BootDiskTotalBandwidth")
     private Integer bootDiskTotalBandwidthParam;
 
     /** 系统盘QoS限速总IOPS，0表示不限制 */
     
-    @OpenAPIParam("BootDiskTotalIOPS")
+    @UCloudStackParam("BootDiskTotalIOPS")
     private Integer bootDiskTotalIOPSParam;
 
     /** 系统盘QoS限速写带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("BootDiskWriteBandwidth")
+    @UCloudStackParam("BootDiskWriteBandwidth")
     private Integer bootDiskWriteBandwidthParam;
 
     /** 系统盘QoS限速写IOPS，0表示不限制 */
     
-    @OpenAPIParam("BootDiskWriteIOPS")
+    @UCloudStackParam("BootDiskWriteIOPS")
     private Integer bootDiskWriteIOPSParam;
 
     /** 启动源类型，指定用于创建虚拟机的介质类型，取值：Image（镜像）、Disk（云盘） */
     
-    @OpenAPIParam("BootSourceType")
+    @UCloudStackParam("BootSourceType")
     private String bootSourceTypeParam;
 
     /** 引导方式，指定虚拟机的系统引导模式，bios兼容性更好，uefi支持更大磁盘和安全启动 */
     
-    @OpenAPIParam("BootloaderType")
+    @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
     /** CDROM列表，指定需挂载的CDROM信息，最多支持3个CDROM */
     
-    @OpenAPIParam("CDROMs")
+    @UCloudStackParam("CDROMs")
     private List<CreateVMInstanceRequestCDROM> cDROMsParam;
 
     /** 核心数，虚拟机的vCPU核心数量，必须与所选计算集群的规格兼容 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** CPU每个插槽内核数，可选字段，默认等于CPU */
     
-    @OpenAPIParam("CPUCoresPerSocket")
+    @UCloudStackParam("CPUCoresPerSocket")
     private Integer cPUCoresPerSocketParam;
 
     /** 虚拟机是否隐藏虚拟化 (hypervisor) 标记，可选字段，默认false */
     
-    @OpenAPIParam("CPUHypervisorDisable")
+    @UCloudStackParam("CPUHypervisorDisable")
     private Boolean cPUHypervisorDisableParam;
 
     /** CPU频率限制百分比，可选字段，默认100% */
     
-    @OpenAPIParam("CPULimitPercent")
+    @UCloudStackParam("CPULimitPercent")
     private Integer cPULimitPercentParam;
 
     /** CPU模式，指定虚拟机CPU的模拟方式，host-passthrough提供最优性能但可移植性差，custom提供更好的兼容性 */
     
-    @OpenAPIParam("CPUMode")
+    @UCloudStackParam("CPUMode")
     private String cPUModeParam;
 
     /** CPU型号，指定虚拟机的CPU处理器型号，需与所选计算集群兼容 */
     
-    @OpenAPIParam("CPUModel")
+    @UCloudStackParam("CPUModel")
     private String cPUModelParam;
 
     /** CPU优先级，取值：Normal，High （高），可选字段，默认Normal */
     
-    @OpenAPIParam("CPUPriority")
+    @UCloudStackParam("CPUPriority")
     private String cPUPriorityParam;
 
     /** 计费类型，用于指定计费模式，取值：Dynamic（按小时）、Month（按月）、Year（按年） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** DNS配置，指定虚拟机的DNS服务器地址，多个服务器用逗号分隔 */
     
-    @OpenAPIParam("DNS")
+    @UCloudStackParam("DNS")
     private String dNSParam;
 
     /** 数据盘ID，需挂载的已有数据盘标识，与DataDiskSpace互斥，可选字段 */
     
-    @OpenAPIParam("DataDiskID")
+    @UCloudStackParam("DataDiskID")
     private String dataDiskIDParam;
 
     /** 数据盘加密密钥，用于加密数据盘的密钥信息，仅在创建数据盘时有效，可选字段 */
     
-    @OpenAPIParam("DataDiskSecret")
+    @UCloudStackParam("DataDiskSecret")
     private String dataDiskSecretParam;
 
     /** 数据盘集群类型，指定新建数据盘所属的存储集群，仅在DataDiskID为空且DataDiskSpace>0时有效，租户必须有访问权限，可选字段 */
     
-    @OpenAPIParam("DataDiskSetType")
+    @UCloudStackParam("DataDiskSetType")
     private String dataDiskSetTypeParam;
 
     /** 数据盘容量，指定新建数据盘的大小，单位：GiB，当值为0时表示不创建数据盘，仅在DataDiskID为空时有效，与DataDiskID互斥 */
     
-    @OpenAPIParam("DataDiskSpace")
+    @UCloudStackParam("DataDiskSpace")
     private Integer dataDiskSpaceParam;
 
     /** DataDisk列表，指定需挂载的磁盘信息 */
     
-    @OpenAPIParam("DataDisks")
+    @UCloudStackParam("DataDisks")
     private List<CreateVMInstanceRequestDataDisk> dataDisksParam;
 
     /** 磁盘缓存模式，指定磁盘I/O的缓存策略，directsync最安全但性能最低，writeback性能最优但可靠性风险高，none折中方案 */
     
-    @OpenAPIParam("DiskCacheMode")
+    @UCloudStackParam("DiskCacheMode")
     private String diskCacheModeParam;
 
     /** 租户邮箱，归属租户的联系电子邮箱 */
     
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
     /** 扁平网络ID，虚拟机归属的扁平网络标识，与VPCID/SubnetID/OperatorName互斥，扁平网络模式下使用 */
     
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** GPU数量，指定挂载的物理GPU数量，仅在GPUType为GPU时有效，必须不超过所选计算集群的可用数量 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU绑定优化，标识是否启用GPU与vCPU的绑定优化，提高GPU访问延迟性能，仅在配置GPU时有效 */
     
-    @OpenAPIParam("GPUBindingEnable")
+    @UCloudStackParam("GPUBindingEnable")
     private Boolean gPUBindingEnableParam;
 
     /** GPU规格，指定物理GPU的型号规格，仅在GPUType为GPU时有效且必填 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** GPU类型，指定虚拟机挂载的GPU资源类型，GPU（物理透传）提供最高性能和隔离，VGPU（虚拟化）提供资源灵活分配，不指定表示不挂载，可选字段 */
     
-    @OpenAPIParam("GPUType")
+    @UCloudStackParam("GPUType")
     private String gPUTypeParam;
 
     /** 高可用模式，指定虚拟机的高可用策略，NeverStop启用自动重启，None禁用 */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 指定主机运行 */
     
-    @OpenAPIParam("HostID")
+    @UCloudStackParam("HostID")
     private String hostIDParam;
 
     /** 主机名称，虚拟机操作系统内部的主机名 */
     
-    @OpenAPIParam("Hostname")
+    @UCloudStackParam("Hostname")
     private String hostnameParam;
 
     /** 隔离组ID，指定虚拟机所属的物理隔离组，用于提高虚拟机间的物理隔离，可选字段 */
     
-    @OpenAPIParam("IGID")
+    @UCloudStackParam("IGID")
     private String iGIDParam;
 
     /** IP版本，指定网络地址的协议版本，取值：IPv4、IPv6 */
     
-    @OpenAPIParam("IPVersion")
+    @UCloudStackParam("IPVersion")
     private String iPVersionParam;
 
     /** 镜像ID，作为启动源的基础镜像标识，与BootDiskID互斥，两者必须指定其一，镜像必须与计算集群架构匹配，租户必须有访问权限 */
     
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** 电源策略，指定虚拟机创建完成后的电源状态，取值：Running，Stopped，可选字段，默认Running */
     
-    @OpenAPIParam("InitialState")
+    @UCloudStackParam("InitialState")
     private String initialStateParam;
 
     /** 内网IP，指定虚拟机在子网中的内网IP地址，若未指定则由系统自动分配 */
     
-    @OpenAPIParam("InternalIP")
+    @UCloudStackParam("InternalIP")
     private String internalIPParam;
 
     /** 外网IP，指定虚拟机绑定的公网IP地址，若未指定则由系统自动分配 */
     
-    @OpenAPIParam("InternetIP")
+    @UCloudStackParam("InternetIP")
     private String internetIPParam;
 
     /** 内网入向带宽，内网网卡的入站流量带宽限额，单位：Mbps，0表示不限制，与PFCode（SR-IOV）互斥 */
     
-    @OpenAPIParam("LANInAverageBandwidth")
+    @UCloudStackParam("LANInAverageBandwidth")
     private Integer lANInAverageBandwidthParam;
 
     /** 内网MAC，指定内网网卡的MAC地址，需为unicast地址，不能与WANMAC重复，若未指定则由系统自动分配，可选字段 */
     
-    @OpenAPIParam("LANMAC")
+    @UCloudStackParam("LANMAC")
     private String lANMACParam;
 
     /** 内网出向带宽，内网网卡的出站流量带宽限额，单位：Mbps，0表示不限制，与PFCode（SR-IOV）互斥 */
     
-    @OpenAPIParam("LANOutAverageBandwidth")
+    @UCloudStackParam("LANOutAverageBandwidth")
     private Integer lANOutAverageBandwidthParam;
 
     /** 内网安全组ID，绑定到内网网卡的安全策略组标识 */
     
-    @OpenAPIParam("LANSGID")
+    @UCloudStackParam("LANSGID")
     private String lANSGIDParam;
 
     /** vGPU规格，指定虚拟GPU的配置规格，仅在GPUType为VGPU时有效且必填，预留字段，暂未支持 */
     
-    @OpenAPIParam("MdevName")
+    @UCloudStackParam("MdevName")
     private String mdevNameParam;
 
     /** 内存容量，虚拟机的内存大小，单位：MiB，必须是1024的倍数 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 网卡列表，指定需挂载的网卡信息 */
     
-    @OpenAPIParam("NICs")
+    @UCloudStackParam("NICs")
     private List<CreateVMInstanceRequestNIC> nICsParam;
 
     /** 虚拟机名称，自定义的云主机实例标识，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 操作系统发行版，标识操作系统的具体家族，ImageID为空时必填 */
     
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 操作系统类型，标识操作系统的核心分类，ImageID为空时必填 */
     
-    @OpenAPIParam("OSType")
+    @UCloudStackParam("OSType")
     private String oSTypeParam;
 
     /** 操作系统版本，标识发行版内部的具体版本信息 */
     
-    @OpenAPIParam("OSVersion")
+    @UCloudStackParam("OSVersion")
     private String oSVersionParam;
 
     /** 线路ID，虚拟机绑定的外网线路资源标识，与FlatNetworkID互斥，用于WAN网络的外网IP绑定，在VPC模式下，若Bandwidth>0则必填 */
     
-    @OpenAPIParam("OperatorName")
+    @UCloudStackParam("OperatorName")
     private String operatorNameParam;
 
     /** 网卡型号，指定物理网卡的硬件型号编码，支持SR-IOV加速，与内网带宽限速互斥 */
     
-    @OpenAPIParam("PFCode")
+    @UCloudStackParam("PFCode")
     private String pFCodeParam;
 
     /** 登录密码，虚拟机的初始系统管理员密码，仅当所选镜像支持QGA或Cloud-Init时有效，密码强度规则由RegionConfigKeyVMPasswordLength与RegionConfigKeyVMPasswordComplexity配置决定 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 购买时长，指定计费周期的数量 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，对虚拟机资源的补充说明，长度0-100个字符，禁止包含<script>标签或javascript链接 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 子网ID，虚拟机归属的VPC子网标识，与FlatNetworkID互斥，VPC模式下必填（需与VPCID同时指定） */
     
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** Cloud-Init支持，标识是否在虚拟机中启用Cloud-Init，用于虚拟机的自动化初始化配置 */
     
-    @OpenAPIParam("SupportCloudInit")
+    @UCloudStackParam("SupportCloudInit")
     private Boolean supportCloudInitParam;
 
     /** 热插拔支持，标识虚拟机是否支持设备热插拔，允许在虚拟机运行时添加/移除设备 */
     
-    @OpenAPIParam("SupportHotplug")
+    @UCloudStackParam("SupportHotplug")
     private Boolean supportHotplugParam;
 
     /** QGA支持，标识是否在虚拟机中安装QEMU Guest Agent，支持虚拟机内部命令执行和密码重置 */
     
-    @OpenAPIParam("SupportQGA")
+    @UCloudStackParam("SupportQGA")
     private Boolean supportQGAParam;
 
     /** 标签键值对，用于资源的分类标记与自动化管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** USB挂载类型，指定USB设备的连接方式，取值：redir（重定向）、pass-through（直通），仅在USBDeviceID有效时生效 */
     
-    @OpenAPIParam("USBAttachType")
+    @UCloudStackParam("USBAttachType")
     private String uSBAttachTypeParam;
 
     /** USB设备ID，需挂载到虚拟机的USB设备标识 */
     
-    @OpenAPIParam("USBDeviceID")
+    @UCloudStackParam("USBDeviceID")
     private String uSBDeviceIDParam;
 
     /** Cloud-Init脚本，虚拟机启动时的自定义初始化配置脚本，仅当镜像支持Cloud-Init时有效，YAML或Shell格式，需 base64 编码后传入，可选字段 */
     
-    @OpenAPIParam("UserData")
+    @UCloudStackParam("UserData")
     private String userDataParam;
 
     /** 降级允许，标识vCPU绑定在迁移时是否允许降级为非绑定模式，提高迁移成功率但可能降低性能 */
     
-    @OpenAPIParam("VCPUBindingDegrandable")
+    @UCloudStackParam("VCPUBindingDegrandable")
     private Boolean vCPUBindingDegrandableParam;
 
     /** vCPU绑定详情，vCPU与物理CPU的具体绑定关系，由系统自动生成，基于VCPUBindingNode */
     
-    @OpenAPIParam("VCPUBindingInfos")
+    @UCloudStackParam("VCPUBindingInfos")
     private List<String> vCPUBindingInfosParam;
 
     /** vCPU绑定节点，指定vCPU绑定的物理NUMA节点，用于性能优化和延迟敏感应用，可选字段 */
     
-    @OpenAPIParam("VCPUBindingNode")
+    @UCloudStackParam("VCPUBindingNode")
     private String vCPUBindingNodeParam;
 
     /** 计算集群类型，指定虚拟机所属的物理资源集群，决定了虚拟机的架构（x86/ARM）和性能规格 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** VPCID，虚拟机归属的专有网络标识，与FlatNetworkID互斥，VPC模式下必填（需与SubnetID同时指定） */
     
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
     /** 外网MAC，指定外网网卡的MAC地址，需为unicast地址，不能与LANMAC重复，仅在外网网卡存在时有效，可选字段 */
     
-    @OpenAPIParam("WANMAC")
+    @UCloudStackParam("WANMAC")
     private String wANMACParam;
 
     /** WAN网络配置，创建阶段用于声明WAN网卡及其IP配置；当前仅支持1张WAN网卡，单网卡可配置多个WAN IP */
     
-    @OpenAPIParam("WANNetworkConfig")
+    @UCloudStackParam("WANNetworkConfig")
     private WANNetworkConfig wANNetworkConfigParam;
 
     /** 外网安全组ID，绑定到外网网卡的安全策略组标识，仅在指定外网时有效 */
     
-    @OpenAPIParam("WANSGID")
+    @UCloudStackParam("WANSGID")
     private String wANSGIDParam;
 
 

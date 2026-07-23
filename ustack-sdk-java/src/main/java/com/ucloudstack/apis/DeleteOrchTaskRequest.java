@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteOrchTaskRequest extends Request {
 
     /** 租户ID，任务所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域，编排任务所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 任务ID，待删除的编排任务ID，仅允许删除资源类型为编排任务且状态为Available的任务 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

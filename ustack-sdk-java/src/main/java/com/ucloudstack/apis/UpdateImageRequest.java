@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class UpdateImageRequest extends Request {
 
     /** 引导类型，取值bios、uefi */
     
-    @OpenAPIParam("BootloaderType")
+    @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像ID，需修改属性的目标镜像标识，镜像需处于可用状态 */
     @NotEmpty
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** 操作系统发行版，如Ubuntu、CentOS */
     @NotEmpty
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 操作系统类型，如Linux、Windows */
     @NotEmpty
-    @OpenAPIParam("OSType")
+    @UCloudStackParam("OSType")
     private String oSTypeParam;
 
     /** 操作系统版本，标识内部安装的具体补丁或版本号 */
     @NotEmpty
-    @OpenAPIParam("OSVersion")
+    @UCloudStackParam("OSVersion")
     private String oSVersionParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 架构类型，基于计算集群支持的指令集，如x86_64、aarch64 */
     @NotEmpty
-    @OpenAPIParam("SetArch")
+    @UCloudStackParam("SetArch")
     private String setArchParam;
 
     /** Cloud-Init支持，标识镜像是否支持自动化初始化 */
     
-    @OpenAPIParam("SupportCloudInit")
+    @UCloudStackParam("SupportCloudInit")
     private Boolean supportCloudInitParam;
 
     /** QEMU Guest Agent支持，标识镜像是否支持QGA通讯 */
     
-    @OpenAPIParam("SupportQGA")
+    @UCloudStackParam("SupportQGA")
     private Boolean supportQGAParam;
 
 

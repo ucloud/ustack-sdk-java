@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class VerifyEmailAvailabilityRequest extends Request {
 
     /** 收件人邮箱地址，用于验证邮件服务器是否可用 */
     @NotEmpty
-    @OpenAPIParam("Receiver")
+    @UCloudStackParam("Receiver")
     private String receiverParam;
 
 

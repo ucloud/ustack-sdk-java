@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class SetComputeClassDRSVMRuleRequest extends Request {
 
     /** 是否添加黑名单，true为新增或更新黑名单，false表示删除指定VM规则 */
     
-    @OpenAPIParam("Add")
+    @UCloudStackParam("Add")
     private Boolean addParam;
 
     /** 租户ID，用于按租户范围筛选可操作的DRS配置 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 备注信息，可选字段，后台会对内容进行Base64编码后写入Huanghe */
     
-    @OpenAPIParam("Reason")
+    @UCloudStackParam("Reason")
     private String reasonParam;
 
     /** 地域ID，指定要操作的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，指定要更新黑名单的ComputeClass */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 规则类型，Manual表示手工迁移保护，Ignore表示忽略DRS迁移，仅在Add为true时必填 */
     
-    @OpenAPIParam("Type")
+    @UCloudStackParam("Type")
     private String typeParam;
 
     /** 虚拟机ID，指定需要添加或移除的虚拟机，必须存在于当前集群 */
     
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class UpdateIsolationGroupRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 隔离组ID，指定要更新的隔离组 */
     @NotEmpty
-    @OpenAPIParam("IGID")
+    @UCloudStackParam("IGID")
     private String iGIDParam;
 
     /** 是否启用，设置策略是否生效，不传表示不修改 */
     
-    @OpenAPIParam("IsEnable")
+    @UCloudStackParam("IsEnable")
     private Boolean isEnableParam;
 
     /** 是否强制执行，设置策略执行方式，不传表示不修改 */
     
-    @OpenAPIParam("IsForce")
+    @UCloudStackParam("IsForce")
     private Boolean isForceParam;
 
     /** 策略对象列表，用于更新隔离组策略对象 */
     
-    @OpenAPIParam("PolicyObj")
+    @UCloudStackParam("PolicyObj")
     private List<String> policyObjParam;
 
     /** 策略类型，用于更新隔离组策略类型，取值VMAffinity/VMAntiAffinity */
     
-    @OpenAPIParam("PolicyType")
+    @UCloudStackParam("PolicyType")
     private String policyTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

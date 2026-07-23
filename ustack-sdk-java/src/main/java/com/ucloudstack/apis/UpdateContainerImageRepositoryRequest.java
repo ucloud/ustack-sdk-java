@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateContainerImageRepositoryRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像仓库ID，待更新的镜像仓库ID */
     @NotEmpty
-    @OpenAPIParam("ContainerImageRepositoryID")
+    @UCloudStackParam("ContainerImageRepositoryID")
     private String containerImageRepositoryIDParam;
 
     /** 是否为公有仓库，true 时为仓库追加公有标记并同步 Registry 以允许所有租户拉取镜像，false 时移除公有标记恢复为私有 */
     
-    @OpenAPIParam("Public")
+    @UCloudStackParam("Public")
     private Boolean publicParam;
 
     /** 地域，镜像仓库所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

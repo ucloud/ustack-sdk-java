@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class GetDTSPriceRequest extends Request {
 
     /** CPU核数，用于指定DTS实例的CPU配置 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计算集群类型，用于指定DTS实例运行的计算集群 */
     @NotEmpty
-    @OpenAPIParam("ComputeClass")
+    @UCloudStackParam("ComputeClass")
     private String computeClassParam;
 
     /** 购买数量，用于批量购买时指定购买的DTS实例数量 */
     @NotEmpty
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private Integer countParam;
 
     /** DTS任务ID，用于计算升级配置时的费用差价；不指定则计算新购价格 */
     
-    @OpenAPIParam("DTSID")
+    @UCloudStackParam("DTSID")
     private String dTSIDParam;
 
     /** 内存大小，单位GB，用于指定DTS实例的内存配置 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1， */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群类型，用于指定DTS实例系统盘所在存储集群 */
     @NotEmpty
-    @OpenAPIParam("StorageClass")
+    @UCloudStackParam("StorageClass")
     private String storageClassParam;
 
 

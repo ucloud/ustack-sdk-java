@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class StartPaaSInstanceRequest extends Request {
 
     /** 产品类型，取值范围与StopPaaSInstance一致；当类型为LB时，开机完成后会自动恢复绑定的弹性伸缩组配置 */
     @NotEmpty
-    @OpenAPIParam("ProductType")
+    @UCloudStackParam("ProductType")
     private String productTypeParam;
 
     /** 地域ID，指定资源所属地域，用于获取相应的黄河服务 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要开启的PaaS资源，仅支持MYSQL/REDIS/OSS/FS/LB/NATGW/VPNGW */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DeleteNodeHostDeviceRequest extends Request {
 
     /** 租户唯一标识ID，标识请求发起租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 外置设备ID，待删除设备的资源标识 */
     @NotEmpty
-    @OpenAPIParam("HostDeviceID")
+    @UCloudStackParam("HostDeviceID")
     private String hostDeviceIDParam;
 
     /** 设备类型，标识待删除设备的类型 */
     @NotEmpty
-    @OpenAPIParam("HostDeviceType")
+    @UCloudStackParam("HostDeviceType")
     private String hostDeviceTypeParam;
 
     /** 地域ID，用于标识外置设备资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

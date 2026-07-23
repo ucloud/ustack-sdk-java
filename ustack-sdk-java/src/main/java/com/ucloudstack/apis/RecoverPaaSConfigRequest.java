@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class RecoverPaaSConfigRequest extends Request {
 
     /** 地域ID，指定资源所属地域，用于调用对应的资源服务 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要恢复配置的PaaS资源，仅支持MYSQL/REDIS/OSS/FS四类资源。默认要求资源处于AVAILABLE且hhpaas状态为Config_Mismatch；对于带 legacy 标记且尚未 normalized 的 Running 状态 MySQL，也允许执行恢复配置 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class DescribeCertificateRequest extends Request {
 
     /** 证书ID列表，用于筛选指定证书，当Origin为Ingress时必填 */
     
-    @OpenAPIParam("CertificateIDs")
+    @UCloudStackParam("CertificateIDs")
     private List<String> certificateIDsParam;
 
     /** 证书类型，证书的类型，取值范围：ServerCrt、CACrt，空表示不筛选类型 */
     
-    @OpenAPIParam("CertificateType")
+    @UCloudStackParam("CertificateType")
     private String certificateTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，用于搜索证书 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 负载均衡ID，用于筛选已绑定证书的负载均衡，当Origin为Ingress时必填 */
     
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 证书来源，证书的来源，取值范围：Default、Ingress，空表示不筛选来源 */
     
-    @OpenAPIParam("Origin")
+    @UCloudStackParam("Origin")
     private String originParam;
 
     /** 项目ID列表，用于筛选指定项目的证书 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟服务器ID，用于筛选已绑定证书的虚拟服务器，当Origin为Ingress时必填 */
     
-    @OpenAPIParam("VSID")
+    @UCloudStackParam("VSID")
     private String vSIDParam;
 
 

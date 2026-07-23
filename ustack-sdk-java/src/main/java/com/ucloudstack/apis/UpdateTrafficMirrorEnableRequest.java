@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateTrafficMirrorEnableRequest extends Request {
 
     /** 是否启用流量镜像，true表示启用，false表示禁用，启用时若全部源设备已失效（关联虚拟机被删除或销毁）将触发StatusNoAvailableSrcDevice错误，需要重新配置Sources */
     
-    @OpenAPIParam("Enable")
+    @UCloudStackParam("Enable")
     private Boolean enableParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 流量镜像ID，待更新的流量镜像唯一标识符，资源状态必须为Available，执行启停前会自动剔除已解绑或已删除虚拟机对应的源设备，若剔除后没有可用源设备会返回StatusNoAvailableSrcDevice错误 */
     @NotEmpty
-    @OpenAPIParam("TrafficMirrorID")
+    @UCloudStackParam("TrafficMirrorID")
     private String trafficMirrorIDParam;
 
 

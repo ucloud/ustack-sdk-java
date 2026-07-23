@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class RetryInstallTaskV2Request extends Request {
 
     /** 租户ID，标识当前执行重试操作的租户，后台会校验任务所属租户与裸金属当前租户一致，不允许管理员租户（0或超级管理员）直接重试 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，指定任务所在地域，系统会基于地域选择Kunlun集群执行重试 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 装机任务ID，重试目标任务的唯一标识，后台将基于该ID读取任务详情、核验裸金属状态并重新下发装机流程 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateMemberPhoneRequest extends Request {
 
     /** 成员ID，指定要更新手机号的账号标识 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 手机号，用于安全通知或验证码接收，需为合法手机号 */
     @NotEmpty
-    @OpenAPIParam("PhoneNum")
+    @UCloudStackParam("PhoneNum")
     private String phoneNumParam;
 
 

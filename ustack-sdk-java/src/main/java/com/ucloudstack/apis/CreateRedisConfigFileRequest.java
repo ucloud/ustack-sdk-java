@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateRedisConfigFileRequest extends Request {
 
     /** 租户ID，模板所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 原配置ID，从已有模板复制 */
     
-    @OpenAPIParam("ConfigID")
+    @UCloudStackParam("ConfigID")
     private String configIDParam;
 
     /** 描述，模板描述信息 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 名称，模板名称，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 配置项，自定义配置项；当ConfigID为空时必填 */
     
-    @OpenAPIParam("Params")
+    @UCloudStackParam("Params")
     private String paramsParam;
 
     /** 地域ID，模板所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 版本，Redis版本 */
     @NotEmpty
-    @OpenAPIParam("Version")
+    @UCloudStackParam("Version")
     private String versionParam;
 
 

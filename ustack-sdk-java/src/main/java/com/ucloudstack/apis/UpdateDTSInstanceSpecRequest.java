@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateDTSInstanceSpecRequest extends Request {
 
     /** CPU核数，升级后的CPU配置，任务需处于可用状态 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** DTS任务ID，待升级规格的DTS任务唯一标识 */
     @NotEmpty
-    @OpenAPIParam("DTSID")
+    @UCloudStackParam("DTSID")
     private String dTSIDParam;
 
     /** 内存大小，单位GB，升级后的内存配置，任务需处于可用状态 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

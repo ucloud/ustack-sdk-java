@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateOrchTaskRequest extends Request {
 
     /** 租户ID，任务所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 资源筛选条件，用于动态选择资源 */
     
-    @OpenAPIParam("Condition")
+    @UCloudStackParam("Condition")
     private String conditionParam;
 
     /** 地域，编排任务所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 步骤列表，定义更新后的执行步骤，每个步骤为JSON字符串，格式：{"order":1,"delay":0,"resourceIDs":"vm-xx,vm-yy"}；delay取值范围0-3600；order在所有步骤中必须唯一；resourceIDs为逗号分隔的资源ID列表；仅保留AVAILABLE资源，且资源类型必须与任务ResourceType一致 */
     @NotEmpty
-    @OpenAPIParam("Steps")
+    @UCloudStackParam("Steps")
     private List<String> stepsParam;
 
     /** 任务ID，待更新的编排任务ID */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

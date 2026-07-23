@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,117 +24,117 @@ public class CreateRedisRequest extends Request {
 
     /** 备份文件ID，用于从备份恢复创建Redis实例，条件互斥：当提供BackupID时，HighAvailability不能为ActiveStandy */
     
-    @OpenAPIParam("BackupID")
+    @UCloudStackParam("BackupID")
     private String backupIDParam;
 
     /** 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 配置文件ID，用于指定Redis实例的配置模板 */
     @NotEmpty
-    @OpenAPIParam("ConfigID")
+    @UCloudStackParam("ConfigID")
     private String configIDParam;
 
     /** 购买数量，创建实例的数量 */
     @NotEmpty
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private String countParam;
 
     /** 存储集群ID，指定云硬盘所在的存储集群，若不指定，系统会自动获取最空闲的存储集群 */
     
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 外网IP资源ID，用于绑定公网IP，如果提供，系统会检查该IP是否已被绑定到其他资源，若已绑定则创建失败 */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** Redis数据库高可用类型，取值范围：Standalone（单机版，创建1个VM节点）、ActiveStandy（高可用版/主备版，创建2个VM节点），当BackupID不为空（从备份恢复）时仅支持Standalone */
     @NotEmpty
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 内存大小，单位：GiB，系统会根据比率自动调整实际分配的内存 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** Redis实例名称，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** Redis登录密码，要求：1.长度6-64个字符2.支持字母、数字及部分特殊字符（~!@#^&*_+{}|:<>?-=[],./等）3.不支持反引号、单引号、反斜杠、$、%、;、小括号4.必须包含至少2种字符类型（大写字母、小写字母、数字、特殊字符） */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费数量，指定计费周期的数量，按月/年计费时表示购买的月数/年数，按小时计费时强制为1 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于说明和注释，长度为0-100个英文或中文字符，不能包含<script>、<a javascript:>等非法字符，用于XSS防护 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 子网ID，创建虚拟机时必须选择VPC网络和所属子网 */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 标签键值对，用于资源标记和分类管理，格式为key:value的字符串，传入Base64编码的字符串， */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 删除保护策略，取值范围：0（开启删除保护，删除操作会被拒绝）、1（关闭删除保护，允许删除），默认值：0 */
     
-    @OpenAPIParam("TerminationPolicy")
+    @UCloudStackParam("TerminationPolicy")
     private Integer terminationPolicyParam;
 
     /** 线程数量，仅Redis7.0版本有效，默认值：Redis4.0默认为1，Redis7.0默认为2 */
     
-    @OpenAPIParam("Threads")
+    @UCloudStackParam("Threads")
     private Integer threadsParam;
 
     /** 计算集群类型，虚拟机所在宿主机的集群类型，需要有访问权限 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** VPCID，创建虚拟机时必须选择VPC网络和所属子网 */
     @NotEmpty
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
     /** Redis版本，必须为枚举值之一，取值范围：4.0、7.0，默认值：4.0 */
     
-    @OpenAPIParam("Version")
+    @UCloudStackParam("Version")
     private String versionParam;
 
     /** 外网安全组ID，用于外网访问控制，如果需要使用外网安全组，需提前创建安全组后获取其ID */
     
-    @OpenAPIParam("WANSGID")
+    @UCloudStackParam("WANSGID")
     private String wANSGIDParam;
 
 

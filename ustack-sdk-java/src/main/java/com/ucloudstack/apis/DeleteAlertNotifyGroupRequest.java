@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteAlertNotifyGroupRequest extends Request {
 
     /** 通知组ID，待删除的通知组ID；当通知组仍被告警规则引用时会返回错误 */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
 

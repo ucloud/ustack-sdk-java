@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteProductSpecificationRequest extends Request {
 
     /** 规格ID，要删除的产品规格唯一标识符 */
     @NotEmpty
-    @OpenAPIParam("SpecificationID")
+    @UCloudStackParam("SpecificationID")
     private String specificationIDParam;
 
 

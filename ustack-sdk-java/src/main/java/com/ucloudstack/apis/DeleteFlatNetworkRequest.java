@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteFlatNetworkRequest extends Request {
 
     /** 扁平网络ID，指定要删除的扁平网络唯一标识 */
     @NotEmpty
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

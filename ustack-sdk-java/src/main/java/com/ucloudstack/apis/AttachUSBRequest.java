@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class AttachUSBRequest extends Request {
 
     /** 加载类型，取值Passthrough、redir */
     @NotEmpty
-    @OpenAPIParam("AttachType")
+    @UCloudStackParam("AttachType")
     private String attachTypeParam;
 
     /** 租户唯一标识ID，用于验证USB设备归属权限，确保只能操作属于当前租户的设备 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** USB设备ID，指定要加载到虚拟机的USB设备 */
     @NotEmpty
-    @OpenAPIParam("USBDeviceID")
+    @UCloudStackParam("USBDeviceID")
     private String uSBDeviceIDParam;
 
     /** 虚拟机ID，USB设备要加载到的目标虚拟机 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteOSMediaV2Request extends Request {
 
     /** 系统镜像ID，需要先通过CreateOSMediaV2/ListOSMediaV2获取，删除时会先清理Kunlun镜像再删除Taishan资源 */
     @NotEmpty
-    @OpenAPIParam("MediaID")
+    @UCloudStackParam("MediaID")
     private String mediaIDParam;
 
     /** 地域ID，指定要删除系统镜像所在地域，系统会在该地域的Kunlun及Taishan中执行删除 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

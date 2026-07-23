@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeTransactionRequest extends Request {
 
     /** 查询起始时间，Unix秒时间戳，必须早于EndTime */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 查询结束时间，Unix秒时间戳，必须大于BeginTime */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 分页大小，指定每页返回的交易记录数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定从第几条记录开始返回 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，保留字段，当前接口不会根据项目过滤 */
     @NotEmpty
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定交易所属地域；传入all或空字符串会查询所有地域（充值/提现类交易本身无地域概念） */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 交易类型，取值：CHARGE/RECHARGE/REFUND/WITHDRAW/FREE_RECHARGE/FREE_WITHDRAW，不填写则返回所有交易类型 */
     
-    @OpenAPIParam("TransactionType")
+    @UCloudStackParam("TransactionType")
     private String transactionTypeParam;
 
     /** 用户账号ID（即CompanyID），交易查询依据的唯一租户标识 */
     
-    @OpenAPIParam("UserAccountID")
+    @UCloudStackParam("UserAccountID")
     private Integer userAccountIDParam;
 
 

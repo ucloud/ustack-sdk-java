@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateProductSpecificationRequest extends Request {
 
     /** 地域ID，指定规格所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 规格ID，要更新的产品规格唯一标识符 */
     @NotEmpty
-    @OpenAPIParam("SpecificationID")
+    @UCloudStackParam("SpecificationID")
     private String specificationIDParam;
 
     /** 规格值，要设置的新规格值，需符合规格模板定义的格式要求 */
     @NotEmpty
-    @OpenAPIParam("Value")
+    @UCloudStackParam("Value")
     private String valueParam;
 
 

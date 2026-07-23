@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class GetMigratePaaSInstancePriceRequest extends Request {
 
     /** 是否为取消迁移，true表示按照旧集群（AK_MIGRATE_OLD_SET_HOST_IP记录）计算回滚差价；false表示按MigrateComputeSetID计算迁移差价 */
     
-    @OpenAPIParam("AbortMigrate")
+    @UCloudStackParam("AbortMigrate")
     private Boolean abortMigrateParam;
 
     /** 租户ID，保留字段 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 实例ID，要查询差价的虚拟机，必须属于该PaaS资源 */
     @NotEmpty
-    @OpenAPIParam("InstanceID")
+    @UCloudStackParam("InstanceID")
     private String instanceIDParam;
 
     /** 目标计算集群ID，AbortMigrate为false时必填并会被校验；为true时忽略此字段 */
     
-    @OpenAPIParam("MigrateComputeSetID")
+    @UCloudStackParam("MigrateComputeSetID")
     private String migrateComputeSetIDParam;
 
     /** 目标宿主机IP，可选字段；当前计费逻辑未使用，当AbortMigrate为true时忽略此值 */
     
-    @OpenAPIParam("MigrateHostIP")
+    @UCloudStackParam("MigrateHostIP")
     private String migrateHostIPParam;
 
     /** 地域ID，指定资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，需为支持计算迁移的PaaS资源且处于AVAILABLE状态 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

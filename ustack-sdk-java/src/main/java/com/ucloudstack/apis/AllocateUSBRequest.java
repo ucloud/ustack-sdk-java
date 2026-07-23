@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class AllocateUSBRequest extends Request {
 
     /** 项目ID，USB设备分配后归属的项目，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 目标租户ID，指定USB设备分配给的租户 */
     @NotEmpty
-    @OpenAPIParam("TargetCompanyID")
+    @UCloudStackParam("TargetCompanyID")
     private Integer targetCompanyIDParam;
 
     /** USB设备ID，指定要分配给租户的USB设备，设备必须处于未挂载且节点授权通过 */
     @NotEmpty
-    @OpenAPIParam("USBDeviceID")
+    @UCloudStackParam("USBDeviceID")
     private String uSBDeviceIDParam;
 
 

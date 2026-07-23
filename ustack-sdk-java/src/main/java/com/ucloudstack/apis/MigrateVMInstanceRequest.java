@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class MigrateVMInstanceRequest extends Request {
 
     /** 是否自动收敛 */
     
-    @OpenAPIParam("AutoConverge")
+    @UCloudStackParam("AutoConverge")
     private Boolean autoConvergeParam;
 
     /** 计算实例ID，用于标识待迁移的虚拟机 */
     @NotEmpty
-    @OpenAPIParam("CIID")
+    @UCloudStackParam("CIID")
     private String cIIDParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 物理机IP地址，用于标识源宿主机IP */
     
-    @OpenAPIParam("HostIP")
+    @UCloudStackParam("HostIP")
     private String hostIPParam;
 
     /** 目标宿主机IP地址，需为合法IP且不可与HostIP相同 */
     
-    @OpenAPIParam("MigrateHostIP")
+    @UCloudStackParam("MigrateHostIP")
     private String migrateHostIPParam;
 
     /** 目标集群ID，用于标识目标集群 */
     @NotEmpty
-    @OpenAPIParam("MigrateSetID")
+    @UCloudStackParam("MigrateSetID")
     private String migrateSetIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，源虚拟机所在计算集群标识 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

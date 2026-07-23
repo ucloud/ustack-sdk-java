@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpgradeMySQLRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 目标存储容量，单位：GiB，最小值为10GB，升级限制：不能小于当前磁盘容量；若存在从库，从库磁盘必须先升级到大于等于此规格；若无变更则该项不生效 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 目标内存大小，单位：MiB，必须是1024的倍数，升级限制：不能小于当前内存；AARCH64架构不支持热升级，实例必须先停止；若无变更则该项不生效 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** MySQL实例ID，指定要升级的MySQL实例；注意：资源必须为AVAILABLE，存在从库时需先将从库规格升级到不小于目标规格 */
     @NotEmpty
-    @OpenAPIParam("MySQLID")
+    @UCloudStackParam("MySQLID")
     private String mySQLIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

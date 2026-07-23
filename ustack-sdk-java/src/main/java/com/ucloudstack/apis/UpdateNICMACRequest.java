@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateNICMACRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** MAC地址，新的MAC地址，格式为6组2位十六进制数，以冒号或连字符分隔 */
     @NotEmpty
-    @OpenAPIParam("MAC")
+    @UCloudStackParam("MAC")
     private String mACParam;
 
     /** 网卡ID，指定要修改MAC地址的网卡资源 */
     @NotEmpty
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateAdminRegionRequest extends Request {
 
     /** 管理员ID，请求传入用于定位被授权的管理员账号 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 地域ID列表，请求传入用于授予管理员管理权限的地域集合 */
     @NotEmpty
-    @OpenAPIParam("Regions")
+    @UCloudStackParam("Regions")
     private List<String> regionsParam;
 
 

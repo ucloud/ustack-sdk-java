@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class GetInstallLogsV2Request extends Request {
 
     /** 日志行数，限制返回的日志行数，0表示不限制 */
     
-    @OpenAPIParam("Lines")
+    @UCloudStackParam("Lines")
     private Integer linesParam;
 
     /** 裸金属ID，物理机唯一标识 */
     @NotEmpty
-    @OpenAPIParam("PMID")
+    @UCloudStackParam("PMID")
     private String pMIDParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 起始时间，RFC3339格式时间戳，例如2024-01-01T00:00:00Z，若不指定则从日志开始返回 */
     
-    @OpenAPIParam("Since")
+    @UCloudStackParam("Since")
     private String sinceParam;
 
     /** 任务ID，安装任务唯一标识 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 
