@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteDirectConnectRequest extends Request {
 
     /** 专线接入ID，指定要删除的专线接入资源ID，删除时会：1）先删除底层Huanghe DC资源；2）删除Taishan资源表记录；3）删除相关配额记录（DeleteSpecificationByDimension），删除失败会返回相应错误码 */
     @NotEmpty
-    @OpenAPIParam("DirectConnectID")
+    @UCloudStackParam("DirectConnectID")
     private String directConnectIDParam;
 
     /** 地域ID，指定要删除的专线接入所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

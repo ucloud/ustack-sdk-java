@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DetectBMCTypeV2Request extends Request {
 
     /** IPMI管理IP地址，用于连接BMC进行类型检测，必须是有效的IPv4地址 */
     @NotEmpty
-    @OpenAPIParam("IPMIIP")
+    @UCloudStackParam("IPMIIP")
     private String iPMIIPParam;
 
     /** IPMI密码，用于IPMI身份验证 */
     @NotEmpty
-    @OpenAPIParam("IPMIPassword")
+    @UCloudStackParam("IPMIPassword")
     private String iPMIPasswordParam;
 
     /** IPMI用户名，用于IPMI身份验证 */
     @NotEmpty
-    @OpenAPIParam("IPMIUsername")
+    @UCloudStackParam("IPMIUsername")
     private String iPMIUsernameParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

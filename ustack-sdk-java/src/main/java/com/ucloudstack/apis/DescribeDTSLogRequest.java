@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeDTSLogRequest extends Request {
 
     /** DTS任务ID，待查询日志的DTS任务唯一标识 */
     @NotEmpty
-    @OpenAPIParam("DTSID")
+    @UCloudStackParam("DTSID")
     private String dTSIDParam;
 
     /** 任务阶段名称，指定查询哪个阶段的日志，常见值包括：precheck、struct-sync、full-data-sync、incremental-data-sync等 */
     @NotEmpty
-    @OpenAPIParam("DTSStage")
+    @UCloudStackParam("DTSStage")
     private String dTSStageParam;
 
     /** 结束时间戳，秒级Unix时间戳，用于指定日志查询结束时间 */
     
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 日志数量限制，指定最多返回的日志条数 */
     
-    @OpenAPIParam("LogLimit")
+    @UCloudStackParam("LogLimit")
     private Integer logLimitParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 开始时间戳，秒级Unix时间戳，用于指定日志查询起始时间 */
     
-    @OpenAPIParam("StartTime")
+    @UCloudStackParam("StartTime")
     private Integer startTimeParam;
 
     /** 日志类型，指定查询的日志类别，取值范围：default（默认日志）、monitor（监控日志） */
     @NotEmpty
-    @OpenAPIParam("Type")
+    @UCloudStackParam("Type")
     private String typeParam;
 
 

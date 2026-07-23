@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteDBSBackupPlanRequest extends Request {
 
     /** 租户ID，备份计划所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计划ID，待删除的备份计划ID */
     @NotEmpty
-    @OpenAPIParam("PlanID")
+    @UCloudStackParam("PlanID")
     private String planIDParam;
 
 

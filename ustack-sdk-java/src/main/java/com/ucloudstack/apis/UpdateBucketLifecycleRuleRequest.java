@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class UpdateBucketLifecycleRuleRequest extends Request {
 
     /** 桶名称，存储桶名称 */
     @NotEmpty
-    @OpenAPIParam("BucketName")
+    @UCloudStackParam("BucketName")
     private String bucketNameParam;
 
     /** 过期天数，对象过期天数 */
     @NotEmpty
-    @OpenAPIParam("ExpirationDays")
+    @UCloudStackParam("ExpirationDays")
     private Integer expirationDaysParam;
 
     /** 过期类型，生命周期规则适用对象，取值范围：CurrentVersion（当前版本）、NonCurrentVersion（非当前版本）、Multipart（碎片） */
     @NotEmpty
-    @OpenAPIParam("ExpirationType")
+    @UCloudStackParam("ExpirationType")
     private String expirationTypeParam;
 
     /** 生命周期规则ID，生命周期规则标识 */
     @NotEmpty
-    @OpenAPIParam("LifeCycleID")
+    @UCloudStackParam("LifeCycleID")
     private String lifeCycleIDParam;
 
     /** 对象存储ID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 对象名前缀，用于匹配生命周期规则 */
     
-    @OpenAPIParam("ObjectKeyPrefix")
+    @UCloudStackParam("ObjectKeyPrefix")
     private String objectKeyPrefixParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 归档存储类，生命周期转储的存储类型 */
     
-    @OpenAPIParam("TransitionStorageClass")
+    @UCloudStackParam("TransitionStorageClass")
     private String transitionStorageClassParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class GetUpdateNICPriceRequest extends Request {
 
     /** 带宽，单位Mbps，指定网卡的新带宽值 */
     @NotEmpty
-    @OpenAPIParam("Bandwidth")
+    @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
     /** 租户ID，GetUpdateNICPrice接口中可选，用于权限校验 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 网卡ID，指定要修改带宽的网卡资源，仅支持非Flat类型网卡 */
     @NotEmpty
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

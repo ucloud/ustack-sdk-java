@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class AliasSetRequest extends Request {
 
     /** 集群类型别名，为计算集群类型设置的自定义名称，用于更易读的展示，通过调用RenameResource接口修改资源名称实现，别名长度限制为1-128个字符 */
     @NotEmpty
-    @OpenAPIParam("Alias")
+    @UCloudStackParam("Alias")
     private String aliasParam;
 
     /** 地域ID，指定计算集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群类型，用于唯一标识计算集群的类型 */
     @NotEmpty
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class ListUSBsRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 是否过滤已加载的USB设备，为true时仅返回未加载设备 */
     
-    @OpenAPIParam("FilterAttached")
+    @UCloudStackParam("FilterAttached")
     private Boolean filterAttachedParam;
 
     /** 宿主机IP，用于筛选指定宿主机上的USB设备 */
     
-    @OpenAPIParam("HostIP")
+    @UCloudStackParam("HostIP")
     private String hostIPParam;
 
     /** 分页大小，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于指定返回结果起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，筛选指定项目下的USB设备 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群类型，用于筛选特定集群类型下的USB设备 */
     
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
     /** USB设备ID列表，用于精确查询指定USB设备 */
     
-    @OpenAPIParam("USBDeviceIDs")
+    @UCloudStackParam("USBDeviceIDs")
     private List<String> uSBDeviceIDsParam;
 
     /** 虚拟机ID，用于筛选已加载到指定虚拟机的USB设备 */
     
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeOPLogsRequest extends Request {
 
     /** 开始时间，查询时间范围的起始Unix时间戳，需小于EndTime */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID，用于筛选指定租户的操作日志 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 结束时间，查询时间范围的结束Unix时间戳，需大于BeginTime */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 是否成功，筛选成功或失败的操作日志；取值：1 表示成功，0 表示失败，空表示全部 */
     
-    @OpenAPIParam("IsSuccess")
+    @UCloudStackParam("IsSuccess")
     private String isSuccessParam;
 
     /** 关键词，用于按API名称、资源ID等字段检索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，控制单次返回数量 */
     @NotEmpty
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于分页起点 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 产品类型，用于筛选特定产品的操作日志；为空时默认TYPE_NONE */
     
-    @OpenAPIParam("ProductType")
+    @UCloudStackParam("ProductType")
     private String productTypeParam;
 
     /** 资源ID，用于筛选特定资源的操作日志 */
     
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

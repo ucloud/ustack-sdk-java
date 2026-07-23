@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeRegionRequest extends Request {
 
     /** 租户ID，用于查询指定租户授权的地域列表；条件互斥：CompanyID不为0时使用当前登录用户Company和Member作为目标；CompanyID为0且MemberID为0时返回当前用户可访问的全部地域 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 管理员ID，用于查询指定管理员授权的地域列表；条件互斥：MemberID不为0时仅返回该管理员授权地域；CompanyID不为0时该字段被忽略 */
     
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
 

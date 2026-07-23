@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeDBSBackupPlanRequest extends Request {
 
     /** 备份ID，筛选指定备份 */
     
-    @OpenAPIParam("BackupID")
+    @UCloudStackParam("BackupID")
     private String backupIDParam;
 
     /** 租户ID，用于筛选指定租户的计划 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，指定每页返回的记录数，默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，默认0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 备份计划ID，筛选指定计划 */
     
-    @OpenAPIParam("PlanID")
+    @UCloudStackParam("PlanID")
     private String planIDParam;
 
     /** 地域ID，备份计划所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备份源ID，筛选指定备份源 */
     
-    @OpenAPIParam("SrcResourceID")
+    @UCloudStackParam("SrcResourceID")
     private String srcResourceIDParam;
 
 

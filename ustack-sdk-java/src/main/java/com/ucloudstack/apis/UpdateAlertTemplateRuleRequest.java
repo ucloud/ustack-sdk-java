@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class UpdateAlertTemplateRuleRequest extends Request {
 
     /** 条件类型，告警触发比较方式，取值：GE/LE/ET/NE/LT/GT */
     @NotEmpty
-    @OpenAPIParam("ConditionType")
+    @UCloudStackParam("ConditionType")
     private String conditionTypeParam;
 
     /** 持续时间，超过阈值需持续的秒数才触发告警 */
     @NotEmpty
-    @OpenAPIParam("ForSeconds")
+    @UCloudStackParam("ForSeconds")
     private Integer forSecondsParam;
 
     /** 监控指标名称，必须是合法的Prometheus指标名，且不能包含大括号 */
     @NotEmpty
-    @OpenAPIParam("Metric")
+    @UCloudStackParam("Metric")
     private String metricParam;
 
     /** 通知组ID，告警触发通知目标组ID；若规则所属模板为REGION类型，则此字段对管理员不可修改 */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
     /** PromQL查询表达式，必须是合法的Prometheus查询语法 */
     @NotEmpty
-    @OpenAPIParam("Query")
+    @UCloudStackParam("Query")
     private String queryParam;
 
     /** 告警规则ID，待更新的规则ID，非管理员租户需验证规则所属模板的归属权限 */
     @NotEmpty
-    @OpenAPIParam("RuleID")
+    @UCloudStackParam("RuleID")
     private String ruleIDParam;
 
     /** 告警级别，定义告警严重程度，取值：warning/critical/error */
     @NotEmpty
-    @OpenAPIParam("Severity")
+    @UCloudStackParam("Severity")
     private String severityParam;
 
     /** 告警摘要，描述告警的触发条件和意义，将在告警通知中展示 */
     @NotEmpty
-    @OpenAPIParam("Summary")
+    @UCloudStackParam("Summary")
     private String summaryParam;
 
     /** 告警阈值，触发告警的指标值 */
     @NotEmpty
-    @OpenAPIParam("Thresholds")
+    @UCloudStackParam("Thresholds")
     private Double thresholdsParam;
 
 

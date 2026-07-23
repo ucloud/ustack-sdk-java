@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class UpdateNICIPRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 扁平网络ID，指定网卡所属的扁平网络 */
     
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** 要修改的IP地址，指定要绑定到网卡上的新IP地址 */
     @NotEmpty
-    @OpenAPIParam("IP")
+    @UCloudStackParam("IP")
     private String iPParam;
 
     /** 网卡ID，指定要修改IP地址的网卡资源 */
     @NotEmpty
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 网卡类型，指定IP分配来源；取值Flat（扁平网络） */
     @NotEmpty
-    @OpenAPIParam("NICType")
+    @UCloudStackParam("NICType")
     private String nICTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

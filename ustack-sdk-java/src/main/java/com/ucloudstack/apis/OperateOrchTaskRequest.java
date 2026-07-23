@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class OperateOrchTaskRequest extends Request {
 
     /** 租户ID，任务所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 任务操作，任务操作类型，取值：Update（重置任务并允许重新配置步骤）/Execute（重新执行任务并清空资源执行记录）/Abort（中断正在执行的任务并置结果为Interrupted）/Pause（暂停正在执行的任务并置结果为Interrupted） */
     @NotEmpty
-    @OpenAPIParam("Operation")
+    @UCloudStackParam("Operation")
     private String operationParam;
 
     /** 地域，编排任务所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 任务ID，待操作的编排任务ID */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

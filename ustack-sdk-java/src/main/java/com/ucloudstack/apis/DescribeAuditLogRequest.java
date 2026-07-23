@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeAuditLogRequest extends Request {
 
     /** 开始时间，Unix秒时间戳，作为QueryLog的startTime参数传入Agent */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户唯一标识ID，保留字段，当前接口不会根据该字段过滤日志 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 结束时间，Unix秒时间戳，作为QueryLog的endTime，建议晚于BeginTime以避免空结果 */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 忽略审计语句关键字，多个关键字用逗号分隔，后端会去除空格并转成大写后按前缀匹配SQL语句，命中则直接丢弃该日志 */
     
-    @OpenAPIParam("IgnoreQuery")
+    @UCloudStackParam("IgnoreQuery")
     private String ignoreQueryParam;
 
     /** 分页大小，用于对已采集到的审计日志做本地分页 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，只在本地分页时使用 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定MySQL实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要查询审计日志的MySQL资源，要求实例处于AVAILABLE且hhpaas状态Running */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

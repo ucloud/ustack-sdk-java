@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DescribeDBSRestoreRangeInfoRequest extends Request {
 
     /** 备份源ID，备份源资源ID */
     @NotEmpty
-    @OpenAPIParam("BackupSourceID")
+    @UCloudStackParam("BackupSourceID")
     private String backupSourceIDParam;
 
     /** 备份类型，Physical/Logical/Snapshot返回时间点，Incremental返回时间段 */
     @NotEmpty
-    @OpenAPIParam("BackupType")
+    @UCloudStackParam("BackupType")
     private String backupTypeParam;
 
     /** 租户ID，备份所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，备份源资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

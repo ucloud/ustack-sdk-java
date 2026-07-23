@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class CreateExternalStorageSetRequest extends Request {
 
     /** CSI插件地址，存储集群CSI插件的访问地址，格式为IP:Port，支持多个地址用逗号分隔 */
     @NotEmpty
-    @OpenAPIParam("CSIPluginAddress")
+    @UCloudStackParam("CSIPluginAddress")
     private String cSIPluginAddressParam;
 
     /** 租户ID，外置存储集群所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** IQN禁用列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("DisableTargetIQNs")
+    @UCloudStackParam("DisableTargetIQNs")
     private List<String> disableTargetIQNsParam;
 
     /** IQN启用列表，符合iqn.YYYY-MM.domain[:suffix]格式的IQN列表 */
     
-    @OpenAPIParam("EnableTargetIQNs")
+    @UCloudStackParam("EnableTargetIQNs")
     private List<String> enableTargetIQNsParam;
 
     /** 名称，存储集群名称，1-128个字符，仅支持中文、英文字母、数字、点（.）、下划线（_）和中划线（-） */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 密码，登录存储集群的密码，最多50个字符 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 用户名，登录存储集群的用户名，最多50个字符 */
     
-    @OpenAPIParam("UserName")
+    @UCloudStackParam("UserName")
     private String userNameParam;
 
 

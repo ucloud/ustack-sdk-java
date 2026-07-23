@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeRSRequest extends Request {
 
     /** 绑定资源ID，真实服务器绑定的资源ID，仅支持虚拟机资源 */
     
-    @OpenAPIParam("BindResourceID")
+    @UCloudStackParam("BindResourceID")
     private String bindResourceIDParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 负载均衡ID，用于定位需要查询服务节点的负载均衡实例 */
     @NotEmpty
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量，取值范围：1-100，默认值：10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询，取值范围：≥0， 默认值：0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 真实服务器ID列表，用于筛选指定服务节点 */
     
-    @OpenAPIParam("RSIDs")
+    @UCloudStackParam("RSIDs")
     private List<String> rSIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟服务器ID，用于定位需要查询服务节点的监听器实例 */
     @NotEmpty
-    @OpenAPIParam("VSID")
+    @UCloudStackParam("VSID")
     private String vSIDParam;
 
 

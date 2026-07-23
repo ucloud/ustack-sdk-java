@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class CreateAlertNotifyWebhookRequest extends Request {
 
     /** HTTP请求方法，取值：GET/POST */
     @NotEmpty
-    @OpenAPIParam("Method")
+    @UCloudStackParam("Method")
     private String methodParam;
 
     /** Webhook名称，Webhook名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 通知组ID，Webhook所属通知组ID */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
     /** Webhook URL，告警触发时系统将向该地址发送HTTP请求 */
     @NotEmpty
-    @OpenAPIParam("Url")
+    @UCloudStackParam("Url")
     private String urlParam;
 
 

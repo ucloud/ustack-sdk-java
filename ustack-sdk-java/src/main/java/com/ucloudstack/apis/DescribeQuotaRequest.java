@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeQuotaRequest extends Request {
 
     /** 租户ID，指定要查询配额的租户，用于筛选指定租户的配额信息 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 配额因子列表，用于过滤特定计量维度的配额 */
     
-    @OpenAPIParam("FactorTypes")
+    @UCloudStackParam("FactorTypes")
     private List<String> factorTypesParam;
 
     /** 搜索关键词，用于模糊搜索配额信息 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，取值范围1-100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，从0开始计数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 产品类型列表，用于过滤特定产品的配额 */
     
-    @OpenAPIParam("ProductTypes")
+    @UCloudStackParam("ProductTypes")
     private List<String> productTypesParam;
 
     /** 地域ID，指定要查询配额的地域，必须填写且需要具备该地域的访问权限 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

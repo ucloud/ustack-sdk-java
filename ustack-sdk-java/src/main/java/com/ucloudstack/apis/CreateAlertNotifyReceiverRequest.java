@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class CreateAlertNotifyReceiverRequest extends Request {
 
     /** 接收人邮箱地址，用于接收告警通知邮件，同一通知组内邮箱不能重复 */
     @NotEmpty
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
     /** 接收人名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 通知组ID，接收人所属通知组 */
     @NotEmpty
-    @OpenAPIParam("NotifyGroupID")
+    @UCloudStackParam("NotifyGroupID")
     private String notifyGroupIDParam;
 
     /** 接收人电话号码，用于接收告警通知 */
     
-    @OpenAPIParam("Phone")
+    @UCloudStackParam("Phone")
     private String phoneParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteTagRequest extends Request {
 
     /** 租户ID，用于标识资源所属的租户，实现多租户环境下的资源隔离 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 标签键名，指定要删除的标签键，删除前会检查是否有资源绑定该标签，如有绑定则返回StatusTagHasBoundResource错误 */
     @NotEmpty
-    @OpenAPIParam("Key")
+    @UCloudStackParam("Key")
     private String keyParam;
 
     /** 标签值列表，指定要删除的标签值，若为空则删除整个标签键及其所有值，删除时会检查该标签值是否还有资源绑定（通过uerrors.Error_TagHasBoundResource），若有绑定则无法删除并返回StatusTagHasBoundResource错误，可以批量删除多个值 */
     @NotEmpty
-    @OpenAPIParam("Values")
+    @UCloudStackParam("Values")
     private List<String> valuesParam;
 
 

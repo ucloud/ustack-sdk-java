@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateMySQLParamTplRequest extends Request {
 
     /** 租户ID，模板所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 名称，模板名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 自定义配置项，JSON格式的配置参数；当SrcTplID为空时必填 */
     
-    @OpenAPIParam("Params")
+    @UCloudStackParam("Params")
     private String paramsParam;
 
     /** 地域ID，配置模板所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 描述，模板描述信息 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 源模板ID，从已有模板复制 */
     
-    @OpenAPIParam("SrcTplID")
+    @UCloudStackParam("SrcTplID")
     private String srcTplIDParam;
 
     /** 版本，MySQL版本 */
     @NotEmpty
-    @OpenAPIParam("Version")
+    @UCloudStackParam("Version")
     private String versionParam;
 
 

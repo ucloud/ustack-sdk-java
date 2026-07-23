@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DiscoverDHCPServersRequest extends Request {
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VLAN ID，指定要扫描的VLAN，有效范围0-4094，0表示扫描所有VLAN */
     
-    @OpenAPIParam("VLANID")
+    @UCloudStackParam("VLANID")
     private Integer vLANIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class DescribeMySQLRequest extends Request {
 
     /** 租户唯一标识ID，用于过滤指定租户的资源，实现多租户环境下的资源隔离，若不指定则查询当前用户有权限访问的所有租户的资源 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，用于模糊搜索MySQL实例名称或ID */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** MySQL实例ID列表，用于查询指定的MySQL实例，若同时提供Keyword，则取两者的交集 */
     
-    @OpenAPIParam("MySQLIDs")
+    @UCloudStackParam("MySQLIDs")
     private List<String> mySQLIDsParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于按项目过滤资源，支持多项目查询 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** MySQL状态列表，用于按状态过滤实例，可选值包括：Running（运行中）、Stopped（已停止）、Creating（创建中）等 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
 

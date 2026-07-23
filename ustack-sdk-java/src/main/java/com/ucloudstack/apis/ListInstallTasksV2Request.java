@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class ListInstallTasksV2Request extends Request {
 
     /** 租户ID，过滤指定租户下的装机任务，若不指定则返回所有租户的任务 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词搜索，支持按任务ID、裸金属ID、序列号、安装模式、状态进行关键词搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 每页数量，指定每页返回的记录数，默认值为20，最大值为100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 机器序列号过滤，支持精确匹配 */
     
-    @OpenAPIParam("MachineSN")
+    @UCloudStackParam("MachineSN")
     private String machineSNParam;
 
     /** 偏移量，指定跳过的记录数，最小值为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，过滤指定项目下的装机任务 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 状态过滤，可选值：waiting（待安装）、installing（安装中）、completed（已完成）、failed（失败）、canceled（已取消） */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private String statusParam;
 
 

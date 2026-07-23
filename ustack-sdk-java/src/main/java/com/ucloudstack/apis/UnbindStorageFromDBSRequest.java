@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UnbindStorageFromDBSRequest extends Request {
 
     /** 租户ID，存储池所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 备份存储池ID，待解绑的存储池ID；注意：存储池存在备份数据或绑定备份计划时不可解绑 */
     @NotEmpty
-    @OpenAPIParam("StorageID")
+    @UCloudStackParam("StorageID")
     private String storageIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateStorageSetSortPolicyRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，普通租户需填写自身CompanyID；管理员租户（CompanyID=200000231）或留空时按管理员权限操作存储排序策略 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 排序策略，存储集群的排序策略，用于确定虚拟机创建时选择存储集群的优先级顺序，支持类型：default（默认排序）、available（按可用容量降序）、ssd（SSD类型优先）、hdd（HDD类型优先）、defined（自定义顺序，需配合SetIDs使用） */
     @NotEmpty
-    @OpenAPIParam("Policy")
+    @UCloudStackParam("Policy")
     private String policyParam;
 
     /** 地域ID，指定存储集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 自定义集群ID列表，当Policy为defined时必填，指定存储集群的优先级顺序，按数组顺序依次选择，当Policy为其他值时此字段应为空列表，通过SetStorageSetSortPolicy接口设置排序策略 */
     
-    @OpenAPIParam("SetIDs")
+    @UCloudStackParam("SetIDs")
     private List<String> setIDsParam;
 
 

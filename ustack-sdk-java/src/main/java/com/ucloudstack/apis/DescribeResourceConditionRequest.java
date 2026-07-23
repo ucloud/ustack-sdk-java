@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class DescribeResourceConditionRequest extends Request {
 
     /** 租户ID，指定要查询资源状态的租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，指定要查询状态的项目组范围，ProjectID 采用 project- 前缀加14位随机字符格式 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定要查询资源状态的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID列表，指定要查询状态的资源范围，每个ResourceID格式为类型前缀-14位随机字符 */
     
-    @OpenAPIParam("ResourceIDs")
+    @UCloudStackParam("ResourceIDs")
     private List<String> resourceIDsParam;
 
     /** 资源类型列表，指定要查询状态的资源类型，当前仅支持VM */
     
-    @OpenAPIParam("ResourceTypes")
+    @UCloudStackParam("ResourceTypes")
     private List<String> resourceTypesParam;
 
     /** 排序方向，指定升序或降序 */
     
-    @OpenAPIParam("Sort")
+    @UCloudStackParam("Sort")
     private String sortParam;
 
     /** 排序指标，指定排序的字段名 */
     
-    @OpenAPIParam("SortBy")
+    @UCloudStackParam("SortBy")
     private String sortByParam;
 
     /** 状态，按资源状态进行过滤，支持True、False或Unknown */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private String statusParam;
 
 

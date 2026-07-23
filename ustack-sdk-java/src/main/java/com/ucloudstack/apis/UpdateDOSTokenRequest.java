@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class UpdateDOSTokenRequest extends Request {
 
     /** 授权的桶，允许访问的桶列表 */
     @NotEmpty
-    @OpenAPIParam("AllowBuckets")
+    @UCloudStackParam("AllowBuckets")
     private List<String> allowBucketsParam;
 
     /** 授权的对象前缀，仅允许 "*" 或不含 "*" 的前缀 */
     
-    @OpenAPIParam("AllowObjectPrefix")
+    @UCloudStackParam("AllowObjectPrefix")
     private String allowObjectPrefixParam;
 
     /** 允许的操作，允许的S3操作列表 */
     @NotEmpty
-    @OpenAPIParam("AllowOps")
+    @UCloudStackParam("AllowOps")
     private List<String> allowOpsParam;
 
     /** IP黑名单，格式需包含 "/" 前缀长度 */
     
-    @OpenAPIParam("BlackIPs")
+    @UCloudStackParam("BlackIPs")
     private List<String> blackIPsParam;
 
     /** 租户ID，用于标识令牌所属的租户上下文；公司级账号需填写自身CompanyID，系统/地域管理员可不填或指定目标租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private String companyIDParam;
 
     /** 过期时间，Unix 时间戳（毫秒） */
     @NotEmpty
-    @OpenAPIParam("ExpireTime")
+    @UCloudStackParam("ExpireTime")
     private Integer expireTimeParam;
 
     /** 令牌名称，令牌展示名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** OSSID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** IP白名单，格式需包含 "/" 前缀长度 */
     
-    @OpenAPIParam("WhiteIPs")
+    @UCloudStackParam("WhiteIPs")
     private List<String> whiteIPsParam;
 
 

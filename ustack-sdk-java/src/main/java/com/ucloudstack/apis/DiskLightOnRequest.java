@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DiskLightOnRequest extends Request {
 
     /** RAID卡ControllerID，用于指定磁盘所属RAID控制器 */
     @NotEmpty
-    @OpenAPIParam("ControllerID")
+    @UCloudStackParam("ControllerID")
     private String controllerIDParam;
 
     /** 持续时长，点灯持续时间，单位秒 */
     
-    @OpenAPIParam("Duration")
+    @UCloudStackParam("Duration")
     private Integer durationParam;
 
     /** 磁盘柜编号，用于指定磁盘所在磁盘柜位置 */
     @NotEmpty
-    @OpenAPIParam("Enclosure")
+    @UCloudStackParam("Enclosure")
     private String enclosureParam;
 
     /** 物理机IP地址，用于指定磁盘所在宿主机 */
     @NotEmpty
-    @OpenAPIParam("HostIP")
+    @UCloudStackParam("HostIP")
     private String hostIPParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 磁盘插槽号，用于指定磁盘在磁盘柜中的插槽位置 */
     @NotEmpty
-    @OpenAPIParam("Slot")
+    @UCloudStackParam("Slot")
     private String slotParam;
 
 

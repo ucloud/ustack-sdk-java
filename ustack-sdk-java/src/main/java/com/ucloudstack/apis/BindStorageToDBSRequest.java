@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class BindStorageToDBSRequest extends Request {
 
     /** 外部服务访问密钥，当StorageType为S3时必填 */
     
-    @OpenAPIParam("AccessKey")
+    @UCloudStackParam("AccessKey")
     private String accessKeyParam;
 
     /** 外部服务存储桶名称，当StorageType为S3时可选，空值默认dbs */
     
-    @OpenAPIParam("BucketName")
+    @UCloudStackParam("BucketName")
     private String bucketNameParam;
 
     /** 租户ID，备份存储池所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 外部服务地址，当StorageType为S3时必填 */
     
-    @OpenAPIParam("Endpoint")
+    @UCloudStackParam("Endpoint")
     private String endpointParam;
 
     /** 名称，备份存储池名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 对象存储ID，当StorageType为OSS时必填 */
     
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 地域ID，备份存储池所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，备份存储池描述信息，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 外部服务私钥，当StorageType为S3时必填 */
     
-    @OpenAPIParam("SecretKey")
+    @UCloudStackParam("SecretKey")
     private String secretKeyParam;
 
     /** 存储类型，取值OSS或S3 */
     @NotEmpty
-    @OpenAPIParam("StorageType")
+    @UCloudStackParam("StorageType")
     private String storageTypeParam;
 
 

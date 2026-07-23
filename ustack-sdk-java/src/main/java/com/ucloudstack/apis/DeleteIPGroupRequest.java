@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteIPGroupRequest extends Request {
 
     /** 租户ID，标识IP组所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** IP组ID，指定要删除的IP组唯一标识符；删除前会检查是否被安全组规则引用 */
     @NotEmpty
-    @OpenAPIParam("IPGroupID")
+    @UCloudStackParam("IPGroupID")
     private String iPGroupIDParam;
 
     /** 地域ID，用于标识IP组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

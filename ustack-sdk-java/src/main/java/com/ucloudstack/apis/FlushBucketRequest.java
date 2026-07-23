@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class FlushBucketRequest extends Request {
 
     /** 桶名称，存储桶名称 */
     @NotEmpty
-    @OpenAPIParam("BucketName")
+    @UCloudStackParam("BucketName")
     private String bucketNameParam;
 
     /** 租户ID，用于匹配被清理桶所属的租户并清理该租户在本地的上传缓存；公司级账号需填写自身CompanyID，系统/地域管理员可不填或传0 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 对象存储ID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

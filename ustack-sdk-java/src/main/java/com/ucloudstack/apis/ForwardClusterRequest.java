@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class ForwardClusterRequest extends Request {
 
     /** 响应体格式 */
     
-    @OpenAPIParam("Accept")
+    @UCloudStackParam("Accept")
     private String acceptParam;
 
     /** 集群名称 */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 请求体格式 */
     
-    @OpenAPIParam("ContentType")
+    @UCloudStackParam("ContentType")
     private String contentTypeParam;
 
     /** 转发Body数据是否被编码 */
     
-    @OpenAPIParam("EncodedBody")
+    @UCloudStackParam("EncodedBody")
     private Boolean encodedBodyParam;
 
     /** 语言 */
     
-    @OpenAPIParam("Language")
+    @UCloudStackParam("Language")
     private String languageParam;
 
     /** 请求类型 */
     
-    @OpenAPIParam("Method")
+    @UCloudStackParam("Method")
     private String methodParam;
 
     /** 请求路径 */
     
-    @OpenAPIParam("Path")
+    @UCloudStackParam("Path")
     private String pathParam;
 
     /** Region */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 转发Body数据 */
     
-    @OpenAPIParam("RequestBody")
+    @UCloudStackParam("RequestBody")
     private String requestBodyParam;
 
     /** 请求版本 */
     
-    @OpenAPIParam("Version")
+    @UCloudStackParam("Version")
     private String versionParam;
 
 

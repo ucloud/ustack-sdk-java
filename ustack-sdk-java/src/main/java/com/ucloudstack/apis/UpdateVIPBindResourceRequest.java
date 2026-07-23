@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateVIPBindResourceRequest extends Request {
 
     /** 关联资源ID列表，指定需要绑定的虚拟机或弹性网卡资源ID；此操作会解绑原有绑定并绑定新列表；为空表示解绑全部资源；绑定数量上限由配置GlobalConfigKeyVIPBoundLimit控制；关联资源为VM时，LAN要求与VIP同子网，WAN要求所有VM同VPC且不能已绑定NAT模式EIP */
     
-    @OpenAPIParam("AssociatedResourceIDs")
+    @UCloudStackParam("AssociatedResourceIDs")
     private List<String> associatedResourceIDsParam;
 
     /** 关联资源类型，指定绑定资源类型；VM表示虚拟机，ELASTIC_NIC表示弹性网卡；为空时默认VM */
     
-    @OpenAPIParam("AssociatedResourceType")
+    @UCloudStackParam("AssociatedResourceType")
     private String associatedResourceTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VIPID，VIP的唯一标识符 */
     @NotEmpty
-    @OpenAPIParam("VIPID")
+    @UCloudStackParam("VIPID")
     private String vIPIDParam;
 
 

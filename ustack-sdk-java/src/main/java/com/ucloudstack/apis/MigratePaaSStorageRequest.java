@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class MigratePaaSStorageRequest extends Request {
 
     /** 计费类型，预留字段，系统会根据资源当前订单自动计算差价，可留空 */
     
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，保留字段，当前仅用于审计 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 实例ID，指定要迁移存储的虚拟机，必须属于上述资源且其当前存储集群类型与目标集群不同 */
     @NotEmpty
-    @OpenAPIParam("InstanceID")
+    @UCloudStackParam("InstanceID")
     private String instanceIDParam;
 
     /** 迁移限速，单位MB/s，写入资源注解后由控制器执行限速，0表示不限速 */
     
-    @OpenAPIParam("MigrateLimit")
+    @UCloudStackParam("MigrateLimit")
     private Integer migrateLimitParam;
 
     /** 目标存储集群ID，后台会校验集群存在且类型与当前不同，否则返回错误 */
     @NotEmpty
-    @OpenAPIParam("MigrateStorageSetID")
+    @UCloudStackParam("MigrateStorageSetID")
     private String migrateStorageSetIDParam;
 
     /** 计费数量，预留字段，仅当ChargeType为预付费场景时使用，其他场景可留空 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** PaaS资源ID，支持MYSQL、REDIS、FS、OSS、DTS等拥有虚拟机的PaaS资源；要求资源处于AVAILABLE，运行状态为Running，且若非DTS必须为最新版本 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

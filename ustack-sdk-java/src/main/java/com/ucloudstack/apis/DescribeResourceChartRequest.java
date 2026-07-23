@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DescribeResourceChartRequest extends Request {
 
     /** 地域ID，指定要查询资源图表的地域，若不指定则查询所有有权限的地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源类型，指定要查询的资源图表类型，支持COMPUTE_SET(计算集群)、STORAGE_SET(存储集群)、REGION(地域) */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 类型为 REGION 时, 是否只展示用户虚拟机；为 true 时仅统计用户 VM（过滤管理虚拟机），为 false 时包含所有虚拟机（过滤 sandbox） */
     
-    @OpenAPIParam("ShowUserVMOnly")
+    @UCloudStackParam("ShowUserVMOnly")
     private Boolean showUserVMOnlyParam;
 
 

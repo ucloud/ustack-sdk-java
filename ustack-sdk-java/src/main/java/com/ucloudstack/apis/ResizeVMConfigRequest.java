@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class ResizeVMConfigRequest extends Request {
 
     /** 审批名称，启用审批流程时的标题 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由，启用审批流程时的说明 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** 核心数，调整后的vCPU核心数量 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** CPU每个插槽内核数，可选字段，默认等于CPU */
     
-    @OpenAPIParam("CPUCoresPerSocket")
+    @UCloudStackParam("CPUCoresPerSocket")
     private Integer cPUCoresPerSocketParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** GPU数量，调整后的物理GPU数量，仅在GPUType为GPU时有效且必填 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU规格，调整后的物理GPU型号，仅在GPUType为GPU时有效且必填 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** GPU类型，调整后的GPU资源类型，取值：GPU、VGPU，暂未支持VGPU */
     
-    @OpenAPIParam("GPUType")
+    @UCloudStackParam("GPUType")
     private String gPUTypeParam;
 
     /** vGPU规格，调整后的虚拟GPU规格，仅在GPUType为VGPU时有效且必填，预留字段，暂未支持 */
     
-    @OpenAPIParam("MdevName")
+    @UCloudStackParam("MdevName")
     private String mdevNameParam;
 
     /** 内存容量，调整后的内存大小，单位：MiB */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID，待调整配置的虚拟机资源标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

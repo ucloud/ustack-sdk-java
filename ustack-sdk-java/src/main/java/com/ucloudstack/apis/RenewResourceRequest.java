@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class RenewResourceRequest extends Request {
 
     /** 计费类型，取值：Dynamic/Month/Year，后台会阻止降级（例如Year改为Month），安全产品只允许Month；同时兼容传入大写值HOUR/MONTH/YEAR */
     
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，从该租户账户扣费 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 续费时长，按Hour续费时系统固定为1小时；按Month续费最多11个月，按Year续费最多5年 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，必须与资源实际所在地域一致，用于匹配历史订单 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，要续费的资源唯一标识；若传入虚拟机启动盘（ID以-boot结尾）会自动改为对应虚拟机ID并同时续费启动盘 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class UpdatePartitionTemplateRequest extends Request {
 
     /** 分区配置 */
     
-    @OpenAPIParam("Config")
+    @UCloudStackParam("Config")
     private String configParam;
 
     /** 模板描述 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 模板ID */
     @NotEmpty
-    @OpenAPIParam("ID")
+    @UCloudStackParam("ID")
     private String iDParam;
 
     /** 是否默认 */
     
-    @OpenAPIParam("IsDefault")
+    @UCloudStackParam("IsDefault")
     private String isDefaultParam;
 
     /** 模板名称 */
     
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

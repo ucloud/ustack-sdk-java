@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,67 +24,67 @@ public class CreateIsolationGroupRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 是否启用，标识隔离组策略是否生效 */
     
-    @OpenAPIParam("IsEnable")
+    @UCloudStackParam("IsEnable")
     private Boolean isEnableParam;
 
     /** 是否强制执行，强制模式下即使不满足策略也会执行 */
     
-    @OpenAPIParam("IsForce")
+    @UCloudStackParam("IsForce")
     private Boolean isForceParam;
 
     /** 隔离组名称，用于标识隔离组并便于检索管理，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 策略对象，PolicyObjType为PolicyToVG时填写目标隔离组ID，PolicyToNode时由系统使用默认值 */
     
-    @OpenAPIParam("PolicyObj")
+    @UCloudStackParam("PolicyObj")
     private String policyObjParam;
 
     /** 策略对象是否为自身，为true时系统将策略对象设置为当前隔离组 */
     
-    @OpenAPIParam("PolicyObjIsSelf")
+    @UCloudStackParam("PolicyObjIsSelf")
     private Boolean policyObjIsSelfParam;
 
     /** 策略对象类型，取值PolicyToNode（节点）、PolicyToVG（隔离组） */
     @NotEmpty
-    @OpenAPIParam("PolicyObjType")
+    @UCloudStackParam("PolicyObjType")
     private String policyObjTypeParam;
 
     /** 隔离组策略类型，取值VMAffinity（亲和）、VMAntiAffinity（反亲和） */
     @NotEmpty
-    @OpenAPIParam("PolicyType")
+    @UCloudStackParam("PolicyType")
     private String policyTypeParam;
 
     /** 项目ID，资源所属项目分组标识，不传则不绑定项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于补充说明隔离组用途，长度0-100个字符，禁止包含<script>标签或javascript链接 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 计算集群ID，隔离组所属的计算集群 */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 标签键值对，用于资源分类与检索，格式为Base64编码的key:value字符串，列表项不能为空且key不得重复 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
 

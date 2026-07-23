@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class GetConnectionInfoRequest extends Request {
 
     /** 开始时间，保留字段，当前版本的连接查询不会按时间范围过滤 */
     
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID，保留字段，当前不会影响查询范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 结束时间，保留字段，当前版本的连接查询不会按时间范围过滤 */
     
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 分页大小，后台在汇总所有连接后按Offset+Limit切片，取值范围1-100，未填写或超出范围时按20处理 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定在采集到的连接列表中的起始位置，未填写时默认为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 产品类型，传入Taishan定义的product_type字符串（如MYSQL、REDIS、OSS、FS等），系统会据此选择ss/netstat/showmount等方式采集连接日志，未知类型会返回错误 */
     @NotEmpty
-    @OpenAPIParam("ProductType")
+    @UCloudStackParam("ProductType")
     private String productTypeParam;
 
     /** 地域ID，必须与目标资源所属地域一致，后端会基于该字段获取对应黄河集群及Agent */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，PaaS资源唯一标识，仅当资源处于AVAILABLE且hhpaas运行状态为工作态时才会继续采集连接，否则返回错误 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

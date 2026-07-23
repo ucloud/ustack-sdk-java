@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DescribeTrafficMirrorRequest extends Request {
 
     /** 关键字，用于搜索流量镜像名称或ID */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源状态，用于过滤特定状态的流量镜像 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private String statusParam;
 
     /** 流量镜像ID列表，指定要查询的流量镜像，若指定单个ID则返回详细信息（包含规则和源设备详情） */
     
-    @OpenAPIParam("TrafficMirrorIDs")
+    @UCloudStackParam("TrafficMirrorIDs")
     private List<String> trafficMirrorIDsParam;
 
 

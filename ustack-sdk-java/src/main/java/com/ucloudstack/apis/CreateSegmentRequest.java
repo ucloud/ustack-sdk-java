@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class CreateSegmentRequest extends Request {
 
     /** DHCP服务器IP地址，必须在指定的网段内，传值表示启用DHCP，传空表示禁用DHCP */
     
-    @OpenAPIParam("DHCPServerIP")
+    @UCloudStackParam("DHCPServerIP")
     private String dHCPServerIPParam;
 
     /** 网卡名称，指定外网线路绑定的物理网卡，格式为bond0、bond1等，若不确定请联系部署人员或网络管理员 */
     @NotEmpty
-    @OpenAPIParam("Device")
+    @UCloudStackParam("Device")
     private String deviceParam;
 
     /** 是否启用DHCP服务，用于为虚拟机自动分配IP地址 */
     
-    @OpenAPIParam("EnableDHCP")
+    @UCloudStackParam("EnableDHCP")
     private Boolean enableDHCPParam;
 
     /** 可用IP范围，指定网段内可分配的IP地址范围，格式为起始IP-结束IP，若不指定则使用整个网段 */
     
-    @OpenAPIParam("IPRange")
+    @UCloudStackParam("IPRange")
     private String iPRangeParam;
 
     /** 外网线路名称，长度为1-50个字符，名称只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 权限范围，指定该外网线路的租户访问权限，当PermissionMode为whitelist或blacklist时，传入租户ID列表（逗号分隔，如200000230,200000232） */
     
-    @OpenAPIParam("Permission")
+    @UCloudStackParam("Permission")
     private String permissionParam;
 
     /** 权限模式，控制租户访问权限的模式，可选值：all（所有租户可用，默认值）、whitelist（白名单，仅指定租户可用）、blacklist（黑名单，仅指定租户不可用） */
     
-    @OpenAPIParam("PermissionMode")
+    @UCloudStackParam("PermissionMode")
     private String permissionModeParam;
 
     /** 地域ID，指定外网线路所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于进行说明和注释，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 外网网段，指定外网线路的网络地址范围，必须为CIDR格式，支持IPv4和IPv6 */
     @NotEmpty
-    @OpenAPIParam("Segment")
+    @UCloudStackParam("Segment")
     private String segmentParam;
 
     /** 标签键值对，用于资源标记和分类管理，格式为key:value的字符串，传入Base64编码的字符串 */
     @NotEmpty
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** VLAN ID，虚拟局域网标识，可选，取值范围1-4094，不传或传0表示不设置VLAN */
     
-    @OpenAPIParam("Vlan")
+    @UCloudStackParam("Vlan")
     private String vlanParam;
 
 

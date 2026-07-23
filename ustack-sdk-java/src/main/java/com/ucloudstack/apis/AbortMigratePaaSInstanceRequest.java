@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class AbortMigratePaaSInstanceRequest extends Request {
 
     /** 租户ID，保留字段 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 实例ID，只有迁移已报错( MigrationError=true )时才允许取消；其他状态会返回状态错误 */
     @NotEmpty
-    @OpenAPIParam("InstanceID")
+    @UCloudStackParam("InstanceID")
     private String instanceIDParam;
 
     /** 地域ID，指定资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，仅当资源处于计算迁移中时才能取消迁移 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

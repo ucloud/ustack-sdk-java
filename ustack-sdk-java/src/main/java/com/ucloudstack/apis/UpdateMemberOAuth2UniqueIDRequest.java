@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateMemberOAuth2UniqueIDRequest extends Request {
 
     /** 成员ID，指定要更新OAuth2标识的账号 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** OAuth2唯一标识ID，用于绑定外部身份；留空表示清除该字段，长度不超过200字符 */
     
-    @OpenAPIParam("OAuth2UniqueID")
+    @UCloudStackParam("OAuth2UniqueID")
     private String oAuth2UniqueIDParam;
 
 

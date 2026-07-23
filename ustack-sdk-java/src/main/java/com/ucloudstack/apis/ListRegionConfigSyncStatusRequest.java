@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class ListRegionConfigSyncStatusRequest extends Request {
 
     /** 配置键列表，指定要查询同步状态的地域配置项；不传则返回指定地域全部配置项的同步状态 */
     
-    @OpenAPIParam("ConfigKeys")
+    @UCloudStackParam("ConfigKeys")
     private List<String> configKeysParam;
 
     /** 地域ID，指定要查询配置同步状态的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

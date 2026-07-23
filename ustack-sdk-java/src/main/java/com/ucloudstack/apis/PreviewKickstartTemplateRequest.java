@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class PreviewKickstartTemplateRequest extends Request {
 
     /** 结构化安装参数(JSON String) */
     
-    @OpenAPIParam("Config")
+    @UCloudStackParam("Config")
     private String configParam;
 
     /** 系统镜像ID，用于生成正确的安装源URL，当Config去除空白后非空时必填 */
     
-    @OpenAPIParam("MediaID")
+    @UCloudStackParam("MediaID")
     private String mediaIDParam;
 
     /** 模板名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 模板变量(JSON String) */
     
-    @OpenAPIParam("Variables")
+    @UCloudStackParam("Variables")
     private String variablesParam;
 
 

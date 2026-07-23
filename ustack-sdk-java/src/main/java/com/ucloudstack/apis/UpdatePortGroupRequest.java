@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdatePortGroupRequest extends Request {
 
     /** 租户ID，标识端口组所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 端口组ID，指定要更新的端口组唯一标识符 */
     @NotEmpty
-    @OpenAPIParam("PortGroupID")
+    @UCloudStackParam("PortGroupID")
     private String portGroupIDParam;
 
     /** 地域ID，用于标识端口组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 端口组规则，新的协议端口组合列表，将替换现有规则，格式为协议:端口或协议:端口范围，多条规则以逗号分隔 */
     @NotEmpty
-    @OpenAPIParam("Rules")
+    @UCloudStackParam("Rules")
     private String rulesParam;
 
 

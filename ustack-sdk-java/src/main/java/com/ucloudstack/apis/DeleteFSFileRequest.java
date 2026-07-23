@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DeleteFSFileRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 文件存储实例ID，要操作的文件存储标识 */
     @NotEmpty
-    @OpenAPIParam("FSID")
+    @UCloudStackParam("FSID")
     private String fSIDParam;
 
     /** 文件路径，要删除的文件或目录绝对路径，不能为根目录/ */
     @NotEmpty
-    @OpenAPIParam("FilePath")
+    @UCloudStackParam("FilePath")
     private String filePathParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateMemberEmailRequest extends Request {
 
     /** 租户ID，用于授权校验与账号归属识别 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 成员ID，指定要修改邮箱的账号标识 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 账号邮箱，用于更新账号的登录与通知邮箱 */
     @NotEmpty
-    @OpenAPIParam("UserEmail")
+    @UCloudStackParam("UserEmail")
     private String userEmailParam;
 
 

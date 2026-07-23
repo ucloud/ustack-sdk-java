@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class CancelInstallTaskV2Request extends Request {
 
     /** 取消后是否清理已安装的系统，true 或 false，默认值为 false */
     
-    @OpenAPIParam("CleanOnCancel")
+    @UCloudStackParam("CleanOnCancel")
     private String cleanOnCancelParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 序列号，裸金属的硬件序列号 */
     @NotEmpty
-    @OpenAPIParam("SN")
+    @UCloudStackParam("SN")
     private String sNParam;
 
     /** 任务ID，指定要取消的装机任务 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

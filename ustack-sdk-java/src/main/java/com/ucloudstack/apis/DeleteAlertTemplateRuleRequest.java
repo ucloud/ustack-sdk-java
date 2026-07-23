@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteAlertTemplateRuleRequest extends Request {
 
     /** 告警规则ID，待删除的规则ID；当规则所属模板为REGION类型时不允许删除 */
     @NotEmpty
-    @OpenAPIParam("RuleID")
+    @UCloudStackParam("RuleID")
     private String ruleIDParam;
 
 

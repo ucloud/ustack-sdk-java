@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,147 +24,147 @@ public class CloneVMInstanceRequest extends Request {
 
     /** 审批名称，启用审批流程时的标题 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由，启用审批流程时的说明 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** 外网带宽，新虚拟机的带宽上限，单位：Mbps */
     
-    @OpenAPIParam("Bandwidth")
+    @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
     /** 核心数，新虚拟机的vCPU核心数量 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型，新虚拟机的计费模式，取值：Dynamic、Month、Year */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 租户邮箱，归属租户的联系电子邮箱 */
     
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
     /** 扁平网络ID，指定扁平网络，与OperatorName互斥 */
     
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** IP版本，新虚拟机使用的IP协议版本，取值：IPv4、IPv6 */
     
-    @OpenAPIParam("IPVersion")
+    @UCloudStackParam("IPVersion")
     private String iPVersionParam;
 
     /** 内网IP，指定新虚拟机的内网IP地址，留空则自动分配 */
     
-    @OpenAPIParam("InternalIP")
+    @UCloudStackParam("InternalIP")
     private String internalIPParam;
 
     /** 外网IP，指定新虚拟机的外网IP地址，留空则自动分配 */
     
-    @OpenAPIParam("InternetIP")
+    @UCloudStackParam("InternetIP")
     private String internetIPParam;
 
     /** 入向带宽限制，第一张网卡的入向平均带宽限制，单位：Mbps，0表示不限制 */
     
-    @OpenAPIParam("LANInAverageBandwidth")
+    @UCloudStackParam("LANInAverageBandwidth")
     private Integer lANInAverageBandwidthParam;
 
     /** 内网MAC，指定新虚拟机的内网MAC地址，留空则自动生成 */
     
-    @OpenAPIParam("LANMAC")
+    @UCloudStackParam("LANMAC")
     private String lANMACParam;
 
     /** 出向带宽限制，第一张网卡的出向平均带宽限制，单位：Mbps，0表示不限制 */
     
-    @OpenAPIParam("LANOutAverageBandwidth")
+    @UCloudStackParam("LANOutAverageBandwidth")
     private Integer lANOutAverageBandwidthParam;
 
     /** 内网安全组ID，新虚拟机绑定的内网安全组 */
     
-    @OpenAPIParam("LANSGID")
+    @UCloudStackParam("LANSGID")
     private String lANSGIDParam;
 
     /** 内存容量，新虚拟机的内存大小，单位：MiB */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 虚拟机名称，新虚拟机的显示名称，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 外网线路ID，指定外网宽带运营商线路 */
     
-    @OpenAPIParam("OperatorName")
+    @UCloudStackParam("OperatorName")
     private String operatorNameParam;
 
     /** 项目ID，资源所属的项目分组标识，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费周期，购买的时长，按月/年计费时表示月数/年数 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，对新虚拟机的补充说明，长度0-100个字符，禁止包含<script>标签或javascript链接 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 子网ID，新虚拟机所属的子网标识 */
     
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 源虚拟机ID，被克隆的源虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
     /** 整机快照ID，基于该整机快照进行克隆 */
     @NotEmpty
-    @OpenAPIParam("VMSPID")
+    @UCloudStackParam("VMSPID")
     private String vMSPIDParam;
 
     /** VPCID，新虚拟机所属的VPC标识 */
     
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
     /** 外网MAC，指定新虚拟机的外网MAC地址，留空则自动生成 */
     
-    @OpenAPIParam("WANMAC")
+    @UCloudStackParam("WANMAC")
     private String wANMACParam;
 
     /** WAN网络配置，克隆阶段用于声明WAN网卡及其IP配置；当前仅支持1张WAN网卡，单网卡可配置多个WAN IP */
     
-    @OpenAPIParam("WANNetworkConfig")
+    @UCloudStackParam("WANNetworkConfig")
     private WANNetworkConfig wANNetworkConfigParam;
 
     /** 外网安全组ID，新虚拟机绑定的外网安全组 */
     
-    @OpenAPIParam("WANSGID")
+    @UCloudStackParam("WANSGID")
     private String wANSGIDParam;
 
 

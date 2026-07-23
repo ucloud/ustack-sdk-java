@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateRedisConfigParamsRequest extends Request {
 
     /** 租户ID，配置所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 配置文件ID，参数模板ID或Redis实例ID（redis-config-前缀表示模板ID） */
     @NotEmpty
-    @OpenAPIParam("ConfigID")
+    @UCloudStackParam("ConfigID")
     private String configIDParam;
 
     /** Redis配置项，配置参数列表，格式为key:value */
     @NotEmpty
-    @OpenAPIParam("Params")
+    @UCloudStackParam("Params")
     private List<String> paramsParam;
 
 

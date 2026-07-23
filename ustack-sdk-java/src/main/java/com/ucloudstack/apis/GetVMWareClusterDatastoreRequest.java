@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class GetVMWareClusterDatastoreRequest extends Request {
 
     /** 集群ID，VMware计算集群标识 */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 集群名称，VMware计算集群标识 */
     @NotEmpty
-    @OpenAPIParam("ClusterName")
+    @UCloudStackParam("ClusterName")
     private String clusterNameParam;
 
     /** vmware配置名称，指定VMware连接配置标识 */
     @NotEmpty
-    @OpenAPIParam("ConfigName")
+    @UCloudStackParam("ConfigName")
     private String configNameParam;
 
     /** 数据中心名称，VMware数据中心标识 */
     @NotEmpty
-    @OpenAPIParam("Datacenter")
+    @UCloudStackParam("Datacenter")
     private String datacenterParam;
 
 

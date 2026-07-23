@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class DescribeImageRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像格式，用于筛选镜像格式，取值qcow2、iso、vmdk、raw */
     
-    @OpenAPIParam("ImageFormat")
+    @UCloudStackParam("ImageFormat")
     private String imageFormatParam;
 
     /** 镜像ID列表，用于精确筛选指定镜像集合 */
     
-    @OpenAPIParam("ImageIDs")
+    @UCloudStackParam("ImageIDs")
     private List<String> imageIDsParam;
 
     /** 镜像类型，用于筛选镜像类型，取值Base、Custom */
     
-    @OpenAPIParam("ImageType")
+    @UCloudStackParam("ImageType")
     private String imageTypeParam;
 
     /** 关键词，用于对镜像名称或备注进行模糊检索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页记录数，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 起始偏移量，用于指定返回结果集的起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于筛选自定义镜像所属项目，基础镜像不生效 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 状态列表，用于筛选指定状态的镜像资源 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
 

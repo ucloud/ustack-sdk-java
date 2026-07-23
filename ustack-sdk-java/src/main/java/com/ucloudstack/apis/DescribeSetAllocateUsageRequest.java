@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeSetAllocateUsageRequest extends Request {
 
     /** 当为true时，即使不指定Region也返回所有地域下的所有集群信息 */
     
-    @OpenAPIParam("IncludeAllClusters")
+    @UCloudStackParam("IncludeAllClusters")
     private Boolean includeAllClustersParam;
 
     /** 地域ID，若不指定则查询所有有权限访问的地域，返回结果以地域为维度；若指定则查询单个地域，返回结果以地域下的集群为维度 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

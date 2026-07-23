@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteASGroupRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 伸缩组ID，要删除的伸缩组的唯一标识符，删除前必须先禁用伸缩组（Mode为Disabled），且对于VM类型伸缩组需要清空所有成员，对于VS类型伸缩组需要移除所有由伸缩组自动创建的成员（Origin为AsGroup的成员） */
     @NotEmpty
-    @OpenAPIParam("GroupID")
+    @UCloudStackParam("GroupID")
     private String groupIDParam;
 
     /** 地域ID，指定伸缩组所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

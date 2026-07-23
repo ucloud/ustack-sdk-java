@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,92 +24,92 @@ public class CreateDBSBackupPlanRequest extends Request {
 
     /** 备份库表，指定备份库表范围，格式为db.table用逗号分隔，仅Logical且MySQL时生效，*.*表示全库 */
     
-    @OpenAPIParam("BackupTables")
+    @UCloudStackParam("BackupTables")
     private String backupTablesParam;
 
     /** 备份类型，取值Logical/Physical/Snapshot/Incremental；Incremental仅支持MySQL且ScheduleType必须为Timer，并需提供IncrementalSrcResourceID与RelatedPlanID */
     @NotEmpty
-    @OpenAPIParam("BackupType")
+    @UCloudStackParam("BackupType")
     private String backupTypeParam;
 
     /** 租户ID，备份计划所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 增量备份间隔，单位分钟，增量备份时必填，且必须≥5分钟， */
     
-    @OpenAPIParam("IncrementalInterval")
+    @UCloudStackParam("IncrementalInterval")
     private Integer incrementalIntervalParam;
 
     /** 增量备份源ID，增量备份源资源ID，BackupType为Incremental时必填 */
     
-    @OpenAPIParam("IncrementalSrcResourceID")
+    @UCloudStackParam("IncrementalSrcResourceID")
     private String incrementalSrcResourceIDParam;
 
     /** 名称，备份计划名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 关联的全量备份计划ID，增量备份关联的全量备份计划ID，BackupType为Incremental时必填 */
     
-    @OpenAPIParam("RelatedPlanID")
+    @UCloudStackParam("RelatedPlanID")
     private String relatedPlanIDParam;
 
     /** 备注，备份计划描述信息，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 保留时间，备份保留时长 */
     @NotEmpty
-    @OpenAPIParam("RetentionTime")
+    @UCloudStackParam("RetentionTime")
     private Integer retentionTimeParam;
 
     /** 调度类型，取值Manual或Timer */
     @NotEmpty
-    @OpenAPIParam("ScheduleType")
+    @UCloudStackParam("ScheduleType")
     private String scheduleTypeParam;
 
     /** 备份源ID，备份源资源ID */
     @NotEmpty
-    @OpenAPIParam("SrcResourceID")
+    @UCloudStackParam("SrcResourceID")
     private String srcResourceIDParam;
 
     /** 备份源地域，备份源资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("SrcResourceRegion")
+    @UCloudStackParam("SrcResourceRegion")
     private String srcResourceRegionParam;
 
     /** 备份源类型，备份源的资源类型 */
     @NotEmpty
-    @OpenAPIParam("SrcResourceType")
+    @UCloudStackParam("SrcResourceType")
     private String srcResourceTypeParam;
 
     /** 存储池ID，非快照备份时必填 */
     
-    @OpenAPIParam("StorageID")
+    @UCloudStackParam("StorageID")
     private String storageIDParam;
 
     /** 执行日期，TimerType为TIMER_TYPE_MONTHLY时必填 */
     
-    @OpenAPIParam("TimerDays")
+    @UCloudStackParam("TimerDays")
     private List<Integer> timerDaysParam;
 
     /** 执行小时，TimerType为TIMER_TYPE_DAILY/TIMER_TYPE_WEEKLY/TIMER_TYPE_MONTHLY时必填 */
     
-    @OpenAPIParam("TimerHours")
+    @UCloudStackParam("TimerHours")
     private List<Integer> timerHoursParam;
 
     /** 定时器类型，ScheduleType为Timer时必填 */
     
-    @OpenAPIParam("TimerType")
+    @UCloudStackParam("TimerType")
     private String timerTypeParam;
 
     /** 执行星期，TimerType为TIMER_TYPE_WEEKLY时必填 */
     
-    @OpenAPIParam("TimerWeeks")
+    @UCloudStackParam("TimerWeeks")
     private List<Integer> timerWeeksParam;
 
 

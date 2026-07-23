@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,92 +24,92 @@ public class DescribeVMInstanceRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 宿主机IP，过滤运行在指定宿主机的虚拟机 */
     
-    @OpenAPIParam("HostIP")
+    @UCloudStackParam("HostIP")
     private String hostIPParam;
 
     /** 隔离组ID，过滤指定隔离组下的虚拟机 */
     
-    @OpenAPIParam("IGID")
+    @UCloudStackParam("IGID")
     private String iGIDParam;
 
     /** 关键词，用于模糊匹配虚拟机名称或备注 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 网络类型，筛选虚拟机网络接入类型 */
     
-    @OpenAPIParam("NetworkType")
+    @UCloudStackParam("NetworkType")
     private String networkTypeParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于资源分组管理 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 搜索字段，指定关键词匹配的字段，取值：Name（仅按名称字段模糊匹配）；不传或空值表示全字段匹配 */
     
-    @OpenAPIParam("SearchField")
+    @UCloudStackParam("SearchField")
     private String searchFieldParam;
 
     /** 计算集群ID，过滤指定计算集群下的虚拟机 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 是否仅查询简略信息 */
     
-    @OpenAPIParam("SimpleInfo")
+    @UCloudStackParam("SimpleInfo")
     private Boolean simpleInfoParam;
 
     /** 排序方向，指定排序的升降序，取值：Ascending（升序）、Descending（降序） */
     
-    @OpenAPIParam("Sort")
+    @UCloudStackParam("Sort")
     private String sortParam;
 
     /** 排序字段，指定返回结果的排序依据，取值：CreateTime（创建时间）、CPUUtilization（CPU利用率）、MemUsage（内存利用率）、SpaceUsage（空间利用率） */
     
-    @OpenAPIParam("SortBy")
+    @UCloudStackParam("SortBy")
     private String sortByParam;
 
     /** 状态列表，过滤虚拟机的运行状态 */
     
-    @OpenAPIParam("States")
+    @UCloudStackParam("States")
     private List<String> statesParam;
 
     /** 子网ID，过滤指定子网下的虚拟机 */
     
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 虚拟机ID列表，精确匹配虚拟机标识 */
     
-    @OpenAPIParam("VMIDs")
+    @UCloudStackParam("VMIDs")
     private List<String> vMIDsParam;
 
     /** VPCID，过滤指定VPC下的虚拟机 */
     
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class MigratePaaSInstanceRequest extends Request {
 
     /** 租户ID，保留字段 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 实例ID，指定要迁移的虚拟机，必须属于该PaaS资源，若指定的实例不在资源的虚拟机列表中或已经位于目标集群，接口会返回参数错误 */
     @NotEmpty
-    @OpenAPIParam("InstanceID")
+    @UCloudStackParam("InstanceID")
     private String instanceIDParam;
 
     /** 目标计算集群ID，系统会验证集群存在，若传入的集群不存在会返回错误 */
     @NotEmpty
-    @OpenAPIParam("MigrateComputeSetID")
+    @UCloudStackParam("MigrateComputeSetID")
     private String migrateComputeSetIDParam;
 
     /** 目标宿主机IP，可选字段，不传时由控制器自动调度；传入时需为有效IPv4 */
     
-    @OpenAPIParam("MigrateHostIP")
+    @UCloudStackParam("MigrateHostIP")
     private String migrateHostIPParam;
 
     /** 地域ID，指定资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，支持MYSQL、REDIS、OSS、FS、LB、NATGW、VPNGW、DTS等PaaS资源；资源状态必须为AVAILABLE且运行状态为Running或Stopped */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

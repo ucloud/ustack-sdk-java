@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class AllocateK8SSessionRequest extends Request {
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 执行命令 */
     
-    @OpenAPIParam("CmdName")
+    @UCloudStackParam("CmdName")
     private String cmdNameParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 容器名称 */
     
-    @OpenAPIParam("ContainerName")
+    @UCloudStackParam("ContainerName")
     private String containerNameParam;
 
     /** 名字空间 */
     
-    @OpenAPIParam("NameSpace")
+    @UCloudStackParam("NameSpace")
     private String nameSpaceParam;
 
     /** Pod名称 */
     @NotEmpty
-    @OpenAPIParam("PodName")
+    @UCloudStackParam("PodName")
     private String podNameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

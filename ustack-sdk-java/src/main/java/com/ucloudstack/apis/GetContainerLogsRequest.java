@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class GetContainerLogsRequest extends Request {
 
     /** 集群id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 容器名 */
     @NotEmpty
-    @OpenAPIParam("Container")
+    @UCloudStackParam("Container")
     private String containerParam;
 
     /** 结束时间,unixnano */
     
-    @OpenAPIParam("End")
+    @UCloudStackParam("End")
     private Integer endParam;
 
     /** 关键词 */
     
-    @OpenAPIParam("Keywords")
+    @UCloudStackParam("Keywords")
     private List<String> keywordsParam;
 
     /** 关键词排除 */
     
-    @OpenAPIParam("KeywordsIgnore")
+    @UCloudStackParam("KeywordsIgnore")
     private List<String> keywordsIgnoreParam;
 
     /** 数量限制 */
     
-    @OpenAPIParam("LineLimit")
+    @UCloudStackParam("LineLimit")
     private Integer lineLimitParam;
 
     /** 命名空间 */
     @NotEmpty
-    @OpenAPIParam("Namespace")
+    @UCloudStackParam("Namespace")
     private String namespaceParam;
 
     /** 是否在集群内 */
     
-    @OpenAPIParam("NotInCluster")
+    @UCloudStackParam("NotInCluster")
     private Boolean notInClusterParam;
 
     /** pod名字 */
     @NotEmpty
-    @OpenAPIParam("Pod")
+    @UCloudStackParam("Pod")
     private String podParam;
 
     /** Region */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 起始时间,unixnano */
     
-    @OpenAPIParam("Start")
+    @UCloudStackParam("Start")
     private Integer startParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class PrometheusQueryRequest extends Request {
 
     /** 返回结果数量限制，预留字段，当前实现未对Prometheus返回结果做截断限制 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** PromQL查询表达式，用于查询即时监控指标数据 */
     @NotEmpty
-    @OpenAPIParam("Query")
+    @UCloudStackParam("Query")
     private String queryParam;
 
     /** 地域，指定查询哪个地域的Prometheus监控数据；若地域不存在将返回StatusRegionNotExist错误 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 查询时间点，支持Unix时间戳（秒）或RFC3339格式；解析失败或不填写时会自动使用当前时间 */
     
-    @OpenAPIParam("Time")
+    @UCloudStackParam("Time")
     private String timeParam;
 
     /** 查询超时时间，支持Go duration格式（如30s、1m），若解析失败、<=0或超过2m将返回参数错误 */
     
-    @OpenAPIParam("Timeout")
+    @UCloudStackParam("Timeout")
     private String timeoutParam;
 
 

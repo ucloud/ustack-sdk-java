@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeOrderRequest extends Request {
 
     /** 查询起始时间，订单创建时间的起始时间戳，单位为秒，必须小于结束时间 */
     @NotEmpty
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 查询结束时间，订单创建时间的结束时间戳，单位为秒，必须大于起始时间 */
     @NotEmpty
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 分页大小，指定每页返回的订单记录数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定从第几条记录开始返回 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，保留字段，当前接口不会根据项目进行过滤；传空字符串时表示筛选未归属项目组数据 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定订单资源所属的物理区域，传入all或空值表示查询所有地域的订单 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 租户唯一标识ID，用于标识资源所属的租户，实现多租户环境下的资源隔离和权限控制，根据此租户ID查询所有订单 */
     
-    @OpenAPIParam("UserAccountID")
+    @UCloudStackParam("UserAccountID")
     private Integer userAccountIDParam;
 
 

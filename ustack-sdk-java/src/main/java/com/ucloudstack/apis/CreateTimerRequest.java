@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,92 +24,92 @@ public class CreateTimerRequest extends Request {
 
     /** 特定参数，任务策略配置的key:value数组，可用键：PolicySetID、PolicyCompanyIDs、PolicyProjectIDs、PolicyResourceTypes、PolicyDays、PolicyDirPath、PolicyNotifyGroup、PolicyNotifyWhenWarning */
     
-    @OpenAPIParam("Annotations")
+    @UCloudStackParam("Annotations")
     private List<String> annotationsParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 日期，当调度类型为TIMER_TYPE_MONTHLY时必填，指定每月执行日期列表，取值范围1-32，其中32表示每月最后一天（自动适配大小月和二月） */
     
-    @OpenAPIParam("Days")
+    @UCloudStackParam("Days")
     private List<Integer> daysParam;
 
     /** 固定间隔，当调度类型为TIMER_TYPE_FIXED_INTERVAL时必填，取值范围60-86400秒 */
     
-    @OpenAPIParam("FixedInterval")
+    @UCloudStackParam("FixedInterval")
     private Integer fixedIntervalParam;
 
     /** 小时，当调度类型为TIMER_TYPE_DAILY、TIMER_TYPE_WEEKLY、TIMER_TYPE_MONTHLY时必填，指定每天执行小时列表，取值范围0-23 */
     
-    @OpenAPIParam("Hours")
+    @UCloudStackParam("Hours")
     private List<Integer> hoursParam;
 
     /** 保留数量，当Task为CreateSnapshot/CreateInspection/CreateResUsed时使用，取值范围1-42，默认10 */
     
-    @OpenAPIParam("KeepNum")
+    @UCloudStackParam("KeepNum")
     private Integer keepNumParam;
 
     /** 定时器名称，用于标识和区分定时任务 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，定时器所属项目分组标识，CreateInspection/CreateResUsed/DBSBackUP任务不归属项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识定时器所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，用于补充说明定时器用途或业务场景 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 资源ID列表，当Task为CreateSnapshot时必填，用于指定快照目标资源 */
     
-    @OpenAPIParam("ResourceIDs")
+    @UCloudStackParam("ResourceIDs")
     private List<String> resourceIDsParam;
 
     /** 资源类型，当Task为CreateSnapshot时有效，默认DISK，DIRECTORY表示文件目录 */
     
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 保留时长（单位：天），用于备份类任务的保留策略，CreateSnapshot/CreateInspection/CreateResUsed不使用该字段 */
     
-    @OpenAPIParam("Retention")
+    @UCloudStackParam("Retention")
     private Integer retentionParam;
 
     /** 标签键值对，用于资源标签管理与检索，格式为Base64的key:value */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 取值：CreateSnapshot（为云硬盘创建快照，用于数据备份和恢复）、DBSBackUP（数据库备份任务）、CreateInspection（平台巡检任务，用于系统健康检查）、CreateResUsed（资源用量统计任务，用于生成资源使用报表） */
     @NotEmpty
-    @OpenAPIParam("Task")
+    @UCloudStackParam("Task")
     private String taskParam;
 
     /** 单次触发时间，当调度类型为TIMER_TYPE_ONCE时必填，秒级Unix时间戳且必须大于当前时间 */
     
-    @OpenAPIParam("TriggerTime")
+    @UCloudStackParam("TriggerTime")
     private Integer triggerTimeParam;
 
     /** 调度类型，定义定时器的触发规则和执行频率，取值：TIMER_TYPE_ONCE（单次执行，在指定时间点执行一次）、TIMER_TYPE_DAILY（每日执行，每天在指定时间执行）、TIMER_TYPE_WEEKLY（每周执行，每周在指定星期和时间执行）、TIMER_TYPE_MONTHLY（每月执行，每月在指定日期和时间执行）、TIMER_TYPE_FIXED_INTERVAL（固定间隔执行，按指定时间间隔周期性执行） */
     @NotEmpty
-    @OpenAPIParam("Type")
+    @UCloudStackParam("Type")
     private String typeParam;
 
     /** 星期，当调度类型为TIMER_TYPE_WEEKLY时必填，指定每周执行星期列表，取值范围0-7对应周一到周日 */
     
-    @OpenAPIParam("Weeks")
+    @UCloudStackParam("Weeks")
     private List<Integer> weeksParam;
 
 

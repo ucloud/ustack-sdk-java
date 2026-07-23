@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class PrometheusQueryRangeRequest extends Request {
 
     /** 查询结束时间，定义时间范围的结束点，支持Unix时间戳（秒）或RFC3339格式，解析失败会直接返回错误 */
     @NotEmpty
-    @OpenAPIParam("End")
+    @UCloudStackParam("End")
     private String endParam;
 
     /** 返回结果数量限制，用于限制返回的时间序列数据点数量，避免结果集过大，预留字段，当前实现未对Prometheus返回结果做截断 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** PromQL查询表达式，用于查询时间范围内的监控指标数据，必须是合法的PromQL语法 */
     @NotEmpty
-    @OpenAPIParam("Query")
+    @UCloudStackParam("Query")
     private String queryParam;
 
     /** 地域ID，指定查询哪个地域的Prometheus监控数据；若地域不存在将返回StatusRegionNotExist错误 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 查询开始时间，定义时间范围的起始点，支持Unix时间戳（秒）或RFC3339格式，解析失败会直接返回错误 */
     @NotEmpty
-    @OpenAPIParam("Start")
+    @UCloudStackParam("Start")
     private String startParam;
 
     /** 查询步长，定义返回数据点之间的时间间隔，支持数字（秒）或Go duration格式（如60、60s），无法解析时会直接返回错误 */
     @NotEmpty
-    @OpenAPIParam("Step")
+    @UCloudStackParam("Step")
     private String stepParam;
 
     /** 查询超时时间，用于控制单次查询的最大执行时间，支持Go duration格式（如30s、1m），若解析失败、<=0或超过2m将返回参数错误 */
     
-    @OpenAPIParam("Timeout")
+    @UCloudStackParam("Timeout")
     private String timeoutParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DescribeNodeHostDeviceRequest extends Request {
 
     /** 租户唯一标识ID，标识请求发起租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 物理机节点ID，指定要扫描设备的物理机标识 */
     @NotEmpty
-    @OpenAPIParam("NodeID")
+    @UCloudStackParam("NodeID")
     private String nodeIDParam;
 
     /** 地域ID，用于标识外置设备所在的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

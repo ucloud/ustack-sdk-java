@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class ListRegionConfigsRequest extends Request {
 
     /** 配置类型，用于筛选地域配置的分类 */
     @NotEmpty
-    @OpenAPIParam("ConfigType")
+    @UCloudStackParam("ConfigType")
     private String configTypeParam;
 
     /** 地域ID，指定要查询配置的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

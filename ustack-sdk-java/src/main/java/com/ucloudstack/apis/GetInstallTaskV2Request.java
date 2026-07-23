@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class GetInstallTaskV2Request extends Request {
 
     /** 地域ID，指定要查询装机任务所属的地域，系统会基于地域选择Kunlun集群并仅返回该地域的任务数据 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 装机任务ID，来源于CreateInstallTaskV2/ListInstallTasksV2返回值，后台依据该ID从Kunlun查询任务详情，需与地域保持一致 */
     @NotEmpty
-    @OpenAPIParam("TaskID")
+    @UCloudStackParam("TaskID")
     private String taskIDParam;
 
 

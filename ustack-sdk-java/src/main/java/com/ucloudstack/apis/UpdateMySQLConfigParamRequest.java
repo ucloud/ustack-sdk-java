@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateMySQLConfigParamRequest extends Request {
 
     /** 是否自动重启，取值范围：0（仅更新参数，标记为待重启，不自动触发重启）、1（自动重启实例立即生效）， */
     @NotEmpty
-    @OpenAPIParam("AutoRestart")
+    @UCloudStackParam("AutoRestart")
     private String autoRestartParam;
 
     /** 租户ID，实例所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** MySQL实例ID，实例唯一标识 */
     @NotEmpty
-    @OpenAPIParam("MySQLID")
+    @UCloudStackParam("MySQLID")
     private String mySQLIDParam;
 
     /** 配置参数，JSON格式的配置参数；MySQL 8.0不允许修改lower_case_table_names */
     @NotEmpty
-    @OpenAPIParam("Params")
+    @UCloudStackParam("Params")
     private String paramsParam;
 
     /** 地域ID，实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

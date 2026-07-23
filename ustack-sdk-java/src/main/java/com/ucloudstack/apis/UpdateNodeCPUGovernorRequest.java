@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateNodeCPUGovernorRequest extends Request {
 
     /** 电源模式，取值performance（性能）、powersave（节能）、ondemand（自动，部分机器不支持） */
     @NotEmpty
-    @OpenAPIParam("Governor")
+    @UCloudStackParam("Governor")
     private String governorParam;
 
     /** 节点ID，用于标识节点唯一标识 */
     @NotEmpty
-    @OpenAPIParam("HostID")
+    @UCloudStackParam("HostID")
     private String hostIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

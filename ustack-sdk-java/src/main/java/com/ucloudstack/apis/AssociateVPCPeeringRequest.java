@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class AssociateVPCPeeringRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 对端ID，PeerType为VPC时传VPCID，为DC时传DirectConnectID */
     @NotEmpty
-    @OpenAPIParam("PeerID")
+    @UCloudStackParam("PeerID")
     private String peerIDParam;
 
     /** 对端类型，取值VPC/DC */
     @NotEmpty
-    @OpenAPIParam("PeerType")
+    @UCloudStackParam("PeerType")
     private String peerTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VPCID，发起对等连接的源VPC标识符 */
     @NotEmpty
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class WithdrawRequest extends Request {
 
     /** 租户ID，指定要提现的租户唯一标识，从该租户账户扣除提现金额 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 源账户类型，指定提现的账户类型，FREE表示从内部账户（赠金）提现，REAL表示从外部账户（现金）提现 */
     @NotEmpty
-    @OpenAPIParam("SrcAccountType")
+    @UCloudStackParam("SrcAccountType")
     private String srcAccountTypeParam;
 
     /** 提现金额，要提现的金额，单位为元，必须大于0且不能超过账户可提现余额 */
     @NotEmpty
-    @OpenAPIParam("WithdrawAmount")
+    @UCloudStackParam("WithdrawAmount")
     private Double withdrawAmountParam;
 
 
