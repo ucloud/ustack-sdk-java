@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class GetRenewPriceRequest extends Request {
 
     /** 计费类型，续费的计费方式，Dynamic表示按小时计费（兼容HOUR）、Month表示按月计费（兼容MONTH）、Year表示按年计费（兼容YEAR）；若填写必须不低于资源当前计费模式，留空则沿用当前值 */
     
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，保留字段，续费价格始终根据资源所属租户的折扣计算，管理员可留空 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 续费时长，按Hour查询时系统固定为1小时且最多24小时，按Month最多11个月，按Year最多5年，不指定则默认为1 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，要查询续费价格的资源唯一标识，必须是存在的资源ID */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

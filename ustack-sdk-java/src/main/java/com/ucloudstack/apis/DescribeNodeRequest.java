@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeNodeRequest extends Request {
 
     /** 节点ID列表，用于精确筛选指定节点 */
     
-    @OpenAPIParam("HostIDs")
+    @UCloudStackParam("HostIDs")
     private List<String> hostIDsParam;
 
     /** 关键词，用于模糊匹配节点名或IP地址 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 节点类型，用于筛选指定类型的节点 */
     
-    @OpenAPIParam("NodeType")
+    @UCloudStackParam("NodeType")
     private String nodeTypeParam;
 
     /** 分页偏移量，用于指定返回结果起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，用于筛选节点所属地域；为空时查询所有地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，用于筛选指定集群下的节点 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 排序方向，取值Ascending或Descending */
     
-    @OpenAPIParam("Sort")
+    @UCloudStackParam("Sort")
     private String sortParam;
 
     /** 排序字段，目前仅支持NodeIP */
     
-    @OpenAPIParam("SortBy")
+    @UCloudStackParam("SortBy")
     private String sortByParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeVPNTunnelRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，模糊匹配VPN隧道名称或ID */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量，取值范围：1-100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询，取值范围：≥0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，按项目过滤VPN隧道，支持多个项目 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VPN隧道ID列表，指定要查询的VPN隧道ID，支持批量查询 */
     
-    @OpenAPIParam("VPNTunnelIDs")
+    @UCloudStackParam("VPNTunnelIDs")
     private List<String> vPNTunnelIDsParam;
 
 

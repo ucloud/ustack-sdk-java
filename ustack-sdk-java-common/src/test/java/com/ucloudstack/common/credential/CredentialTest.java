@@ -2,8 +2,8 @@ package com.ucloudstack.common.credential;
 
 import static org.junit.Assert.*;
 
-import com.ucloudstack.common.annotation.OpenAPIParam;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.annotation.UCloudStackParam;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 
 import org.junit.Assert;
@@ -20,10 +20,10 @@ public class CredentialTest {
             super();
         }
 
-        @OpenAPIParam("Region")
+        @UCloudStackParam("Region")
         private String region;
 
-        @OpenAPIParam("Limit")
+        @UCloudStackParam("Limit")
         private Integer limit;
 
         public String getRegion() {
@@ -44,7 +44,7 @@ public class CredentialTest {
     }
 
     @Test
-    public void verifyAc() throws OpenAPIException {
+    public void verifyAc() throws UCloudStackException {
         Credential cred = new Credential(pubKey, priKey);
         Assert.assertEquals(pubKey, cred.getPublicKey());
         Assert.assertEquals(priKey, cred.getPrivateKey());
@@ -67,10 +67,10 @@ public class CredentialTest {
             super();
         }
 
-        @OpenAPIParam("Proportion")
+        @UCloudStackParam("Proportion")
         private Double proportion;
 
-        @OpenAPIParam("Region")
+        @UCloudStackParam("Region")
         private String region;
 
         public String getRegion() {
@@ -91,7 +91,7 @@ public class CredentialTest {
     }
 
     @Test
-    public void verifyAcDoubleTailingZero() throws OpenAPIException {
+    public void verifyAcDoubleTailingZero() throws UCloudStackException {
         Credential cred = new Credential(pubKey, priKey);
         Assert.assertEquals(pubKey, cred.getPublicKey());
         Assert.assertEquals(priKey, cred.getPrivateKey());
@@ -117,7 +117,7 @@ public class CredentialTest {
     }
 
     @Test
-    public void verifyAcDoubleNoneTailingZero() throws OpenAPIException {
+    public void verifyAcDoubleNoneTailingZero() throws UCloudStackException {
         Credential cred = new Credential(pubKey, priKey);
         Assert.assertEquals(pubKey, cred.getPublicKey());
         Assert.assertEquals(priKey, cred.getPrivateKey());

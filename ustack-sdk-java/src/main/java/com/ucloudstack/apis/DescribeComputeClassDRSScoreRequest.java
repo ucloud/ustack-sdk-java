@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DescribeComputeClassDRSScoreRequest extends Request {
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

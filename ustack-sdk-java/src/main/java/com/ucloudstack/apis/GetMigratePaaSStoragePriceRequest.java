@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class GetMigratePaaSStoragePriceRequest extends Request {
 
     /** 租户ID，保留字段 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 实例ID，指定要评估存储迁移费用的虚拟机，必须属于该PaaS资源 */
     @NotEmpty
-    @OpenAPIParam("InstanceID")
+    @UCloudStackParam("InstanceID")
     private String instanceIDParam;
 
     /** 目标存储集群ID，后台会验证集群存在且合法 */
     @NotEmpty
-    @OpenAPIParam("MigrateStorageSetID")
+    @UCloudStackParam("MigrateStorageSetID")
     private String migrateStorageSetIDParam;
 
     /** 地域ID，指定资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** PaaS资源ID，需处于AVAILABLE状态，且仅支持发起存储迁移的资源类型（MYSQL、REDIS、FS、OSS、DTS等） */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

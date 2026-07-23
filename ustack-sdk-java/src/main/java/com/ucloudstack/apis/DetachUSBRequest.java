@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DetachUSBRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** USB设备ID，指定要从虚拟机卸载的USB设备 */
     @NotEmpty
-    @OpenAPIParam("USBDeviceID")
+    @UCloudStackParam("USBDeviceID")
     private String uSBDeviceIDParam;
 
 

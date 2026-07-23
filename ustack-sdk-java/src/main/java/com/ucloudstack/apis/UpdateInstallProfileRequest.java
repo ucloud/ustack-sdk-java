@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class UpdateInstallProfileRequest extends Request {
 
     /** 租户ID，预留字段，当前不生效 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 模板描述，可选，若不传则不更新 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 镜像ID，可选，若不传则不更新 */
     
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** 镜像名称，可选，若不传则不更新 */
     
-    @OpenAPIParam("ImageName")
+    @UCloudStackParam("ImageName")
     private String imageNameParam;
 
     /** 镜像操作系统发行版，可选，若不传则不更新 */
     
-    @OpenAPIParam("ImageOSDistribution")
+    @UCloudStackParam("ImageOSDistribution")
     private String imageOSDistributionParam;
 
     /** 镜像操作系统名称，可选，若不传则不更新 */
     
-    @OpenAPIParam("ImageOSName")
+    @UCloudStackParam("ImageOSName")
     private String imageOSNameParam;
 
     /** Kickstart模板ID，可选，若不传则不更新 */
     
-    @OpenAPIParam("KickstartTemplateID")
+    @UCloudStackParam("KickstartTemplateID")
     private String kickstartTemplateIDParam;
 
     /** 模板名称，可选，若不传则不更新 */
     
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 系统镜像ID，可选，若不传则不更新 */
     
-    @OpenAPIParam("OSMediaID")
+    @UCloudStackParam("OSMediaID")
     private String oSMediaIDParam;
 
     /** 分区模板ID，可选，若不传则不更新 */
     
-    @OpenAPIParam("PartitionTemplateID")
+    @UCloudStackParam("PartitionTemplateID")
     private String partitionTemplateIDParam;
 
     /** 模板ID，指定要更新的模板 */
     @NotEmpty
-    @OpenAPIParam("ProfileID")
+    @UCloudStackParam("ProfileID")
     private String profileIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

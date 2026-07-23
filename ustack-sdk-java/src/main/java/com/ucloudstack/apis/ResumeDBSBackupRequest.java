@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class ResumeDBSBackupRequest extends Request {
 
     /** 租户ID，用于标识资源所属的租户，实现多租户环境下的资源隔离 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计划ID，备份计划的ID；仅支持ScheduleType=Timer的计划 */
     @NotEmpty
-    @OpenAPIParam("PlanID")
+    @UCloudStackParam("PlanID")
     private String planIDParam;
 
     /** 地域，备份源的地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

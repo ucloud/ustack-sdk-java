@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class BindAlertTemplateRequest extends Request {
 
     /** 地域，目标资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 目标资源ID，待绑定告警模板的资源ID */
     @NotEmpty
-    @OpenAPIParam("TargetID")
+    @UCloudStackParam("TargetID")
     private String targetIDParam;
 
     /** 告警模板ID，待绑定的告警模板ID，非管理员租户需验证模板归属权限，仅允许绑定自有模板 */
     @NotEmpty
-    @OpenAPIParam("TemplateID")
+    @UCloudStackParam("TemplateID")
     private String templateIDParam;
 
 

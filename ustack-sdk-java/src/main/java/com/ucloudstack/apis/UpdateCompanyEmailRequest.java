@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateCompanyEmailRequest extends Request {
 
     /** 租户ID，请求传入用于定位要更新邮箱的租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 租户邮箱，请求传入并更新租户主账号邮箱，用于登录与通知；邮箱需全局唯一 */
     @NotEmpty
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
 

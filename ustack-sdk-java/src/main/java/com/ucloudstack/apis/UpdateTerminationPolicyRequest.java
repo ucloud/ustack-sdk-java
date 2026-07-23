@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateTerminationPolicyRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围，用于验证资源归属 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，指定资源所属的物理区域，用于验证资源归属 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要修改删除保护策略的PaaS产品资源，如MySQL主库实例 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 从库ID列表，可同时下发给最多5个从库（后台直接遍历Patch资源注解，不做额外校验），为空表示仅修改主库 */
     @NotEmpty
-    @OpenAPIParam("SlaveIDs")
+    @UCloudStackParam("SlaveIDs")
     private List<String> slaveIDsParam;
 
     /** 删除保护策略，0表示开启删除保护，1表示关闭删除保护 */
     
-    @OpenAPIParam("TerminationPolicy")
+    @UCloudStackParam("TerminationPolicy")
     private Integer terminationPolicyParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class ListAdminRequest extends Request {
 
     /** 关键词，用于按名称或邮箱检索管理员账号 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，控制单次返回数量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于分页起点，默认为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
 

@@ -12,7 +12,7 @@ package com.ucloudstack.example;
 import com.ucloudstack.common.client.DefaultClient;
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public class Main {
         Response response = null;
         try {
             response = client.invoke(request, Response.class);
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             e.printStackTrace();
         }
         System.out.println(response);

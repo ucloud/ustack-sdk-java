@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UnbindAlertTemplateRequest extends Request {
 
     /** 地域，目标资源所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 目标资源ID，待解绑告警模板的资源ID，非管理员租户需验证资源归属权限 */
     @NotEmpty
-    @OpenAPIParam("TargetID")
+    @UCloudStackParam("TargetID")
     private String targetIDParam;
 
 

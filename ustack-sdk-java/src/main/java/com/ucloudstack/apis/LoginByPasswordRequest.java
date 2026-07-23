@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class LoginByPasswordRequest extends Request {
 
     /** OAuth2客户端ID，用于触发登录后的授权流程 */
     
-    @OpenAPIParam("ClientID")
+    @UCloudStackParam("ClientID")
     private String clientIDParam;
 
     /** 账号邮箱，登录身份标识并用于查询账号权限，需符合邮箱格式 */
     @NotEmpty
-    @OpenAPIParam("Email")
+    @UCloudStackParam("Email")
     private String emailParam;
 
     /** 登录密码，用于认证；若使用 X-Auth-Method: plain 则需 Base64 输入，服务端转为 AES 加密 */
     @NotEmpty
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** OAuth2重定向地址，ClientID存在时必填，需为合法URI */
     
-    @OpenAPIParam("RedirectURI")
+    @UCloudStackParam("RedirectURI")
     private String redirectURIParam;
 
     /** OAuth2响应类型，ClientID存在时必填且仅支持code */
     
-    @OpenAPIParam("ResponseType")
+    @UCloudStackParam("ResponseType")
     private String responseTypeParam;
 
     /** OAuth2状态参数，ClientID存在时必填，用于防CSRF */
     
-    @OpenAPIParam("State")
+    @UCloudStackParam("State")
     private String stateParam;
 
     /** 用户邮箱，传递给登录模块用于兼容用户主体关联的邮箱信息,若为空则默认使用Email */
     
-    @OpenAPIParam("UserEmail")
+    @UCloudStackParam("UserEmail")
     private String userEmailParam;
 
 

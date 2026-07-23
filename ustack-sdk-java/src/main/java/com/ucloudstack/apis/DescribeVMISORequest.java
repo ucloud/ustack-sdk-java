@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeVMISORequest extends Request {
 
     /** 挂载的资源ID，要查询ISO镜像挂载信息的目标资源标识 */
     @NotEmpty
-    @OpenAPIParam("AttachResourceID")
+    @UCloudStackParam("AttachResourceID")
     private String attachResourceIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

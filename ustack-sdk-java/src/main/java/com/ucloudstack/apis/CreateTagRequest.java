@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class CreateTagRequest extends Request {
 
     /** 租户ID，用于标识资源所属的租户，实现多租户环境下的资源隔离 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 标签键名，用于标识标签的名称，在租户内必须唯一，支持字母、数字、空格及+-=._:/@()[]（）【】汉字等字符（正则：^[A-Za-z0-9 +-=._:/@()[\]（）【】\u4e00-\u9fa5]{1,127}$），长度范围1-127个字符，系统会自动去除前后空格（TrimSpace） */
     @NotEmpty
-    @OpenAPIParam("Key")
+    @UCloudStackParam("Key")
     private String keyParam;
 
     /** 标签值列表，用于标识标签的具体取值，支持字母、数字、空格及+-=._:/@()[]（）【】汉字等字符（正则：^[A-Za-z0-9 +-=._:/@()[\]（）【】\u4e00-\u9fa5]{1,127}$），每个值长度范围1-127个字符，列表内不可重复（使用strset.New去重），空字符串会被拒绝，系统会自动去除前后空格（TrimSpace） */
     @NotEmpty
-    @OpenAPIParam("Values")
+    @UCloudStackParam("Values")
     private List<String> valuesParam;
 
 

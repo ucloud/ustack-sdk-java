@@ -21,6 +21,6 @@ import java.lang.annotation.Target;
 /** Annotation of OpenAPI parameters */
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface OpenAPIParam {
+public @interface UCloudStackParam {
     String value(); // parameter name
 }

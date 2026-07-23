@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribePortGroupRequest extends Request {
 
     /** 租户ID，指定查询范围内的租户组织，若不指定则返回当前租户的端口组 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词，用于模糊搜索端口组名称等字段 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 端口组ID列表，用于精确查询指定的端口组 */
     
-    @OpenAPIParam("PortGroupIDs")
+    @UCloudStackParam("PortGroupIDs")
     private List<String> portGroupIDsParam;
 
     /** 项目ID列表，用于按项目筛选端口组 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识端口组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

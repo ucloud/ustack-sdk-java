@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DeleteDOSTokenRequest extends Request {
 
     /** 租户ID，用于标识令牌所属的租户上下文；公司级账号需填写自身CompanyID，系统/地域管理员可不填或指定目标租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private String companyIDParam;
 
     /** 令牌名称，令牌展示名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** OSSID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

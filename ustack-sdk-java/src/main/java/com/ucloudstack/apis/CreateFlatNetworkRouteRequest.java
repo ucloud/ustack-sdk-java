@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class CreateFlatNetworkRouteRequest extends Request {
 
     /** 目的地址CIDR，指定路由目标网段；单个扁平网络最多50条路由；目的地址已存在则创建失败 */
     @NotEmpty
-    @OpenAPIParam("Destination")
+    @UCloudStackParam("Destination")
     private String destinationParam;
 
     /** 扁平网络ID，指定要添加路由的扁平网络唯一标识 */
     @NotEmpty
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** 下一跳地址，指定数据包转发的网关IP地址，必须在扁平网络的CIDR范围内 */
     @NotEmpty
-    @OpenAPIParam("NextHop")
+    @UCloudStackParam("NextHop")
     private String nextHopParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注信息，用于说明和注释，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

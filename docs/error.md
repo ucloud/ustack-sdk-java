@@ -11,7 +11,7 @@ try {
     System.out.println(e.getMessage());
 } catch (RetCodeException e) {
     System.out.println(e.getRetCode());
-} catch (OpenAPIException e) {
+} catch (UCloudStackException e) {
     e.printStackTrace();
 }
 ```

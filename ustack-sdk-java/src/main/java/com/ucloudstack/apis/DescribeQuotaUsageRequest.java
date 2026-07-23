@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DescribeQuotaUsageRequest extends Request {
 
     /** 租户ID，若不指定则查询所有租户（除管理员租户外）的配额使用情况，指定则仅查询该租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，若不指定则查询所有有权限访问的地域配额使用情况，指定则仅查询该地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

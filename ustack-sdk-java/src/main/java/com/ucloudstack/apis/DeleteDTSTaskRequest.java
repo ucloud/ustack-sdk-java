@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteDTSTaskRequest extends Request {
 
     /** DTS任务ID，待删除的DTS任务唯一标识 */
     @NotEmpty
-    @OpenAPIParam("DTSID")
+    @UCloudStackParam("DTSID")
     private String dTSIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

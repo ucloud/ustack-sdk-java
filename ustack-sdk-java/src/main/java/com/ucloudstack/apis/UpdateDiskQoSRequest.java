@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class UpdateDiskQoSRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 硬盘带宽限制，单位MBps，取值范围0-1000，0表示不限制 */
     
-    @OpenAPIParam("DiskBandwidth")
+    @UCloudStackParam("DiskBandwidth")
     private Integer diskBandwidthParam;
 
     /** 磁盘ID，要更新QoS配置的磁盘标识 */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 硬盘IOPS限制，取值范围0-50000，0表示不限制 */
     
-    @OpenAPIParam("DiskIOPS")
+    @UCloudStackParam("DiskIOPS")
     private Integer diskIOPSParam;
 
     /** 硬盘QoS限速读带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("DiskReadBandwidth")
+    @UCloudStackParam("DiskReadBandwidth")
     private Integer diskReadBandwidthParam;
 
     /** 硬盘QoS限速读IOPS，0表示不限制 */
     
-    @OpenAPIParam("DiskReadIOPS")
+    @UCloudStackParam("DiskReadIOPS")
     private Integer diskReadIOPSParam;
 
     /** 硬盘QoS限速总带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("DiskTotalBandwidth")
+    @UCloudStackParam("DiskTotalBandwidth")
     private Integer diskTotalBandwidthParam;
 
     /** 硬盘QoS限速总IOPS，0表示不限制 */
     
-    @OpenAPIParam("DiskTotalIOPS")
+    @UCloudStackParam("DiskTotalIOPS")
     private Integer diskTotalIOPSParam;
 
     /** 硬盘QoS限速写带宽，单位MB/s，0表示不限制 */
     
-    @OpenAPIParam("DiskWriteBandwidth")
+    @UCloudStackParam("DiskWriteBandwidth")
     private Integer diskWriteBandwidthParam;
 
     /** 硬盘QoS限速写IOPS，0表示不限制 */
     
-    @OpenAPIParam("DiskWriteIOPS")
+    @UCloudStackParam("DiskWriteIOPS")
     private Integer diskWriteIOPSParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

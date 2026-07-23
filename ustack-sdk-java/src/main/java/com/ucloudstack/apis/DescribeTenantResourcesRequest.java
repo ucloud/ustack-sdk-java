@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DescribeTenantResourcesRequest extends Request {
 
     /** 租户ID，请求传入并指定要查询资源的租户；租户资源查询场景使用 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，请求传入用于控制返回记录数；列表分页场景使用；Limit为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，请求传入用于分页起始位置；列表分页场景使用；Offset为0表示从头开始 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，请求传入并指定资源所属物理区域；租户资源查询场景使用 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

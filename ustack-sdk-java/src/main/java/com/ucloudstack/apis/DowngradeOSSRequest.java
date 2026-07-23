@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DowngradeOSSRequest extends Request {
 
     /** CPU核数，降配后的CPU核数需小于当前值，取值范围：2、4、6、8、10、12、14、16 */
     
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 对象存储ID，要降配的对象存储标识，对象存储状态必须为Stopped */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

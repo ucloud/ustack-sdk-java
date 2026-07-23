@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,82 +24,82 @@ public class GetVMInstancePriceRequest extends Request {
 
     /** 系统盘集群ID，指定引导盘所在的存储池位置，影响磁盘的I/O性能和可靠性级别，若未指定，系统将根据策略自动选择 */
     
-    @OpenAPIParam("BootDiskSetType")
+    @UCloudStackParam("BootDiskSetType")
     private String bootDiskSetTypeParam;
 
     /** 系统盘容量，虚拟机的启动盘大小，单位：GiB */
     
-    @OpenAPIParam("BootDiskSpace")
+    @UCloudStackParam("BootDiskSpace")
     private Integer bootDiskSpaceParam;
 
     /** 核心数，虚拟机的vCPU核心数量 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型，资源的计费模式，取值：Dynamic（按小时）、Month（按月）、Year（按年） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 购买数量，批量购买的实例个数 */
     @NotEmpty
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private Integer countParam;
 
     /** GPU数量，挂载的物理GPU数量，仅在GPUType为GPU时有效且必填 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU规格，挂载的物理GPU型号，仅在GPUType为GPU时有效且必填 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** GPU类型，虚拟机挂载的GPU资源类型，取值：GPU、VGPU，暂未支持VGPU */
     
-    @OpenAPIParam("GPUType")
+    @UCloudStackParam("GPUType")
     private String gPUTypeParam;
 
     /** 镜像ID，创建虚拟机所使用的镜像标识 */
     
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** vGPU规格，挂载的虚拟GPU规格，仅在GPUType为VGPU时有效且必填，预留字段，暂未支持 */
     
-    @OpenAPIParam("MdevName")
+    @UCloudStackParam("MdevName")
     private String mdevNameParam;
 
     /** 内存容量，虚拟机的内存大小，单位：MiB */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 计费周期，购买的时长，按月/年计费时表示月数/年数，按小时计费时固定为1 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储类型，磁盘的存储介质类型 */
     
-    @OpenAPIParam("StorageType")
+    @UCloudStackParam("StorageType")
     private String storageTypeParam;
 
     /** 计算集群ID，指定虚拟机所属的计算资源池，决定了虚拟机的CPU架构（如x86、ARM）和可用的宿主机范围 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
 

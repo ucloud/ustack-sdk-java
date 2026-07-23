@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class UpdateVMOSRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 操作系统发行版，标识操作系统的具体家族 */
     
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 操作系统类型，标识操作系统的核心分类 */
     
-    @OpenAPIParam("OSType")
+    @UCloudStackParam("OSType")
     private String oSTypeParam;
 
     /** 操作系统版本，标识发行版内部的具体版本信息 */
     
-    @OpenAPIParam("OSVersion")
+    @UCloudStackParam("OSVersion")
     private String oSVersionParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

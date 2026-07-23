@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateVMISOSlotRequest extends Request {
 
     /** ISO插槽配额，配置的ISO挂载插槽数量，需重启生效 */
     
-    @OpenAPIParam("ISOTotal")
+    @UCloudStackParam("ISOTotal")
     private Integer iSOTotalParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID，待修改配置的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpgradeRedisToHARequest extends Request {
 
     /** 租户ID，实例所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** Redis实例ID，指定要升级为高可用的实例；注意：实例必须为Running且子网需有可用IP */
     @NotEmpty
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
     /** 地域ID，实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

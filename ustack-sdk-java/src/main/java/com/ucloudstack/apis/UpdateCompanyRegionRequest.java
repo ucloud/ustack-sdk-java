@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateCompanyRegionRequest extends Request {
 
     /** 租户ID，请求传入用于定位要授权地域的租户，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID列表，请求传入用于授予租户访问权限的地域集合，控制租户可创建和管理资源的物理区域范围 */
     @NotEmpty
-    @OpenAPIParam("Regions")
+    @UCloudStackParam("Regions")
     private List<String> regionsParam;
 
 

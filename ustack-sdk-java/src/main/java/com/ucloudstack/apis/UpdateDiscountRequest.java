@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class UpdateDiscountRequest extends Request {
 
     /** 计费类型，指定计费方式，Dynamic表示按小时计费（兼容传HOUR）、Month表示按月计费（兼容MONTH）、Year表示按年计费（兼容YEAR） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，指定要更新折扣的租户唯一标识，为该租户设置专属折扣 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 折扣比例，设置的折扣百分比，100表示无折扣，50表示五折，设置为0表示免费 */
     @NotEmpty
-    @OpenAPIParam("Discount")
+    @UCloudStackParam("Discount")
     private Double discountParam;
 
     /** 产品ID，指定要更新折扣的产品唯一标识 */
     @NotEmpty
-    @OpenAPIParam("ProductID")
+    @UCloudStackParam("ProductID")
     private String productIDParam;
 
     /** 地域ID，指定价格所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 集群类型，指定资源所属的集群类型标识，从DescribeSet接口获取 */
     @NotEmpty
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
 

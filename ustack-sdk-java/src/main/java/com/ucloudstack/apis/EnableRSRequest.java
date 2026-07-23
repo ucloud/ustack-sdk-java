@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class EnableRSRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 负载均衡ID，用于定位需要启用服务节点的负载均衡实例 */
     @NotEmpty
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** 真实服务器ID，用于定位需要启用的服务节点 */
     @NotEmpty
-    @OpenAPIParam("RSID")
+    @UCloudStackParam("RSID")
     private String rSIDParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟服务器ID，用于定位需要启用服务节点的监听器实例，仅支持来源为Default的监听器（Service/Ingress来源由容器系统管理，调用会返回StatusCanNotModifyNoDefaultOriginVS错误） */
     @NotEmpty
-    @OpenAPIParam("VSID")
+    @UCloudStackParam("VSID")
     private String vSIDParam;
 
 

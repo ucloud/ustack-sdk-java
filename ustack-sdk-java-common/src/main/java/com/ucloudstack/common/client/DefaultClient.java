@@ -15,7 +15,7 @@ package com.ucloudstack.common.client;
 
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.exception.RetCodeException;
 import com.ucloudstack.common.middleware.Context;
 import com.ucloudstack.common.middleware.Middleware;
@@ -54,7 +54,7 @@ public class DefaultClient implements Client {
 
     @Override
     public Response invoke(Request request, Class<? extends Response> clazz)
-            throws OpenAPIException {
+            throws UCloudStackException {
         Context ctx = new Context();
         ctx.setConfig(this.getConfig());
         ctx.setCredential(this.getCredential());
@@ -69,7 +69,7 @@ public class DefaultClient implements Client {
         Response response = null;
         try {
             response = call(ctx, request, clazz);
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             ctx.setException(e);
             for (Middleware middleware : this.middlewares) {
                 middleware.handleException(ctx);
@@ -86,7 +86,7 @@ public class DefaultClient implements Client {
     }
 
     private Response call(Context ctx, Request request, Class<? extends Response> clazz)
-            throws OpenAPIException {
+            throws UCloudStackException {
         Response response = null;
         Integer maxRetries = request.loadMaxRetries();
         for (int i = 0; i <= maxRetries; i++) {
@@ -94,7 +94,7 @@ public class DefaultClient implements Client {
             try {
                 response = this.transport.invoke(ctx.getRequest(), clazz);
                 break;
-            } catch (OpenAPIException e) {
+            } catch (UCloudStackException e) {
                 if (i == maxRetries) {
                     throw e;
                 }

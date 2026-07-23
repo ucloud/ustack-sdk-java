@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class AllocatePMVNCSessionRequest extends Request {
 
     /** 裸金属ID，指定要创建VNC会话的裸金属实例 */
     @NotEmpty
-    @OpenAPIParam("PMID")
+    @UCloudStackParam("PMID")
     private String pMIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VNC密码，用于身份验证，可选 */
     
-    @OpenAPIParam("VNCPassword")
+    @UCloudStackParam("VNCPassword")
     private String vNCPasswordParam;
 
     /** VNC端口号，用于远程控制访问，有效端口范围 1-65535 */
     @NotEmpty
-    @OpenAPIParam("VNCPort")
+    @UCloudStackParam("VNCPort")
     private Integer vNCPortParam;
 
 

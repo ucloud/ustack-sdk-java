@@ -13,14 +13,14 @@
  */
 package com.ucloudstack.common.exception;
 
-/** OpenAPIException is the base-class of all the exception throw by SDK */
-public class OpenAPIException extends Exception {
+/** UCloudStackException is the base-class of all the exception throw by SDK */
+public class UCloudStackException extends Exception {
 
-    public OpenAPIException(String message) {
+    public UCloudStackException(String message) {
         super(message);
     }
 
-    public OpenAPIException(String message, Throwable cause) {
+    public UCloudStackException(String message, Throwable cause) {
         super(message, cause);
     }
 }

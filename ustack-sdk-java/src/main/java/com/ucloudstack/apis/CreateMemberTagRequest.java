@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class CreateMemberTagRequest extends Request {
 
     /** 成员ID，用于指定被授权的账号 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 项目组ID列表，租户级别用户必填且至少一个项目组ID；系统级/区域级授权可为空 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 角色ID列表，用于指定要授予的角色集合 */
     @NotEmpty
-    @OpenAPIParam("RoleIDs")
+    @UCloudStackParam("RoleIDs")
     private List<String> roleIDsParam;
 
 

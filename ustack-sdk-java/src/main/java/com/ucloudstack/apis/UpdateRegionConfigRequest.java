@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateRegionConfigRequest extends Request {
 
     /** 配置键，要更新的地域配置项唯一标识符， */
     @NotEmpty
-    @OpenAPIParam("ConfigKey")
+    @UCloudStackParam("ConfigKey")
     private String configKeyParam;
 
     /** 配置值，要设置的新配置值，ConfigKey为VPCNetwork时，需为有效的VPC网段（CIDR格式） */
     
-    @OpenAPIParam("ConfigValue")
+    @UCloudStackParam("ConfigValue")
     private String configValueParam;
 
     /** 地域ID，指定要更新配置的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

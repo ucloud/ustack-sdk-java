@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeWorkflowRequest extends Request {
 
     /** 租户唯一标识ID，用于筛选指定租户创建的流程，不指定时返回所有可见流程，管理员租户（CompanyID=200000231）可看见所有流程，普通租户只能看见自己和管理员创建的流程 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键字，用于通过搜索引擎模糊查找流程名称、备注等信息，与WorkflowIDs组合使用时取交集 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 流程来源，用于筛选流程的创建来源，Admin：管理员创建的全局流程，Company：租户创建的流程，不指定时返回所有来源的流程 */
     
-    @OpenAPIParam("Origin")
+    @UCloudStackParam("Origin")
     private String originParam;
 
     /** 资源类型，用于筛选适用于指定资源类型的流程，可以通过ListProductResources获取支持的类型，不指定时返回所有资源类型的流程 */
     
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 流程ID列表，指定查询的流程ID，指定时返回匹配的流程，不指定时返回符合其他条件的所有流程，与Keyword并用时取交集 */
     
-    @OpenAPIParam("WorkflowIDs")
+    @UCloudStackParam("WorkflowIDs")
     private List<String> workflowIDsParam;
 
 

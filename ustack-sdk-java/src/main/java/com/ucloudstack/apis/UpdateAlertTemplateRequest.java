@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateAlertTemplateRequest extends Request {
 
     /** 告警模板名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 备注信息，用于对告警模板的补充说明，长度0-100字符，不能包含http://或https://等URL */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 告警模板ID，指定要更新的告警模板ID，必须为当前租户可管理的模板 */
     @NotEmpty
-    @OpenAPIParam("TemplateID")
+    @UCloudStackParam("TemplateID")
     private String templateIDParam;
 
 

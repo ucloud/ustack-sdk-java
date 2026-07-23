@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class DetachDiskRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，要解绑的磁盘标识，共享盘解绑时只会移除当前ResourceID的绑定，不会影响其他绑定实例 */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，要解绑磁盘的目标资源标识 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 资源类型，挂载目标的资源类型，当前仅用于兼容调用 */
     
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
 

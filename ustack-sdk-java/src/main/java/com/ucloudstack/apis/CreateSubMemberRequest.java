@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateSubMemberRequest extends Request {
 
     /** 租户ID，标识子账号归属的租户实体，通常由登录上下文确定 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 账号邮箱，子账号登录身份标识，需符合邮箱格式 */
     @NotEmpty
-    @OpenAPIParam("MemberEmail")
+    @UCloudStackParam("MemberEmail")
     private String memberEmailParam;
 
     /** 成员名称，子账号展示名称用于管理界面显示 */
     @NotEmpty
-    @OpenAPIParam("MemberName")
+    @UCloudStackParam("MemberName")
     private String memberNameParam;
 
     /** OAuth2唯一标识ID，用于绑定外部身份认证系统的用户身份 */
     
-    @OpenAPIParam("OAuth2UniqueID")
+    @UCloudStackParam("OAuth2UniqueID")
     private String oAuth2UniqueIDParam;
 
     /** 登录密码，用于子账号登录；若使用 X-Auth-Method: plain 则需 Base64 输入并在服务端转为 AES 加密；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则 */
     @NotEmpty
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 手机号，用于安全通知或验证码接收，需为合法手机号 */
     
-    @OpenAPIParam("Phone")
+    @UCloudStackParam("Phone")
     private String phoneParam;
 
     /** 重置密码，指定子账号首次登录时是否必须修改密码；取值：1, Y, Yes, true 表示是，其他表示否 */
     
-    @OpenAPIParam("ResetPassword")
+    @UCloudStackParam("ResetPassword")
     private String resetPasswordParam;
 
 

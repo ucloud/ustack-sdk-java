@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class CreateOrchTaskRequest extends Request {
 
     /** 租户ID，任务所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 资源筛选条件，用于动态选择资源，当前未使用 */
     
-    @OpenAPIParam("Condition")
+    @UCloudStackParam("Condition")
     private String conditionParam;
 
     /** 任务名称，编排任务名称，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目组ID，任务所属项目组，当前未使用 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域，编排任务所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 任务备注，编排任务描述信息，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 资源类型，编排任务作用的资源类型，必须与TaskType匹配，取值：VM */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 步骤列表，定义编排任务的执行步骤，每个步骤为JSON字符串，格式：{"order":1,"delay":0,"resourceIDs":"vm-xx,vm-yy"}；delay取值范围0-3600；order在所有步骤中必须唯一；resourceIDs为逗号分隔的资源ID列表，同一资源ID在所有步骤中只能出现一次；所有资源必须存在且为AVAILABLE，且资源类型必须与ResourceType一致 */
     @NotEmpty
-    @OpenAPIParam("Steps")
+    @UCloudStackParam("Steps")
     private List<String> stepsParam;
 
     /** 任务类型，必须与ResourceType匹配，取值：StartInOrder/StopInOrder */
     @NotEmpty
-    @OpenAPIParam("TaskType")
+    @UCloudStackParam("TaskType")
     private String taskTypeParam;
 
 

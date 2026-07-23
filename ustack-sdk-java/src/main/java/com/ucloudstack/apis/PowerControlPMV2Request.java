@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class PowerControlPMV2Request extends Request {
 
     /** 裸金属ID，指定要进行电源操作的裸金属实例 */
     @NotEmpty
-    @OpenAPIParam("PMID")
+    @UCloudStackParam("PMID")
     private String pMIDParam;
 
     /** 电源操作，指定要执行的电源控制动作，on：开机；off：强制关机；soft：软关机（向操作系统发送关机信号）；reset：强制重启；cycle：电源循环重启（先断电再上电） */
     @NotEmpty
-    @OpenAPIParam("PowerAction")
+    @UCloudStackParam("PowerAction")
     private String powerActionParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class OperateAlertRequest extends Request {
 
     /** 告警指纹，前端可从DescribeAlert返回中透传，用于辅助展示与历史关联；当前写接口的精确定位以 AlertOccurrenceKey 为准 */
     
-    @OpenAPIParam("AlertFingerprint")
+    @UCloudStackParam("AlertFingerprint")
     private String alertFingerprintParam;
 
     /** 告警实例标识，前端从DescribeAlert返回中透传，用于精确定位一条当前告警实例 */
     @NotEmpty
-    @OpenAPIParam("AlertOccurrenceKey")
+    @UCloudStackParam("AlertOccurrenceKey")
     private String alertOccurrenceKeyParam;
 
     /** 租户ID，告警所属租户；普通租户不传时默认使用当前租户，管理员代操作其他租户时必须明确传入 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 忽略截止时间，Unix时间戳(秒)；当Operation=Ignore时必填且必须大于当前时间，其它操作忽略该值 */
     
-    @OpenAPIParam("IgnoreUntil")
+    @UCloudStackParam("IgnoreUntil")
     private Integer ignoreUntilParam;
 
     /** 操作类型，取值：Handle、Reopen、Ignore、CancelIgnore；命名为 Operation 以避免与通用 API 路由字段 Action 冲突 */
     @NotEmpty
-    @OpenAPIParam("Operation")
+    @UCloudStackParam("Operation")
     private String operationParam;
 
     /** 地域，告警所属地域，用于校验当前告警归属并在状态不存在时回查实时告警 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 操作备注，用于记录处理说明，长度0-255字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 资源ID，触发告警的目标资源ID，用于权限校验和回查当前告警 */
     @NotEmpty
-    @OpenAPIParam("TargetID")
+    @UCloudStackParam("TargetID")
     private String targetIDParam;
 
 

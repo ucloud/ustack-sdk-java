@@ -1,6 +1,6 @@
 package com.ucloudstack.common.accessor;
 
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 
@@ -11,22 +11,22 @@ import java.util.*;
 
 class DemoRequest extends Request {
 
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String name;
 
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cpu;
 
-    @OpenAPIParam("Size")
+    @UCloudStackParam("Size")
     private Double size;
 
-    @OpenAPIParam("UHostIds")
+    @UCloudStackParam("UHostIds")
     private List<String> uhostIds;
 
-    @OpenAPIParam("Led")
+    @UCloudStackParam("Led")
     private Led led;
 
-    @OpenAPIParam("NetworkInterface")
+    @UCloudStackParam("NetworkInterface")
     private List<NetworkInterface> networkInterface;
 
     public String getName() {
@@ -79,7 +79,7 @@ class DemoRequest extends Request {
 
     static class Led extends Request {
 
-        @OpenAPIParam("Enabled")
+        @UCloudStackParam("Enabled")
         private Boolean enabled;
 
         public Boolean getEnabled() {
@@ -93,7 +93,7 @@ class DemoRequest extends Request {
 
     static class NetworkInterface extends Request {
 
-        @OpenAPIParam("Bandwidth")
+        @UCloudStackParam("Bandwidth")
         private Integer bandwidth;
 
         public Integer getBandwidth() {

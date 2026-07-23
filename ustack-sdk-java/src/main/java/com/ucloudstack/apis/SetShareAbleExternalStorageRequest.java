@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class SetShareAbleExternalStorageRequest extends Request {
 
     /** 租户ID，资源所属租户的权限上下文 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，待设置为共享盘的外置存储盘ID */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

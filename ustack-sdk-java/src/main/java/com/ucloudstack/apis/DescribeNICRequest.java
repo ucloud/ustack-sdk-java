@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class DescribeNICRequest extends Request {
 
     /** 绑定的资源ID，用于查询绑定到指定资源的网卡 */
     
-    @OpenAPIParam("BindResourceID")
+    @UCloudStackParam("BindResourceID")
     private String bindResourceIDParam;
 
     /** 租户ID，指定查询范围内的租户组织，可选，用于跨租户查询 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 关键词，用于模糊匹配网卡名称或ID */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 网卡ID列表，用于查询指定的网卡资源 */
     
-    @OpenAPIParam("NICIDs")
+    @UCloudStackParam("NICIDs")
     private List<String> nICIDsParam;
 
     /** 网卡类型过滤，LAN表示从VPC内网分配，WAN表示从外网网段分配，Flat表示从扁平网络分配 */
     
-    @OpenAPIParam("NICType")
+    @UCloudStackParam("NICType")
     private String nICTypeParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于查询指定项目下的网卡资源 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 外网线路ID过滤，用于查询指定线路的外网网卡 */
     
-    @OpenAPIParam("SegmentID")
+    @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
     /** 状态列表，查询指定状态的网卡 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
     /** 子网ID过滤，用于查询指定子网下的网卡 */
     
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
 

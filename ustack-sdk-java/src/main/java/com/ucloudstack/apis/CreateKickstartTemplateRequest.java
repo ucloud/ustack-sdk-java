@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateKickstartTemplateRequest extends Request {
 
     /** 模板内容 */
     
-    @OpenAPIParam("Content")
+    @UCloudStackParam("Content")
     private String contentParam;
 
     /** 模板描述 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 是否设为默认模板 */
     
-    @OpenAPIParam("IsDefault")
+    @UCloudStackParam("IsDefault")
     private Boolean isDefaultParam;
 
     /** 模板名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 操作系统发行版 */
     @NotEmpty
-    @OpenAPIParam("OSDistribution")
+    @UCloudStackParam("OSDistribution")
     private String oSDistributionParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 支持的变量列表 */
     
-    @OpenAPIParam("Variables")
+    @UCloudStackParam("Variables")
     private List<String> variablesParam;
 
 

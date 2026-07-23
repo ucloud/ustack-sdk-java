@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DescribeTagRequest extends Request {
 
     /** 租户ID，用于标识资源所属的租户，实现多租户环境下的资源隔离，若不指定则根据用户权限返回可见标签，权限控制：1）System级管理员可查所有地域；2）Region级管理员可查授权地域（GetRegionForMember）；3）Company级管理员可查租户授权地域（GetRegionForCompany）；4）普通用户仅查项目资源标签（通过getSubuserResourceIDs获取） */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 标签键名，用于过滤指定键的标签，支持精确匹配 */
     
-    @OpenAPIParam("Key")
+    @UCloudStackParam("Key")
     private String keyParam;
 
     /** 搜索关键词，支持对标签键和值进行模糊搜索，使用全文检索引擎实现快速搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 标签值列表，用于过滤指定值的标签，支持多值过滤 */
     
-    @OpenAPIParam("Values")
+    @UCloudStackParam("Values")
     private List<String> valuesParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class AttachNICRequest extends Request {
 
     /** 租户ID，AttachNIC接口中可选，用于权限校验 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 网卡ID，指定要绑定的网卡资源 */
     @NotEmpty
-    @OpenAPIParam("NICID")
+    @UCloudStackParam("NICID")
     private String nICIDParam;
 
     /** 物理网卡型号标准编号，用于SR-IOV直通场景；为空表示不启用SR-IOV；与网卡QoS流量整形互斥 */
     
-    @OpenAPIParam("PFCode")
+    @UCloudStackParam("PFCode")
     private String pFCodeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定网卡要绑定的目标资源ID，通常为虚拟机ID */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 资源类型，指定网卡要绑定的目标资源类型；取值VM */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class GetUpgradeDiskPriceRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，要升级的磁盘标识 */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 磁盘大小，单位GiB，用于价格计算 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

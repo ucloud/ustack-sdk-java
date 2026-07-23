@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpgradeFSRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储容量，单位GiB，扩容后的容量必须大于当前容量，最小值100 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 文件存储实例ID，要扩容的文件存储标识，文件存储状态必须为Running或Stopped */
     @NotEmpty
-    @OpenAPIParam("FSID")
+    @UCloudStackParam("FSID")
     private String fSIDParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

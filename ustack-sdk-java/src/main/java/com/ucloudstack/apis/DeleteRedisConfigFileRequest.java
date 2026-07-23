@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteRedisConfigFileRequest extends Request {
 
     /** 配置ID，参数模板ID */
     @NotEmpty
-    @OpenAPIParam("ConfigID")
+    @UCloudStackParam("ConfigID")
     private String configIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeProductSpecificationRequest extends Request {
 
     /** 搜索关键词，用于模糊搜索规格信息 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，若不指定则默认为500 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数，从0开始计数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 产品类型列表，用于过滤特定产品的规格，如VM、DISK等 */
     
-    @OpenAPIParam("ProductTypes")
+    @UCloudStackParam("ProductTypes")
     private List<String> productTypesParam;
 
     /** 地域ID，指定要查询规格的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源类型，用于过滤特定资源的规格 */
     
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 集群类型列表，用于过滤特定集群的规格，如compute、storage等 */
     
-    @OpenAPIParam("SetTypes")
+    @UCloudStackParam("SetTypes")
     private List<String> setTypesParam;
 
     /** 规格ID列表，指定要查询的规格ID，用于精确查询 */
     
-    @OpenAPIParam("SpecificationIDs")
+    @UCloudStackParam("SpecificationIDs")
     private List<String> specificationIDsParam;
 
     /** 规格名称，用于精确匹配规格名称 */
     
-    @OpenAPIParam("SpecificationName")
+    @UCloudStackParam("SpecificationName")
     private String specificationNameParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class GetCreateDiskPriceRequest extends Request {
 
     /** 计费类型，计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic→HOUR、Month→MONTH、Year→YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘数量，用于价格计算 */
     
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private Integer countParam;
 
     /** 磁盘大小，单位GiB，用于价格计算 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群类型，指定磁盘所属的存储集群 */
     @NotEmpty
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
 

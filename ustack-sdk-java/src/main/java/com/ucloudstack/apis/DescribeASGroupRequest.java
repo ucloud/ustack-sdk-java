@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeASGroupRequest extends Request {
 
     /** 伸缩模式筛选，Horizontal表示水平伸缩，Vertical表示垂直伸缩，若不指定则查询所有模式 */
     
-    @OpenAPIParam("AsMode")
+    @UCloudStackParam("AsMode")
     private String asModeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 伸缩组ID列表，用于查询指定的伸缩组，若不指定则查询所有伸缩组 */
     
-    @OpenAPIParam("GroupIDs")
+    @UCloudStackParam("GroupIDs")
     private List<String> groupIDsParam;
 
     /** 查询关键字，用于按伸缩组名称模糊搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，若不指定则默认为500 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，用于筛选指定项目下的伸缩组，若不指定则查询所有项目 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定查询的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 状态列表，按状态过滤伸缩组 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
 

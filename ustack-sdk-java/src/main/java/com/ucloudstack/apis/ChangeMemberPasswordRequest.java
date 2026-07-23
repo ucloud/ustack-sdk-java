@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class ChangeMemberPasswordRequest extends Request {
 
     /** 新密码，用于管理员重置账号密码，需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则 */
     @NotEmpty
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 成员ID，指定要修改密码的目标账号 */
     @NotEmpty
-    @OpenAPIParam("SpecMemberID")
+    @UCloudStackParam("SpecMemberID")
     private Integer specMemberIDParam;
 
 

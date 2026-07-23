@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class ClonePartitionTemplateRequest extends Request {
 
     /** 源模板ID */
     @NotEmpty
-    @OpenAPIParam("ID")
+    @UCloudStackParam("ID")
     private String iDParam;
 
     /** 新模板名称 */
     @NotEmpty
-    @OpenAPIParam("NewName")
+    @UCloudStackParam("NewName")
     private String newNameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class GetLBPriceRequest extends Request {
 
     /** CPU核数，用于指定负载均衡计费规格的CPU配置 */
     
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型，取值范围：Dynamic、Month、Year；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 高可用模式，用于指定负载均衡计费规格的高可用配置方式 */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 负载均衡ID，用于标识需要计价的负载均衡实例 */
     
-    @OpenAPIParam("LBID")
+    @UCloudStackParam("LBID")
     private String lBIDParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1， */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 规格，用于指定负载均衡计费规格 */
     
-    @OpenAPIParam("Specification")
+    @UCloudStackParam("Specification")
     private String specificationParam;
 
     /** 计算集群类型，用于指定负载均衡运行的计算集群 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
 

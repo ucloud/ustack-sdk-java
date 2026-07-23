@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeFSFileRequest extends Request {
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 文件存储实例ID，要查询的文件存储标识 */
     @NotEmpty
-    @OpenAPIParam("FSID")
+    @UCloudStackParam("FSID")
     private String fSIDParam;
 
     /** 文件路径，要查询的目录或文件的绝对路径 */
     @NotEmpty
-    @OpenAPIParam("FilePath")
+    @UCloudStackParam("FilePath")
     private String filePathParam;
 
     /** 分页大小，指定每页返回的记录数，为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 是否显示隐藏文件，true表示显示隐藏文件 */
     
-    @OpenAPIParam("ShowHidden")
+    @UCloudStackParam("ShowHidden")
     private Boolean showHiddenParam;
 
 

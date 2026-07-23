@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class GenerateVMWareConsoleTicketRequest extends Request {
 
     /** vmware配置名称，指定VMware连接配置标识 */
     @NotEmpty
-    @OpenAPIParam("ConfigName")
+    @UCloudStackParam("ConfigName")
     private String configNameParam;
 
     /** 数据中心名称，VMware数据中心标识 */
     @NotEmpty
-    @OpenAPIParam("Datacenter")
+    @UCloudStackParam("Datacenter")
     private String datacenterParam;
 
     /** 虚拟机ID，VMware虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
     /** 虚拟机名称，VMware虚拟机显示名称 */
     @NotEmpty
-    @OpenAPIParam("VMName")
+    @UCloudStackParam("VMName")
     private String vMNameParam;
 
 

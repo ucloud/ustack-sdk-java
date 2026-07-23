@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteRedisRequest extends Request {
 
     /** Redis实例ID，指定要删除的实例；注意：开启删除保护或版本升级中的资源不可删除 */
     @NotEmpty
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
 

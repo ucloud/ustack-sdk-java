@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteAlertNotifyReceiverRequest extends Request {
 
     /** 接收人ID，待删除的接收人ID，可通过创建或查询接收人接口获取 */
     @NotEmpty
-    @OpenAPIParam("NotifyReceiverID")
+    @UCloudStackParam("NotifyReceiverID")
     private String notifyReceiverIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateResourcePermissionRequest extends Request {
 
     /** 权限配置，当PermissionMode为whitelist或blacklist时，传入以逗号分隔的租户ID列表（如1001,1002,1003） */
     
-    @OpenAPIParam("Permission")
+    @UCloudStackParam("Permission")
     private String permissionParam;
 
     /** 权限模式，控制租户访问权限的模式，可选值：all（所有租户可用，默认值）、whitelist（白名单，仅指定租户可用）、blacklist（黑名单，仅指定租户不可用） */
     
-    @OpenAPIParam("PermissionMode")
+    @UCloudStackParam("PermissionMode")
     private String permissionModeParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要修改权限的资源唯一标识 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 资源类型，指定资源的类型，支持COMPUTE_SET、STORAGE_SET、BASE_IMAGE、SEGMENT、DC（DirectConnect专线）、FLATNETWORK（扁平网络），用于确定资源的类别 */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
 

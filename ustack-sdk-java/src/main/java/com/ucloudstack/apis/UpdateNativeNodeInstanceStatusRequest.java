@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateNativeNodeInstanceStatusRequest extends Request {
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 节点实例状态 */
     @NotEmpty
-    @OpenAPIParam("InstanceStatus")
+    @UCloudStackParam("InstanceStatus")
     private String instanceStatusParam;
 
     /** 节点名称 */
     @NotEmpty
-    @OpenAPIParam("NodeName")
+    @UCloudStackParam("NodeName")
     private String nodeNameParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeSecurityGroupRuleRequest extends Request {
 
     /** 租户ID，指定查询范围内的租户组织，若不指定则返回当前租户的规则 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 流量方向筛选，取值1为入站、0为出站；为空时返回全部方向规则 */
     
-    @OpenAPIParam("IsIn")
+    @UCloudStackParam("IsIn")
     private String isInParam;
 
     /** 分页大小，指定每页返回的记录数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，用于标识安全组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 安全组ID，指定要查询规则的安全组唯一标识符 */
     @NotEmpty
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
     /** 安全组规则ID列表，用于精确查询指定的规则 */
     
-    @OpenAPIParam("SGRuleIDs")
+    @UCloudStackParam("SGRuleIDs")
     private List<String> sGRuleIDsParam;
 
 

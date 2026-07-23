@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class UpdateSegmentRequest extends Request {
 
     /** DHCP服务器IP地址，必须在网段内，传值表示启用DHCP，传空表示禁用DHCP，仅在UpdateMode为DHCPServerIP或All时生效 */
     
-    @OpenAPIParam("DHCPServerIP")
+    @UCloudStackParam("DHCPServerIP")
     private String dHCPServerIPParam;
 
     /** 网卡名称，指定外网线路绑定的物理网卡，格式为bond0、bond1等，仅在UpdateMode为Device或All时生效 */
     
-    @OpenAPIParam("Device")
+    @UCloudStackParam("Device")
     private String deviceParam;
 
     /** 可用IP范围，指定网段内可分配的IP地址范围，格式为起始IP-结束IP，仅在UpdateMode为IPRange或All时生效 */
     
-    @OpenAPIParam("IPRange")
+    @UCloudStackParam("IPRange")
     private String iPRangeParam;
 
     /** 地域ID，指定要更新的外网线路所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 外网线路ID，指定要更新的外网线路资源ID */
     @NotEmpty
-    @OpenAPIParam("SegmentID")
+    @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
     /** 更新模式，指定要更新的字段范围，可选值：IPRange（仅更新IP范围）、Device（仅更新网卡和VLAN）、DHCPServerIP（仅更新DHCP服务器IP）、All（更新所有字段），若不指定则默认为IPRange，这是为了向前兼容 */
     
-    @OpenAPIParam("UpdateMode")
+    @UCloudStackParam("UpdateMode")
     private String updateModeParam;
 
     /** VLAN ID，虚拟局域网标识，可选，取值范围1-4094，不传或传0表示不设置VLAN，仅在UpdateMode为Device或All时生效 */
     
-    @OpenAPIParam("Vlan")
+    @UCloudStackParam("Vlan")
     private String vlanParam;
 
 

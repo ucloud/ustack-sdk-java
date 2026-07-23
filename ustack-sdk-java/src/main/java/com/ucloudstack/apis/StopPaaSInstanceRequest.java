@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class StopPaaSInstanceRequest extends Request {
 
     /** 产品类型，限定可关机的资源范围，取值：MYSQL/REDIS/OSS/FS/LB/NATGW/VPNGW；若资源与类型不匹配或类型未在列表中将返回错误 */
     @NotEmpty
-    @OpenAPIParam("ProductType")
+    @UCloudStackParam("ProductType")
     private String productTypeParam;
 
     /** 地域ID，指定资源所属地域，用于定位对应的黄河区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID，指定要关机的PaaS资源，仅支持MYSQL/REDIS/OSS/FS/LB/NATGW/VPNGW几类资源，且资源状态必须为AVAILABLE */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

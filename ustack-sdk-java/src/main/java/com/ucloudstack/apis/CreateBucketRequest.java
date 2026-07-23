@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class CreateBucketRequest extends Request {
 
     /** 访问类型，桶访问权限级别，取值范围：Private、PublicRead、PublicReadWrite */
     @NotEmpty
-    @OpenAPIParam("AccessType")
+    @UCloudStackParam("AccessType")
     private String accessTypeParam;
 
     /** 桶加密开关，是否开启服务端加密 */
     
-    @OpenAPIParam("BucketCryptEnabled")
+    @UCloudStackParam("BucketCryptEnabled")
     private Boolean bucketCryptEnabledParam;
 
     /** 桶名称，创建后不可修改 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 对象存储ID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 对象锁定时间，单位天，用于设置对象保留时长 */
     
-    @OpenAPIParam("ObjectLockDays")
+    @UCloudStackParam("ObjectLockDays")
     private Integer objectLockDaysParam;
 
     /** 对象锁定开关，是否启用对象锁定 */
     
-    @OpenAPIParam("ObjectLockEnabled")
+    @UCloudStackParam("ObjectLockEnabled")
     private Boolean objectLockEnabledParam;
 
     /** 桶配额，单位GB */
     
-    @OpenAPIParam("Quota")
+    @UCloudStackParam("Quota")
     private Integer quotaParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 多版本开关，是否开启多版本管理 */
     
-    @OpenAPIParam("Versioning")
+    @UCloudStackParam("Versioning")
     private Boolean versioningParam;
 
 

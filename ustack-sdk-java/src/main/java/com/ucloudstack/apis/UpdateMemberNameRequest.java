@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateMemberNameRequest extends Request {
 
     /** 成员ID，指定要修改名称的账号标识 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 成员名称，更新账号展示名称用于管理界面显示，长度为1-30个字符，只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
 

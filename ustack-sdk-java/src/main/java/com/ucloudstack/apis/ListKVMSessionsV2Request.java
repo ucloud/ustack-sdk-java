@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class ListKVMSessionsV2Request extends Request {
 
     /** 租户ID，过滤指定租户下的KVM会话 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 分页大小，每页返回的记录数，默认值为20，最大值为100 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移，指定跳过的记录数，最小值为0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 裸金属ID，过滤指定裸金属的KVM会话，若不指定则返回所有裸金属的会话 */
     
-    @OpenAPIParam("PMID")
+    @UCloudStackParam("PMID")
     private String pMIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 状态过滤，可选值：active（活跃）、expired（已过期）、closed（已关闭） */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private String statusParam;
 
 

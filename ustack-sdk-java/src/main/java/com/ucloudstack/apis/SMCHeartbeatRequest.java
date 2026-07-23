@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class SMCHeartbeatRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，可选参数 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 已完成的子任务数量，用于计算当前迁移进度百分比，DoneSubtask/TotalSubtask = 进度 */
     
-    @OpenAPIParam("DoneSubtask")
+    @UCloudStackParam("DoneSubtask")
     private Integer doneSubtaskParam;
 
     /** 地域ID，指定SMC任务所属的物理区域，与SMCID对应的区域必须相同 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SMC任务唯一标识ID，标识心跳数据关联的迁移任务 */
     @NotEmpty
-    @OpenAPIParam("SMCID")
+    @UCloudStackParam("SMCID")
     private String sMCIDParam;
 
     /** 迁移Agent上报的当前任务状态，允许取值：Unknown、Online、Offline、Preparing、Stopping、Syncing、Exception、Synced、Completing、Completed、Deleted，状态转换规则：ONLINE→PREPARING、SYNCED→PREPARING、SYNCING→STOPPING；状态为SYNCED时服务端会更新LastSyncedTime，状态为COMPLETED、COMPLETING、EXCEPTION时不再更新进度 */
     @NotEmpty
-    @OpenAPIParam("State")
+    @UCloudStackParam("State")
     private String stateParam;
 
     /** 子任务列表，包含各个子任务的名称、进度百分比和传输速率等详细信息 */
     
-    @OpenAPIParam("Subtasks")
+    @UCloudStackParam("Subtasks")
     private List<SMCSubtask> subtasksParam;
 
     /** 子任务总数量，表示本次迁移任务分解的总子任务数，用于计算迁移进度 */
     
-    @OpenAPIParam("TotalSubtask")
+    @UCloudStackParam("TotalSubtask")
     private Integer totalSubtaskParam;
 
 

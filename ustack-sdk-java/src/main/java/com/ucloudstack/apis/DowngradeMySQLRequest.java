@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DowngradeMySQLRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 内存大小，单位MiB，最小2048 MiB（2GB），必须是1024的倍数，且必须小于当前内存 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** MySQL实例ID，指定要降级的实例；注意：资源必须为AVAILABLE且状态为Stopped */
     @NotEmpty
-    @OpenAPIParam("MySQLID")
+    @UCloudStackParam("MySQLID")
     private String mySQLIDParam;
 
     /** 地域ID，实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class RetryResourceUsageRequest extends Request {
 
     /** 资源用量ID，指定要重试的资源用量报告 */
     @NotEmpty
-    @OpenAPIParam("ResourceUsageID")
+    @UCloudStackParam("ResourceUsageID")
     private String resourceUsageIDParam;
 
 

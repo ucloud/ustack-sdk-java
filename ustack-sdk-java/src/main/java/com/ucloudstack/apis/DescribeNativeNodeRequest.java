@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DescribeNativeNodeRequest extends Request {
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /**  */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 节点名称列表 */
     
-    @OpenAPIParam("NodeNames")
+    @UCloudStackParam("NodeNames")
     private List<String> nodeNamesParam;
 
     /**  */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

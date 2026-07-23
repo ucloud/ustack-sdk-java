@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class UpgradeDiskRequest extends Request {
 
     /** 审批名称，用于审批流程的标题描述，当启用审批流程时使用 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由，用于说明申请升级磁盘的原因，当启用审批流程时使用 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** 租户ID，资源所属租户标识 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 磁盘ID，要升级的磁盘标识 */
     @NotEmpty
-    @OpenAPIParam("DiskID")
+    @UCloudStackParam("DiskID")
     private String diskIDParam;
 
     /** 磁盘大小，单位GiB，用于扩容到指定容量 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateVMMACRequest extends Request {
 
     /** MAC地址，新的物理地址，格式为XX:XX:XX:XX:XX:XX */
     @NotEmpty
-    @OpenAPIParam("MAC")
+    @UCloudStackParam("MAC")
     private String mACParam;
 
     /** 网卡类型，待修改MAC的网卡类型，取值：LAN、WAN、Flat */
     @NotEmpty
-    @OpenAPIParam("NICType")
+    @UCloudStackParam("NICType")
     private String nICTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID，待修改MAC的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

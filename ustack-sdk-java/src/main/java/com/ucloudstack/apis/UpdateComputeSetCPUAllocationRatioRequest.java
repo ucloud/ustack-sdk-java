@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateComputeSetCPUAllocationRatioRequest extends Request {
 
     /** CPU分配比例，CPU超分比例，表示物理CPU可以虚拟化出多少倍的逻辑CPU，取值范围1-6（含），用于提高资源利用率 */
     @NotEmpty
-    @OpenAPIParam("CPUAllocationRatio")
+    @UCloudStackParam("CPUAllocationRatio")
     private Double cPUAllocationRatioParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，普通租户需填写自身CompanyID；管理员租户（CompanyID=200000231）或留空时按管理员权限操作 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，指定计算集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，指定要修改CPU分配比例的计算集群唯一标识，由底层Huanghe系统生成 */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

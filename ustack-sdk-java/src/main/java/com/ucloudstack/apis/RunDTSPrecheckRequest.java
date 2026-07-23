@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,127 +24,127 @@ public class RunDTSPrecheckRequest extends Request {
 
     /** 同步数据库列表，指定需要同步的数据库名称，多个数据库用逗号分隔；不指定则同步所有数据库 */
     
-    @OpenAPIParam("Databases")
+    @UCloudStackParam("Databases")
     private String databasesParam;
 
     /** 目标库GTID集合，用于双向同步场景，指定目标库的GTID起始位置，可通过show master status获取，用于反向增量同步 */
     
-    @OpenAPIParam("DestinationEndpointBinlogGTID")
+    @UCloudStackParam("DestinationEndpointBinlogGTID")
     private String destinationEndpointBinlogGTIDParam;
 
     /** 目标实例地址，当DestinationEndpointInstanceType为External时必填，指定外部数据库访问地址 */
     
-    @OpenAPIParam("DestinationEndpointIP")
+    @UCloudStackParam("DestinationEndpointIP")
     private String destinationEndpointIPParam;
 
     /** 目标实例ID，当DestinationEndpointInstanceType为Internal时必填，指定平台内部数据库实例，需可用且处于Running状态 */
     
-    @OpenAPIParam("DestinationEndpointInstanceID")
+    @UCloudStackParam("DestinationEndpointInstanceID")
     private String destinationEndpointInstanceIDParam;
 
     /** 目标实例类型，指定目标数据库的部署位置，取值范围：Internal（平台内部数据库）、External（外部数据库） */
     @NotEmpty
-    @OpenAPIParam("DestinationEndpointInstanceType")
+    @UCloudStackParam("DestinationEndpointInstanceType")
     private String destinationEndpointInstanceTypeParam;
 
     /** 目标实例密码，当DestinationEngine为MYSQL时必填，用于连接目标数据库的账号密码 */
     
-    @OpenAPIParam("DestinationEndpointPassword")
+    @UCloudStackParam("DestinationEndpointPassword")
     private String destinationEndpointPasswordParam;
 
     /** 目标实例端口，当DestinationEndpointInstanceType为External时必填，MYSQL默认3306，REDIS默认6379 */
     
-    @OpenAPIParam("DestinationEndpointPort")
+    @UCloudStackParam("DestinationEndpointPort")
     private Integer destinationEndpointPortParam;
 
     /** 目标实例用户名，当DestinationEngine为MYSQL时必填，用于连接目标数据库的账号用户名 */
     
-    @OpenAPIParam("DestinationEndpointUserName")
+    @UCloudStackParam("DestinationEndpointUserName")
     private String destinationEndpointUserNameParam;
 
     /** 目标实例数据库类型，指定目标数据库引擎类型，取值范围：MYSQL、REDIS，必须与SourceEngine一致 */
     @NotEmpty
-    @OpenAPIParam("DestinationEngine")
+    @UCloudStackParam("DestinationEngine")
     private String destinationEngineParam;
 
     /** 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，与Databases互斥使用 */
     
-    @OpenAPIParam("IgnoreDatabases")
+    @UCloudStackParam("IgnoreDatabases")
     private String ignoreDatabasesParam;
 
     /** 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用 */
     
-    @OpenAPIParam("IgnoreTables")
+    @UCloudStackParam("IgnoreTables")
     private String ignoreTablesParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** binlog GTID集合，用于MYSQL增量或全量加增量同步时基于GTID模式同步，可通过show master status获取，全量加增量任务会自动设置 */
     
-    @OpenAPIParam("SourceEndpointBinlogGTID")
+    @UCloudStackParam("SourceEndpointBinlogGTID")
     private String sourceEndpointBinlogGTIDParam;
 
     /** binlog文件名，用于MYSQL增量或全量加增量同步时指定起始binlog位置，可通过show master status获取，全量加增量任务会自动设置 */
     
-    @OpenAPIParam("SourceEndpointBinlogName")
+    @UCloudStackParam("SourceEndpointBinlogName")
     private String sourceEndpointBinlogNameParam;
 
     /** binlog位点，用于MYSQL增量或全量加增量同步时指定起始binlog偏移量，可通过show master status获取，全量加增量任务会自动设置 */
     
-    @OpenAPIParam("SourceEndpointBinlogPos")
+    @UCloudStackParam("SourceEndpointBinlogPos")
     private Integer sourceEndpointBinlogPosParam;
 
     /** 源实例地址，当SourceEndpointInstanceType为External时必填，指定外部数据库访问地址 */
     
-    @OpenAPIParam("SourceEndpointIP")
+    @UCloudStackParam("SourceEndpointIP")
     private String sourceEndpointIPParam;
 
     /** 源实例ID，当SourceEndpointInstanceType为Internal时必填，指定平台内部数据库实例，需可用且处于Running状态 */
     
-    @OpenAPIParam("SourceEndpointInstanceID")
+    @UCloudStackParam("SourceEndpointInstanceID")
     private String sourceEndpointInstanceIDParam;
 
     /** 源实例类型，指定源数据库的部署位置，取值范围：Internal（平台内部数据库）、External（外部数据库） */
     @NotEmpty
-    @OpenAPIParam("SourceEndpointInstanceType")
+    @UCloudStackParam("SourceEndpointInstanceType")
     private String sourceEndpointInstanceTypeParam;
 
     /** 源实例密码，当SourceEngine为MYSQL时必填，用于连接源数据库的账号密码 */
     
-    @OpenAPIParam("SourceEndpointPassword")
+    @UCloudStackParam("SourceEndpointPassword")
     private String sourceEndpointPasswordParam;
 
     /** 源实例端口，当SourceEndpointInstanceType为External时必填，MYSQL默认3306，REDIS默认6379 */
     
-    @OpenAPIParam("SourceEndpointPort")
+    @UCloudStackParam("SourceEndpointPort")
     private Integer sourceEndpointPortParam;
 
     /** 服务器ID，当SourceEngine为MYSQL时必填，用于标识DTS服务作为从库的唯一ID，需确保不与现有slave的server_id重复 */
     
-    @OpenAPIParam("SourceEndpointServerID")
+    @UCloudStackParam("SourceEndpointServerID")
     private String sourceEndpointServerIDParam;
 
     /** 源实例用户名，当SourceEngine为MYSQL时必填，用于连接源数据库的账号用户名 */
     
-    @OpenAPIParam("SourceEndpointUserName")
+    @UCloudStackParam("SourceEndpointUserName")
     private String sourceEndpointUserNameParam;
 
     /** 源实例数据库类型，指定源数据库引擎类型，取值范围：MYSQL、REDIS，必须与DestinationEngine一致 */
     @NotEmpty
-    @OpenAPIParam("SourceEngine")
+    @UCloudStackParam("SourceEngine")
     private String sourceEngineParam;
 
     /** 同步数据表列表，指定需要同步的数据表，支持通配符，格式为database.table，多个表用逗号分隔；不指定则同步所有数据表 */
     
-    @OpenAPIParam("Tables")
+    @UCloudStackParam("Tables")
     private String tablesParam;
 
     /** 任务类型，指定数据传输的同步模式，取值范围：full（全量迁移）、incremental（增量同步）、full+incremental（全量加增量） */
     @NotEmpty
-    @OpenAPIParam("TaskMode")
+    @UCloudStackParam("TaskMode")
     private String taskModeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateVMSetBoundImageRequest extends Request {
 
     /** 镜像ID列表，指定要绑定到该计算集群的镜像ID，支持两种格式：1）特殊值all表示绑定所有镜像；2）以逗号分隔的多个镜像ID（不支持空字符串），通过UpdateVMSetBoundImage接口实现镜像绑定限制 */
     @NotEmpty
-    @OpenAPIParam("ImageIDs")
+    @UCloudStackParam("ImageIDs")
     private String imageIDsParam;
 
     /** 地域ID，指定计算集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，指定要绑定镜像的计算集群唯一标识 */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
 

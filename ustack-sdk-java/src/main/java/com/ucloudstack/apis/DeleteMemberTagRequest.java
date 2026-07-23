@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteMemberTagRequest extends Request {
 
     /** 成员ID，用于指定需移除授权的账号 */
     @NotEmpty
-    @OpenAPIParam("MemberID")
+    @UCloudStackParam("MemberID")
     private Integer memberIDParam;
 
     /** 项目组ID，租户级别用户必填；系统级/区域级授权可为空 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 角色ID，用于指定要移除的角色 */
     @NotEmpty
-    @OpenAPIParam("RoleID")
+    @UCloudStackParam("RoleID")
     private String roleIDParam;
 
 

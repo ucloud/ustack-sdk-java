@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class RemoveASMemberRequest extends Request {
 
     /** 租户唯一标识ID，伸缩组所属租户，普通调用无需显式填写，系统会根据伸缩组记录自动补充 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 伸缩组ID，要移除成员的伸缩组唯一标识符，仅支持VM类型的伸缩组 */
     @NotEmpty
-    @OpenAPIParam("GroupID")
+    @UCloudStackParam("GroupID")
     private String groupIDParam;
 
     /** 地域ID，指定伸缩组所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 虚拟机ID，要从伸缩组移除的虚拟机实例ID，虚拟机必须是伸缩组的有效成员 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
 

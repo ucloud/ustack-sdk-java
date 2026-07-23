@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class UpdateSGFromNATGWRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 网卡类型，指定要更新安全组的网卡类型，取值范围：LAN、WAN */
     @NotEmpty
-    @OpenAPIParam("NICType")
+    @UCloudStackParam("NICType")
     private String nICTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** NAT网关ID，用于定位需要更新安全组的NAT网关实例，该NAT网关需处于运行或停止状态 */
     @NotEmpty
-    @OpenAPIParam("ResourceID")
+    @UCloudStackParam("ResourceID")
     private String resourceIDParam;
 
     /** 安全组ID，用于更新NAT网关绑定的安全组 */
     @NotEmpty
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class DescribeNetworkTopologyRequest extends Request {
 
     /** 租户ID，指定要查询网络拓扑的租户，若不指定则查询所有租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 专线ID列表，已弃用，参数无效 */
     
-    @OpenAPIParam("DirectConnectIDs")
+    @UCloudStackParam("DirectConnectIDs")
     private List<String> directConnectIDsParam;
 
     /** 扁平网络ID列表，指定要查询的扁平网络范围 */
     
-    @OpenAPIParam("FlatNetworkIDs")
+    @UCloudStackParam("FlatNetworkIDs")
     private List<String> flatNetworkIDsParam;
 
     /** 分页大小，指定每页返回的记录数，若不指定则默认为10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，指定要查询网络拓扑的项目组范围，ProjectID 采用 project- 前缀加14位随机字符格式 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定要查询网络拓扑的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID列表，指定要查询网络拓扑的资源范围，每个ResourceID格式为类型前缀-14位随机字符 */
     
-    @OpenAPIParam("ResourceIDs")
+    @UCloudStackParam("ResourceIDs")
     private List<String> resourceIDsParam;
 
     /** 资源类型列表，指定要查询网络拓扑的资源类型 */
     
-    @OpenAPIParam("ResourceTypes")
+    @UCloudStackParam("ResourceTypes")
     private List<String> resourceTypesParam;
 
     /** 外网线路ID列表，指定要查询的外网线路范围 */
     
-    @OpenAPIParam("SegmentIDs")
+    @UCloudStackParam("SegmentIDs")
     private List<String> segmentIDsParam;
 
     /** 子网ID列表，指定要查询的子网范围 */
     
-    @OpenAPIParam("SubnetIDs")
+    @UCloudStackParam("SubnetIDs")
     private List<String> subnetIDsParam;
 
     /** 子网查询情况下的IP协议版本，支持IPv4或IPv6，若不指定则查询所有协议 */
     
-    @OpenAPIParam("SubnetIPVersion")
+    @UCloudStackParam("SubnetIPVersion")
     private String subnetIPVersionParam;
 
 

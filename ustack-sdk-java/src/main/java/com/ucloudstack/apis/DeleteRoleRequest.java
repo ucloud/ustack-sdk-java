@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteRoleRequest extends Request {
 
     /** 角色ID，用于指定要删除的角色 */
     @NotEmpty
-    @OpenAPIParam("RoleID")
+    @UCloudStackParam("RoleID")
     private String roleIDParam;
 
 

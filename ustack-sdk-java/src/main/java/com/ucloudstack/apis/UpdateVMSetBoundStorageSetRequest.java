@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateVMSetBoundStorageSetRequest extends Request {
 
     /** 地域ID，指定计算集群所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群ID，指定要绑定存储集群的计算集群唯一标识 */
     @NotEmpty
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 存储集群ID列表，指定要绑定到该计算集群的存储集群ID列表，必须从该计算集群的物理绑定存储列表（StorageClassList）中选择，用于限制虚拟机可使用的存储资源，支持RBD、CJFS、Ustorbs、UDisk、QoL等存储Provider类型 */
     @NotEmpty
-    @OpenAPIParam("StorageSetIDs")
+    @UCloudStackParam("StorageSetIDs")
     private List<String> storageSetIDsParam;
 
 

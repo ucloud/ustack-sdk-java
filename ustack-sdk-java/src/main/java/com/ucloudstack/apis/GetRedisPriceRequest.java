@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class GetRedisPriceRequest extends Request {
 
     /** 计费类型，取值Dynamic/Month/Year，分别对应HOUR/MONTH/YEAR */
     
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，资源所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群类型，实例数据盘所属存储集群类型 */
     
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 高可用类型，影响价格计算，取值范围：Standalone（单机版）、ActiveStandy（高可用/主备版）；与订单中副本数一致 */
     @NotEmpty
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 内存大小，单位MiB */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** Redis实例ID，用于查询升级/变更价格 */
     
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
     /** 地域ID，资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 线程数量，Redis7.0有效 */
     
-    @OpenAPIParam("Threads")
+    @UCloudStackParam("Threads")
     private Integer threadsParam;
 
     /** 计算集群类型，用于计算价格 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
 

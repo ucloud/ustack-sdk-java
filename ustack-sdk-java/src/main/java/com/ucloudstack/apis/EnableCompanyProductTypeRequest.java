@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class EnableCompanyProductTypeRequest extends Request {
 
     /** 租户ID列表，用于指定要启用服务的租户集合 */
     @NotEmpty
-    @OpenAPIParam("CompanyIDs")
+    @UCloudStackParam("CompanyIDs")
     private List<Integer> companyIDsParam;
 
     /** 产品类型，指定要启用的产品服务 */
     @NotEmpty
-    @OpenAPIParam("ProductType")
+    @UCloudStackParam("ProductType")
     private String productTypeParam;
 
     /** 地域ID，指定产品服务所属区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

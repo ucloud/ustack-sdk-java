@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class CreateProductSpecificationRequest extends Request {
 
     /** 地域ID，指定规格所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源类型，指定规格的资源类型 */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
     /** 集群类型，指定规格所属的集群类型 */
     @NotEmpty
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
     /** 规格名称，需与规格模板中定义的名称一致 */
     @NotEmpty
-    @OpenAPIParam("SpecificationName")
+    @UCloudStackParam("SpecificationName")
     private String specificationNameParam;
 
     /** 规格值，需符合规格模板定义的格式要求 */
     @NotEmpty
-    @OpenAPIParam("Value")
+    @UCloudStackParam("Value")
     private String valueParam;
 
 

@@ -26,7 +26,7 @@ package com.ucloudstack.example;
 import com.ucloudstack.client.Client;
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.apis.DescribeVMInstanceRequest;
 import com.ucloudstack.apis.DescribeVMInstanceResponse;
 
@@ -49,7 +49,7 @@ public class Main {
         try {
             DescribeVMInstanceResponse resp = client.describeVMInstance(req);
             System.out.println("RetCode: " + resp.getRetCode());
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             e.printStackTrace();
         }
     }

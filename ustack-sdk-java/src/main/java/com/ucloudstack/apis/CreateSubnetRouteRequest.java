@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateSubnetRouteRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 目的地址，IPv4CIDR格式，创建时会自动格式化并校验冲突，最多50条自定义路由 */
     @NotEmpty
-    @OpenAPIParam("Destination")
+    @UCloudStackParam("Destination")
     private String destinationParam;
 
     /** 下一跳标识，VIP/VM类型为资源ID，Custom类型为IPv4地址且必须属于当前子网 */
     @NotEmpty
-    @OpenAPIParam("NextHop")
+    @UCloudStackParam("NextHop")
     private String nextHopParam;
 
     /** 下一跳类型，取值VIP/VM/Custom，VIP/VM会验证资源存在性和子网归属 */
     @NotEmpty
-    @OpenAPIParam("NextHopType")
+    @UCloudStackParam("NextHopType")
     private String nextHopTypeParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于补充说明 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 子网ID */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
 

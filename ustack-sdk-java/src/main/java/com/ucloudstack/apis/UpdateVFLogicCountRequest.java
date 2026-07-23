@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class UpdateVFLogicCountRequest extends Request {
 
     /** 节点IP地址，用于指定需要调整VF数量的物理机 */
     @NotEmpty
-    @OpenAPIParam("HostIP")
+    @UCloudStackParam("HostIP")
     private String hostIPParam;
 
     /** 网卡PCI地址，用于指定需要调整的物理网卡 */
     @NotEmpty
-    @OpenAPIParam("PCI")
+    @UCloudStackParam("PCI")
     private String pCIParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 逻辑VF数量限制，需满足已使用VF数量<=VFLogicCount<=物理VF数量限制 */
     @NotEmpty
-    @OpenAPIParam("VFLogicCount")
+    @UCloudStackParam("VFLogicCount")
     private Integer vFLogicCountParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class AllocateNativeNodeSSHSessionRequest extends Request {
 
     /** 集群Id */
     @NotEmpty
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 执行命令 */
     
-    @OpenAPIParam("CmdName")
+    @UCloudStackParam("CmdName")
     private String cmdNameParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 私钥 */
     
-    @OpenAPIParam("IdentityContent")
+    @UCloudStackParam("IdentityContent")
     private String identityContentParam;
 
     /** 节点名称 */
     @NotEmpty
-    @OpenAPIParam("NodeName")
+    @UCloudStackParam("NodeName")
     private String nodeNameParam;
 
     /** 密码 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 端口 */
     
-    @OpenAPIParam("Port")
+    @UCloudStackParam("Port")
     private String portParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 用户 */
     
-    @OpenAPIParam("User")
+    @UCloudStackParam("User")
     private String userParam;
 
 

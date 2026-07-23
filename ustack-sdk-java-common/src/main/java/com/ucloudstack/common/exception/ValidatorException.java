@@ -14,7 +14,7 @@
 package com.ucloudstack.common.exception;
 
 /** ValidatorException is the exception of parameters validator */
-public class ValidatorException extends OpenAPIException {
+public class ValidatorException extends UCloudStackException {
     public ValidatorException(String message) {
         super(message);
     }

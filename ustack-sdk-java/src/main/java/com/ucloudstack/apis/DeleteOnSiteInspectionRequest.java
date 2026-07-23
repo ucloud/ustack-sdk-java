@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DeleteOnSiteInspectionRequest extends Request {
 
     /** 一键巡检报告ID，指定要删除的巡检报告 */
     @NotEmpty
-    @OpenAPIParam("InspectionID")
+    @UCloudStackParam("InspectionID")
     private String inspectionIDParam;
 
 

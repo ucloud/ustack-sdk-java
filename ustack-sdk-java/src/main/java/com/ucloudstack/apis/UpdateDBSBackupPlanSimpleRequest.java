@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateDBSBackupPlanSimpleRequest extends Request {
 
     /** 名称，备份计划名称，长度1-128字符，支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 计划ID，待更新的备份计划ID */
     @NotEmpty
-    @OpenAPIParam("PlanID")
+    @UCloudStackParam("PlanID")
     private String planIDParam;
 
     /** 备注，备份计划描述信息，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

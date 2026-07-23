@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class CreateInstallProfileRequest extends Request {
 
     /** 租户ID，可选；用于记录模板归属，不传时由登录上下文推断 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 模板描述，可选 */
     
-    @OpenAPIParam("Description")
+    @UCloudStackParam("Description")
     private String descriptionParam;
 
     /** 镜像ID，clone模式必填 */
     
-    @OpenAPIParam("ImageID")
+    @UCloudStackParam("ImageID")
     private String imageIDParam;
 
     /** 镜像名称，clone模式必填 */
     
-    @OpenAPIParam("ImageName")
+    @UCloudStackParam("ImageName")
     private String imageNameParam;
 
     /** 镜像操作系统发行版，clone模式必填 */
     
-    @OpenAPIParam("ImageOSDistribution")
+    @UCloudStackParam("ImageOSDistribution")
     private String imageOSDistributionParam;
 
     /** 镜像操作系统名称，clone模式必填 */
     
-    @OpenAPIParam("ImageOSName")
+    @UCloudStackParam("ImageOSName")
     private String imageOSNameParam;
 
     /** 安装模式，kickstart：Kickstart自动化安装；clone：克隆安装 */
     @NotEmpty
-    @OpenAPIParam("InstallMode")
+    @UCloudStackParam("InstallMode")
     private String installModeParam;
 
     /** Kickstart模板ID，kickstart模式必填 */
     
-    @OpenAPIParam("KickstartTemplateID")
+    @UCloudStackParam("KickstartTemplateID")
     private String kickstartTemplateIDParam;
 
     /** 模板名称，同租户内唯一 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 系统镜像ID，kickstart模式必填 */
     
-    @OpenAPIParam("OSMediaID")
+    @UCloudStackParam("OSMediaID")
     private String oSMediaIDParam;
 
     /** 分区模板ID，kickstart模式必填 */
     
-    @OpenAPIParam("PartitionTemplateID")
+    @UCloudStackParam("PartitionTemplateID")
     private String partitionTemplateIDParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

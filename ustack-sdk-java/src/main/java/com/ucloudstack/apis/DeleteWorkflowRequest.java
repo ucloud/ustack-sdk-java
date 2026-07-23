@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class DeleteWorkflowRequest extends Request {
 
     /** 租户唯一标识ID，必须与流程的CompanyID匹配，用于权限验证，普通租户不能删除管理员创建的流程（管理员租户CompanyID=200000231），如流程来源为Admin只有管理员可删除，必填 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 流程ID，指定需要删除的流程唯一标识，删除后该流程会被立即标记为删除，无法再被创建工单引用，必填 */
     @NotEmpty
-    @OpenAPIParam("WorkflowID")
+    @UCloudStackParam("WorkflowID")
     private String workflowIDParam;
 
 

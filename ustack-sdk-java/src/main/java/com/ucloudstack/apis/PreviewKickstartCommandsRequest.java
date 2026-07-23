@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,27 +24,27 @@ public class PreviewKickstartCommandsRequest extends Request {
 
     /** 分区配置（与TemplateID二选一） */
     
-    @OpenAPIParam("Config")
+    @UCloudStackParam("Config")
     private String configParam;
 
     /** 磁盘设备名 */
     
-    @OpenAPIParam("DiskDevice")
+    @UCloudStackParam("DiskDevice")
     private String diskDeviceParam;
 
     /** 磁盘大小(GB)，用于计算自动分区 */
     
-    @OpenAPIParam("DiskSizeGB")
+    @UCloudStackParam("DiskSizeGB")
     private Integer diskSizeGBParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 使用现有模板ID（与Config二选一） */
     
-    @OpenAPIParam("TemplateID")
+    @UCloudStackParam("TemplateID")
     private String templateIDParam;
 
 

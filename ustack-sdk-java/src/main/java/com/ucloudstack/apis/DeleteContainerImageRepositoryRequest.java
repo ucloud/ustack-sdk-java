@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DeleteContainerImageRepositoryRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 镜像仓库ID，待删除的镜像仓库ID */
     @NotEmpty
-    @OpenAPIParam("ContainerImageRepositoryID")
+    @UCloudStackParam("ContainerImageRepositoryID")
     private String containerImageRepositoryIDParam;
 
     /** 是否删除仓库内所有镜像，为true时强制删除仓库及其下所有镜像，为false时仅当仓库为空才允许删除 */
     
-    @OpenAPIParam("DeleteAllImages")
+    @UCloudStackParam("DeleteAllImages")
     private Boolean deleteAllImagesParam;
 
     /** 地域，镜像仓库所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

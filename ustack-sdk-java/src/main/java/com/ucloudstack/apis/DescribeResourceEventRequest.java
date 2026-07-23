@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,57 +24,57 @@ public class DescribeResourceEventRequest extends Request {
 
     /** 开始时间，Unix时间戳(秒)，查询该时间点之后发生的事件 */
     
-    @OpenAPIParam("BeginTime")
+    @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
     /** 租户ID，指定要查询资源事件的租户，若不指定则查询所有租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 结束时间，Unix时间戳(秒)，查询该时间点之前发生的事件，必须大于开始时间 */
     
-    @OpenAPIParam("EndTime")
+    @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
     /** 事件类型列表，指定要查询的事件类型 */
     
-    @OpenAPIParam("EventTypes")
+    @UCloudStackParam("EventTypes")
     private List<String> eventTypesParam;
 
     /** 事件等级列表，指定要查询的事件严重程度，取值范围：Info、Warning、Error */
     
-    @OpenAPIParam("Levels")
+    @UCloudStackParam("Levels")
     private List<String> levelsParam;
 
     /** 分页大小，指定每页返回的记录数，若不指定则使用默认值 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目组ID列表，指定要查询事件的项目组范围，ProjectID 采用 project- 前缀加14位随机字符格式 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定要查询资源事件的地域 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源ID列表，指定要查询事件的资源范围，每个ResourceID格式为类型前缀-14位随机字符 */
     
-    @OpenAPIParam("ResourceIDs")
+    @UCloudStackParam("ResourceIDs")
     private List<String> resourceIDsParam;
 
     /** 资源类型列表，指定要查询事件的资源类型范围 */
     
-    @OpenAPIParam("ResourceTypes")
+    @UCloudStackParam("ResourceTypes")
     private List<String> resourceTypesParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class DescribeExternalDiskRequest extends Request {
 
     /** 挂载的资源ID，筛选指定资源挂载的外置存储盘 */
     
-    @OpenAPIParam("AttachResourceID")
+    @UCloudStackParam("AttachResourceID")
     private String attachResourceIDParam;
 
     /** 租户ID，筛选指定租户的外置存储资源 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 租户过滤标识，非0仅返回已分配给租户的记录 */
     
-    @OpenAPIParam("CompanyOnly")
+    @UCloudStackParam("CompanyOnly")
     private Integer companyOnlyParam;
 
     /** 计算集群ID，用于筛选指定计算集群下的外置存储盘 */
     
-    @OpenAPIParam("ComputeSetID")
+    @UCloudStackParam("ComputeSetID")
     private String computeSetIDParam;
 
     /** 搜索关键词，支持资源名称模糊匹配 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，默认0 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 项目ID列表，筛选项目内的外置存储资源 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群ID，筛选指定存储集群下的外置存储盘 */
     
-    @OpenAPIParam("SetID")
+    @UCloudStackParam("SetID")
     private String setIDParam;
 
     /** 存储集群类型，用于过滤指定类型的存储集群 */
     
-    @OpenAPIParam("SetType")
+    @UCloudStackParam("SetType")
     private String setTypeParam;
 
     /** 共享盘筛选标识，true仅返回共享盘，false仅返回普通盘，空值返回全部 */
     
-    @OpenAPIParam("ShareAbleFilter")
+    @UCloudStackParam("ShareAbleFilter")
     private String shareAbleFilterParam;
 
 

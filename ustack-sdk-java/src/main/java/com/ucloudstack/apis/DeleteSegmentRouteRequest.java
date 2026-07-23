@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteSegmentRouteRequest extends Request {
 
     /** 目的地址，路由的目标网段，必须为CIDR格式，用于定位要删除的路由规则，仅支持删除本地路由（NextHopType为Local），其他类型路由会返回StatusRouteNextHopTypeNotAllowed错误 */
     @NotEmpty
-    @OpenAPIParam("Destination")
+    @UCloudStackParam("Destination")
     private String destinationParam;
 
     /** 地域ID，指定要删除的外网线路路由所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 外网线路ID，指定要删除路由规则的外网线路 */
     @NotEmpty
-    @OpenAPIParam("SegmentID")
+    @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
 

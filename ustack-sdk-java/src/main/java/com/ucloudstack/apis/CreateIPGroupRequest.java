@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class CreateIPGroupRequest extends Request {
 
     /** 租户ID，标识IP组所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** IP组名称，用于标识IP组，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，IP组所属项目分组标识，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 地域ID，用于标识IP组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于说明和注释，长度0-100字符，禁止http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** IP地址规则，定义IP组包含的IP地址列表，逗号分隔；支持单个IP或CIDR地址段 */
     @NotEmpty
-    @OpenAPIParam("Rules")
+    @UCloudStackParam("Rules")
     private String rulesParam;
 
     /** 标签键值对，格式为Base64编码的key:value字符串，用于资源标记和分类管理 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
 

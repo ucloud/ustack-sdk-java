@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class AddVMNICRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 扁平网络ID */
     @NotEmpty
-    @OpenAPIParam("FlatNetworkID")
+    @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
 
     /** ip地址，可选参数，为空则由平台分配 */
     
-    @OpenAPIParam("IP")
+    @UCloudStackParam("IP")
     private String iPParam;
 
     /** 入向平均带宽，用于QoS流量整形；0表示不限制，单位Mbps */
     
-    @OpenAPIParam("InAverageBandwidth")
+    @UCloudStackParam("InAverageBandwidth")
     private Integer inAverageBandwidthParam;
 
     /** 启用状态，可选值：up（默认），down，可选参数 */
     
-    @OpenAPIParam("LinkState")
+    @UCloudStackParam("LinkState")
     private String linkStateParam;
 
     /** mac地址，可选参数，为空则由平台分配 */
     
-    @OpenAPIParam("MAC")
+    @UCloudStackParam("MAC")
     private String mACParam;
 
     /** 网卡型号，支持e1000，virtio（默认），可选参数 */
     
-    @OpenAPIParam("Model")
+    @UCloudStackParam("Model")
     private String modelParam;
 
     /** 出向平均带宽，用于QoS流量整形；0表示不限制，单位Mbps */
     
-    @OpenAPIParam("OutAverageBandwidth")
+    @UCloudStackParam("OutAverageBandwidth")
     private Integer outAverageBandwidthParam;
 
     /** 网卡队列数，可选参数，为0则根据cpu计算 */
     
-    @OpenAPIParam("Queues")
+    @UCloudStackParam("Queues")
     private Integer queuesParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 安全组ID，可选参数 */
     
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
     /** 虚拟机ID */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class DowngradeRedisRequest extends Request {
 
     /** 租户ID，资源所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 内存大小，单位GiB，且必须小于当前内存；实例及从库需为关机状态 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** Redis实例ID，指定要降级的实例；注意：实例必须为Stopped，且从库需关机且规格不小于降配后主库 */
     @NotEmpty
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
     /** 地域ID，实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

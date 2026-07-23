@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class GetEIPPriceRequest extends Request {
 
     /** 带宽，单位为Mbps，取值范围由线路规格配置确定，默认为1-20000 */
     @NotEmpty
-    @OpenAPIParam("Bandwidth")
+    @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
     /** 计费类型，指定EIP的计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费），兼容hour/month/year，计费类型别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR，hour->HOUR、month->MONTH、year->YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** EIP数量，指定要查询价格的EIP数量 */
     @NotEmpty
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private Integer countParam;
 
     /** 运营商网段名称，指定EIP所属的运营商网络段 */
     @NotEmpty
-    @OpenAPIParam("OpertatorName")
+    @UCloudStackParam("OpertatorName")
     private String opertatorNameParam;
 
     /** 计费数量，指定计费周期的数量，按月/年计费时表示购买Quantity个月/年 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

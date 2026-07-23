@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class CreateRoleRequest extends Request {
 
     /** 角色名称，用于标识自定义角色并在控制台显示，长度为1-50个字符，只能包含中英文、数字、点、下划线和中划线 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 权限定义，指定角色拥有的API操作权限集，格式：Action-1（允许）、Action-0（禁止） */
     @NotEmpty
-    @OpenAPIParam("Permission")
+    @UCloudStackParam("Permission")
     private String permissionParam;
 
     /** 备注，用于进行说明和注释，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符， */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

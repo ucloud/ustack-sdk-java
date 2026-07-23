@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class ListGlobalConfigsRequest extends Request {
 
     /** 配置类型，用于筛选全局配置的分类，如系统配置、安全配置等 */
     @NotEmpty
-    @OpenAPIParam("ConfigType")
+    @UCloudStackParam("ConfigType")
     private String configTypeParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class CountTenantResourceByStatusRequest extends Request {
 
     /** 租户ID，指定要查询资源状态数量的租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，指定要查询资源状态数量的地域，若不指定则查询所有有权限的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 资源类型列表，指定要查询资源状态数量的资源类型范围 */
     @NotEmpty
-    @OpenAPIParam("ResourceType")
+    @UCloudStackParam("ResourceType")
     private List<String> resourceTypeParam;
 
 

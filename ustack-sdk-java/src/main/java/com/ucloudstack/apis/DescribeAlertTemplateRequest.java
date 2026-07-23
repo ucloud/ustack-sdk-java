@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeAlertTemplateRequest extends Request {
 
     /** 租户ID，过滤指定租户的告警模板，若为空则返回所有租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键字，按模板名称或备注进行模糊搜索；若设定该字段，系统会先使用全文检索筛选模板ID，再结合其它过滤条件查询 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，取值范围1-100，若未指定TemplateID则使用该值，Limit为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，过滤指定地域的告警模板 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 告警模板ID，指定精确查询的模板ID；指定后强制返回该模板（Limit 自动置为1） */
     
-    @OpenAPIParam("TemplateID")
+    @UCloudStackParam("TemplateID")
     private String templateIDParam;
 
     /** 告警模板类型列表，过滤指定资源类型的模板，支持多个类型同时查询 */
     
-    @OpenAPIParam("TemplateTypes")
+    @UCloudStackParam("TemplateTypes")
     private List<String> templateTypesParam;
 
 

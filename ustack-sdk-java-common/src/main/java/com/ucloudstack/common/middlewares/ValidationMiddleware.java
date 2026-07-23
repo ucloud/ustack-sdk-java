@@ -14,7 +14,7 @@
 package com.ucloudstack.common.middlewares;
 
 import com.ucloudstack.common.config.Config;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.middleware.BaseMiddleware;
 import com.ucloudstack.common.middleware.Context;
 import com.ucloudstack.common.middleware.Middleware;
@@ -24,7 +24,7 @@ import com.ucloudstack.common.request.Request;
 public class ValidationMiddleware extends BaseMiddleware implements Middleware {
 
     @Override
-    public Request handleRequest(Context context) throws OpenAPIException {
+    public Request handleRequest(Context context) throws UCloudStackException {
         Config config = context.getConfig();
         Request request = context.getRequest();
         if (request.loadMaxRetries() == null) {

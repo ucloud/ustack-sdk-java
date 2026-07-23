@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateDirectConnectBandwidthRequest extends Request {
 
     /** 带宽限制，单位为Mbps，取值范围：1-20000，实际不超过物理带宽上限，同时设置上行和下行带宽 */
     @NotEmpty
-    @OpenAPIParam("Bandwidth")
+    @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
     /** 专线接入ID，指定要更新带宽限制的专线接入资源ID */
     @NotEmpty
-    @OpenAPIParam("DirectConnectID")
+    @UCloudStackParam("DirectConnectID")
     private String directConnectIDParam;
 
     /** 地域ID，指定要更新的专线接入所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.credential;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -42,7 +42,7 @@ public class Credential {
         this.publicKey = publicKey;
     }
 
-    public String verifyAc(Request request) throws OpenAPIException {
+    public String verifyAc(Request request) throws UCloudStackException {
         Map<String, Object> params = request.encode();
         params.put("PublicKey", this.publicKey);
         String[] keys = params.keySet().toArray(new String[0]);
@@ -69,11 +69,11 @@ public class Credential {
         try {
             return sha1(s);
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
-            throw new OpenAPIException("sha1 error", e);
+            throw new UCloudStackException("sha1 error", e);
         }
     }
 
-    public Request sign(Request request) throws OpenAPIException {
+    public Request sign(Request request) throws UCloudStackException {
         request.setPublicKey(this.publicKey);
         request.setSignature(verifyAc(request));
         return request;

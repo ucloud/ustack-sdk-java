@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,97 +24,97 @@ public class CreateClusterRequest extends Request {
 
     /** 审批名称 */
     
-    @OpenAPIParam("ApplicationName")
+    @UCloudStackParam("ApplicationName")
     private String applicationNameParam;
 
     /** 审批理由 */
     
-    @OpenAPIParam("ApplicationReason")
+    @UCloudStackParam("ApplicationReason")
     private String applicationReasonParam;
 
     /** 计费类型 */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计算集群类型 */
     @NotEmpty
-    @OpenAPIParam("ComputeclassType")
+    @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
     /** APIServer EIPID */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** 高可用类型 */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** k8s版本号。可为1.25.0 */
     @NotEmpty
-    @OpenAPIParam("K8SVersion")
+    @UCloudStackParam("K8SVersion")
     private String k8SVersionParam;
 
     /** 名称 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** Pod子网ID */
     
-    @OpenAPIParam("PodSubnetIDs")
+    @UCloudStackParam("PodSubnetIDs")
     private List<String> podSubnetIDsParam;
 
     /** 项目组ID，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费数量 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** Service CIDR */
     @NotEmpty
-    @OpenAPIParam("ServiceCIDR")
+    @UCloudStackParam("ServiceCIDR")
     private String serviceCIDRParam;
 
     /** 存储集群类型 */
     @NotEmpty
-    @OpenAPIParam("StorageclassType")
+    @UCloudStackParam("StorageclassType")
     private String storageclassTypeParam;
 
     /** 子网Id */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 标签键值对 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** VpcID */
     @NotEmpty
-    @OpenAPIParam("VpcID")
+    @UCloudStackParam("VpcID")
     private String vpcIDParam;
 
 

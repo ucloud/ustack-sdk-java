@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,32 +24,32 @@ public class DescribeBucketsRequest extends Request {
 
     /** 桶名称列表，用于查询指定桶信息 */
     
-    @OpenAPIParam("BucketNames")
+    @UCloudStackParam("BucketNames")
     private List<String> bucketNamesParam;
 
     /** 搜索关键词，用于模糊匹配桶名称 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 对象存储ID，对象存储实例标识 */
     @NotEmpty
-    @OpenAPIParam("OSSID")
+    @UCloudStackParam("OSSID")
     private String oSSIDParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

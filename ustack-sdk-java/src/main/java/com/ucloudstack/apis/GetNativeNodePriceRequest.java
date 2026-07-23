@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,67 +24,67 @@ public class GetNativeNodePriceRequest extends Request {
 
     /** 系统盘集群ID */
     @NotEmpty
-    @OpenAPIParam("BootDiskSetType")
+    @UCloudStackParam("BootDiskSetType")
     private String bootDiskSetTypeParam;
 
     /** 系统盘大小 */
     @NotEmpty
-    @OpenAPIParam("BootDiskSpace")
+    @UCloudStackParam("BootDiskSpace")
     private Integer bootDiskSpaceParam;
 
     /** CPU核数 */
     @NotEmpty
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** ClusterID */
     
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计算集群类型 */
     @NotEmpty
-    @OpenAPIParam("ComputeclassType")
+    @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
     /** 数量 */
     @NotEmpty
-    @OpenAPIParam("Count")
+    @UCloudStackParam("Count")
     private Integer countParam;
 
     /** 数据盘集群ID */
     
-    @OpenAPIParam("DataDiskSetType")
+    @UCloudStackParam("DataDiskSetType")
     private String dataDiskSetTypeParam;
 
     /** 数据盘大小 */
     
-    @OpenAPIParam("DataDiskSpace")
+    @UCloudStackParam("DataDiskSpace")
     private Integer dataDiskSpaceParam;
 
     /** GPU数量 */
     
-    @OpenAPIParam("GPU")
+    @UCloudStackParam("GPU")
     private Integer gPUParam;
 
     /** GPU型号 */
     
-    @OpenAPIParam("GPUMdevName")
+    @UCloudStackParam("GPUMdevName")
     private String gPUMdevNameParam;
 
     /** 内存大小 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

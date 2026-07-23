@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,12 +24,12 @@ public class UpdateLoginWhitelistRequest extends Request {
 
     /** 租户ID，请求传入用于设置登录白名单的租户 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** IP白名单，请求传入并设置允许登录的IP或网段，多个值用逗号分隔；为空表示不限制；安全控制场景使用，仅主账号或系统管理员可设置 */
     
-    @OpenAPIParam("Whitelist")
+    @UCloudStackParam("Whitelist")
     private String whitelistParam;
 
 

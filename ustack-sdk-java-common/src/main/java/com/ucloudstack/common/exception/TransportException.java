@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.exception;
 
-public class TransportException extends OpenAPIException {
+public class TransportException extends UCloudStackException {
 
     /**
      * Transport exception occurs when the transport has been invoking

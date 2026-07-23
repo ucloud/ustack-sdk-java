@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class GetMySQLPriceRequest extends Request {
 
     /** 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费） */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户唯一标识ID，用于标识资源所属的租户，实现多租户环境下的资源隔离 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群ID，指定云硬盘所在的存储集群 */
     @NotEmpty
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 存储容量，单位GiB，最小值为10GB */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** MySQL数据库高可用类型，影响价格计算（双节点vs单节点），取值范围：Standalone（单机版）、ActiveStandy（高可用版/双节点主备） */
     @NotEmpty
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 内存大小，单位MiB，必须是1024的倍数 */
     @NotEmpty
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** MySQL实例ID，用于区分查询类型，若为空，查询新购价格；若不为空，查询升级差价 */
     
-    @OpenAPIParam("MySQLID")
+    @UCloudStackParam("MySQLID")
     private String mySQLIDParam;
 
     /** 计费时长，按月/年计费时表示购买的月数/年数，按小时计费时为1 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 计算集群类型，用于获取bootDiskSpace信息进行价格计算 */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
 

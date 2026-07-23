@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class UpdateRolePermissionRequest extends Request {
 
     /** 是否开启权限，0表示关闭，'1','Y','Yes','YES','True','true'表示开启 */
     
-    @OpenAPIParam("IsPermission")
+    @UCloudStackParam("IsPermission")
     private Integer isPermissionParam;
 
     /** 角色权限，指定需要变更的Action名称 */
     @NotEmpty
-    @OpenAPIParam("Permission")
+    @UCloudStackParam("Permission")
     private String permissionParam;
 
     /** 角色ID，用于唯一标识角色 */
     @NotEmpty
-    @OpenAPIParam("RoleID")
+    @UCloudStackParam("RoleID")
     private String roleIDParam;
 
 

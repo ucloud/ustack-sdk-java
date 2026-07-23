@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,87 +24,87 @@ public class CreateFSRequest extends Request {
 
     /** 备份ID，用于从快照恢复创建文件存储，指定后自动继承容量和存储集群类型 */
     
-    @OpenAPIParam("BackupID")
+    @UCloudStackParam("BackupID")
     private String backupIDParam;
 
     /** 计费类型，计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic→HOUR、Month→MONTH、Year→YEAR */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** 租户ID，资源所属租户标识 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 存储集群类型，用于指定数据盘使用的存储集群，指定BackupID时自动继承快照存储类型 */
     @NotEmpty
-    @OpenAPIParam("DiskSetType")
+    @UCloudStackParam("DiskSetType")
     private String diskSetTypeParam;
 
     /** 存储容量，单位GiB，最小值100，指定BackupID时自动继承快照容量 */
     @NotEmpty
-    @OpenAPIParam("DiskSpace")
+    @UCloudStackParam("DiskSpace")
     private Integer diskSpaceParam;
 
     /** 弹性公网IP ID，为文件存储绑定公网IP，该EIP需未绑定其他资源 */
     
-    @OpenAPIParam("EIPID")
+    @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
     /** 文件存储名称，支持中英文、数字、点、下划线和中划线，长度1-128个字符 */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目组ID，资源所属项目组，未传时尝试分配默认项目 */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1 */
     @NotEmpty
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于说明，长度0-100个中英文字符，禁止包含http://或https://等非法字符 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 子网ID，文件存储所属子网标识 */
     @NotEmpty
-    @OpenAPIParam("SubnetID")
+    @UCloudStackParam("SubnetID")
     private String subnetIDParam;
 
     /** 标签键值对，用于资源标记和分类管理，格式为key:value的字符串，传入Base64编码 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
     /** 删除保护策略，取值范围：0（开启删除保护，拒绝删除操作）、1（关闭删除保护，允许删除） */
     
-    @OpenAPIParam("TerminationPolicy")
+    @UCloudStackParam("TerminationPolicy")
     private Integer terminationPolicyParam;
 
     /** 计算集群类型，系统会根据集群架构自动选择对应镜像（x86_64或AArch64） */
     @NotEmpty
-    @OpenAPIParam("VMType")
+    @UCloudStackParam("VMType")
     private String vMTypeParam;
 
     /** VPC ID，文件存储所属VPC的唯一标识 */
     @NotEmpty
-    @OpenAPIParam("VPCID")
+    @UCloudStackParam("VPCID")
     private String vPCIDParam;
 
     /** 外网安全组ID，用于控制文件存储的公网访问规则 */
     
-    @OpenAPIParam("WANSGID")
+    @UCloudStackParam("WANSGID")
     private String wANSGIDParam;
 
 

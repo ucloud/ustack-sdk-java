@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class DescribeVPCRequest extends Request {
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，用于按名称或备注模糊查询 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，用于限制单次返回条数 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，用于指定返回结果起始位置 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 对端ID，用于筛选包含指定对等连接的VPC */
     
-    @OpenAPIParam("PeerID")
+    @UCloudStackParam("PeerID")
     private String peerIDParam;
 
     /** 项目ID列表，用于按项目维度筛选资源 */
     
-    @OpenAPIParam("ProjectIDs")
+    @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** VPC状态列表，用于按多个状态过滤VPC，支持前端按Status.0、Status.1等形式传参 */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private List<String> statusParam;
 
     /** VPCID列表，用于查询指定的虚拟私有网络 */
     
-    @OpenAPIParam("VPCIDs")
+    @UCloudStackParam("VPCIDs")
     private List<String> vPCIDsParam;
 
 

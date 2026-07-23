@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,22 +24,22 @@ public class ApplyRedisConfigFileRequest extends Request {
 
     /** 租户ID，实例所属租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 配置ID，参数模板ID */
     @NotEmpty
-    @OpenAPIParam("ConfigID")
+    @UCloudStackParam("ConfigID")
     private String configIDParam;
 
     /** Redis实例ID，指定要应用模板的实例 */
     @NotEmpty
-    @OpenAPIParam("RedisID")
+    @UCloudStackParam("RedisID")
     private String redisIDParam;
 
     /** 地域ID，实例所属地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,17 +24,17 @@ public class DeleteSecurityGroupRequest extends Request {
 
     /** 租户ID，标识安全组所属的租户组织，用于多租户资源隔离与权限控制 */
     @NotEmpty
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 地域ID，用于标识安全组所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 安全组ID，指定待删除的安全组唯一标识符；删除前会检查是否存在资源绑定 */
     @NotEmpty
-    @OpenAPIParam("SGID")
+    @UCloudStackParam("SGID")
     private String sGIDParam;
 
 

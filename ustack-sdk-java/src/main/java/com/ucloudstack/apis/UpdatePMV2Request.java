@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,62 +24,62 @@ public class UpdatePMV2Request extends Request {
 
     /** BMC类型名称，标识硬件厂商的BMC类型，可选 */
     
-    @OpenAPIParam("BMCTypeName")
+    @UCloudStackParam("BMCTypeName")
     private String bMCTypeNameParam;
 
     /** 自定义监控地址，用于Prometheus等监控系统采集指标，可选 */
     
-    @OpenAPIParam("CustomMetricsPath")
+    @UCloudStackParam("CustomMetricsPath")
     private String customMetricsPathParam;
 
     /** IPMI管理IP地址，用于带外管理访问，可选 */
     
-    @OpenAPIParam("IPMIIP")
+    @UCloudStackParam("IPMIIP")
     private String iPMIIPParam;
 
     /** IPMI密码，用于IPMI身份验证，可选 */
     
-    @OpenAPIParam("IPMIPassword")
+    @UCloudStackParam("IPMIPassword")
     private String iPMIPasswordParam;
 
     /** IPMI用户名，用于IPMI身份验证，可选 */
     
-    @OpenAPIParam("IPMIUsername")
+    @UCloudStackParam("IPMIUsername")
     private String iPMIUsernameParam;
 
     /** 生产厂商，从BMC/IPMI FRU信息采集，可选 */
     
-    @OpenAPIParam("Manufacturer")
+    @UCloudStackParam("Manufacturer")
     private String manufacturerParam;
 
     /** 资源名称，长度为1-128个字符，名称只能包含中英文、数字、点（.）、下划线（_）和中划线（-），可选，若不指定则不更新 */
     
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 裸金属ID，指定要更新的裸金属实例 */
     @NotEmpty
-    @OpenAPIParam("PMID")
+    @UCloudStackParam("PMID")
     private String pMIDParam;
 
     /** 产品名称，从BMC/IPMI FRU信息采集，可选 */
     
-    @OpenAPIParam("ProductName")
+    @UCloudStackParam("ProductName")
     private String productNameParam;
 
     /** 机架位置，标识裸金属在数据中心的物理位置，可选 */
     
-    @OpenAPIParam("RackLocation")
+    @UCloudStackParam("RackLocation")
     private String rackLocationParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于进行说明和注释，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符，可选，若不指定则不更新 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
 

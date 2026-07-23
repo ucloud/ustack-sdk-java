@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeNATGWRuleRequest extends Request {
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，用于按规则关键字模糊搜索SNAT规则 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，用于控制返回数据量 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** NAT网关ID，用于筛选指定NAT网关的SNAT规则 */
     
-    @OpenAPIParam("NATGWID")
+    @UCloudStackParam("NATGWID")
     private String nATGWIDParam;
 
     /** 分页偏移量，指定跳过的记录数，用于实现分页查询 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** SNAT规则ID列表，用于筛选指定SNAT规则 */
     
-    @OpenAPIParam("RuleIDs")
+    @UCloudStackParam("RuleIDs")
     private List<String> ruleIDsParam;
 
 

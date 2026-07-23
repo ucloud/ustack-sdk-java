@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,52 +24,52 @@ public class GetClusterPriceRequest extends Request {
 
     /** CPU核数 */
     
-    @OpenAPIParam("CPU")
+    @UCloudStackParam("CPU")
     private Integer cPUParam;
 
     /** 计费类型 */
     @NotEmpty
-    @OpenAPIParam("ChargeType")
+    @UCloudStackParam("ChargeType")
     private String chargeTypeParam;
 
     /** ClusterID */
     
-    @OpenAPIParam("ClusterID")
+    @UCloudStackParam("ClusterID")
     private String clusterIDParam;
 
     /** 租户ID */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 计算集群类型 */
     @NotEmpty
-    @OpenAPIParam("ComputeclassType")
+    @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
     /** 高可用 */
     
-    @OpenAPIParam("HighAvailability")
+    @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
     /** 内存大小 */
     
-    @OpenAPIParam("Memory")
+    @UCloudStackParam("Memory")
     private Integer memoryParam;
 
     /** 计费周期 */
     
-    @OpenAPIParam("Quantity")
+    @UCloudStackParam("Quantity")
     private Integer quantityParam;
 
     /** 地域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 存储集群类型 */
     @NotEmpty
-    @OpenAPIParam("StorageclassType")
+    @UCloudStackParam("StorageclassType")
     private String storageclassTypeParam;
 
 

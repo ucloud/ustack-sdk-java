@@ -14,7 +14,7 @@
 package com.ucloudstack.common.exception;
 
 /** RetCodeException is the exception of a logic exception returned by remote service */
-public class RetCodeException extends OpenAPIException {
+public class RetCodeException extends UCloudStackException {
 
     private final Integer retCode;
 

@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class DescribeOrchTaskRequest extends Request {
 
     /** 租户ID，筛选指定租户的任务 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 搜索关键词，按任务名称或备注模糊搜索 */
     
-    @OpenAPIParam("Keyword")
+    @UCloudStackParam("Keyword")
     private String keywordParam;
 
     /** 分页大小，指定每页返回的记录数，Limit为0时默认10 */
     
-    @OpenAPIParam("Limit")
+    @UCloudStackParam("Limit")
     private Integer limitParam;
 
     /** 分页偏移量，指定跳过的记录数 */
     
-    @OpenAPIParam("Offset")
+    @UCloudStackParam("Offset")
     private Integer offsetParam;
 
     /** 地域，筛选指定地域的任务 */
     
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 任务状态过滤，精确匹配OrchTaskInfo.Status字段；可为业务状态（NotStarted/Pending/Processing/Pausing/Paused/Completed/Aborting/Aborted/Invalied）或资源状态（Creating/Deleting/Deleted/Destroying等） */
     
-    @OpenAPIParam("Status")
+    @UCloudStackParam("Status")
     private String statusParam;
 
     /** 任务ID列表，精确筛选指定任务 */
     
-    @OpenAPIParam("TaskIDs")
+    @UCloudStackParam("TaskIDs")
     private List<String> taskIDsParam;
 
 

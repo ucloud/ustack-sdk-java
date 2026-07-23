@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,72 +24,72 @@ public class CreatePMV2Request extends Request {
 
     /** BMC类型名称，标识硬件厂商的BMC类型（如Dell iDRAC、HP iLO等） */
     
-    @OpenAPIParam("BMCTypeName")
+    @UCloudStackParam("BMCTypeName")
     private String bMCTypeNameParam;
 
     /** 租户ID，指定裸金属所属的租户，若为0或超级管理员ID则表示未分配租户 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 自定义监控地址，用于Prometheus等监控系统采集指标 */
     
-    @OpenAPIParam("CustomMetricsPath")
+    @UCloudStackParam("CustomMetricsPath")
     private String customMetricsPathParam;
 
     /** 过期时间，Unix时间戳（秒），到期后资源可能被回收 */
     
-    @OpenAPIParam("ExpireTime")
+    @UCloudStackParam("ExpireTime")
     private Integer expireTimeParam;
 
     /** IPMI管理IP地址，用于带外管理访问 */
     
-    @OpenAPIParam("IPMIIP")
+    @UCloudStackParam("IPMIIP")
     private String iPMIIPParam;
 
     /** IPMI密码，用于IPMI身份验证 */
     
-    @OpenAPIParam("IPMIPassword")
+    @UCloudStackParam("IPMIPassword")
     private String iPMIPasswordParam;
 
     /** IPMI用户名，用于IPMI身份验证 */
     
-    @OpenAPIParam("IPMIUsername")
+    @UCloudStackParam("IPMIUsername")
     private String iPMIUsernameParam;
 
     /** 资源名称，长度为1-128个字符，名称只能包含中英文、数字、点（.）、下划线（_）和中划线（-） */
     @NotEmpty
-    @OpenAPIParam("Name")
+    @UCloudStackParam("Name")
     private String nameParam;
 
     /** 项目ID，用于实现资源的逻辑分组管理，当CompanyID为超级管理员或0时不需要ProjectID */
     
-    @OpenAPIParam("ProjectID")
+    @UCloudStackParam("ProjectID")
     private String projectIDParam;
 
     /** 机架位置，标识裸金属在数据中心的物理位置 */
     
-    @OpenAPIParam("RackLocation")
+    @UCloudStackParam("RackLocation")
     private String rackLocationParam;
 
     /** 申请原因，说明申请该裸金属资源的用途和目的 */
     
-    @OpenAPIParam("Reason")
+    @UCloudStackParam("Reason")
     private String reasonParam;
 
     /** 地域ID，指定资源所属的物理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 备注，用于进行说明和注释，长度为0-100个英文或中文字符，不能使用http://或https://等非法字符，可为空 */
     
-    @OpenAPIParam("Remark")
+    @UCloudStackParam("Remark")
     private String remarkParam;
 
     /** 标签键值对，用于资源标记和分类管理，格式为key:value的字符串，传入Base64编码的字符串 */
     
-    @OpenAPIParam("TagKeyValuePairs")
+    @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
 

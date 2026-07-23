@@ -14,7 +14,7 @@
 package com.ucloudstack.apis;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
+import com.ucloudstack.common.annotation.UCloudStackParam;
 import com.ucloudstack.common.request.Request;
 import java.util.List;
 import java.util.Map;
@@ -24,42 +24,42 @@ public class AllocateVMSSHSessionRequest extends Request {
 
     /** 执行命令，连接后自动执行的命令 */
     
-    @OpenAPIParam("CmdName")
+    @UCloudStackParam("CmdName")
     private String cmdNameParam;
 
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
-    @OpenAPIParam("CompanyID")
+    @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
     /** 私钥内容，用于SSH认证的私钥 */
     
-    @OpenAPIParam("IdentityContent")
+    @UCloudStackParam("IdentityContent")
     private String identityContentParam;
 
     /** 密码，SSH登录密码 */
     
-    @OpenAPIParam("Password")
+    @UCloudStackParam("Password")
     private String passwordParam;
 
     /** 端口号，SSH服务的端口 */
     
-    @OpenAPIParam("Port")
+    @UCloudStackParam("Port")
     private String portParam;
 
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String regionParam;
 
     /** 用户名，SSH登录的用户名 */
     
-    @OpenAPIParam("User")
+    @UCloudStackParam("User")
     private String userParam;
 
     /** 虚拟机ID，待获取SSH会话的虚拟机标识 */
     @NotEmpty
-    @OpenAPIParam("VMID")
+    @UCloudStackParam("VMID")
     private String vMIDParam;
 
 
