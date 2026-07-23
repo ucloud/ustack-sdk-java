@@ -9,14 +9,14 @@ OpenAPI SDK 为请求提供了请求中间件的特性。
 以下是一个日志中间件的示例：
 
 ```java
-package cn.openapi.common.middlewares;
+package com.ucloudstack.common.middlewares;
 
-import cn.openapi.common.exception.OpenAPIException;
-import cn.openapi.common.middleware.BaseMiddleware;
-import cn.openapi.common.middleware.Context;
-import cn.openapi.common.middleware.Middleware;
-import cn.openapi.common.request.Request;
-import cn.openapi.common.response.Response;
+import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.middleware.BaseMiddleware;
+import com.ucloudstack.common.middleware.Context;
+import com.ucloudstack.common.middleware.Middleware;
+import com.ucloudstack.common.request.Request;
+import com.ucloudstack.common.response.Response;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 

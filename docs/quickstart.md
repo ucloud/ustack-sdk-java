@@ -12,8 +12,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
     <parent>
-        <artifactId>openapi-sdk-java</artifactId>
-        <groupId>cn.openapi</groupId>
+        <artifactId>ustack-sdk-java</artifactId>
+        <groupId>com.ucloudstack</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -23,8 +23,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>cn.openapi</groupId>
-            <artifactId>openapi-sdk-java-uhost</artifactId>
+            <groupId>com.ucloudstack</groupId>
+            <artifactId>ustack-sdk-java-uhost</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
@@ -35,20 +35,20 @@
 
 目前，SDK 使用 PublicKey/PrivateKey 作为唯一的鉴权方式，该公私钥可以从以下途径获取：
 
-- [账号密钥管理](https://console.openapi.cn/uaccount/api_manage)
+- [账号密钥管理](https://console.ucloudstack.com/uaccount/api_manage)
 
 下面提供一个简单的示例（详细的示例可以在 `examples/uhost` 中获取）：
 
 之后编辑源码：
 
 ```java
-package cn.openapi.example;
+package com.ucloudstack.example;
 
-import cn.openapi.common.config.Config;
-import cn.openapi.common.credential.Credential;
-import cn.openapi.common.exception.OpenAPIException;
-import cn.openapi.uhost.client.UHostClient;
-import cn.openapi.uhost.models.*;
+import com.ucloudstack.common.config.Config;
+import com.ucloudstack.common.credential.Credential;
+import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.uhost.client.UHostClient;
+import com.ucloudstack.uhost.models.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,7 +105,7 @@ public class Main {
 在该示例中，使用 SDK 完成了一个创建云主机的请求。至此，已经涵盖了 SDK 的基本核心用法，可以构建自己的脚本啦！
 
 SDK 中的每一个 api 调用都有详细的注释文档，
-可以通过 Editor/IDE 跳转到具体的方法中查看（也可以 [查看接口文档](https://docs.openapi.cn/api/summary/README) ），
+可以通过 Editor/IDE 跳转到具体的方法中查看（也可以 [查看接口文档](https://docs.ucloudstack.com/api/summary/README) ），
 并根据 IDE 自动补全和报错信息继续探索 SDK 的用法。
 
 如果需要了解这段代码提及但未完全覆盖的使用技巧，请参考：

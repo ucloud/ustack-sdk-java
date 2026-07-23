@@ -4,18 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.openapi</groupId>
-    <artifactId>openapi-sdk-java</artifactId>
+    <groupId>com.ucloudstack</groupId>
+    <artifactId>ustack-sdk-java-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>openapi-sdk-java-common</module>
-        <module>openapi-sdk-java</module>
+        <module>ustack-sdk-java-common</module>
+        <module>ustack-sdk-java</module>
     </modules>
 
-    <name>openapi-sdk-java</name>
-    <url>https://www.openapi.cn</url>
-    <description>openapi-sdk-java</description>
+    <name>ustack-sdk-java-parent</name>
+    <url>https://www.ucloudstack.com</url>
+    <description>UCloudStack SDK Java parent project</description>
 
     <licenses>
         <license>
@@ -25,26 +25,26 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/openapi/openapi-sdk-java</url>
-        <connection>https://github.com/openapi/openapi-sdk-java.git</connection>
-        <developerConnection>https://github.com/openapi/openapi-sdk-java</developerConnection>
+        <url>https://github.com/ucloud/ustack-sdk-java</url>
+        <connection>https://github.com/ucloud/ustack-sdk-java.git</connection>
+        <developerConnection>https://github.com/ucloud/ustack-sdk-java</developerConnection>
     </scm>
 
     <developers>
         <developer>
             <name>wenqian.tang</name>
-            <email>wenqian.tang@openapi.cn</email>
-            <url>https://github.com/openapi/openapi-sdk-java</url>
+            <email>wenqian.tang@ucloudstack.com</email>
+            <url>https://github.com/ucloud/ustack-sdk-java</url>
         </developer>
     </developers>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-openapi</id>
+            <id>sonatype-nexus-ustack</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-openapi</id>
+            <id>sonatype-nexus-ustack</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
@@ -65,7 +65,7 @@
         <codec.version>1.9</codec.version>
         <slf4j.version>1.7.25</slf4j.version>
         <jsonassert.version>1.5.0</jsonassert.version>
-        <sonar.organization>openapi</sonar.organization>
+        <sonar.organization>ucloud</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
