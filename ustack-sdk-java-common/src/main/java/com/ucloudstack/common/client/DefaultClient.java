@@ -101,7 +101,7 @@ public class DefaultClient implements Client {
             }
         }
 
-        // check if return code is not zero, mark it as openapi server exception
+        // check if return code is not zero, mark it as server exception
         if (response != null && response.getRetCode() != 0) {
             throw new RetCodeException(
                     response.getRetCode(), response.getMessage(), response.getRequestId());
