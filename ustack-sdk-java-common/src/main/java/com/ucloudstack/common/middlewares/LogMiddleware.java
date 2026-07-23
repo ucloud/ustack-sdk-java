@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.middlewares;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.middleware.BaseMiddleware;
 import com.ucloudstack.common.middleware.Context;
 import com.ucloudstack.common.middleware.Middleware;
@@ -28,14 +28,14 @@ import org.slf4j.Logger;
 public class LogMiddleware extends BaseMiddleware implements Middleware {
 
     @Override
-    public Request handleRequest(Context context) throws OpenAPIException {
+    public Request handleRequest(Context context) throws UCloudStackException {
         Logger logger = context.getConfig().getLogger();
         logger.info(new Gson().toJson(context.getRequest().encode()));
         return super.handleRequest(context);
     }
 
     @Override
-    public Response handleResponse(Context context) throws OpenAPIException {
+    public Response handleResponse(Context context) throws UCloudStackException {
         Logger logger = context.getConfig().getLogger();
         logger.info(
                 String.format(
@@ -46,7 +46,7 @@ public class LogMiddleware extends BaseMiddleware implements Middleware {
     }
 
     @Override
-    public void handleException(Context context) throws OpenAPIException {
+    public void handleException(Context context) throws UCloudStackException {
         Logger logger = context.getConfig().getLogger();
         logger.error(new Gson().toJson(context.getException().getMessage()));
         super.handleException(context);

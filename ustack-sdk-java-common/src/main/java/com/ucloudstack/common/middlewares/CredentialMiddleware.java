@@ -14,7 +14,7 @@
 package com.ucloudstack.common.middlewares;
 
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.middleware.BaseMiddleware;
 import com.ucloudstack.common.middleware.Context;
 import com.ucloudstack.common.middleware.Middleware;
@@ -24,7 +24,7 @@ import com.ucloudstack.common.request.Request;
 public class CredentialMiddleware extends BaseMiddleware implements Middleware {
 
     @Override
-    public Request handleRequest(Context context) throws OpenAPIException {
+    public Request handleRequest(Context context) throws UCloudStackException {
         Credential cred = context.getCredential();
         Request request = context.getRequest();
         return cred.sign(request);

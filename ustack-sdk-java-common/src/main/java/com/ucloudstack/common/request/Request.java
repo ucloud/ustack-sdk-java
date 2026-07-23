@@ -14,8 +14,8 @@
 package com.ucloudstack.common.request;
 
 import com.ucloudstack.common.annotation.NotEmpty;
-import com.ucloudstack.common.annotation.OpenAPIParam;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.annotation.UCloudStackParam;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.exception.ValidatorException;
 
 import java.lang.reflect.Field;
@@ -23,19 +23,19 @@ import java.util.*;
 
 /** Request is the base-class of all request object */
 public class Request extends RequestOptions {
-    @OpenAPIParam("Signature")
+    @UCloudStackParam("Signature")
     private String signature;
 
-    @OpenAPIParam("Action")
+    @UCloudStackParam("Action")
     private String action;
 
-    @OpenAPIParam("PublicKey")
+    @UCloudStackParam("PublicKey")
     private String publicKey;
 
-    @OpenAPIParam("Region")
+    @UCloudStackParam("Region")
     private String region;
 
-    @OpenAPIParam("ProjectId")
+    @UCloudStackParam("ProjectId")
     private String projectId;
 
     public Request() {}
@@ -85,21 +85,21 @@ public class Request extends RequestOptions {
      *
      * @return map representation of request
      */
-    public Map<String, Object> encode() throws OpenAPIException {
+    public Map<String, Object> encode() throws UCloudStackException {
         try {
             return encodeObject(this);
         } catch (ClassNotFoundException | IllegalAccessException e) {
-            throw new OpenAPIException("cannot encode: " + e.getMessage(), e);
+            throw new UCloudStackException("cannot encode: " + e.getMessage(), e);
         }
     }
 
     private static Map<String, Object> encodeObject(Object obj)
-            throws ClassNotFoundException, IllegalAccessException, OpenAPIException {
+            throws ClassNotFoundException, IllegalAccessException, UCloudStackException {
         Map<String, Object> params = new HashMap<>();
 
         for (Field field : getAllFields(obj.getClass())) {
             // only collect field with param paramAnnotation
-            OpenAPIParam paramAnnotation = field.getAnnotation(OpenAPIParam.class);
+            UCloudStackParam paramAnnotation = field.getAnnotation(UCloudStackParam.class);
             if (paramAnnotation == null) {
                 continue;
             }

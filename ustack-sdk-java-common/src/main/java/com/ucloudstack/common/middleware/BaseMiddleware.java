@@ -13,22 +13,22 @@
  */
 package com.ucloudstack.common.middleware;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 
 public abstract class BaseMiddleware implements Middleware {
 
     @Override
-    public Request handleRequest(Context context) throws OpenAPIException {
+    public Request handleRequest(Context context) throws UCloudStackException {
         return context.getRequest();
     }
 
     @Override
-    public Response handleResponse(Context context) throws OpenAPIException {
+    public Response handleResponse(Context context) throws UCloudStackException {
         return context.getResponse();
     }
 
     @Override
-    public void handleException(Context context) throws OpenAPIException {}
+    public void handleException(Context context) throws UCloudStackException {}
 }

@@ -11,16 +11,16 @@
  * express or implied. See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ucloudstack.common.annotation;
+package com.ucloudstack.common.exception;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+/** UCloudStackException is the base-class of all the exception throw by SDK */
+public class UCloudStackException extends Exception {
 
-/** Annotation of OpenAPI parameters */
-@Target({ElementType.FIELD, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface OpenAPIParam {
-    String value(); // parameter name
+    public UCloudStackException(String message) {
+        super(message);
+    }
+
+    public UCloudStackException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

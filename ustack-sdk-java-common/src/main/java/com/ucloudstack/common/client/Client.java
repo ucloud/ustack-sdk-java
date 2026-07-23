@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.client;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 
@@ -27,5 +27,5 @@ public interface Client extends Closeable {
      * @param clazz response class
      * @return response object
      */
-    Response invoke(Request request, Class<? extends Response> clazz) throws OpenAPIException;
+    Response invoke(Request request, Class<? extends Response> clazz) throws UCloudStackException;
 }

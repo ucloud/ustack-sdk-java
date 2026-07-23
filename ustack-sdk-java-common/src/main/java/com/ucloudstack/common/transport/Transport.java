@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.transport;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 
@@ -24,7 +24,7 @@ public interface Transport extends Closeable {
      * @param request Request payload with data
      * @param clazz Response class without data
      * @return Response
-     * @throws OpenAPIException exception
+     * @throws UCloudStackException exception
      */
-    Response invoke(Request request, Class<? extends Response> clazz) throws OpenAPIException;
+    Response invoke(Request request, Class<? extends Response> clazz) throws UCloudStackException;
 }

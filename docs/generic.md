@@ -2,7 +2,7 @@
 
 如何调用 SDK 尚未支持的 API ？可以使用泛化调用方式。
 
-**NOTE** 如果没有必须使用的理由，不建议使用泛化方式调用 API，因为无法享受 OpenAPI 提供的兼容性保证。
+**NOTE** 如果没有必须使用的理由，不建议使用泛化方式调用 API，因为无法享受 UCloudStack 提供的兼容性保证。
 
 ## 调用方式
 
@@ -12,7 +12,7 @@ package com.ucloudstack.example;
 import com.ucloudstack.common.client.DefaultClient;
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public class Main {
         Response response = null;
         try {
             response = client.invoke(request, Response.class);
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             e.printStackTrace();
         }
         System.out.println(response);

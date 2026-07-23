@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.transport;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.exception.TransportException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
@@ -54,7 +54,7 @@ public class DefaultTransport implements Transport {
 
     @Override
     public Response invoke(Request request, Class<? extends Response> clazz)
-            throws OpenAPIException {
+            throws UCloudStackException {
         HttpPost httpPost = new HttpPost(this.getBaseUrl());
 
         // inject user agent
@@ -81,7 +81,7 @@ public class DefaultTransport implements Transport {
             // check http status
             StatusLine httpStatus = httpResponse.getStatusLine();
             if (httpStatus.getStatusCode() >= 400) {
-                throw new OpenAPIException(
+                throw new UCloudStackException(
                         String.format(
                                 "http error, status code %d %s",
                                 httpStatus.getStatusCode(), httpStatus.getReasonPhrase()));
@@ -92,7 +92,7 @@ public class DefaultTransport implements Transport {
             Response response = new Gson().fromJson(content, clazz);
             response.setRequestId(requestId);
             return response;
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             throw e;
         } catch (Exception e) {
             throw new TransportException("http error", e);

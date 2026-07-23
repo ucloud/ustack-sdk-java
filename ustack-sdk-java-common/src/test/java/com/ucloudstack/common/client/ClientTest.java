@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import com.ucloudstack.common.config.Config;
 import com.ucloudstack.common.credential.Credential;
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 import com.ucloudstack.common.transport.DefaultTransport;
@@ -79,7 +79,7 @@ public class ClientTest {
             transport = Mockito.mock(DefaultTransport.class);
             try {
                 Mockito.when(transport.invoke(request, response.getClass())).thenReturn(response);
-            } catch (OpenAPIException e) {
+            } catch (UCloudStackException e) {
                 e.printStackTrace();
             }
         } else {
@@ -90,7 +90,7 @@ public class ClientTest {
 
         try {
             client.invoke(request, response.getClass());
-        } catch (OpenAPIException e) {
+        } catch (UCloudStackException e) {
             e.printStackTrace();
             assertEquals(true, hasException);
             return;

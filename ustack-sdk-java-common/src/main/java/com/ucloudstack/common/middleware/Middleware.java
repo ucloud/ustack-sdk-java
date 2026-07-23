@@ -13,7 +13,7 @@
  */
 package com.ucloudstack.common.middleware;
 
-import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.exception.UCloudStackException;
 import com.ucloudstack.common.request.Request;
 import com.ucloudstack.common.response.Response;
 
@@ -23,24 +23,24 @@ public interface Middleware {
      *
      * @param context Context of invoking lifecycle
      * @return request object that modified
-     * @throws OpenAPIException the exception during invoking
+     * @throws UCloudStackException the exception during invoking
      */
-    Request handleRequest(Context context) throws OpenAPIException;
+    Request handleRequest(Context context) throws UCloudStackException;
 
     /**
      * Handle the context includes response object
      *
      * @param context Context of invoking lifecycle
      * @return response object that modified
-     * @throws OpenAPIException the exception during invoking
+     * @throws UCloudStackException the exception during invoking
      */
-    Response handleResponse(Context context) throws OpenAPIException;
+    Response handleResponse(Context context) throws UCloudStackException;
 
     /**
      * Handle the context includes exception object
      *
      * @param context Context of invoking lifecycle
-     * @throws OpenAPIException the exception during invoking
+     * @throws UCloudStackException the exception during invoking
      */
-    void handleException(Context context) throws OpenAPIException;
+    void handleException(Context context) throws UCloudStackException;
 }
