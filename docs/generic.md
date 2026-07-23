@@ -7,14 +7,14 @@
 ## 调用方式
 
 ```java
-package cn.openapi.example;
+package com.ucloudstack.example;
 
-import cn.openapi.common.client.DefaultClient;
-import cn.openapi.common.config.Config;
-import cn.openapi.common.credential.Credential;
-import cn.openapi.common.exception.OpenAPIException;
-import cn.openapi.common.request.Request;
-import cn.openapi.common.response.Response;
+import com.ucloudstack.common.client.DefaultClient;
+import com.ucloudstack.common.config.Config;
+import com.ucloudstack.common.credential.Credential;
+import com.ucloudstack.common.exception.OpenAPIException;
+import com.ucloudstack.common.request.Request;
+import com.ucloudstack.common.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
