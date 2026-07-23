@@ -1,4 +1,12 @@
-# SDK使用文档
+# UCloudStack SDK Java
+
+[![Java Version](https://img.shields.io/badge/Java-%3E%3D%208-blue.svg)](https://www.java.com/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+
+UCloudStack SDK Java 是 UCloudStack API 的 Java 客户端库。
+
+- 网站: https://www.ucloudstack.com
+- 许可证: Apache 2.0
 
 ## 安装
 
