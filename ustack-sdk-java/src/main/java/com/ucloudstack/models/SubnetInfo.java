@@ -23,6 +23,10 @@ public class SubnetInfo {
     @SerializedName("CreateTime")
     private Integer createTimeParam;
 
+    /** 扩展网段，子网关联的IPv6地址范围 */
+    @SerializedName("ExpandNetwork")
+    private String expandNetworkParam;
+
     /** IP版本，标识子网支持的地址协议版本 */
     @SerializedName("IPVersion")
     private String iPVersionParam;
@@ -86,6 +90,14 @@ public class SubnetInfo {
 
     public void setCreateTime(Integer createTimeParam) {
         this.createTimeParam = createTimeParam;
+    }
+
+    public String getExpandNetwork() {
+        return expandNetworkParam;
+    }
+
+    public void setExpandNetwork(String expandNetworkParam) {
+        this.expandNetworkParam = expandNetworkParam;
     }
 
     public String getIPVersion() {

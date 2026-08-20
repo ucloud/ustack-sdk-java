@@ -22,10 +22,15 @@ import com.ucloudstack.models.*;
 
 public class CreateRSRequest extends Request {
 
-    /** 绑定资源ID，服务节点的资源ID，仅支持添加与LB相同VPC的虚拟机资源，且该虚拟机必须存在并配置有内网IP地址 */
+    /** 绑定资源ID，BindResourceType为空或VM时传虚拟机ID，BindResourceType为OSS时传对象存储ID */
     @NotEmpty
     @UCloudStackParam("BindResourceID")
     private String bindResourceIDParam;
+
+    /** 绑定资源类型，空或VM表示虚拟机，OSS表示对象存储 */
+    
+    @UCloudStackParam("BindResourceType")
+    private String bindResourceTypeParam;
 
     /** 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制 */
     
@@ -64,6 +69,14 @@ public class CreateRSRequest extends Request {
 
     public void setBindResourceID(String bindResourceIDParam) {
         this.bindResourceIDParam = bindResourceIDParam;
+    }
+
+    public String getBindResourceType() {
+        return bindResourceTypeParam;
+    }
+
+    public void setBindResourceType(String bindResourceTypeParam) {
+        this.bindResourceTypeParam = bindResourceTypeParam;
     }
 
     public Integer getCompanyID() {

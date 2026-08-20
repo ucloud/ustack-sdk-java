@@ -57,11 +57,6 @@ public class DescribeHostVMInstanceRequest extends Request {
     @UCloudStackParam("SetID")
     private String setIDParam;
 
-    /** 虚拟机ID列表，用于精确筛选指定计算实例 */
-    
-    @UCloudStackParam("VMIDs")
-    private List<String> vMIDsParam;
-
 
     public Integer getCompanyID() {
         return companyIDParam;
@@ -117,14 +112,6 @@ public class DescribeHostVMInstanceRequest extends Request {
 
     public void setSetID(String setIDParam) {
         this.setIDParam = setIDParam;
-    }
-
-    public List<String> getVMIDs() {
-        return vMIDsParam;
-    }
-
-    public void setVMIDs(List<String> vMIDsParam) {
-        this.vMIDsParam = vMIDsParam;
     }
 
 }

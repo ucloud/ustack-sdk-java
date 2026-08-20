@@ -57,11 +57,6 @@ public class DescribeVPCRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** VPC状态列表，用于按多个状态过滤VPC，支持前端按Status.0、Status.1等形式传参 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
     /** VPCID列表，用于查询指定的虚拟私有网络 */
     
     @UCloudStackParam("VPCIDs")
@@ -122,14 +117,6 @@ public class DescribeVPCRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
     public List<String> getVPCIDs() {

@@ -62,11 +62,6 @@ public class DescribeSnapshotRequest extends Request {
     @UCloudStackParam("SnapshotIDs")
     private List<String> snapshotIDsParam;
 
-    /** 状态列表，用于筛选指定状态的快照资源 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public Integer getCompanyID() {
         return companyIDParam;
@@ -130,14 +125,6 @@ public class DescribeSnapshotRequest extends Request {
 
     public void setSnapshotIDs(List<String> snapshotIDsParam) {
         this.snapshotIDsParam = snapshotIDsParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

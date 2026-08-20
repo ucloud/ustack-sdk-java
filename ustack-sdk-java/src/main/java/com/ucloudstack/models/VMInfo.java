@@ -27,33 +27,13 @@ public class VMInfo {
     @SerializedName("BasicImageName")
     private String basicImageNameParam;
 
-    /** 引导顺序，可选字段，支持：hd（硬盘），cdrom（光驱），network（网络） */
-    @SerializedName("BootDevices")
-    private List<String> bootDevicesParam;
-
     /** 引导方式，虚拟机的系统引导协议 */
     @SerializedName("BootloaderType")
     private String bootloaderTypeParam;
 
-    /** 光驱列表，挂载到虚拟机的光驱详细信息 */
-    @SerializedName("CDROMInfos")
-    private List<VmCDROMInfo> cDROMInfosParam;
-
     /** 核心数，虚拟机的vCPU核心数量 */
     @SerializedName("CPU")
     private Integer cPUParam;
-
-    /** CPU每个插槽内核数，可选字段，默认等于CPU */
-    @SerializedName("CPUCoresPerSocket")
-    private Integer cPUCoresPerSocketParam;
-
-    /** 是否隐藏虚拟化标记 */
-    @SerializedName("CPUHypervisorDisable")
-    private Boolean cPUHypervisorDisableParam;
-
-    /** CPU频率限制百分比，可选字段，默认100% */
-    @SerializedName("CPULimitPercent")
-    private Integer cPULimitPercentParam;
 
     /** CPU模式，虚拟机的CPU模拟方式 */
     @SerializedName("CPUMode")
@@ -75,10 +55,6 @@ public class VMInfo {
     @SerializedName("CPUModelSpec")
     private String cPUModelSpecParam;
 
-    /** CPU优先级，取值：Normal，High （高），可选字段，默认Normal */
-    @SerializedName("CPUPriority")
-    private String cPUPriorityParam;
-
     /** CPU利用率，10分钟平均CPU使用百分比 */
     @SerializedName("CPUUtilization")
     private Double cPUUtilizationParam;
@@ -87,7 +63,7 @@ public class VMInfo {
     @SerializedName("CanLogin")
     private Boolean canLoginParam;
 
-    /** 迁移/快照可取消，标识当前是否处于可取消的迁移状态 */
+    /** 迁移可取消，标识当前是否处于可取消的迁移状态 */
     @SerializedName("CanMigrateAbort")
     private Boolean canMigrateAbortParam;
 
@@ -118,10 +94,6 @@ public class VMInfo {
     /** DNS配置，虚拟机使用的DNS服务器列表 */
     @SerializedName("DNS")
     private String dNSParam;
-
-    /** DNS模式，DNS配置的分配方式，Auto-自动分配，Manual-手动指定 */
-    @SerializedName("DNSMode")
-    private String dNSModeParam;
 
     /** 磁盘缓存模式，当前生效的磁盘I/O缓存策略 */
     @SerializedName("DiskCacheMode")
@@ -230,10 +202,6 @@ public class VMInfo {
     /** 内存容量，虚拟机的内存大小，单位：MiB */
     @SerializedName("Memory")
     private Integer memoryParam;
-
-    /** 网卡列表，挂载到虚拟机的网卡详细信息 */
-    @SerializedName("NICInfos")
-    private List<VmNICInfo> nICInfosParam;
 
     /** 虚拟机名称，自定义的云主机实例标识 */
     @SerializedName("Name")
@@ -404,14 +372,6 @@ public class VMInfo {
         this.basicImageNameParam = basicImageNameParam;
     }
 
-    public List<String> getBootDevices() {
-        return bootDevicesParam;
-    }
-
-    public void setBootDevices(List<String> bootDevicesParam) {
-        this.bootDevicesParam = bootDevicesParam;
-    }
-
     public String getBootloaderType() {
         return bootloaderTypeParam;
     }
@@ -420,44 +380,12 @@ public class VMInfo {
         this.bootloaderTypeParam = bootloaderTypeParam;
     }
 
-    public List<VmCDROMInfo> getCDROMInfos() {
-        return cDROMInfosParam;
-    }
-
-    public void setCDROMInfos(List<VmCDROMInfo> cDROMInfosParam) {
-        this.cDROMInfosParam = cDROMInfosParam;
-    }
-
     public Integer getCPU() {
         return cPUParam;
     }
 
     public void setCPU(Integer cPUParam) {
         this.cPUParam = cPUParam;
-    }
-
-    public Integer getCPUCoresPerSocket() {
-        return cPUCoresPerSocketParam;
-    }
-
-    public void setCPUCoresPerSocket(Integer cPUCoresPerSocketParam) {
-        this.cPUCoresPerSocketParam = cPUCoresPerSocketParam;
-    }
-
-    public Boolean getCPUHypervisorDisable() {
-        return cPUHypervisorDisableParam;
-    }
-
-    public void setCPUHypervisorDisable(Boolean cPUHypervisorDisableParam) {
-        this.cPUHypervisorDisableParam = cPUHypervisorDisableParam;
-    }
-
-    public Integer getCPULimitPercent() {
-        return cPULimitPercentParam;
-    }
-
-    public void setCPULimitPercent(Integer cPULimitPercentParam) {
-        this.cPULimitPercentParam = cPULimitPercentParam;
     }
 
     public String getCPUMode() {
@@ -498,14 +426,6 @@ public class VMInfo {
 
     public void setCPUModelSpec(String cPUModelSpecParam) {
         this.cPUModelSpecParam = cPUModelSpecParam;
-    }
-
-    public String getCPUPriority() {
-        return cPUPriorityParam;
-    }
-
-    public void setCPUPriority(String cPUPriorityParam) {
-        this.cPUPriorityParam = cPUPriorityParam;
     }
 
     public Double getCPUUtilization() {
@@ -586,14 +506,6 @@ public class VMInfo {
 
     public void setDNS(String dNSParam) {
         this.dNSParam = dNSParam;
-    }
-
-    public String getDNSMode() {
-        return dNSModeParam;
-    }
-
-    public void setDNSMode(String dNSModeParam) {
-        this.dNSModeParam = dNSModeParam;
     }
 
     public String getDiskCacheMode() {
@@ -810,14 +722,6 @@ public class VMInfo {
 
     public void setMemory(Integer memoryParam) {
         this.memoryParam = memoryParam;
-    }
-
-    public List<VmNICInfo> getNICInfos() {
-        return nICInfosParam;
-    }
-
-    public void setNICInfos(List<VmNICInfo> nICInfosParam) {
-        this.nICInfosParam = nICInfosParam;
     }
 
     public String getName() {

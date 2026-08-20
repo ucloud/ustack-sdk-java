@@ -75,14 +75,6 @@ public class NativeNodeInfo {
     @SerializedName("EIPName")
     private String eIPNameParam;
 
-    /** GPU数量，挂载的物理GPU数量 */
-    @SerializedName("GPU")
-    private Integer gPUParam;
-
-    /** GPU规格，挂载的物理GPU型号 */
-    @SerializedName("GPUMdevName")
-    private String gPUMdevNameParam;
-
     /**  */
     @SerializedName("InstanceStatus")
     private String instanceStatusParam;
@@ -262,22 +254,6 @@ public class NativeNodeInfo {
 
     public void setEIPName(String eIPNameParam) {
         this.eIPNameParam = eIPNameParam;
-    }
-
-    public Integer getGPU() {
-        return gPUParam;
-    }
-
-    public void setGPU(Integer gPUParam) {
-        this.gPUParam = gPUParam;
-    }
-
-    public String getGPUMdevName() {
-        return gPUMdevNameParam;
-    }
-
-    public void setGPUMdevName(String gPUMdevNameParam) {
-        this.gPUMdevNameParam = gPUMdevNameParam;
     }
 
     public String getInstanceStatus() {

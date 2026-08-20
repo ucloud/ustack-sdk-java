@@ -42,8 +42,8 @@ public class DescribeOrderRequest extends Request {
     @UCloudStackParam("Offset")
     private Integer offsetParam;
 
-    /** 项目组ID列表，保留字段，当前接口不会根据项目进行过滤；传空字符串时表示筛选未归属项目组数据 */
-    
+    /** 项目组ID列表，保留字段，当前接口不会根据项目进行过滤 */
+    @NotEmpty
     @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 

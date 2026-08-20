@@ -22,7 +22,7 @@ import com.ucloudstack.models.*;
 
 public class AllocateUSBRequest extends Request {
 
-    /** 项目ID，USB设备分配后归属的项目，未传时尝试分配默认项目 */
+    /** 项目ID，USB设备分配后归属的项目 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

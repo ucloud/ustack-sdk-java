@@ -21,13 +21,9 @@ import com.ucloudstack.models.*;
 
 public class CreateVMInstanceResponse extends Response {
 
-    /** 数据盘ID，盘的唯一标识 */
+    /** 磁盘ID，系统盘的唯一标识 */
     @SerializedName("DiskID")
     private String diskIDParam;
-
-    /** 数据盘ID列表，挂载的数据盘唯一标识列表 */
-    @SerializedName("DiskIDs")
-    private List<String> diskIDsParam;
 
     /** 外网资源ID，绑定的弹性IP标识 */
     @SerializedName("EIPID")
@@ -36,6 +32,10 @@ public class CreateVMInstanceResponse extends Response {
     /** 外网资源ID列表，创建阶段生成的WAN IP标识列表；首个元素与EIPID一致，后续元素为附加WAN IP的标识 */
     @SerializedName("EIPIDs")
     private List<String> eIPIDsParam;
+
+    /** 扁平网络ID，绑定的扁平网络IP标识 */
+    @SerializedName("FlatIPID")
+    private String flatIPIDParam;
 
     /** 虚拟机ID，创建成功的云主机实例标识 */
     @SerializedName("VMID")
@@ -48,14 +48,6 @@ public class CreateVMInstanceResponse extends Response {
 
     public void setDiskID(String diskIDParam) {
         this.diskIDParam = diskIDParam;
-    }
-
-    public List<String> getDiskIDs() {
-        return diskIDsParam;
-    }
-
-    public void setDiskIDs(List<String> diskIDsParam) {
-        this.diskIDsParam = diskIDsParam;
     }
 
     public String getEIPID() {
@@ -72,6 +64,14 @@ public class CreateVMInstanceResponse extends Response {
 
     public void setEIPIDs(List<String> eIPIDsParam) {
         this.eIPIDsParam = eIPIDsParam;
+    }
+
+    public String getFlatIPID() {
+        return flatIPIDParam;
+    }
+
+    public void setFlatIPID(String flatIPIDParam) {
+        this.flatIPIDParam = flatIPIDParam;
     }
 
     public String getVMID() {

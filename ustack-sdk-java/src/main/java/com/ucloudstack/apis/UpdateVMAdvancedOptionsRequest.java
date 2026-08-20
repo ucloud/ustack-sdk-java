@@ -22,17 +22,17 @@ import com.ucloudstack.models.*;
 
 public class UpdateVMAdvancedOptionsRequest extends Request {
 
-    /** 已废弃，不生效 */
+    /** 引导方式，虚拟机的系统引导协议，取值：bios、uefi */
     
     @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
-    /** 已废弃，不生效 */
+    /** CPU模式，虚拟机的CPU模拟方式，取值：host-passthrough（直通）、custom（自定义） */
     
     @UCloudStackParam("CPUMode")
     private String cPUModeParam;
 
-    /** 已废弃，不生效 */
+    /** CPU型号，仅在CPUMode为custom时生效，取值：default、general、other */
     
     @UCloudStackParam("CPUModel")
     private String cPUModelParam;
@@ -42,17 +42,17 @@ public class UpdateVMAdvancedOptionsRequest extends Request {
     @UCloudStackParam("DNS")
     private String dNSParam;
 
-    /** 已废弃，不生效 */
+    /** 磁盘缓存模式，磁盘I/O缓存策略，取值：writeback、none、directsync */
     
     @UCloudStackParam("DiskCacheMode")
     private String diskCacheModeParam;
 
-    /** 已废弃，不生效 */
+    /** 高可用模式，虚拟机的HA策略，取值：NeverStop（默认）、None */
     
     @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
-    /** 已废弃，不生效 */
+    /** ISO插槽配额，配置的ISO挂载插槽数量，需重启生效 */
     
     @UCloudStackParam("ISOTotal")
     private Integer iSOTotalParam;
@@ -62,12 +62,12 @@ public class UpdateVMAdvancedOptionsRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 已废弃，不生效 */
+    /** 卸载ISO，标识是否卸载挂载的ISO镜像 */
     
     @UCloudStackParam("UninstallISO")
     private Boolean uninstallISOParam;
 
-    /** 自定义数据，需 base64 编码后传入 */
+    /** Cloud-Init脚本，用于自定义系统初始化配置 */
     
     @UCloudStackParam("UserData")
     private String userDataParam;

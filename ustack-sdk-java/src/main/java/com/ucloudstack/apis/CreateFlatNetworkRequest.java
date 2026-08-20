@@ -32,11 +32,6 @@ public class CreateFlatNetworkRequest extends Request {
     @UCloudStackParam("DHCPServerIP")
     private String dHCPServerIPParam;
 
-    /** DNS配置，指定DNS服务器地址，多个服务器用逗号分隔，格式为IP地址列表 */
-    
-    @UCloudStackParam("DNS")
-    private String dNSParam;
-
     /** 物理网卡设备名称，指定扁平网络绑定的物理网络接口 */
     @NotEmpty
     @UCloudStackParam("Device")
@@ -46,11 +41,6 @@ public class CreateFlatNetworkRequest extends Request {
     
     @UCloudStackParam("EnableDHCP")
     private Boolean enableDHCPParam;
-
-    /** 网关IP地址，指定网络的默认网关IP，必须在网段CIDR范围内 */
-    
-    @UCloudStackParam("GatewayIP")
-    private String gatewayIPParam;
 
     /** 可用IP范围，指定从网段中可分配的IP地址范围，支持多个范围用逗号分隔，格式为192.168.1.10-192.168.1.20 */
     
@@ -109,14 +99,6 @@ public class CreateFlatNetworkRequest extends Request {
         this.dHCPServerIPParam = dHCPServerIPParam;
     }
 
-    public String getDNS() {
-        return dNSParam;
-    }
-
-    public void setDNS(String dNSParam) {
-        this.dNSParam = dNSParam;
-    }
-
     public String getDevice() {
         return deviceParam;
     }
@@ -131,14 +113,6 @@ public class CreateFlatNetworkRequest extends Request {
 
     public void setEnableDHCP(Boolean enableDHCPParam) {
         this.enableDHCPParam = enableDHCPParam;
-    }
-
-    public String getGatewayIP() {
-        return gatewayIPParam;
-    }
-
-    public void setGatewayIP(String gatewayIPParam) {
-        this.gatewayIPParam = gatewayIPParam;
     }
 
     public String getIPRange() {

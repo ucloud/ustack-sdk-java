@@ -67,7 +67,7 @@ public class DescribeVMInstanceRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 搜索字段，指定关键词匹配的字段，取值：Name（仅按名称字段模糊匹配）；不传或空值表示全字段匹配 */
+    /** 搜索字段，指定关键词匹配的字段，取值：Name（名称，前缀匹配）；不传或空值表示全字段匹配 */
     
     @UCloudStackParam("SearchField")
     private String searchFieldParam;
@@ -76,11 +76,6 @@ public class DescribeVMInstanceRequest extends Request {
     
     @UCloudStackParam("SetID")
     private String setIDParam;
-
-    /** 是否仅查询简略信息 */
-    
-    @UCloudStackParam("SimpleInfo")
-    private Boolean simpleInfoParam;
 
     /** 排序方向，指定排序的升降序，取值：Ascending（升序）、Descending（降序） */
     
@@ -199,14 +194,6 @@ public class DescribeVMInstanceRequest extends Request {
 
     public void setSetID(String setIDParam) {
         this.setIDParam = setIDParam;
-    }
-
-    public Boolean getSimpleInfo() {
-        return simpleInfoParam;
-    }
-
-    public void setSimpleInfo(Boolean simpleInfoParam) {
-        this.simpleInfoParam = simpleInfoParam;
     }
 
     public String getSort() {

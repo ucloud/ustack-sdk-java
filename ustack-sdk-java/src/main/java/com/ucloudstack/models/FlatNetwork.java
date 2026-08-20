@@ -35,10 +35,6 @@ public class FlatNetwork {
     @SerializedName("DHCPServerIP")
     private String dHCPServerIPParam;
 
-    /** DNS配置，DNS服务器地址列表，多个地址用逗号分隔 */
-    @SerializedName("DNS")
-    private String dNSParam;
-
     /** 备注信息，网络的用途说明 */
     @SerializedName("Description")
     private String descriptionParam;
@@ -54,10 +50,6 @@ public class FlatNetwork {
     /** 扁平网络ID，网络的唯一标识 */
     @SerializedName("FlatNetworkID")
     private String flatNetworkIDParam;
-
-    /** 网关IP地址，网络的默认网关IP */
-    @SerializedName("GatewayIP")
-    private String gatewayIPParam;
 
     /** 可用IP范围，可分配的IP地址段 */
     @SerializedName("IPRanges")
@@ -148,14 +140,6 @@ public class FlatNetwork {
         this.dHCPServerIPParam = dHCPServerIPParam;
     }
 
-    public String getDNS() {
-        return dNSParam;
-    }
-
-    public void setDNS(String dNSParam) {
-        this.dNSParam = dNSParam;
-    }
-
     public String getDescription() {
         return descriptionParam;
     }
@@ -186,14 +170,6 @@ public class FlatNetwork {
 
     public void setFlatNetworkID(String flatNetworkIDParam) {
         this.flatNetworkIDParam = flatNetworkIDParam;
-    }
-
-    public String getGatewayIP() {
-        return gatewayIPParam;
-    }
-
-    public void setGatewayIP(String gatewayIPParam) {
-        this.gatewayIPParam = gatewayIPParam;
     }
 
     public String getIPRanges() {

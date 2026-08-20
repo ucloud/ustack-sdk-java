@@ -27,7 +27,7 @@ public class DescribeParametersHistoriesRequest extends Request {
     @UCloudStackParam("BeginTime")
     private Integer beginTimeParam;
 
-    /** 租户唯一标识ID，用于校验目标实例租户归属；不会作为审计日志查询条件 */
+    /** 租户唯一标识ID，作为审计日志查询条件之一 */
     @NotEmpty
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
@@ -62,7 +62,7 @@ public class DescribeParametersHistoriesRequest extends Request {
     @UCloudStackParam("ProductType")
     private String productTypeParam;
 
-    /** 地域ID，用于校验目标实例所属地域；审计日志查询范围由DatabaseID、ProductType和对应操作类型收敛 */
+    /** 地域ID，指定实例所在地域，后台会据此到对应审计日志库查询操作记录 */
     @NotEmpty
     @UCloudStackParam("Region")
     private String regionParam;

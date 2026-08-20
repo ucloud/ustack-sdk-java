@@ -27,10 +27,6 @@ public class DTSTaskInfo {
     @SerializedName("Arch")
     private String archParam;
 
-    /** 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000 */
-    @SerializedName("BatchSize")
-    private Integer batchSizeParam;
-
     /** CPU核数，DTS实例CPU配置 */
     @SerializedName("CPU")
     private Integer cPUParam;
@@ -90,10 +86,6 @@ public class DTSTaskInfo {
     /** 过期时间，秒级Unix时间戳 */
     @SerializedName("ExpireTime")
     private Integer expireTimeParam;
-
-    /** 增量同步阶段的 DTS 自恢复策略；为空表示沿用 DTS 默认自恢复策略 */
-    @SerializedName("IncrementalRestart")
-    private DTSServiceRestartPolicy incrementalRestartParam;
 
     /** 最大每秒同步记录数，用于限制同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000 */
     @SerializedName("MaxRPS")
@@ -182,14 +174,6 @@ public class DTSTaskInfo {
 
     public void setArch(String archParam) {
         this.archParam = archParam;
-    }
-
-    public Integer getBatchSize() {
-        return batchSizeParam;
-    }
-
-    public void setBatchSize(Integer batchSizeParam) {
-        this.batchSizeParam = batchSizeParam;
     }
 
     public Integer getCPU() {
@@ -310,14 +294,6 @@ public class DTSTaskInfo {
 
     public void setExpireTime(Integer expireTimeParam) {
         this.expireTimeParam = expireTimeParam;
-    }
-
-    public DTSServiceRestartPolicy getIncrementalRestart() {
-        return incrementalRestartParam;
-    }
-
-    public void setIncrementalRestart(DTSServiceRestartPolicy incrementalRestartParam) {
-        this.incrementalRestartParam = incrementalRestartParam;
     }
 
     public Integer getMaxRPS() {

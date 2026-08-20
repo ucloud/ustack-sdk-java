@@ -25,6 +25,14 @@ public class GetSubnetAvailableIPQuotaResponse extends Response {
     @SerializedName("AvailableCount")
     private Integer availableCountParam;
 
+    /** 扩展网段可用IP数量 */
+    @SerializedName("ExpandAvailableCount")
+    private Integer expandAvailableCountParam;
+
+    /** 扩展网段已用IP数量 */
+    @SerializedName("ExpandUsedCount")
+    private Integer expandUsedCountParam;
+
     /** 主网段已用IP数量 */
     @SerializedName("UsedCount")
     private Integer usedCountParam;
@@ -36,6 +44,22 @@ public class GetSubnetAvailableIPQuotaResponse extends Response {
 
     public void setAvailableCount(Integer availableCountParam) {
         this.availableCountParam = availableCountParam;
+    }
+
+    public Integer getExpandAvailableCount() {
+        return expandAvailableCountParam;
+    }
+
+    public void setExpandAvailableCount(Integer expandAvailableCountParam) {
+        this.expandAvailableCountParam = expandAvailableCountParam;
+    }
+
+    public Integer getExpandUsedCount() {
+        return expandUsedCountParam;
+    }
+
+    public void setExpandUsedCount(Integer expandUsedCountParam) {
+        this.expandUsedCountParam = expandUsedCountParam;
     }
 
     public Integer getUsedCount() {

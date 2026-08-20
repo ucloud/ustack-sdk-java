@@ -52,7 +52,7 @@ public class CreateVPNGWRequest extends Request {
     @UCloudStackParam("Name")
     private String nameParam;
 
-    /** 项目ID，用于标识资源所属项目分组，未传时尝试分配默认项目 */
+    /** 项目ID，用于标识资源所属项目分组 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

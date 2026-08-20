@@ -23,14 +23,6 @@ public class AlertInfo {
     @SerializedName("ActiveAt")
     private Integer activeAtParam;
 
-    /** 告警指纹，基于稳定标签生成的唯一标识，用于关联当前告警与历史记录 */
-    @SerializedName("AlertFingerprint")
-    private String alertFingerprintParam;
-
-    /** 告警实例标识，格式为 AlertFingerprint:ActiveAtUnixNano，用于区分同一指纹在不同触发轮次中的具体实例 */
-    @SerializedName("AlertOccurrenceKey")
-    private String alertOccurrenceKeyParam;
-
     /** 租户ID，告警所属租户ID */
     @SerializedName("CompanyID")
     private Integer companyIDParam;
@@ -39,14 +31,6 @@ public class AlertInfo {
     @SerializedName("Email")
     private String emailParam;
 
-    /** 忽略截止时间，Unix时间戳(秒)，为0表示未忽略 */
-    @SerializedName("IgnoreUntil")
-    private Integer ignoreUntilParam;
-
-    /** 是否处于忽略期，true 表示当前时间早于 IgnoreUntil */
-    @SerializedName("Ignored")
-    private Boolean ignoredParam;
-
     /** 告警标签，告警标签信息 */
     @SerializedName("LabelSet")
     private List<AlertLabelSet> labelSetParam;
@@ -54,10 +38,6 @@ public class AlertInfo {
     /** 告警指标，触发告警的监控指标名称 */
     @SerializedName("Metric")
     private String metricParam;
-
-    /** 人工处理状态，取值：Open、Handled；未有状态记录的当前告警默认返回Open */
-    @SerializedName("ProcessStatus")
-    private String processStatusParam;
 
     /** 地域，告警所属地域 */
     @SerializedName("Region")
@@ -108,22 +88,6 @@ public class AlertInfo {
         this.activeAtParam = activeAtParam;
     }
 
-    public String getAlertFingerprint() {
-        return alertFingerprintParam;
-    }
-
-    public void setAlertFingerprint(String alertFingerprintParam) {
-        this.alertFingerprintParam = alertFingerprintParam;
-    }
-
-    public String getAlertOccurrenceKey() {
-        return alertOccurrenceKeyParam;
-    }
-
-    public void setAlertOccurrenceKey(String alertOccurrenceKeyParam) {
-        this.alertOccurrenceKeyParam = alertOccurrenceKeyParam;
-    }
-
     public Integer getCompanyID() {
         return companyIDParam;
     }
@@ -140,22 +104,6 @@ public class AlertInfo {
         this.emailParam = emailParam;
     }
 
-    public Integer getIgnoreUntil() {
-        return ignoreUntilParam;
-    }
-
-    public void setIgnoreUntil(Integer ignoreUntilParam) {
-        this.ignoreUntilParam = ignoreUntilParam;
-    }
-
-    public Boolean getIgnored() {
-        return ignoredParam;
-    }
-
-    public void setIgnored(Boolean ignoredParam) {
-        this.ignoredParam = ignoredParam;
-    }
-
     public List<AlertLabelSet> getLabelSet() {
         return labelSetParam;
     }
@@ -170,14 +118,6 @@ public class AlertInfo {
 
     public void setMetric(String metricParam) {
         this.metricParam = metricParam;
-    }
-
-    public String getProcessStatus() {
-        return processStatusParam;
-    }
-
-    public void setProcessStatus(String processStatusParam) {
-        this.processStatusParam = processStatusParam;
     }
 
     public String getRegion() {

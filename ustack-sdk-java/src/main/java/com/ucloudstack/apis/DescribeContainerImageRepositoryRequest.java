@@ -57,11 +57,6 @@ public class DescribeContainerImageRepositoryRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 状态列表，按状态过滤镜像仓库 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public Integer getCompanyID() {
         return companyIDParam;
@@ -117,14 +112,6 @@ public class DescribeContainerImageRepositoryRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

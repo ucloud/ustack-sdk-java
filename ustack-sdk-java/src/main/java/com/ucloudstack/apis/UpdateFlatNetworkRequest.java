@@ -27,11 +27,6 @@ public class UpdateFlatNetworkRequest extends Request {
     @UCloudStackParam("DHCPServerIP")
     private String dHCPServerIPParam;
 
-    /** DNS配置，指定DNS服务器地址，多个服务器用逗号分隔，格式为IP地址列表；传空表示清除DNS配置 */
-    
-    @UCloudStackParam("DNS")
-    private String dNSParam;
-
     /** 物理网卡设备名称，更新网络绑定的物理网络接口 */
     
     @UCloudStackParam("Device")
@@ -41,11 +36,6 @@ public class UpdateFlatNetworkRequest extends Request {
     @NotEmpty
     @UCloudStackParam("FlatNetworkID")
     private String flatNetworkIDParam;
-
-    /** 网关IP地址，更新网络的默认网关IP，必须在网段CIDR范围内 */
-    
-    @UCloudStackParam("GatewayIP")
-    private String gatewayIPParam;
 
     /** 可用IP范围，更新网络的可分配IP地址段，支持多个范围用逗号分隔，格式为192.168.1.10-192.168.1.20 */
     
@@ -57,7 +47,7 @@ public class UpdateFlatNetworkRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 更新模式，指定更新的字段范围，IPRange仅更新IP范围，Device更新设备和VLAN，DHCPServerIP更新DHCP配置，DNS更新DNS配置，GatewayIP更新网关IP，All全部更新；不指定时默认IPRange */
+    /** 更新模式，指定更新的字段范围，IPRange仅更新IP范围，Device更新设备和VLAN，DHCPServerIP更新DHCP配置，All全部更新；不指定时默认IPRange */
     
     @UCloudStackParam("UpdateMode")
     private String updateModeParam;
@@ -76,14 +66,6 @@ public class UpdateFlatNetworkRequest extends Request {
         this.dHCPServerIPParam = dHCPServerIPParam;
     }
 
-    public String getDNS() {
-        return dNSParam;
-    }
-
-    public void setDNS(String dNSParam) {
-        this.dNSParam = dNSParam;
-    }
-
     public String getDevice() {
         return deviceParam;
     }
@@ -98,14 +80,6 @@ public class UpdateFlatNetworkRequest extends Request {
 
     public void setFlatNetworkID(String flatNetworkIDParam) {
         this.flatNetworkIDParam = flatNetworkIDParam;
-    }
-
-    public String getGatewayIP() {
-        return gatewayIPParam;
-    }
-
-    public void setGatewayIP(String gatewayIPParam) {
-        this.gatewayIPParam = gatewayIPParam;
     }
 
     public String getIPRange() {

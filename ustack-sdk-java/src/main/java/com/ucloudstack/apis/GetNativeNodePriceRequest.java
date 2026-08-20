@@ -67,16 +67,6 @@ public class GetNativeNodePriceRequest extends Request {
     @UCloudStackParam("DataDiskSpace")
     private Integer dataDiskSpaceParam;
 
-    /** GPU数量 */
-    
-    @UCloudStackParam("GPU")
-    private Integer gPUParam;
-
-    /** GPU型号 */
-    
-    @UCloudStackParam("GPUMdevName")
-    private String gPUMdevNameParam;
-
     /** 内存大小 */
     @NotEmpty
     @UCloudStackParam("Memory")
@@ -158,22 +148,6 @@ public class GetNativeNodePriceRequest extends Request {
 
     public void setDataDiskSpace(Integer dataDiskSpaceParam) {
         this.dataDiskSpaceParam = dataDiskSpaceParam;
-    }
-
-    public Integer getGPU() {
-        return gPUParam;
-    }
-
-    public void setGPU(Integer gPUParam) {
-        this.gPUParam = gPUParam;
-    }
-
-    public String getGPUMdevName() {
-        return gPUMdevNameParam;
-    }
-
-    public void setGPUMdevName(String gPUMdevNameParam) {
-        this.gPUMdevNameParam = gPUMdevNameParam;
     }
 
     public Integer getMemory() {

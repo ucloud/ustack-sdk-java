@@ -77,11 +77,6 @@ public class DescribeEIPRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** EIP状态列表，用于按多个状态过滤EIP，支持前端按Status.0、Status.1等形式传参 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public String getBindResourceID() {
         return bindResourceIDParam;
@@ -169,14 +164,6 @@ public class DescribeEIPRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

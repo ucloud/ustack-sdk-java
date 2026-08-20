@@ -39,11 +39,11 @@ public class LbVSInfo {
     @SerializedName("HealthcheckType")
     private String healthcheckTypeParam;
 
-    /** 请求体大小限制，单位MB，最大512；0表示不配置，继承负载均衡全局默认值 */
+    /** 请求体大小限制，单位MB，最大512；未配置时返回历史兼容默认展示值64 */
     @SerializedName("HttpClientMaxBodySizeMB")
     private Integer httpClientMaxBodySizeMBParam;
 
-    /** 请求头大小限制，单位KB，最大512；0表示不配置，继承负载均衡全局默认值 */
+    /** 请求头大小限制，单位KB，最大512；未配置时返回历史兼容默认展示值32 */
     @SerializedName("HttpClientMaxHeaderSizeKB")
     private Integer httpClientMaxHeaderSizeKBParam;
 

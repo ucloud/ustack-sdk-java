@@ -92,7 +92,7 @@ public class CreateSMCRequest extends Request {
     @UCloudStackParam("OS")
     private String oSParam;
 
-    /** 项目ID，用于实现资源的逻辑分组管理，同一项目下的资源可统一计费和权限管理，未传时尝试分配默认项目 */
+    /** 项目ID，用于实现资源的逻辑分组管理，同一项目下的资源可统一计费和权限管理 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

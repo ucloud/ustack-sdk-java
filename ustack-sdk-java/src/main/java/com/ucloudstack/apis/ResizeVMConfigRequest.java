@@ -37,11 +37,6 @@ public class ResizeVMConfigRequest extends Request {
     @UCloudStackParam("CPU")
     private Integer cPUParam;
 
-    /** CPU每个插槽内核数，可选字段，默认等于CPU */
-    
-    @UCloudStackParam("CPUCoresPerSocket")
-    private Integer cPUCoresPerSocketParam;
-
     /** 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围 */
     
     @UCloudStackParam("CompanyID")
@@ -105,14 +100,6 @@ public class ResizeVMConfigRequest extends Request {
 
     public void setCPU(Integer cPUParam) {
         this.cPUParam = cPUParam;
-    }
-
-    public Integer getCPUCoresPerSocket() {
-        return cPUCoresPerSocketParam;
-    }
-
-    public void setCPUCoresPerSocket(Integer cPUCoresPerSocketParam) {
-        this.cPUCoresPerSocketParam = cPUCoresPerSocketParam;
     }
 
     public Integer getCompanyID() {

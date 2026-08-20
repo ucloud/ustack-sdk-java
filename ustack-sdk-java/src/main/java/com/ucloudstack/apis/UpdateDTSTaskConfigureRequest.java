@@ -22,11 +22,6 @@ import com.ucloudstack.models.*;
 
 public class UpdateDTSTaskConfigureRequest extends Request {
 
-    /** 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000 */
-    
-    @UCloudStackParam("BatchSize")
-    private Integer batchSizeParam;
-
     /** DTS任务ID，待更新配置的DTS任务唯一标识 */
     @NotEmpty
     @UCloudStackParam("DTSID")
@@ -102,11 +97,6 @@ public class UpdateDTSTaskConfigureRequest extends Request {
     @UCloudStackParam("IgnoreTables")
     private String ignoreTablesParam;
 
-    /** 增量同步阶段的 DTS 自恢复策略；不传表示保留当前配置，显式 Enabled=false 表示关闭 DTS 自恢复 */
-    
-    @UCloudStackParam("IncrementalRestart")
-    private DTSServiceRestartPolicy incrementalRestartParam;
-
     /** 最大每秒同步记录数，用于限制数据同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000 */
     @NotEmpty
     @UCloudStackParam("MaxRPS")
@@ -177,14 +167,6 @@ public class UpdateDTSTaskConfigureRequest extends Request {
     @UCloudStackParam("Tables")
     private String tablesParam;
 
-
-    public Integer getBatchSize() {
-        return batchSizeParam;
-    }
-
-    public void setBatchSize(Integer batchSizeParam) {
-        this.batchSizeParam = batchSizeParam;
-    }
 
     public String getDTSID() {
         return dTSIDParam;
@@ -304,14 +286,6 @@ public class UpdateDTSTaskConfigureRequest extends Request {
 
     public void setIgnoreTables(String ignoreTablesParam) {
         this.ignoreTablesParam = ignoreTablesParam;
-    }
-
-    public DTSServiceRestartPolicy getIncrementalRestart() {
-        return incrementalRestartParam;
-    }
-
-    public void setIncrementalRestart(DTSServiceRestartPolicy incrementalRestartParam) {
-        this.incrementalRestartParam = incrementalRestartParam;
     }
 
     public Integer getMaxRPS() {

@@ -22,11 +22,6 @@ import com.ucloudstack.models.*;
 
 public class AttachExternalDiskRequest extends Request {
 
-    /** 缓存类型，取值 directsync、none、writeback */
-    
-    @UCloudStackParam("CacheMode")
-    private String cacheModeParam;
-
     /** 租户ID，资源所属租户的权限上下文 */
     
     @UCloudStackParam("CompanyID")
@@ -52,14 +47,6 @@ public class AttachExternalDiskRequest extends Request {
     @UCloudStackParam("ResourceType")
     private String resourceTypeParam;
 
-
-    public String getCacheMode() {
-        return cacheModeParam;
-    }
-
-    public void setCacheMode(String cacheModeParam) {
-        this.cacheModeParam = cacheModeParam;
-    }
 
     public Integer getCompanyID() {
         return companyIDParam;

@@ -19,14 +19,6 @@ import java.util.Map;
 
 public class VmDiskInfo {
 
-    /** 总线类型 */
-    @SerializedName("Bus")
-    private String busParam;
-
-    /** 缓存类型，取值 directsync、none、writeback */
-    @SerializedName("CacheMode")
-    private String cacheModeParam;
-
     /** 磁盘ID，虚拟机绑定的磁盘唯一标识 */
     @SerializedName("DiskID")
     private String diskIDParam;
@@ -50,18 +42,6 @@ public class VmDiskInfo {
     /** 磁盘名称，磁盘的可视化显示名称 */
     @SerializedName("Name")
     private String nameParam;
-
-    /** QoS限速读带宽，单位MB/s */
-    @SerializedName("ReadBandwidth")
-    private Integer readBandwidthParam;
-
-    /** QoS限速读IOPS */
-    @SerializedName("ReadIOPS")
-    private Integer readIOPSParam;
-
-    /** 存储集群ID，磁盘所属存储集群的唯一标识 */
-    @SerializedName("SetID")
-    private String setIDParam;
 
     /** 共享标识，标识磁盘是否支持多点挂载 */
     @SerializedName("ShareAble")
@@ -87,42 +67,10 @@ public class VmDiskInfo {
     @SerializedName("StorageSetType")
     private String storageSetTypeParam;
 
-    /** QoS限速总带宽，单位MB/s */
-    @SerializedName("TotalBandwidth")
-    private Integer totalBandwidthParam;
-
-    /** QoS限速总IOPS */
-    @SerializedName("TotalIOPS")
-    private Integer totalIOPSParam;
-
     /** 磁盘类型，标识引导盘或数据盘，取值：boot（启动盘）、data（数据盘） */
     @SerializedName("Type")
     private String typeParam;
 
-    /** QoS限速写带宽，单位MB/s */
-    @SerializedName("WriteBandwidth")
-    private Integer writeBandwidthParam;
-
-    /** QoS限速写IOPS */
-    @SerializedName("WriteIOPS")
-    private Integer writeIOPSParam;
-
-
-    public String getBus() {
-        return busParam;
-    }
-
-    public void setBus(String busParam) {
-        this.busParam = busParam;
-    }
-
-    public String getCacheMode() {
-        return cacheModeParam;
-    }
-
-    public void setCacheMode(String cacheModeParam) {
-        this.cacheModeParam = cacheModeParam;
-    }
 
     public String getDiskID() {
         return diskIDParam;
@@ -170,30 +118,6 @@ public class VmDiskInfo {
 
     public void setName(String nameParam) {
         this.nameParam = nameParam;
-    }
-
-    public Integer getReadBandwidth() {
-        return readBandwidthParam;
-    }
-
-    public void setReadBandwidth(Integer readBandwidthParam) {
-        this.readBandwidthParam = readBandwidthParam;
-    }
-
-    public Integer getReadIOPS() {
-        return readIOPSParam;
-    }
-
-    public void setReadIOPS(Integer readIOPSParam) {
-        this.readIOPSParam = readIOPSParam;
-    }
-
-    public String getSetID() {
-        return setIDParam;
-    }
-
-    public void setSetID(String setIDParam) {
-        this.setIDParam = setIDParam;
     }
 
     public Boolean getShareAble() {
@@ -244,44 +168,12 @@ public class VmDiskInfo {
         this.storageSetTypeParam = storageSetTypeParam;
     }
 
-    public Integer getTotalBandwidth() {
-        return totalBandwidthParam;
-    }
-
-    public void setTotalBandwidth(Integer totalBandwidthParam) {
-        this.totalBandwidthParam = totalBandwidthParam;
-    }
-
-    public Integer getTotalIOPS() {
-        return totalIOPSParam;
-    }
-
-    public void setTotalIOPS(Integer totalIOPSParam) {
-        this.totalIOPSParam = totalIOPSParam;
-    }
-
     public String getType() {
         return typeParam;
     }
 
     public void setType(String typeParam) {
         this.typeParam = typeParam;
-    }
-
-    public Integer getWriteBandwidth() {
-        return writeBandwidthParam;
-    }
-
-    public void setWriteBandwidth(Integer writeBandwidthParam) {
-        this.writeBandwidthParam = writeBandwidthParam;
-    }
-
-    public Integer getWriteIOPS() {
-        return writeIOPSParam;
-    }
-
-    public void setWriteIOPS(Integer writeIOPSParam) {
-        this.writeIOPSParam = writeIOPSParam;
     }
 
 }

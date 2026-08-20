@@ -22,11 +22,6 @@ import com.ucloudstack.models.*;
 
 public class MigrateVMInstanceRequest extends Request {
 
-    /** 是否自动收敛 */
-    
-    @UCloudStackParam("AutoConverge")
-    private Boolean autoConvergeParam;
-
     /** 计算实例ID，用于标识待迁移的虚拟机 */
     @NotEmpty
     @UCloudStackParam("CIID")
@@ -62,14 +57,6 @@ public class MigrateVMInstanceRequest extends Request {
     @UCloudStackParam("SetID")
     private String setIDParam;
 
-
-    public Boolean getAutoConverge() {
-        return autoConvergeParam;
-    }
-
-    public void setAutoConverge(Boolean autoConvergeParam) {
-        this.autoConvergeParam = autoConvergeParam;
-    }
 
     public String getCIID() {
         return cIIDParam;

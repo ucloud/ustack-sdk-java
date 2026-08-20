@@ -39,6 +39,10 @@ public class RoleInfo {
     @SerializedName("RoleID")
     private String roleIDParam;
 
+    /** 角色授权层级，取值：System、Region或Company */
+    @SerializedName("Stratum")
+    private String stratumParam;
+
     /** 角色类型，标识角色来源，取值：System或Custom */
     @SerializedName("Type")
     private String typeParam;
@@ -86,6 +90,14 @@ public class RoleInfo {
 
     public void setRoleID(String roleIDParam) {
         this.roleIDParam = roleIDParam;
+    }
+
+    public String getStratum() {
+        return stratumParam;
+    }
+
+    public void setStratum(String stratumParam) {
+        this.stratumParam = stratumParam;
     }
 
     public String getType() {
