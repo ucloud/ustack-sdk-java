@@ -32,6 +32,11 @@ public class ListAdminRequest extends Request {
     @UCloudStackParam("Limit")
     private Integer limitParam;
 
+    /** 管理员ID列表，用于精确筛选指定管理员，非必填 */
+    
+    @UCloudStackParam("MemberIDs")
+    private List<Integer> memberIDsParam;
+
     /** 分页偏移量，用于分页起点，默认为0 */
     
     @UCloudStackParam("Offset")
@@ -52,6 +57,14 @@ public class ListAdminRequest extends Request {
 
     public void setLimit(Integer limitParam) {
         this.limitParam = limitParam;
+    }
+
+    public List<Integer> getMemberIDs() {
+        return memberIDsParam;
+    }
+
+    public void setMemberIDs(List<Integer> memberIDsParam) {
+        this.memberIDsParam = memberIDsParam;
     }
 
     public Integer getOffset() {

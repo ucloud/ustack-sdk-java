@@ -72,10 +72,10 @@ public class DescribeNICRequest extends Request {
     @UCloudStackParam("SegmentID")
     private String segmentIDParam;
 
-    /** 状态列表，查询指定状态的网卡 */
+    /** 状态过滤，查询指定状态的网卡 */
     
     @UCloudStackParam("Status")
-    private List<String> statusParam;
+    private String statusParam;
 
     /** 子网ID过滤，用于查询指定子网下的网卡 */
     
@@ -163,11 +163,11 @@ public class DescribeNICRequest extends Request {
         this.segmentIDParam = segmentIDParam;
     }
 
-    public List<String> getStatus() {
+    public String getStatus() {
         return statusParam;
     }
 
-    public void setStatus(List<String> statusParam) {
+    public void setStatus(String statusParam) {
         this.statusParam = statusParam;
     }
 

@@ -139,10 +139,6 @@ public class SetInfo {
     @SerializedName("StorageClassList")
     private List<StorageClassItem> storageClassListParam;
 
-    /** DRS是否暂停 */
-    @SerializedName("Suspend")
-    private Boolean suspendParam;
-
     /** 更新时间，Unix时间戳，单位为秒 */
     @SerializedName("UpdateTime")
     private Integer updateTimeParam;
@@ -390,14 +386,6 @@ public class SetInfo {
 
     public void setStorageClassList(List<StorageClassItem> storageClassListParam) {
         this.storageClassListParam = storageClassListParam;
-    }
-
-    public Boolean getSuspend() {
-        return suspendParam;
-    }
-
-    public void setSuspend(Boolean suspendParam) {
-        this.suspendParam = suspendParam;
     }
 
     public Integer getUpdateTime() {

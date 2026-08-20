@@ -42,7 +42,7 @@ public class ReinstallVMInstanceRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** Cloud-Init脚本，用于自定义系统初始化配置，需 base64 编码后传入 */
+    /** Cloud-Init脚本，用于自定义系统初始化配置 */
     
     @UCloudStackParam("UserData")
     private String userDataParam;

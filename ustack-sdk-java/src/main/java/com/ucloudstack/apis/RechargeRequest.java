@@ -22,7 +22,7 @@ import com.ucloudstack.models.*;
 
 public class RechargeRequest extends Request {
 
-    /** 充值金额，单位：元；现金充值取值范围：100.00-500000.00，内部赠金充值取值范围：100.00-10000000.00 */
+    /** 充值金额，单位：元，取值范围：100.00-500000.00 */
     @NotEmpty
     @UCloudStackParam("Amount")
     private Double amountParam;

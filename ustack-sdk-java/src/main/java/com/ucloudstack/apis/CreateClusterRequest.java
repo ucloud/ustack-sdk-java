@@ -57,7 +57,7 @@ public class CreateClusterRequest extends Request {
     @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
-    /** k8s版本号。可为1.25.0 */
+    /** k8s版本号。可为1.25.0,1.34.9 */
     @NotEmpty
     @UCloudStackParam("K8SVersion")
     private String k8SVersionParam;
@@ -72,7 +72,7 @@ public class CreateClusterRequest extends Request {
     @UCloudStackParam("PodSubnetIDs")
     private List<String> podSubnetIDsParam;
 
-    /** 项目组ID，未传时尝试分配默认项目 */
+    /** 项目组ID */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
@@ -92,8 +92,8 @@ public class CreateClusterRequest extends Request {
     @UCloudStackParam("Remark")
     private String remarkParam;
 
-    /** Service CIDR */
-    @NotEmpty
+    /** Service CIDR 或 Serivce 所在子网Id */
+    
     @UCloudStackParam("ServiceCIDR")
     private String serviceCIDRParam;
 

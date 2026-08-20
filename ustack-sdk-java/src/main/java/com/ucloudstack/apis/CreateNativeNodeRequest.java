@@ -67,16 +67,6 @@ public class CreateNativeNodeRequest extends Request {
     @UCloudStackParam("EIPID")
     private String eIPIDParam;
 
-    /** GPU数量 */
-    
-    @UCloudStackParam("GPU")
-    private Integer gPUParam;
-
-    /** GPU型号 */
-    
-    @UCloudStackParam("GPUMdevName")
-    private String gPUMdevNameParam;
-
     /** 镜像ID */
     @NotEmpty
     @UCloudStackParam("ImageID")
@@ -188,22 +178,6 @@ public class CreateNativeNodeRequest extends Request {
 
     public void setEIPID(String eIPIDParam) {
         this.eIPIDParam = eIPIDParam;
-    }
-
-    public Integer getGPU() {
-        return gPUParam;
-    }
-
-    public void setGPU(Integer gPUParam) {
-        this.gPUParam = gPUParam;
-    }
-
-    public String getGPUMdevName() {
-        return gPUMdevNameParam;
-    }
-
-    public void setGPUMdevName(String gPUMdevNameParam) {
-        this.gPUMdevNameParam = gPUMdevNameParam;
     }
 
     public String getImageID() {

@@ -37,7 +37,7 @@ public class DescribeOPLogsRequest extends Request {
     @UCloudStackParam("EndTime")
     private Integer endTimeParam;
 
-    /** 是否成功，筛选成功或失败的操作日志；取值：1 表示成功，0 表示失败，空表示全部 */
+    /** 是否成功，筛选成功或失败的操作日志；取值：Y表示成功，N表示失败，空表示全部 */
     
     @UCloudStackParam("IsSuccess")
     private String isSuccessParam;

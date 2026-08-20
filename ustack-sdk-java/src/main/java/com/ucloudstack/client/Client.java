@@ -67,8 +67,6 @@ import com.ucloudstack.apis.DescribeOPLogNotifyRuleRequest;
 import com.ucloudstack.apis.DescribeOPLogNotifyRuleResponse;
 import com.ucloudstack.apis.DescribeResourceEventNotifyRuleRequest;
 import com.ucloudstack.apis.DescribeResourceEventNotifyRuleResponse;
-import com.ucloudstack.apis.OperateAlertRequest;
-import com.ucloudstack.apis.OperateAlertResponse;
 import com.ucloudstack.apis.PrometheusQueryRequest;
 import com.ucloudstack.apis.PrometheusQueryResponse;
 import com.ucloudstack.apis.PrometheusQueryRangeRequest;
@@ -223,8 +221,6 @@ import com.ucloudstack.apis.GetSSOConfigRequest;
 import com.ucloudstack.apis.GetSSOConfigResponse;
 import com.ucloudstack.apis.ListGlobalConfigsRequest;
 import com.ucloudstack.apis.ListGlobalConfigsResponse;
-import com.ucloudstack.apis.ListRegionConfigSyncStatusRequest;
-import com.ucloudstack.apis.ListRegionConfigSyncStatusResponse;
 import com.ucloudstack.apis.ListRegionConfigsRequest;
 import com.ucloudstack.apis.ListRegionConfigsResponse;
 import com.ucloudstack.apis.SetAccountQuotaRequest;
@@ -423,6 +419,8 @@ import com.ucloudstack.apis.DescribeNodeRequest;
 import com.ucloudstack.apis.DescribeNodeResponse;
 import com.ucloudstack.apis.DescribeNodeNUMAInfoRequest;
 import com.ucloudstack.apis.DescribeNodeNUMAInfoResponse;
+import com.ucloudstack.apis.DescribeSRIOVStateRequest;
+import com.ucloudstack.apis.DescribeSRIOVStateResponse;
 import com.ucloudstack.apis.DescribeVMHostRequest;
 import com.ucloudstack.apis.DescribeVMHostResponse;
 import com.ucloudstack.apis.DiskLightOffRequest;
@@ -443,6 +441,8 @@ import com.ucloudstack.apis.UnlockHostRequest;
 import com.ucloudstack.apis.UnlockHostResponse;
 import com.ucloudstack.apis.UpdateNodeCPUGovernorRequest;
 import com.ucloudstack.apis.UpdateNodeCPUGovernorResponse;
+import com.ucloudstack.apis.UpdateSRIOVStateRequest;
+import com.ucloudstack.apis.UpdateSRIOVStateResponse;
 import com.ucloudstack.apis.UpdateVFLogicCountRequest;
 import com.ucloudstack.apis.UpdateVFLogicCountResponse;
 import com.ucloudstack.apis.AllocateNodeHostDeviceRequest;
@@ -507,8 +507,6 @@ import com.ucloudstack.apis.ListOnSiteInspectionsRequest;
 import com.ucloudstack.apis.ListOnSiteInspectionsResponse;
 import com.ucloudstack.apis.ListResourceUsagesRequest;
 import com.ucloudstack.apis.ListResourceUsagesResponse;
-import com.ucloudstack.apis.RetryResourceUsageRequest;
-import com.ucloudstack.apis.RetryResourceUsageResponse;
 import com.ucloudstack.apis.AllocateEIPRequest;
 import com.ucloudstack.apis.AllocateEIPResponse;
 import com.ucloudstack.apis.BindEIPRequest;
@@ -559,14 +557,20 @@ import com.ucloudstack.apis.CreateClusterRequest;
 import com.ucloudstack.apis.CreateClusterResponse;
 import com.ucloudstack.apis.CreateNativeNodeRequest;
 import com.ucloudstack.apis.CreateNativeNodeResponse;
+import com.ucloudstack.apis.CreateSuperNodeRequest;
+import com.ucloudstack.apis.CreateSuperNodeResponse;
 import com.ucloudstack.apis.DeleteClusterRequest;
 import com.ucloudstack.apis.DeleteClusterResponse;
 import com.ucloudstack.apis.DeleteNativeNodeRequest;
 import com.ucloudstack.apis.DeleteNativeNodeResponse;
+import com.ucloudstack.apis.DeleteSuperNodeRequest;
+import com.ucloudstack.apis.DeleteSuperNodeResponse;
 import com.ucloudstack.apis.DescribeClusterRequest;
 import com.ucloudstack.apis.DescribeClusterResponse;
 import com.ucloudstack.apis.DescribeNativeNodeRequest;
 import com.ucloudstack.apis.DescribeNativeNodeResponse;
+import com.ucloudstack.apis.DescribeSuperNodeRequest;
+import com.ucloudstack.apis.DescribeSuperNodeResponse;
 import com.ucloudstack.apis.DetachClusterEIPRequest;
 import com.ucloudstack.apis.DetachClusterEIPResponse;
 import com.ucloudstack.apis.ForwardClusterRequest;
@@ -587,6 +591,10 @@ import com.ucloudstack.apis.UpdateNativeNodeInstanceStatusRequest;
 import com.ucloudstack.apis.UpdateNativeNodeInstanceStatusResponse;
 import com.ucloudstack.apis.UpdateNativeNodeWANRequest;
 import com.ucloudstack.apis.UpdateNativeNodeWANResponse;
+import com.ucloudstack.apis.UpdateSuperNodeRequest;
+import com.ucloudstack.apis.UpdateSuperNodeResponse;
+import com.ucloudstack.apis.UpdateSuperNodeGPURequest;
+import com.ucloudstack.apis.UpdateSuperNodeGPUResponse;
 import com.ucloudstack.apis.BindEIPToLBRequest;
 import com.ucloudstack.apis.BindEIPToLBResponse;
 import com.ucloudstack.apis.CreateCertificateRequest;
@@ -781,8 +789,6 @@ import com.ucloudstack.apis.GetCreateNICPriceRequest;
 import com.ucloudstack.apis.GetCreateNICPriceResponse;
 import com.ucloudstack.apis.GetUpdateNICPriceRequest;
 import com.ucloudstack.apis.GetUpdateNICPriceResponse;
-import com.ucloudstack.apis.UpdateNICIPRequest;
-import com.ucloudstack.apis.UpdateNICIPResponse;
 import com.ucloudstack.apis.UpdateNICIPBandwidthRequest;
 import com.ucloudstack.apis.UpdateNICIPBandwidthResponse;
 import com.ucloudstack.apis.UpdateNICMACRequest;
@@ -1033,8 +1039,6 @@ import com.ucloudstack.apis.RollbackResourceRequest;
 import com.ucloudstack.apis.RollbackResourceResponse;
 import com.ucloudstack.apis.TerminateResourceRequest;
 import com.ucloudstack.apis.TerminateResourceResponse;
-import com.ucloudstack.apis.AllocateRedisConsoleSessionRequest;
-import com.ucloudstack.apis.AllocateRedisConsoleSessionResponse;
 import com.ucloudstack.apis.ApplyRedisConfigFileRequest;
 import com.ucloudstack.apis.ApplyRedisConfigFileResponse;
 import com.ucloudstack.apis.CreateRedisRequest;
@@ -1287,14 +1291,6 @@ import com.ucloudstack.apis.UpdateVIPBandwidthRequest;
 import com.ucloudstack.apis.UpdateVIPBandwidthResponse;
 import com.ucloudstack.apis.UpdateVIPBindResourceRequest;
 import com.ucloudstack.apis.UpdateVIPBindResourceResponse;
-import com.ucloudstack.apis.AbortMigrateVMDiskRequest;
-import com.ucloudstack.apis.AbortMigrateVMDiskResponse;
-import com.ucloudstack.apis.AbortVMSnapshotRequest;
-import com.ucloudstack.apis.AbortVMSnapshotResponse;
-import com.ucloudstack.apis.AddVMDiskRequest;
-import com.ucloudstack.apis.AddVMDiskResponse;
-import com.ucloudstack.apis.AddVMNICRequest;
-import com.ucloudstack.apis.AddVMNICResponse;
 import com.ucloudstack.apis.AllocateVMSSHSessionRequest;
 import com.ucloudstack.apis.AllocateVMSSHSessionResponse;
 import com.ucloudstack.apis.AllocateVMVNCSessionRequest;
@@ -1309,8 +1305,6 @@ import com.ucloudstack.apis.DeleteVMCRequest;
 import com.ucloudstack.apis.DeleteVMCResponse;
 import com.ucloudstack.apis.DeleteVMInstanceRequest;
 import com.ucloudstack.apis.DeleteVMInstanceResponse;
-import com.ucloudstack.apis.DeleteVMNICRequest;
-import com.ucloudstack.apis.DeleteVMNICResponse;
 import com.ucloudstack.apis.DeleteVMSnapshotRequest;
 import com.ucloudstack.apis.DeleteVMSnapshotResponse;
 import com.ucloudstack.apis.DescribeCIStatusRequest;
@@ -1327,8 +1321,6 @@ import com.ucloudstack.apis.GetPaymentOfPremiumRequest;
 import com.ucloudstack.apis.GetPaymentOfPremiumResponse;
 import com.ucloudstack.apis.GetVMInstancePriceRequest;
 import com.ucloudstack.apis.GetVMInstancePriceResponse;
-import com.ucloudstack.apis.GetVMScreenshotRequest;
-import com.ucloudstack.apis.GetVMScreenshotResponse;
 import com.ucloudstack.apis.GetVMSpiceInfoRequest;
 import com.ucloudstack.apis.GetVMSpiceInfoResponse;
 import com.ucloudstack.apis.GetVMVNCInfoRequest;
@@ -1367,46 +1359,16 @@ import com.ucloudstack.apis.UnSetBootFromCdromRequest;
 import com.ucloudstack.apis.UnSetBootFromCdromResponse;
 import com.ucloudstack.apis.UpdateVMAdvancedOptionsRequest;
 import com.ucloudstack.apis.UpdateVMAdvancedOptionsResponse;
-import com.ucloudstack.apis.UpdateVMBootBootLoaderTypeRequest;
-import com.ucloudstack.apis.UpdateVMBootBootLoaderTypeResponse;
-import com.ucloudstack.apis.UpdateVMBootDevicesRequest;
-import com.ucloudstack.apis.UpdateVMBootDevicesResponse;
-import com.ucloudstack.apis.UpdateVMCPUHypervisorRequest;
-import com.ucloudstack.apis.UpdateVMCPUHypervisorResponse;
-import com.ucloudstack.apis.UpdateVMCPULimitPercentRequest;
-import com.ucloudstack.apis.UpdateVMCPULimitPercentResponse;
-import com.ucloudstack.apis.UpdateVMCPUModelRequest;
-import com.ucloudstack.apis.UpdateVMCPUModelResponse;
-import com.ucloudstack.apis.UpdateVMCPUPriorityRequest;
-import com.ucloudstack.apis.UpdateVMCPUPriorityResponse;
-import com.ucloudstack.apis.UpdateVMDNSRequest;
-import com.ucloudstack.apis.UpdateVMDNSResponse;
 import com.ucloudstack.apis.UpdateVMDefaultGWRequest;
 import com.ucloudstack.apis.UpdateVMDefaultGWResponse;
-import com.ucloudstack.apis.UpdateVMDiskBusRequest;
-import com.ucloudstack.apis.UpdateVMDiskBusResponse;
-import com.ucloudstack.apis.UpdateVMDiskCacheModeRequest;
-import com.ucloudstack.apis.UpdateVMDiskCacheModeResponse;
-import com.ucloudstack.apis.UpdateVMHighAvailabilityRequest;
-import com.ucloudstack.apis.UpdateVMHighAvailabilityResponse;
-import com.ucloudstack.apis.UpdateVMISOSlotRequest;
-import com.ucloudstack.apis.UpdateVMISOSlotResponse;
 import com.ucloudstack.apis.UpdateVMMACRequest;
 import com.ucloudstack.apis.UpdateVMMACResponse;
-import com.ucloudstack.apis.UpdateVMNICLinkStateRequest;
-import com.ucloudstack.apis.UpdateVMNICLinkStateResponse;
-import com.ucloudstack.apis.UpdateVMNICModelRequest;
-import com.ucloudstack.apis.UpdateVMNICModelResponse;
-import com.ucloudstack.apis.UpdateVMNICQueuesRequest;
-import com.ucloudstack.apis.UpdateVMNICQueuesResponse;
-import com.ucloudstack.apis.UpdateVMOSRequest;
-import com.ucloudstack.apis.UpdateVMOSResponse;
-import com.ucloudstack.apis.UpdateVMSupportHotPlugRequest;
-import com.ucloudstack.apis.UpdateVMSupportHotPlugResponse;
-import com.ucloudstack.apis.UpdateVMUserDataRequest;
-import com.ucloudstack.apis.UpdateVMUserDataResponse;
 import com.ucloudstack.apis.UpdateVMVCPUBindingRequest;
 import com.ucloudstack.apis.UpdateVMVCPUBindingResponse;
+import com.ucloudstack.apis.AddSubnetNetworkRequest;
+import com.ucloudstack.apis.AddSubnetNetworkResponse;
+import com.ucloudstack.apis.AddVPCNetworkRequest;
+import com.ucloudstack.apis.AddVPCNetworkResponse;
 import com.ucloudstack.apis.AssociateVPCPeeringRequest;
 import com.ucloudstack.apis.AssociateVPCPeeringResponse;
 import com.ucloudstack.apis.CreateSubnetRequest;
@@ -1433,6 +1395,10 @@ import com.ucloudstack.apis.GetSubnetAvailableIPQuotaRequest;
 import com.ucloudstack.apis.GetSubnetAvailableIPQuotaResponse;
 import com.ucloudstack.apis.ListAllocatedIPsInSubnetRequest;
 import com.ucloudstack.apis.ListAllocatedIPsInSubnetResponse;
+import com.ucloudstack.apis.RemoveSubnetNetworkRequest;
+import com.ucloudstack.apis.RemoveSubnetNetworkResponse;
+import com.ucloudstack.apis.RemoveVPCNetworkRequest;
+import com.ucloudstack.apis.RemoveVPCNetworkResponse;
 import com.ucloudstack.apis.ReplaceIPRequest;
 import com.ucloudstack.apis.ReplaceIPResponse;
 import com.ucloudstack.apis.UpdateSubnetRouteRequest;
@@ -1835,20 +1801,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("DescribeResourceEventNotifyRule");
         return (DescribeResourceEventNotifyRuleResponse)
                 this.invoke(request, DescribeResourceEventNotifyRuleResponse.class);
-    }
-
-
-    /**
-     * OperateAlert - 操作告警处理状态
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public OperateAlertResponse operateAlert(OperateAlertRequest request)
-            throws UCloudStackException {
-        request.setAction("OperateAlert");
-        return (OperateAlertResponse)
-                this.invoke(request, OperateAlertResponse.class);
     }
 
 
@@ -2927,20 +2879,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("ListGlobalConfigs");
         return (ListGlobalConfigsResponse)
                 this.invoke(request, ListGlobalConfigsResponse.class);
-    }
-
-
-    /**
-     * ListRegionConfigSyncStatus - 查询地域配置同步状态
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public ListRegionConfigSyncStatusResponse listRegionConfigSyncStatus(ListRegionConfigSyncStatusRequest request)
-            throws UCloudStackException {
-        request.setAction("ListRegionConfigSyncStatus");
-        return (ListRegionConfigSyncStatusResponse)
-                this.invoke(request, ListRegionConfigSyncStatusResponse.class);
     }
 
 
@@ -4331,6 +4269,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * DescribeSRIOVState - 查询物理网卡SR-IOV状态
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public DescribeSRIOVStateResponse describeSRIOVState(DescribeSRIOVStateRequest request)
+            throws UCloudStackException {
+        request.setAction("DescribeSRIOVState");
+        return (DescribeSRIOVStateResponse)
+                this.invoke(request, DescribeSRIOVStateResponse.class);
+    }
+
+
+    /**
      * DescribeVMHost - 获取虚拟机物理机信息
      *
      * @param request Request object
@@ -4467,6 +4419,20 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("UpdateNodeCPUGovernor");
         return (UpdateNodeCPUGovernorResponse)
                 this.invoke(request, UpdateNodeCPUGovernorResponse.class);
+    }
+
+
+    /**
+     * UpdateSRIOVState - 启用或禁用物理网卡SR-IOV
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateSRIOVStateResponse updateSRIOVState(UpdateSRIOVStateRequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateSRIOVState");
+        return (UpdateSRIOVStateResponse)
+                this.invoke(request, UpdateSRIOVStateResponse.class);
     }
 
 
@@ -4919,20 +4885,6 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * RetryResourceUsage - 重试重新生成资源使用情况报告
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public RetryResourceUsageResponse retryResourceUsage(RetryResourceUsageRequest request)
-            throws UCloudStackException {
-        request.setAction("RetryResourceUsage");
-        return (RetryResourceUsageResponse)
-                this.invoke(request, RetryResourceUsageResponse.class);
-    }
-
-
-    /**
      * AllocateEIP - 申请弹性IP
      *
      * @param request Request object
@@ -5283,6 +5235,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * CreateSuperNode - 创建k8s集群SuperNode
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public CreateSuperNodeResponse createSuperNode(CreateSuperNodeRequest request)
+            throws UCloudStackException {
+        request.setAction("CreateSuperNode");
+        return (CreateSuperNodeResponse)
+                this.invoke(request, CreateSuperNodeResponse.class);
+    }
+
+
+    /**
      * DeleteCluster - 删除k8s集群
      *
      * @param request Request object
@@ -5311,6 +5277,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * DeleteSuperNode - 删除k8s集群SuperNode
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public DeleteSuperNodeResponse deleteSuperNode(DeleteSuperNodeRequest request)
+            throws UCloudStackException {
+        request.setAction("DeleteSuperNode");
+        return (DeleteSuperNodeResponse)
+                this.invoke(request, DeleteSuperNodeResponse.class);
+    }
+
+
+    /**
      * DescribeCluster - 查询k8s集群
      *
      * @param request Request object
@@ -5335,6 +5315,20 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("DescribeNativeNode");
         return (DescribeNativeNodeResponse)
                 this.invoke(request, DescribeNativeNodeResponse.class);
+    }
+
+
+    /**
+     * DescribeSuperNode - 查询k8s集群Node
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public DescribeSuperNodeResponse describeSuperNode(DescribeSuperNodeRequest request)
+            throws UCloudStackException {
+        request.setAction("DescribeSuperNode");
+        return (DescribeSuperNodeResponse)
+                this.invoke(request, DescribeSuperNodeResponse.class);
     }
 
 
@@ -5475,6 +5469,34 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("UpdateNativeNodeWAN");
         return (UpdateNativeNodeWANResponse)
                 this.invoke(request, UpdateNativeNodeWANResponse.class);
+    }
+
+
+    /**
+     * UpdateSuperNode - 更新k8s集群SuperNode
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateSuperNodeResponse updateSuperNode(UpdateSuperNodeRequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateSuperNode");
+        return (UpdateSuperNodeResponse)
+                this.invoke(request, UpdateSuperNodeResponse.class);
+    }
+
+
+    /**
+     * UpdateSuperNodeGPU - 更新k8s集群SuperNodeGPU
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateSuperNodeGPUResponse updateSuperNodeGPU(UpdateSuperNodeGPURequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateSuperNodeGPU");
+        return (UpdateSuperNodeGPUResponse)
+                this.invoke(request, UpdateSuperNodeGPUResponse.class);
     }
 
 
@@ -6753,7 +6775,7 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * CreateNIC - 创建弹性网卡
+     * CreateNIC - 创建网卡
      *
      * @param request Request object
      * @throws UCloudStackException Exception
@@ -6767,7 +6789,7 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * DeleteNIC - 删除弹性网卡
+     * DeleteNIC - 删除网卡
      *
      * @param request Request object
      * @throws UCloudStackException Exception
@@ -6833,20 +6855,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("GetUpdateNICPrice");
         return (GetUpdateNICPriceResponse)
                 this.invoke(request, GetUpdateNICPriceResponse.class);
-    }
-
-
-    /**
-     * UpdateNICIP - 更新网卡的IP
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateNICIPResponse updateNICIP(UpdateNICIPRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateNICIP");
-        return (UpdateNICIPResponse)
-                this.invoke(request, UpdateNICIPResponse.class);
     }
 
 
@@ -8597,20 +8605,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("TerminateResource");
         return (TerminateResourceResponse)
                 this.invoke(request, TerminateResourceResponse.class);
-    }
-
-
-    /**
-     * AllocateRedisConsoleSession - 申请redis控制台会话
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public AllocateRedisConsoleSessionResponse allocateRedisConsoleSession(AllocateRedisConsoleSessionRequest request)
-            throws UCloudStackException {
-        request.setAction("AllocateRedisConsoleSession");
-        return (AllocateRedisConsoleSessionResponse)
-                this.invoke(request, AllocateRedisConsoleSessionResponse.class);
     }
 
 
@@ -10379,62 +10373,6 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * AbortMigrateVMDisk - 取消虚拟机热存储迁移
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public AbortMigrateVMDiskResponse abortMigrateVMDisk(AbortMigrateVMDiskRequest request)
-            throws UCloudStackException {
-        request.setAction("AbortMigrateVMDisk");
-        return (AbortMigrateVMDiskResponse)
-                this.invoke(request, AbortMigrateVMDiskResponse.class);
-    }
-
-
-    /**
-     * AbortVMSnapshot - 取消虚拟机整机快照
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public AbortVMSnapshotResponse abortVMSnapshot(AbortVMSnapshotRequest request)
-            throws UCloudStackException {
-        request.setAction("AbortVMSnapshot");
-        return (AbortVMSnapshotResponse)
-                this.invoke(request, AbortVMSnapshotResponse.class);
-    }
-
-
-    /**
-     * AddVMDisk - 添加虚拟机磁盘
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public AddVMDiskResponse addVMDisk(AddVMDiskRequest request)
-            throws UCloudStackException {
-        request.setAction("AddVMDisk");
-        return (AddVMDiskResponse)
-                this.invoke(request, AddVMDiskResponse.class);
-    }
-
-
-    /**
-     * AddVMNIC - 添加虚拟机网卡
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public AddVMNICResponse addVMNIC(AddVMNICRequest request)
-            throws UCloudStackException {
-        request.setAction("AddVMNIC");
-        return (AddVMNICResponse)
-                this.invoke(request, AddVMNICResponse.class);
-    }
-
-
-    /**
      * AllocateVMSSHSession - 申请虚拟机SSH会话
      *
      * @param request Request object
@@ -10529,20 +10467,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("DeleteVMInstance");
         return (DeleteVMInstanceResponse)
                 this.invoke(request, DeleteVMInstanceResponse.class);
-    }
-
-
-    /**
-     * DeleteVMNIC - 删除虚拟机网卡
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public DeleteVMNICResponse deleteVMNIC(DeleteVMNICRequest request)
-            throws UCloudStackException {
-        request.setAction("DeleteVMNIC");
-        return (DeleteVMNICResponse)
-                this.invoke(request, DeleteVMNICResponse.class);
     }
 
 
@@ -10655,20 +10579,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("GetVMInstancePrice");
         return (GetVMInstancePriceResponse)
                 this.invoke(request, GetVMInstancePriceResponse.class);
-    }
-
-
-    /**
-     * GetVMScreenshot - 获取截屏
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public GetVMScreenshotResponse getVMScreenshot(GetVMScreenshotRequest request)
-            throws UCloudStackException {
-        request.setAction("GetVMScreenshot");
-        return (GetVMScreenshotResponse)
-                this.invoke(request, GetVMScreenshotResponse.class);
     }
 
 
@@ -10925,7 +10835,7 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * UpdateVMAdvancedOptions - 设置虚拟机高级参数(DNS)
+     * UpdateVMAdvancedOptions - 设置虚拟机高级参数
      *
      * @param request Request object
      * @throws UCloudStackException Exception
@@ -10935,104 +10845,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("UpdateVMAdvancedOptions");
         return (UpdateVMAdvancedOptionsResponse)
                 this.invoke(request, UpdateVMAdvancedOptionsResponse.class);
-    }
-
-
-    /**
-     * UpdateVMBootBootLoaderType - 设置虚拟机引导方式
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMBootBootLoaderTypeResponse updateVMBootBootLoaderType(UpdateVMBootBootLoaderTypeRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMBootBootLoaderType");
-        return (UpdateVMBootBootLoaderTypeResponse)
-                this.invoke(request, UpdateVMBootBootLoaderTypeResponse.class);
-    }
-
-
-    /**
-     * UpdateVMBootDevices - 设置虚拟机引导顺序
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMBootDevicesResponse updateVMBootDevices(UpdateVMBootDevicesRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMBootDevices");
-        return (UpdateVMBootDevicesResponse)
-                this.invoke(request, UpdateVMBootDevicesResponse.class);
-    }
-
-
-    /**
-     * UpdateVMCPUHypervisor - 设置虚拟机CPU虚拟化隐藏标记
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMCPUHypervisorResponse updateVMCPUHypervisor(UpdateVMCPUHypervisorRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMCPUHypervisor");
-        return (UpdateVMCPUHypervisorResponse)
-                this.invoke(request, UpdateVMCPUHypervisorResponse.class);
-    }
-
-
-    /**
-     * UpdateVMCPULimitPercent - 修改虚拟机CPU资源限制
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMCPULimitPercentResponse updateVMCPULimitPercent(UpdateVMCPULimitPercentRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMCPULimitPercent");
-        return (UpdateVMCPULimitPercentResponse)
-                this.invoke(request, UpdateVMCPULimitPercentResponse.class);
-    }
-
-
-    /**
-     * UpdateVMCPUModel - 设置虚拟机cpu模型
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMCPUModelResponse updateVMCPUModel(UpdateVMCPUModelRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMCPUModel");
-        return (UpdateVMCPUModelResponse)
-                this.invoke(request, UpdateVMCPUModelResponse.class);
-    }
-
-
-    /**
-     * UpdateVMCPUPriority - 修改虚拟机CPU资源优先级
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMCPUPriorityResponse updateVMCPUPriority(UpdateVMCPUPriorityRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMCPUPriority");
-        return (UpdateVMCPUPriorityResponse)
-                this.invoke(request, UpdateVMCPUPriorityResponse.class);
-    }
-
-
-    /**
-     * UpdateVMDNS - 设置虚拟机DNS
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMDNSResponse updateVMDNS(UpdateVMDNSRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMDNS");
-        return (UpdateVMDNSResponse)
-                this.invoke(request, UpdateVMDNSResponse.class);
     }
 
 
@@ -11051,62 +10863,6 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * UpdateVMDiskBus - 更新磁盘总线类型
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMDiskBusResponse updateVMDiskBus(UpdateVMDiskBusRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMDiskBus");
-        return (UpdateVMDiskBusResponse)
-                this.invoke(request, UpdateVMDiskBusResponse.class);
-    }
-
-
-    /**
-     * UpdateVMDiskCacheMode - 设置虚拟机磁盘缓存类型
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMDiskCacheModeResponse updateVMDiskCacheMode(UpdateVMDiskCacheModeRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMDiskCacheMode");
-        return (UpdateVMDiskCacheModeResponse)
-                this.invoke(request, UpdateVMDiskCacheModeResponse.class);
-    }
-
-
-    /**
-     * UpdateVMHighAvailability - 设置虚拟机高可用
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMHighAvailabilityResponse updateVMHighAvailability(UpdateVMHighAvailabilityRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMHighAvailability");
-        return (UpdateVMHighAvailabilityResponse)
-                this.invoke(request, UpdateVMHighAvailabilityResponse.class);
-    }
-
-
-    /**
-     * UpdateVMISOSlot - 设置虚拟机iso插槽数量
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMISOSlotResponse updateVMISOSlot(UpdateVMISOSlotRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMISOSlot");
-        return (UpdateVMISOSlotResponse)
-                this.invoke(request, UpdateVMISOSlotResponse.class);
-    }
-
-
-    /**
      * UpdateVMMAC - 修改网卡的MAC
      *
      * @param request Request object
@@ -11121,90 +10877,6 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
-     * UpdateVMNICLinkState - 更新虚拟机网卡启用状态
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMNICLinkStateResponse updateVMNICLinkState(UpdateVMNICLinkStateRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMNICLinkState");
-        return (UpdateVMNICLinkStateResponse)
-                this.invoke(request, UpdateVMNICLinkStateResponse.class);
-    }
-
-
-    /**
-     * UpdateVMNICModel - 更新虚拟机网卡型号
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMNICModelResponse updateVMNICModel(UpdateVMNICModelRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMNICModel");
-        return (UpdateVMNICModelResponse)
-                this.invoke(request, UpdateVMNICModelResponse.class);
-    }
-
-
-    /**
-     * UpdateVMNICQueues - 更新虚拟机网卡队列
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMNICQueuesResponse updateVMNICQueues(UpdateVMNICQueuesRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMNICQueues");
-        return (UpdateVMNICQueuesResponse)
-                this.invoke(request, UpdateVMNICQueuesResponse.class);
-    }
-
-
-    /**
-     * UpdateVMOS - 更新虚拟机操作系统
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMOSResponse updateVMOS(UpdateVMOSRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMOS");
-        return (UpdateVMOSResponse)
-                this.invoke(request, UpdateVMOSResponse.class);
-    }
-
-
-    /**
-     * UpdateVMSupportHotPlug - 更新虚拟机热插拔
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMSupportHotPlugResponse updateVMSupportHotPlug(UpdateVMSupportHotPlugRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMSupportHotPlug");
-        return (UpdateVMSupportHotPlugResponse)
-                this.invoke(request, UpdateVMSupportHotPlugResponse.class);
-    }
-
-
-    /**
-     * UpdateVMUserData - 设置虚拟机用户数据
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public UpdateVMUserDataResponse updateVMUserData(UpdateVMUserDataRequest request)
-            throws UCloudStackException {
-        request.setAction("UpdateVMUserData");
-        return (UpdateVMUserDataResponse)
-                this.invoke(request, UpdateVMUserDataResponse.class);
-    }
-
-
-    /**
      * UpdateVMVCPUBinding - 虚拟机更新VCPU绑定
      *
      * @param request Request object
@@ -11215,6 +10887,34 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("UpdateVMVCPUBinding");
         return (UpdateVMVCPUBindingResponse)
                 this.invoke(request, UpdateVMVCPUBindingResponse.class);
+    }
+
+
+    /**
+     * AddSubnetNetwork - 添加子网IPv6网络
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public AddSubnetNetworkResponse addSubnetNetwork(AddSubnetNetworkRequest request)
+            throws UCloudStackException {
+        request.setAction("AddSubnetNetwork");
+        return (AddSubnetNetworkResponse)
+                this.invoke(request, AddSubnetNetworkResponse.class);
+    }
+
+
+    /**
+     * AddVPCNetwork - 添加VPC IPv6网络
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public AddVPCNetworkResponse addVPCNetwork(AddVPCNetworkRequest request)
+            throws UCloudStackException {
+        request.setAction("AddVPCNetwork");
+        return (AddVPCNetworkResponse)
+                this.invoke(request, AddVPCNetworkResponse.class);
     }
 
 
@@ -11397,6 +11097,34 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("ListAllocatedIPsInSubnet");
         return (ListAllocatedIPsInSubnetResponse)
                 this.invoke(request, ListAllocatedIPsInSubnetResponse.class);
+    }
+
+
+    /**
+     * RemoveSubnetNetwork - 移除子网IPv6网络
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public RemoveSubnetNetworkResponse removeSubnetNetwork(RemoveSubnetNetworkRequest request)
+            throws UCloudStackException {
+        request.setAction("RemoveSubnetNetwork");
+        return (RemoveSubnetNetworkResponse)
+                this.invoke(request, RemoveSubnetNetworkResponse.class);
+    }
+
+
+    /**
+     * RemoveVPCNetwork - 移除VPC IPv6网络
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public RemoveVPCNetworkResponse removeVPCNetwork(RemoveVPCNetworkRequest request)
+            throws UCloudStackException {
+        request.setAction("RemoveVPCNetwork");
+        return (RemoveVPCNetworkResponse)
+                this.invoke(request, RemoveVPCNetworkResponse.class);
     }
 
 

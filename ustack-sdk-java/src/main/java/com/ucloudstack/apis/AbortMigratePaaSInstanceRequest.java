@@ -27,7 +27,7 @@ public class AbortMigratePaaSInstanceRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** 实例ID，只有迁移已报错( MigrationError=true )时才允许取消；其他状态会返回状态错误 */
+    /** 实例ID，只有当迁移进度仍为0或迁移已报错( MigrationError=true )时才允许取消；其他状态会返回参数错误 */
     @NotEmpty
     @UCloudStackParam("InstanceID")
     private String instanceIDParam;

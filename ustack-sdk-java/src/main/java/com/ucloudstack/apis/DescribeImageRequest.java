@@ -27,7 +27,7 @@ public class DescribeImageRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** 镜像格式，用于筛选镜像格式，取值qcow2、iso、vmdk、raw */
+    /** 镜像格式，用于筛选镜像格式，取值qcow2、iso */
     
     @UCloudStackParam("ImageFormat")
     private String imageFormatParam;
@@ -66,11 +66,6 @@ public class DescribeImageRequest extends Request {
     @NotEmpty
     @UCloudStackParam("Region")
     private String regionParam;
-
-    /** 状态列表，用于筛选指定状态的镜像资源 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
 
 
     public Integer getCompanyID() {
@@ -143,14 +138,6 @@ public class DescribeImageRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

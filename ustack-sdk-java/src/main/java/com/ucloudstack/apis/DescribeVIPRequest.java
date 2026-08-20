@@ -52,11 +52,6 @@ public class DescribeVIPRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 状态列表，按状态过滤VIP */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
     /** VIPID列表，VIP的唯一标识符 */
     
     @UCloudStackParam("VIPIDs")
@@ -114,14 +109,6 @@ public class DescribeVIPRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
     public List<String> getVIPIDs() {

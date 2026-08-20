@@ -39,10 +39,6 @@ public class ResourceEventInfo {
     @SerializedName("Level")
     private String levelParam;
 
-    /** 人工处理状态，仅当Type=MonitorAlert时返回，取值：Open、Handled；未有状态记录时默认Open */
-    @SerializedName("ProcessStatus")
-    private String processStatusParam;
-
     /** 地域ID，标识该资源事件所属的地域 */
     @SerializedName("Region")
     private String regionParam;
@@ -114,14 +110,6 @@ public class ResourceEventInfo {
 
     public void setLevel(String levelParam) {
         this.levelParam = levelParam;
-    }
-
-    public String getProcessStatus() {
-        return processStatusParam;
-    }
-
-    public void setProcessStatus(String processStatusParam) {
-        this.processStatusParam = processStatusParam;
     }
 
     public String getRegion() {

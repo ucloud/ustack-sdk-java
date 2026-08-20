@@ -27,11 +27,6 @@ public class UnBindSecurityGroupRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** 网卡ID，绑定安全组时指定的网络接口唯一标识符，Flat时传入,其他场景传空字符串 */
-    
-    @UCloudStackParam("NICID")
-    private String nICIDParam;
-
     /** 网卡类型，取值LAN/WAN；需与绑定时的类型一致 */
     @NotEmpty
     @UCloudStackParam("NICType")
@@ -54,14 +49,6 @@ public class UnBindSecurityGroupRequest extends Request {
 
     public void setCompanyID(Integer companyIDParam) {
         this.companyIDParam = companyIDParam;
-    }
-
-    public String getNICID() {
-        return nICIDParam;
-    }
-
-    public void setNICID(String nICIDParam) {
-        this.nICIDParam = nICIDParam;
     }
 
     public String getNICType() {

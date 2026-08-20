@@ -42,36 +42,6 @@ public class UpdateDiskQoSRequest extends Request {
     @UCloudStackParam("DiskIOPS")
     private Integer diskIOPSParam;
 
-    /** 硬盘QoS限速读带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("DiskReadBandwidth")
-    private Integer diskReadBandwidthParam;
-
-    /** 硬盘QoS限速读IOPS，0表示不限制 */
-    
-    @UCloudStackParam("DiskReadIOPS")
-    private Integer diskReadIOPSParam;
-
-    /** 硬盘QoS限速总带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("DiskTotalBandwidth")
-    private Integer diskTotalBandwidthParam;
-
-    /** 硬盘QoS限速总IOPS，0表示不限制 */
-    
-    @UCloudStackParam("DiskTotalIOPS")
-    private Integer diskTotalIOPSParam;
-
-    /** 硬盘QoS限速写带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("DiskWriteBandwidth")
-    private Integer diskWriteBandwidthParam;
-
-    /** 硬盘QoS限速写IOPS，0表示不限制 */
-    
-    @UCloudStackParam("DiskWriteIOPS")
-    private Integer diskWriteIOPSParam;
-
     /** 地域ID，指定资源所属的地域 */
     @NotEmpty
     @UCloudStackParam("Region")
@@ -108,54 +78,6 @@ public class UpdateDiskQoSRequest extends Request {
 
     public void setDiskIOPS(Integer diskIOPSParam) {
         this.diskIOPSParam = diskIOPSParam;
-    }
-
-    public Integer getDiskReadBandwidth() {
-        return diskReadBandwidthParam;
-    }
-
-    public void setDiskReadBandwidth(Integer diskReadBandwidthParam) {
-        this.diskReadBandwidthParam = diskReadBandwidthParam;
-    }
-
-    public Integer getDiskReadIOPS() {
-        return diskReadIOPSParam;
-    }
-
-    public void setDiskReadIOPS(Integer diskReadIOPSParam) {
-        this.diskReadIOPSParam = diskReadIOPSParam;
-    }
-
-    public Integer getDiskTotalBandwidth() {
-        return diskTotalBandwidthParam;
-    }
-
-    public void setDiskTotalBandwidth(Integer diskTotalBandwidthParam) {
-        this.diskTotalBandwidthParam = diskTotalBandwidthParam;
-    }
-
-    public Integer getDiskTotalIOPS() {
-        return diskTotalIOPSParam;
-    }
-
-    public void setDiskTotalIOPS(Integer diskTotalIOPSParam) {
-        this.diskTotalIOPSParam = diskTotalIOPSParam;
-    }
-
-    public Integer getDiskWriteBandwidth() {
-        return diskWriteBandwidthParam;
-    }
-
-    public void setDiskWriteBandwidth(Integer diskWriteBandwidthParam) {
-        this.diskWriteBandwidthParam = diskWriteBandwidthParam;
-    }
-
-    public Integer getDiskWriteIOPS() {
-        return diskWriteIOPSParam;
-    }
-
-    public void setDiskWriteIOPS(Integer diskWriteIOPSParam) {
-        this.diskWriteIOPSParam = diskWriteIOPSParam;
     }
 
     public String getRegion() {

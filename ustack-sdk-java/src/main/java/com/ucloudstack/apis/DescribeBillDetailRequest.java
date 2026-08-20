@@ -62,8 +62,8 @@ public class DescribeBillDetailRequest extends Request {
     @UCloudStackParam("ProductTypes")
     private List<String> productTypesParam;
 
-    /** 项目组ID列表，过滤指定项目组的账单详情，不填写默认查询所有项目组；传空字符串时表示筛选未归属项目组数据 */
-    
+    /** 项目组ID列表，过滤指定项目组的账单详情，不填写默认查询所有项目组 */
+    @NotEmpty
     @UCloudStackParam("ProjectIDs")
     private List<String> projectIDsParam;
 

@@ -67,10 +67,20 @@ public class CloneVMInstanceRequest extends Request {
     @UCloudStackParam("IPVersion")
     private String iPVersionParam;
 
+    /** 扩展IP，指定内网扩展IP地址 */
+    
+    @UCloudStackParam("InternalExpandIP")
+    private String internalExpandIPParam;
+
     /** 内网IP，指定新虚拟机的内网IP地址，留空则自动分配 */
     
     @UCloudStackParam("InternalIP")
     private String internalIPParam;
+
+    /** 内网协议，指定内网IP协议版本，取值：IPv4、IPv6、ALL、空值 */
+    
+    @UCloudStackParam("InternalIPVersion")
+    private String internalIPVersionParam;
 
     /** 外网IP，指定新虚拟机的外网IP地址，留空则自动分配 */
     
@@ -112,7 +122,7 @@ public class CloneVMInstanceRequest extends Request {
     @UCloudStackParam("OperatorName")
     private String operatorNameParam;
 
-    /** 项目ID，资源所属的项目分组标识，未传时尝试分配默认项目 */
+    /** 项目ID，资源所属的项目分组标识 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
@@ -240,12 +250,28 @@ public class CloneVMInstanceRequest extends Request {
         this.iPVersionParam = iPVersionParam;
     }
 
+    public String getInternalExpandIP() {
+        return internalExpandIPParam;
+    }
+
+    public void setInternalExpandIP(String internalExpandIPParam) {
+        this.internalExpandIPParam = internalExpandIPParam;
+    }
+
     public String getInternalIP() {
         return internalIPParam;
     }
 
     public void setInternalIP(String internalIPParam) {
         this.internalIPParam = internalIPParam;
+    }
+
+    public String getInternalIPVersion() {
+        return internalIPVersionParam;
+    }
+
+    public void setInternalIPVersion(String internalIPVersionParam) {
+        this.internalIPVersionParam = internalIPVersionParam;
     }
 
     public String getInternetIP() {

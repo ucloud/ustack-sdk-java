@@ -27,6 +27,11 @@ public class CreateVPCRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
+    /** VPC扩展网段，用于扩展VPC的IPv6地址空间，仅支持IPv6CIDR */
+    
+    @UCloudStackParam("ExpandNetwork")
+    private String expandNetworkParam;
+
     /** VPC名称，用于标识虚拟私有网络，长度为1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
     @UCloudStackParam("Name")
@@ -37,7 +42,7 @@ public class CreateVPCRequest extends Request {
     @UCloudStackParam("Network")
     private String networkParam;
 
-    /** 项目ID，资源所属项目分组标识，未传时尝试分配默认项目 */
+    /** 项目ID，资源所属项目分组标识 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
@@ -64,6 +69,14 @@ public class CreateVPCRequest extends Request {
 
     public void setCompanyID(Integer companyIDParam) {
         this.companyIDParam = companyIDParam;
+    }
+
+    public String getExpandNetwork() {
+        return expandNetworkParam;
+    }
+
+    public void setExpandNetwork(String expandNetworkParam) {
+        this.expandNetworkParam = expandNetworkParam;
     }
 
     public String getName() {

@@ -59,7 +59,7 @@ public class ImageInfo {
     @SerializedName("ImageDescription")
     private String imageDescriptionParam;
 
-    /** 镜像格式，返回值为qcow2、iso、vmdk、raw */
+    /** 镜像格式，返回值为qcow2或iso */
     @SerializedName("ImageFormat")
     private String imageFormatParam;
 

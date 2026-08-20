@@ -82,11 +82,6 @@ public class DescribeIsolationGroupsRequest extends Request {
     @UCloudStackParam("SetType")
     private String setTypeParam;
 
-    /** 状态列表，过滤隔离组状态 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public Integer getCompanyID() {
         return companyIDParam;
@@ -182,14 +177,6 @@ public class DescribeIsolationGroupsRequest extends Request {
 
     public void setSetType(String setTypeParam) {
         this.setTypeParam = setTypeParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

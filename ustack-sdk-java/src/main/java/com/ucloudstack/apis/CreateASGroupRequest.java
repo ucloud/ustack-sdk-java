@@ -77,7 +77,7 @@ public class CreateASGroupRequest extends Request {
     @UCloudStackParam("Port")
     private Integer portParam;
 
-    /** 项目ID，用于实现资源的逻辑分组管理，伸缩组将归属于指定项目，未传时尝试分配默认项目 */
+    /** 项目ID，用于实现资源的逻辑分组管理，伸缩组将归属于指定项目 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

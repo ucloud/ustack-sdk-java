@@ -27,11 +27,11 @@ public class NUMANode {
     @SerializedName("NUMAID")
     private Integer nUMAIDParam;
 
-    /** 物理NUMA内存 */
+    /** 物理NUMA内存，单位：MiB */
     @SerializedName("TotalMemory")
     private Integer totalMemoryParam;
 
-    /** 物理NUMA已被虚拟机使用的内存 */
+    /** 物理NUMA已被虚拟机使用的内存，单位：MiB */
     @SerializedName("UsedMemory")
     private Integer usedMemoryParam;
 

@@ -19,18 +19,6 @@ import java.util.Map;
 
 public class SGResourceInfo {
 
-    /** IP地址，按网卡粒度查询时返回网卡主IP；未获取到时为空 */
-    @SerializedName("IP")
-    private String iPParam;
-
-    /** MAC地址，按网卡粒度查询时返回网卡MAC；未获取到时为空 */
-    @SerializedName("MAC")
-    private String mACParam;
-
-    /** 网卡ID，按网卡粒度查询时返回绑定安全组的网卡唯一标识符；非网卡资源为空 */
-    @SerializedName("NICID")
-    private String nICIDParam;
-
     /** 网卡类型，资源绑定安全组时的网络接口类型；取值LAN/WAN */
     @SerializedName("NICType")
     private String nICTypeParam;
@@ -55,30 +43,6 @@ public class SGResourceInfo {
     @SerializedName("SGID")
     private String sGIDParam;
 
-
-    public String getIP() {
-        return iPParam;
-    }
-
-    public void setIP(String iPParam) {
-        this.iPParam = iPParam;
-    }
-
-    public String getMAC() {
-        return mACParam;
-    }
-
-    public void setMAC(String mACParam) {
-        this.mACParam = mACParam;
-    }
-
-    public String getNICID() {
-        return nICIDParam;
-    }
-
-    public void setNICID(String nICIDParam) {
-        this.nICIDParam = nICIDParam;
-    }
 
     public String getNICType() {
         return nICTypeParam;

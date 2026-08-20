@@ -82,11 +82,6 @@ public class DescribeDiskRequest extends Request {
     @UCloudStackParam("ShareAbleFilter")
     private String shareAbleFilterParam;
 
-    /** 状态列表，用于筛选指定状态的磁盘资源 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public String getAttachResourceID() {
         return attachResourceIDParam;
@@ -182,14 +177,6 @@ public class DescribeDiskRequest extends Request {
 
     public void setShareAbleFilter(String shareAbleFilterParam) {
         this.shareAbleFilterParam = shareAbleFilterParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

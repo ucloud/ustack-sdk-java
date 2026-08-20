@@ -27,7 +27,7 @@ public class VMNumaInfo {
     @SerializedName("HostNumaID")
     private Integer hostNumaIDParam;
 
-    /** 内存容量，分配给该NUMA节点的内存大小，单位：KiB */
+    /** 内存容量，分配给该NUMA节点的内存大小，单位：MiB */
     @SerializedName("Memory")
     private Integer memoryParam;
 

@@ -37,7 +37,7 @@ public class CreateDBSGatewayRequest extends Request {
     @UCloudStackParam("Name")
     private String nameParam;
 
-    /** 项目组ID，项目组的ID，未传时尝试分配默认项目 */
+    /** 项目组ID，项目组的ID */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

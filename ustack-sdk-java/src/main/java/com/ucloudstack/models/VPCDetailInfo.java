@@ -35,6 +35,14 @@ public class VPCDetailInfo {
     @SerializedName("Email")
     private String emailParam;
 
+    /** 扩展网段，VPC关联的IPv6地址范围 */
+    @SerializedName("ExpandNetwork")
+    private String expandNetworkParam;
+
+    /** 扩展子网数量，展示扩展网段下已划分的子网总数 */
+    @SerializedName("ExpandSubnetCount")
+    private Integer expandSubnetCountParam;
+
     /** VPC名称 */
     @SerializedName("Name")
     private String nameParam;
@@ -126,6 +134,22 @@ public class VPCDetailInfo {
 
     public void setEmail(String emailParam) {
         this.emailParam = emailParam;
+    }
+
+    public String getExpandNetwork() {
+        return expandNetworkParam;
+    }
+
+    public void setExpandNetwork(String expandNetworkParam) {
+        this.expandNetworkParam = expandNetworkParam;
+    }
+
+    public Integer getExpandSubnetCount() {
+        return expandSubnetCountParam;
+    }
+
+    public void setExpandSubnetCount(Integer expandSubnetCountParam) {
+        this.expandSubnetCountParam = expandSubnetCountParam;
     }
 
     public String getName() {

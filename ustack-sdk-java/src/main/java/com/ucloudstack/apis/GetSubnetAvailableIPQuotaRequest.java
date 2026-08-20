@@ -27,6 +27,11 @@ public class GetSubnetAvailableIPQuotaRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
+    /** 是否返回扩展网段的相关数量，默认false仅返回主网段 */
+    
+    @UCloudStackParam("IncludeExpand")
+    private Boolean includeExpandParam;
+
     /** 地域ID，用于标识资源所属的地理区域 */
     @NotEmpty
     @UCloudStackParam("Region")
@@ -44,6 +49,14 @@ public class GetSubnetAvailableIPQuotaRequest extends Request {
 
     public void setCompanyID(Integer companyIDParam) {
         this.companyIDParam = companyIDParam;
+    }
+
+    public Boolean getIncludeExpand() {
+        return includeExpandParam;
+    }
+
+    public void setIncludeExpand(Boolean includeExpandParam) {
+        this.includeExpandParam = includeExpandParam;
     }
 
     public String getRegion() {

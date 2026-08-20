@@ -19,6 +19,10 @@ import java.util.Map;
 
 public class PFInfo {
 
+    /** 当前是否可以启用SR-IOV，任一节点或网卡前置条件不满足时为false */
+    @SerializedName("CanEnableSRIOV")
+    private Boolean canEnableSRIOVParam;
+
     /** 网卡型号标准编号，网卡型号标识 */
     @SerializedName("Code")
     private String codeParam;
@@ -43,6 +47,14 @@ public class PFInfo {
     @SerializedName("Product")
     private String productParam;
 
+    /** 不能启用SR-IOV时的原因码 */
+    @SerializedName("SRIOVEnableReason")
+    private String sRIOVEnableReasonParam;
+
+    /** SR-IOV状态，取值Enabling、Disabling、Enabled或Disabled */
+    @SerializedName("SRIOVState")
+    private String sRIOVStateParam;
+
     /** 已使用的VF网卡列表 */
     @SerializedName("UsedVFs")
     private List<VFInfo> usedVFsParam;
@@ -59,6 +71,14 @@ public class PFInfo {
     @SerializedName("Vendor")
     private String vendorParam;
 
+
+    public Boolean getCanEnableSRIOV() {
+        return canEnableSRIOVParam;
+    }
+
+    public void setCanEnableSRIOV(Boolean canEnableSRIOVParam) {
+        this.canEnableSRIOVParam = canEnableSRIOVParam;
+    }
 
     public String getCode() {
         return codeParam;
@@ -106,6 +126,22 @@ public class PFInfo {
 
     public void setProduct(String productParam) {
         this.productParam = productParam;
+    }
+
+    public String getSRIOVEnableReason() {
+        return sRIOVEnableReasonParam;
+    }
+
+    public void setSRIOVEnableReason(String sRIOVEnableReasonParam) {
+        this.sRIOVEnableReasonParam = sRIOVEnableReasonParam;
+    }
+
+    public String getSRIOVState() {
+        return sRIOVStateParam;
+    }
+
+    public void setSRIOVState(String sRIOVStateParam) {
+        this.sRIOVStateParam = sRIOVStateParam;
     }
 
     public List<VFInfo> getUsedVFs() {

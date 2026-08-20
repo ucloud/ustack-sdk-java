@@ -67,7 +67,7 @@ public class CreateOSSRequest extends Request {
     @UCloudStackParam("Password")
     private String passwordParam;
 
-    /** 项目组ID，资源所属项目组，未传时尝试分配默认项目 */
+    /** 项目组ID，资源所属项目组 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

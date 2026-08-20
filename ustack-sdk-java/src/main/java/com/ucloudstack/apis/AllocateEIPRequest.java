@@ -57,7 +57,7 @@ public class AllocateEIPRequest extends Request {
     @UCloudStackParam("OperatorName")
     private String operatorNameParam;
 
-    /** 项目ID，资源所属项目分组标识，未传时尝试分配默认项目 */
+    /** 项目ID，资源所属项目分组标识 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

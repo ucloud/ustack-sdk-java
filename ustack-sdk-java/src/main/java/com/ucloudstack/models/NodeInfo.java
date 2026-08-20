@@ -55,10 +55,6 @@ public class NodeInfo {
     @SerializedName("NodeIP")
     private String nodeIPParam;
 
-    /** 节点IPMI管理地址 */
-    @SerializedName("NodeIPMIIP")
-    private String nodeIPMIIPParam;
-
     /** 节点IPv6地址，节点管理IPv6地址 */
     @SerializedName("NodeIPv6")
     private String nodeIPv6Param;
@@ -70,10 +66,6 @@ public class NodeInfo {
     /** NUMA节点数，节点NUMA拓扑数量 */
     @SerializedName("NumaNodes")
     private Integer numaNodesParam;
-
-    /** 操作系统 */
-    @SerializedName("OS")
-    private String oSParam;
 
     /** 存储节点OSD详情，存储服务状态信息 */
     @SerializedName("OSDInfos")
@@ -87,17 +79,9 @@ public class NodeInfo {
     @SerializedName("Region")
     private String regionParam;
 
-    /** 地域别名，地域的人性化显示名称 */
-    @SerializedName("RegionAlias")
-    private String regionAliasParam;
-
     /** 序列号，硬件设备序列号 */
     @SerializedName("SerialNumber")
     private String serialNumberParam;
-
-    /** 集群别名，节点所属计算集群的自定义名称 */
-    @SerializedName("SetAlias")
-    private String setAliasParam;
 
     /** 节点类型，节点角色列表 */
     @SerializedName("Types")
@@ -184,14 +168,6 @@ public class NodeInfo {
         this.nodeIPParam = nodeIPParam;
     }
 
-    public String getNodeIPMIIP() {
-        return nodeIPMIIPParam;
-    }
-
-    public void setNodeIPMIIP(String nodeIPMIIPParam) {
-        this.nodeIPMIIPParam = nodeIPMIIPParam;
-    }
-
     public String getNodeIPv6() {
         return nodeIPv6Param;
     }
@@ -214,14 +190,6 @@ public class NodeInfo {
 
     public void setNumaNodes(Integer numaNodesParam) {
         this.numaNodesParam = numaNodesParam;
-    }
-
-    public String getOS() {
-        return oSParam;
-    }
-
-    public void setOS(String oSParam) {
-        this.oSParam = oSParam;
     }
 
     public List<OSDStat> getOSDInfos() {
@@ -248,28 +216,12 @@ public class NodeInfo {
         this.regionParam = regionParam;
     }
 
-    public String getRegionAlias() {
-        return regionAliasParam;
-    }
-
-    public void setRegionAlias(String regionAliasParam) {
-        this.regionAliasParam = regionAliasParam;
-    }
-
     public String getSerialNumber() {
         return serialNumberParam;
     }
 
     public void setSerialNumber(String serialNumberParam) {
         this.serialNumberParam = serialNumberParam;
-    }
-
-    public String getSetAlias() {
-        return setAliasParam;
-    }
-
-    public void setSetAlias(String setAliasParam) {
-        this.setAliasParam = setAliasParam;
     }
 
     public List<String> getTypes() {

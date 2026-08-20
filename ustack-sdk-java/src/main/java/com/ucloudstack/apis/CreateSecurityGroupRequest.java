@@ -32,7 +32,7 @@ public class CreateSecurityGroupRequest extends Request {
     @UCloudStackParam("Name")
     private String nameParam;
 
-    /** 项目ID，安全组所属项目分组标识，未传时尝试分配默认项目 */
+    /** 项目ID，安全组所属项目分组标识 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
@@ -47,8 +47,8 @@ public class CreateSecurityGroupRequest extends Request {
     @UCloudStackParam("Remark")
     private String remarkParam;
 
-    /** 安全组规则列表，定义流量控制策略；创建安全组时可为空；每条规则格式：协议|端口|地址|动作|优先级|方向|备注；协议支持TCP/UDP/ICMP/ICMPv4/ICMPv6/ALL，端口支持1-65535或端口范围，地址支持IP/CIDR或group:IPGroupID，动作支持ACCEPT/DROP，优先级支持HIGH/MEDIUM/LOW，方向1为入站0为出站；端口组引用格式：group:PortGroupID|-|地址|动作|优先级|方向|备注；备注长度不超过100字符 */
-    
+    /** 安全组规则列表，定义流量控制策略；每条规则格式：协议|端口|地址|动作|优先级|方向|备注；协议支持TCP/UDP/ICMP/ICMPv4/ICMPv6/ALL，端口支持1-65535或端口范围，地址支持IP/CIDR或group:IPGroupID，动作支持ACCEPT/DROP，优先级支持HIGH/MEDIUM/LOW，方向1为入站0为出站；端口组引用格式：group:PortGroupID|-|地址|动作|优先级|方向|备注；备注长度不超过100字符 */
+    @NotEmpty
     @UCloudStackParam("Rule")
     private List<String> ruleParam;
 

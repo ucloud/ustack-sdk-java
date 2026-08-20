@@ -27,6 +27,10 @@ public class LbRSInfo {
     @SerializedName("BindResourceName")
     private String bindResourceNameParam;
 
+    /** 绑定资源类型，取值范围：VM、OSS */
+    @SerializedName("BindResourceType")
+    private String bindResourceTypeParam;
+
     /** 创建时间，秒级Unix时间戳 */
     @SerializedName("CreateTime")
     private Integer createTimeParam;
@@ -90,6 +94,14 @@ public class LbRSInfo {
 
     public void setBindResourceName(String bindResourceNameParam) {
         this.bindResourceNameParam = bindResourceNameParam;
+    }
+
+    public String getBindResourceType() {
+        return bindResourceTypeParam;
+    }
+
+    public void setBindResourceType(String bindResourceTypeParam) {
+        this.bindResourceTypeParam = bindResourceTypeParam;
     }
 
     public Integer getCreateTime() {

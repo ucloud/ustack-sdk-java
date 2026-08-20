@@ -37,7 +37,7 @@ public class ImportImageRequest extends Request {
     @UCloudStackParam("ImageDescription")
     private String imageDescriptionParam;
 
-    /** 镜像格式，指定导入的虚拟化文件格式，取值qcow2、iso、vmdk、raw */
+    /** 镜像格式，指定导入的虚拟化文件格式，取值qcow2、iso */
     @NotEmpty
     @UCloudStackParam("ImageFormat")
     private String imageFormatParam;
@@ -73,7 +73,7 @@ public class ImportImageRequest extends Request {
     private String oSTypeParam;
 
     /** 操作系统版本，指定镜像内部安装的具体发行版本号 */
-    
+    @NotEmpty
     @UCloudStackParam("OSVersion")
     private String oSVersionParam;
 
@@ -93,7 +93,7 @@ public class ImportImageRequest extends Request {
     private String secretParam;
 
     /** 架构类型，基于计算集群支持的指令集，如x86_64、aarch64 */
-    
+    @NotEmpty
     @UCloudStackParam("SetArch")
     private String setArchParam;
 

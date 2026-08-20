@@ -57,10 +57,10 @@ public class DescribeSecurityGroupRequest extends Request {
     @UCloudStackParam("SGIDs")
     private List<String> sGIDsParam;
 
-    /** 安全组状态列表，用于按多个状态过滤安全组，支持前端按Status.0、Status.1等形式传参 */
+    /** 安全组状态，用于筛选指定状态的安全组 */
     
     @UCloudStackParam("Status")
-    private List<String> statusParam;
+    private String statusParam;
 
 
     public Integer getCompanyID() {
@@ -119,11 +119,11 @@ public class DescribeSecurityGroupRequest extends Request {
         this.sGIDsParam = sGIDsParam;
     }
 
-    public List<String> getStatus() {
+    public String getStatus() {
         return statusParam;
     }
 
-    public void setStatus(List<String> statusParam) {
+    public void setStatus(String statusParam) {
         this.statusParam = statusParam;
     }
 

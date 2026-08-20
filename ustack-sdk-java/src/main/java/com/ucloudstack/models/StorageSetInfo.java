@@ -67,6 +67,10 @@ public class StorageSetInfo {
     @SerializedName("SetBlockBackupRole")
     private String setBlockBackupRoleParam;
 
+    /** set数量，UDisk存储集群的set个数，用于前端计算分配率，仅UDisk类型返回 */
+    @SerializedName("SetCount")
+    private Integer setCountParam;
+
     /** 集群ID，存储集群的唯一标识，由底层Huanghe系统生成和管理 */
     @SerializedName("SetID")
     private String setIDParam;
@@ -206,6 +210,14 @@ public class StorageSetInfo {
 
     public void setSetBlockBackupRole(String setBlockBackupRoleParam) {
         this.setBlockBackupRoleParam = setBlockBackupRoleParam;
+    }
+
+    public Integer getSetCount() {
+        return setCountParam;
+    }
+
+    public void setSetCount(Integer setCountParam) {
+        this.setCountParam = setCountParam;
     }
 
     public String getSetID() {

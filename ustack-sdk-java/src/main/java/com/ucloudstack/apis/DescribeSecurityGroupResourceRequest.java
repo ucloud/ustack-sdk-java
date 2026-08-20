@@ -22,11 +22,6 @@ import com.ucloudstack.models.*;
 
 public class DescribeSecurityGroupResourceRequest extends Request {
 
-    /** 返回粒度，Resource 表示按资源聚合（默认，兼容旧行为），NIC 表示按网卡粒度返回；仅对存在网卡概念的资源生效 */
-    
-    @UCloudStackParam("GroupBy")
-    private String groupByParam;
-
     /** 分页大小，指定每页返回的记录数 */
     
     @UCloudStackParam("Limit")
@@ -47,14 +42,6 @@ public class DescribeSecurityGroupResourceRequest extends Request {
     @UCloudStackParam("SGID")
     private String sGIDParam;
 
-
-    public String getGroupBy() {
-        return groupByParam;
-    }
-
-    public void setGroupBy(String groupByParam) {
-        this.groupByParam = groupByParam;
-    }
 
     public Integer getLimit() {
         return limitParam;

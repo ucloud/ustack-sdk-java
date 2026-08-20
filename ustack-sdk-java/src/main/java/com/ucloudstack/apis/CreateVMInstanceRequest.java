@@ -37,35 +37,10 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("Bandwidth")
     private Integer bandwidthParam;
 
-    /** 引导顺序，可选字段，支持：hd（硬盘），cdrom（光驱），network（网络） */
-    
-    @UCloudStackParam("BootDevices")
-    private List<String> bootDevicesParam;
-
-    /** 系统盘总线类型，取值 virtio，ide，scsi */
-    
-    @UCloudStackParam("BootDiskBus")
-    private String bootDiskBusParam;
-
-    /** 系统盘磁盘缓存模式，当前生效的磁盘I/O缓存策略 */
-    
-    @UCloudStackParam("BootDiskCacheMode")
-    private String bootDiskCacheModeParam;
-
-    /** 系统盘ID，作为系统启动盘的已有云盘标识，与BootDiskSpace互斥 */
+    /** 系统盘ID，作为系统启动盘的已有云盘标识，与BootDiskSpace互斥，与ImageID互斥，两者必须指定其一 */
     
     @UCloudStackParam("BootDiskID")
     private String bootDiskIDParam;
-
-    /** 系统盘QoS限速读带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskReadBandwidth")
-    private Integer bootDiskReadBandwidthParam;
-
-    /** 系统盘QoS限速读IOPS，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskReadIOPS")
-    private Integer bootDiskReadIOPSParam;
 
     /** 启动盘加密密钥，用于加密系统盘的密钥信息，可选字段 */
     
@@ -82,26 +57,6 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("BootDiskSpace")
     private Integer bootDiskSpaceParam;
 
-    /** 系统盘QoS限速总带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskTotalBandwidth")
-    private Integer bootDiskTotalBandwidthParam;
-
-    /** 系统盘QoS限速总IOPS，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskTotalIOPS")
-    private Integer bootDiskTotalIOPSParam;
-
-    /** 系统盘QoS限速写带宽，单位MB/s，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskWriteBandwidth")
-    private Integer bootDiskWriteBandwidthParam;
-
-    /** 系统盘QoS限速写IOPS，0表示不限制 */
-    
-    @UCloudStackParam("BootDiskWriteIOPS")
-    private Integer bootDiskWriteIOPSParam;
-
     /** 启动源类型，指定用于创建虚拟机的介质类型，取值：Image（镜像）、Disk（云盘） */
     
     @UCloudStackParam("BootSourceType")
@@ -112,30 +67,10 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("BootloaderType")
     private String bootloaderTypeParam;
 
-    /** CDROM列表，指定需挂载的CDROM信息，最多支持3个CDROM */
-    
-    @UCloudStackParam("CDROMs")
-    private List<CreateVMInstanceRequestCDROM> cDROMsParam;
-
     /** 核心数，虚拟机的vCPU核心数量，必须与所选计算集群的规格兼容 */
     @NotEmpty
     @UCloudStackParam("CPU")
     private Integer cPUParam;
-
-    /** CPU每个插槽内核数，可选字段，默认等于CPU */
-    
-    @UCloudStackParam("CPUCoresPerSocket")
-    private Integer cPUCoresPerSocketParam;
-
-    /** 虚拟机是否隐藏虚拟化 (hypervisor) 标记，可选字段，默认false */
-    
-    @UCloudStackParam("CPUHypervisorDisable")
-    private Boolean cPUHypervisorDisableParam;
-
-    /** CPU频率限制百分比，可选字段，默认100% */
-    
-    @UCloudStackParam("CPULimitPercent")
-    private Integer cPULimitPercentParam;
 
     /** CPU模式，指定虚拟机CPU的模拟方式，host-passthrough提供最优性能但可移植性差，custom提供更好的兼容性 */
     
@@ -146,11 +81,6 @@ public class CreateVMInstanceRequest extends Request {
     
     @UCloudStackParam("CPUModel")
     private String cPUModelParam;
-
-    /** CPU优先级，取值：Normal，High （高），可选字段，默认Normal */
-    
-    @UCloudStackParam("CPUPriority")
-    private String cPUPriorityParam;
 
     /** 计费类型，用于指定计费模式，取值：Dynamic（按小时）、Month（按月）、Year（按年） */
     @NotEmpty
@@ -166,6 +96,11 @@ public class CreateVMInstanceRequest extends Request {
     
     @UCloudStackParam("DNS")
     private String dNSParam;
+
+    /** 自动挂载，标识是否自动挂载数据盘到系统默认路径 */
+    
+    @UCloudStackParam("DataDiskAutoMount")
+    private Boolean dataDiskAutoMountParam;
 
     /** 数据盘ID，需挂载的已有数据盘标识，与DataDiskSpace互斥，可选字段 */
     
@@ -186,11 +121,6 @@ public class CreateVMInstanceRequest extends Request {
     
     @UCloudStackParam("DataDiskSpace")
     private Integer dataDiskSpaceParam;
-
-    /** DataDisk列表，指定需挂载的磁盘信息 */
-    
-    @UCloudStackParam("DataDisks")
-    private List<CreateVMInstanceRequestDataDisk> dataDisksParam;
 
     /** 磁盘缓存模式，指定磁盘I/O的缓存策略，directsync最安全但性能最低，writeback性能最优但可靠性风险高，none折中方案 */
     
@@ -232,11 +162,6 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("HighAvailability")
     private String highAvailabilityParam;
 
-    /** 指定主机运行 */
-    
-    @UCloudStackParam("HostID")
-    private String hostIDParam;
-
     /** 主机名称，虚拟机操作系统内部的主机名 */
     
     @UCloudStackParam("Hostname")
@@ -257,15 +182,20 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("ImageID")
     private String imageIDParam;
 
-    /** 电源策略，指定虚拟机创建完成后的电源状态，取值：Running，Stopped，可选字段，默认Running */
+    /** 内网扩展IP，指定额外的内网IP地址，仅支持IPv6地址，可选字段 */
     
-    @UCloudStackParam("InitialState")
-    private String initialStateParam;
+    @UCloudStackParam("InternalExpandIP")
+    private String internalExpandIPParam;
 
     /** 内网IP，指定虚拟机在子网中的内网IP地址，若未指定则由系统自动分配 */
     
     @UCloudStackParam("InternalIP")
     private String internalIPParam;
+
+    /** 内网协议版本，指定内网IP的协议类型，IPv4传统网络，IPv6新一代网络，ALL双栈，可选字段 */
+    
+    @UCloudStackParam("InternalIPVersion")
+    private String internalIPVersionParam;
 
     /** 外网IP，指定虚拟机绑定的公网IP地址，若未指定则由系统自动分配 */
     
@@ -302,11 +232,6 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("Memory")
     private Integer memoryParam;
 
-    /** 网卡列表，指定需挂载的网卡信息 */
-    
-    @UCloudStackParam("NICs")
-    private List<CreateVMInstanceRequestNIC> nICsParam;
-
     /** 虚拟机名称，自定义的云主机实例标识，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线 */
     @NotEmpty
     @UCloudStackParam("Name")
@@ -322,7 +247,7 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("OSType")
     private String oSTypeParam;
 
-    /** 操作系统版本，标识发行版内部的具体版本信息 */
+    /** 操作系统版本，标识发行版内部的具体版本信息，ImageID为空时必填 */
     
     @UCloudStackParam("OSVersion")
     private String oSVersionParam;
@@ -342,7 +267,7 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("Password")
     private String passwordParam;
 
-    /** 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目 */
+    /** 项目ID，用于实现资源的逻辑分组管理 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
@@ -397,7 +322,7 @@ public class CreateVMInstanceRequest extends Request {
     @UCloudStackParam("USBDeviceID")
     private String uSBDeviceIDParam;
 
-    /** Cloud-Init脚本，虚拟机启动时的自定义初始化配置脚本，仅当镜像支持Cloud-Init时有效，YAML或Shell格式，需 base64 编码后传入，可选字段 */
+    /** Cloud-Init脚本，虚拟机启动时的自定义初始化配置脚本，仅当镜像支持Cloud-Init时有效，YAML或Shell格式，可选字段 */
     
     @UCloudStackParam("UserData")
     private String userDataParam;
@@ -467,52 +392,12 @@ public class CreateVMInstanceRequest extends Request {
         this.bandwidthParam = bandwidthParam;
     }
 
-    public List<String> getBootDevices() {
-        return bootDevicesParam;
-    }
-
-    public void setBootDevices(List<String> bootDevicesParam) {
-        this.bootDevicesParam = bootDevicesParam;
-    }
-
-    public String getBootDiskBus() {
-        return bootDiskBusParam;
-    }
-
-    public void setBootDiskBus(String bootDiskBusParam) {
-        this.bootDiskBusParam = bootDiskBusParam;
-    }
-
-    public String getBootDiskCacheMode() {
-        return bootDiskCacheModeParam;
-    }
-
-    public void setBootDiskCacheMode(String bootDiskCacheModeParam) {
-        this.bootDiskCacheModeParam = bootDiskCacheModeParam;
-    }
-
     public String getBootDiskID() {
         return bootDiskIDParam;
     }
 
     public void setBootDiskID(String bootDiskIDParam) {
         this.bootDiskIDParam = bootDiskIDParam;
-    }
-
-    public Integer getBootDiskReadBandwidth() {
-        return bootDiskReadBandwidthParam;
-    }
-
-    public void setBootDiskReadBandwidth(Integer bootDiskReadBandwidthParam) {
-        this.bootDiskReadBandwidthParam = bootDiskReadBandwidthParam;
-    }
-
-    public Integer getBootDiskReadIOPS() {
-        return bootDiskReadIOPSParam;
-    }
-
-    public void setBootDiskReadIOPS(Integer bootDiskReadIOPSParam) {
-        this.bootDiskReadIOPSParam = bootDiskReadIOPSParam;
     }
 
     public String getBootDiskSecret() {
@@ -539,38 +424,6 @@ public class CreateVMInstanceRequest extends Request {
         this.bootDiskSpaceParam = bootDiskSpaceParam;
     }
 
-    public Integer getBootDiskTotalBandwidth() {
-        return bootDiskTotalBandwidthParam;
-    }
-
-    public void setBootDiskTotalBandwidth(Integer bootDiskTotalBandwidthParam) {
-        this.bootDiskTotalBandwidthParam = bootDiskTotalBandwidthParam;
-    }
-
-    public Integer getBootDiskTotalIOPS() {
-        return bootDiskTotalIOPSParam;
-    }
-
-    public void setBootDiskTotalIOPS(Integer bootDiskTotalIOPSParam) {
-        this.bootDiskTotalIOPSParam = bootDiskTotalIOPSParam;
-    }
-
-    public Integer getBootDiskWriteBandwidth() {
-        return bootDiskWriteBandwidthParam;
-    }
-
-    public void setBootDiskWriteBandwidth(Integer bootDiskWriteBandwidthParam) {
-        this.bootDiskWriteBandwidthParam = bootDiskWriteBandwidthParam;
-    }
-
-    public Integer getBootDiskWriteIOPS() {
-        return bootDiskWriteIOPSParam;
-    }
-
-    public void setBootDiskWriteIOPS(Integer bootDiskWriteIOPSParam) {
-        this.bootDiskWriteIOPSParam = bootDiskWriteIOPSParam;
-    }
-
     public String getBootSourceType() {
         return bootSourceTypeParam;
     }
@@ -587,44 +440,12 @@ public class CreateVMInstanceRequest extends Request {
         this.bootloaderTypeParam = bootloaderTypeParam;
     }
 
-    public List<CreateVMInstanceRequestCDROM> getCDROMs() {
-        return cDROMsParam;
-    }
-
-    public void setCDROMs(List<CreateVMInstanceRequestCDROM> cDROMsParam) {
-        this.cDROMsParam = cDROMsParam;
-    }
-
     public Integer getCPU() {
         return cPUParam;
     }
 
     public void setCPU(Integer cPUParam) {
         this.cPUParam = cPUParam;
-    }
-
-    public Integer getCPUCoresPerSocket() {
-        return cPUCoresPerSocketParam;
-    }
-
-    public void setCPUCoresPerSocket(Integer cPUCoresPerSocketParam) {
-        this.cPUCoresPerSocketParam = cPUCoresPerSocketParam;
-    }
-
-    public Boolean getCPUHypervisorDisable() {
-        return cPUHypervisorDisableParam;
-    }
-
-    public void setCPUHypervisorDisable(Boolean cPUHypervisorDisableParam) {
-        this.cPUHypervisorDisableParam = cPUHypervisorDisableParam;
-    }
-
-    public Integer getCPULimitPercent() {
-        return cPULimitPercentParam;
-    }
-
-    public void setCPULimitPercent(Integer cPULimitPercentParam) {
-        this.cPULimitPercentParam = cPULimitPercentParam;
     }
 
     public String getCPUMode() {
@@ -641,14 +462,6 @@ public class CreateVMInstanceRequest extends Request {
 
     public void setCPUModel(String cPUModelParam) {
         this.cPUModelParam = cPUModelParam;
-    }
-
-    public String getCPUPriority() {
-        return cPUPriorityParam;
-    }
-
-    public void setCPUPriority(String cPUPriorityParam) {
-        this.cPUPriorityParam = cPUPriorityParam;
     }
 
     public String getChargeType() {
@@ -673,6 +486,14 @@ public class CreateVMInstanceRequest extends Request {
 
     public void setDNS(String dNSParam) {
         this.dNSParam = dNSParam;
+    }
+
+    public Boolean getDataDiskAutoMount() {
+        return dataDiskAutoMountParam;
+    }
+
+    public void setDataDiskAutoMount(Boolean dataDiskAutoMountParam) {
+        this.dataDiskAutoMountParam = dataDiskAutoMountParam;
     }
 
     public String getDataDiskID() {
@@ -705,14 +526,6 @@ public class CreateVMInstanceRequest extends Request {
 
     public void setDataDiskSpace(Integer dataDiskSpaceParam) {
         this.dataDiskSpaceParam = dataDiskSpaceParam;
-    }
-
-    public List<CreateVMInstanceRequestDataDisk> getDataDisks() {
-        return dataDisksParam;
-    }
-
-    public void setDataDisks(List<CreateVMInstanceRequestDataDisk> dataDisksParam) {
-        this.dataDisksParam = dataDisksParam;
     }
 
     public String getDiskCacheMode() {
@@ -779,14 +592,6 @@ public class CreateVMInstanceRequest extends Request {
         this.highAvailabilityParam = highAvailabilityParam;
     }
 
-    public String getHostID() {
-        return hostIDParam;
-    }
-
-    public void setHostID(String hostIDParam) {
-        this.hostIDParam = hostIDParam;
-    }
-
     public String getHostname() {
         return hostnameParam;
     }
@@ -819,12 +624,12 @@ public class CreateVMInstanceRequest extends Request {
         this.imageIDParam = imageIDParam;
     }
 
-    public String getInitialState() {
-        return initialStateParam;
+    public String getInternalExpandIP() {
+        return internalExpandIPParam;
     }
 
-    public void setInitialState(String initialStateParam) {
-        this.initialStateParam = initialStateParam;
+    public void setInternalExpandIP(String internalExpandIPParam) {
+        this.internalExpandIPParam = internalExpandIPParam;
     }
 
     public String getInternalIP() {
@@ -833,6 +638,14 @@ public class CreateVMInstanceRequest extends Request {
 
     public void setInternalIP(String internalIPParam) {
         this.internalIPParam = internalIPParam;
+    }
+
+    public String getInternalIPVersion() {
+        return internalIPVersionParam;
+    }
+
+    public void setInternalIPVersion(String internalIPVersionParam) {
+        this.internalIPVersionParam = internalIPVersionParam;
     }
 
     public String getInternetIP() {
@@ -889,14 +702,6 @@ public class CreateVMInstanceRequest extends Request {
 
     public void setMemory(Integer memoryParam) {
         this.memoryParam = memoryParam;
-    }
-
-    public List<CreateVMInstanceRequestNIC> getNICs() {
-        return nICsParam;
-    }
-
-    public void setNICs(List<CreateVMInstanceRequestNIC> nICsParam) {
-        this.nICsParam = nICsParam;
     }
 
     public String getName() {

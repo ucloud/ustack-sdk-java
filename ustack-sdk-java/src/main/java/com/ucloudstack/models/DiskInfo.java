@@ -47,10 +47,6 @@ public class DiskInfo {
     @SerializedName("Bandwidth")
     private Integer bandwidthParam;
 
-    /** 缓存类型，取值 directsync、none、writeback */
-    @SerializedName("CacheMode")
-    private String cacheModeParam;
-
     /** 计费类型，计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic→HOUR、Month→MONTH、Year→YEAR */
     @SerializedName("ChargeType")
     private String chargeTypeParam;
@@ -238,14 +234,6 @@ public class DiskInfo {
 
     public void setBandwidth(Integer bandwidthParam) {
         this.bandwidthParam = bandwidthParam;
-    }
-
-    public String getCacheMode() {
-        return cacheModeParam;
-    }
-
-    public void setCacheMode(String cacheModeParam) {
-        this.cacheModeParam = cacheModeParam;
     }
 
     public String getChargeType() {

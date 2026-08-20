@@ -143,6 +143,10 @@ public class CIInfo {
     @SerializedName("VMID")
     private String vMIDParam;
 
+    /** 计算集群别名，虚拟机所在计算集群的人性化显示名称 */
+    @SerializedName("VMTypeAlias")
+    private String vMTypeAliasParam;
+
 
     public String getBindResourceID() {
         return bindResourceIDParam;
@@ -390,6 +394,14 @@ public class CIInfo {
 
     public void setVMID(String vMIDParam) {
         this.vMIDParam = vMIDParam;
+    }
+
+    public String getVMTypeAlias() {
+        return vMTypeAliasParam;
+    }
+
+    public void setVMTypeAlias(String vMTypeAliasParam) {
+        this.vMTypeAliasParam = vMTypeAliasParam;
     }
 
 }

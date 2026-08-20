@@ -55,11 +55,11 @@ public class OPLogInfo {
     @SerializedName("ProductType")
     private String productTypeParam;
 
-    /** 地域ID；地域类操作返回具体地域标识，全局类或账号级日志可为空 */
+    /** 地域ID，操作发生的地域标识 */
     @SerializedName("Region")
     private String regionParam;
 
-    /** 地域别称；当 Region 非空时保证非空，优先返回地域显示名称，缺失时可回退为 Region 原值；当 Region 为空时该字段也为空 */
+    /** 地域别称，地域的显示名称 */
     @SerializedName("RegionAlias")
     private String regionAliasParam;
 

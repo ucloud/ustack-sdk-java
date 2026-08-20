@@ -27,11 +27,6 @@ public class DescribeSecurityGroupRuleRequest extends Request {
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** 流量方向筛选，取值1为入站、0为出站；为空时返回全部方向规则 */
-    
-    @UCloudStackParam("IsIn")
-    private String isInParam;
-
     /** 分页大小，指定每页返回的记录数 */
     
     @UCloudStackParam("Limit")
@@ -64,14 +59,6 @@ public class DescribeSecurityGroupRuleRequest extends Request {
 
     public void setCompanyID(Integer companyIDParam) {
         this.companyIDParam = companyIDParam;
-    }
-
-    public String getIsIn() {
-        return isInParam;
-    }
-
-    public void setIsIn(String isInParam) {
-        this.isInParam = isInParam;
     }
 
     public Integer getLimit() {

@@ -62,11 +62,6 @@ public class DescribeASGroupRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 状态列表，按状态过滤伸缩组 */
-    
-    @UCloudStackParam("Status")
-    private List<String> statusParam;
-
 
     public String getAsMode() {
         return asModeParam;
@@ -130,14 +125,6 @@ public class DescribeASGroupRequest extends Request {
 
     public void setRegion(String regionParam) {
         this.regionParam = regionParam;
-    }
-
-    public List<String> getStatus() {
-        return statusParam;
-    }
-
-    public void setStatus(List<String> statusParam) {
-        this.statusParam = statusParam;
     }
 
 }

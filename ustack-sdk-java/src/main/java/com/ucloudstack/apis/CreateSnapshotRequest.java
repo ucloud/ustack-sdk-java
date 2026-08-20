@@ -37,7 +37,7 @@ public class CreateSnapshotRequest extends Request {
     @UCloudStackParam("Name")
     private String nameParam;
 
-    /** 项目组ID，资源所属项目组，未传时尝试分配默认项目 */
+    /** 项目组ID，资源所属项目组 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

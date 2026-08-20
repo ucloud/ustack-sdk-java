@@ -77,7 +77,7 @@ public class CreateMySQLRequest extends Request {
     @UCloudStackParam("Password")
     private String passwordParam;
 
-    /** 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目 */
+    /** 项目ID，用于实现资源的逻辑分组管理 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;

@@ -32,7 +32,7 @@ public class AllocateExternalStorageSetDiskRequest extends Request {
     @UCloudStackParam("DiskID")
     private String diskIDParam;
 
-    /** 项目ID，资源分配到目标租户后的项目归属，未传时尝试分配默认项目 */
+    /** 项目ID，资源分配到目标租户后的项目归属 */
     
     @UCloudStackParam("ProjectID")
     private String projectIDParam;
