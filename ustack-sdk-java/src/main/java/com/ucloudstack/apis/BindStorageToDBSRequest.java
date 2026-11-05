@@ -27,7 +27,7 @@ public class BindStorageToDBSRequest extends Request {
     @UCloudStackParam("AccessKey")
     private String accessKeyParam;
 
-    /** 外部服务存储桶名称，当StorageType为S3时可选，空值默认dbs */
+    /** 外部服务存储桶名称，当StorageType为S3时必填 */
     
     @UCloudStackParam("BucketName")
     private String bucketNameParam;

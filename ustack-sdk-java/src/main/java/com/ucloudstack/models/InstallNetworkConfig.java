@@ -39,6 +39,10 @@ public class InstallNetworkConfig {
     @SerializedName("VLAN")
     private InstallVLANConfig vLANParam;
 
+    /** 交换机端口模式，来自该网卡最近一次装机时选择的值；access表示交换机端口为Access模式，trunk或空表示Trunk模式 */
+    @SerializedName("VlanMode")
+    private String vlanModeParam;
+
 
     public InstallBondConfig getBond() {
         return bondParam;
@@ -78,6 +82,14 @@ public class InstallNetworkConfig {
 
     public void setVLAN(InstallVLANConfig vLANParam) {
         this.vLANParam = vLANParam;
+    }
+
+    public String getVlanMode() {
+        return vlanModeParam;
+    }
+
+    public void setVlanMode(String vlanModeParam) {
+        this.vlanModeParam = vlanModeParam;
     }
 
 }

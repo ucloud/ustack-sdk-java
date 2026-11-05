@@ -22,6 +22,11 @@ import com.ucloudstack.models.*;
 
 public class CreateDTSTaskRequest extends Request {
 
+    /** 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000 */
+    
+    @UCloudStackParam("BatchSize")
+    private Integer batchSizeParam;
+
     /** CPU核数，用于指定DTS实例的CPU配置 */
     @NotEmpty
     @UCloudStackParam("CPU")
@@ -107,15 +112,20 @@ public class CreateDTSTaskRequest extends Request {
     @UCloudStackParam("HeartbeatTable")
     private String heartbeatTableParam;
 
-    /** 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，与Databases互斥使用 */
+    /** 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，命中即不同步，优先级高于同步配置 */
     
     @UCloudStackParam("IgnoreDatabases")
     private String ignoreDatabasesParam;
 
-    /** 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用 */
+    /** 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，命中即不同步，优先级高于同步配置 */
     
     @UCloudStackParam("IgnoreTables")
     private String ignoreTablesParam;
+
+    /** 增量同步阶段的 DTS 自恢复策略；不传表示沿用 DTS 默认自恢复策略，显式 Enabled=false 表示关闭 DTS 自恢复 */
+    
+    @UCloudStackParam("IncrementalRestart")
+    private DTSServiceRestartPolicy incrementalRestartParam;
 
     /** 最大每秒同步记录数，用于限制数据同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000 */
     @NotEmpty
@@ -227,6 +237,14 @@ public class CreateDTSTaskRequest extends Request {
     @UCloudStackParam("TaskMode")
     private String taskModeParam;
 
+
+    public Integer getBatchSize() {
+        return batchSizeParam;
+    }
+
+    public void setBatchSize(Integer batchSizeParam) {
+        this.batchSizeParam = batchSizeParam;
+    }
 
     public Integer getCPU() {
         return cPUParam;
@@ -378,6 +396,14 @@ public class CreateDTSTaskRequest extends Request {
 
     public void setIgnoreTables(String ignoreTablesParam) {
         this.ignoreTablesParam = ignoreTablesParam;
+    }
+
+    public DTSServiceRestartPolicy getIncrementalRestart() {
+        return incrementalRestartParam;
+    }
+
+    public void setIncrementalRestart(DTSServiceRestartPolicy incrementalRestartParam) {
+        this.incrementalRestartParam = incrementalRestartParam;
     }
 
     public Integer getMaxRPS() {

@@ -22,6 +22,11 @@ import com.ucloudstack.models.*;
 
 public class RunDTSPrecheckRequest extends Request {
 
+    /** DTS任务ID，已有DTS任务预检查时用于在对应DTS虚拟机内执行命令；新建任务预检查时无需传入 */
+    
+    @UCloudStackParam("DTSID")
+    private String dTSIDParam;
+
     /** 同步数据库列表，指定需要同步的数据库名称，多个数据库用逗号分隔；不指定则同步所有数据库 */
     
     @UCloudStackParam("Databases")
@@ -67,12 +72,12 @@ public class RunDTSPrecheckRequest extends Request {
     @UCloudStackParam("DestinationEngine")
     private String destinationEngineParam;
 
-    /** 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，与Databases互斥使用 */
+    /** 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，命中即不同步，优先级高于同步配置 */
     
     @UCloudStackParam("IgnoreDatabases")
     private String ignoreDatabasesParam;
 
-    /** 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用 */
+    /** 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，命中即不同步，优先级高于同步配置 */
     
     @UCloudStackParam("IgnoreTables")
     private String ignoreTablesParam;
@@ -147,6 +152,14 @@ public class RunDTSPrecheckRequest extends Request {
     @UCloudStackParam("TaskMode")
     private String taskModeParam;
 
+
+    public String getDTSID() {
+        return dTSIDParam;
+    }
+
+    public void setDTSID(String dTSIDParam) {
+        this.dTSIDParam = dTSIDParam;
+    }
 
     public String getDatabases() {
         return databasesParam;

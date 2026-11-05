@@ -21,6 +21,10 @@ import com.ucloudstack.models.*;
 
 public class GetDTSTaskConfigureResponse extends Response {
 
+    /** 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000 */
+    @SerializedName("BatchSize")
+    private Integer batchSizeParam;
+
     /** DTS任务ID，数据传输任务唯一标识 */
     @SerializedName("DTSID")
     private String dTSIDParam;
@@ -85,6 +89,10 @@ public class GetDTSTaskConfigureResponse extends Response {
     @SerializedName("IgnoreTables")
     private String ignoreTablesParam;
 
+    /** 增量同步阶段的 DTS 自恢复策略；为空表示沿用 DTS 默认自恢复策略 */
+    @SerializedName("IncrementalRestart")
+    private DTSServiceRestartPolicy incrementalRestartParam;
+
     /** binlog GTID集合，用于增量或全量加增量同步 */
     @SerializedName("SourceEndpointBinlogGTID")
     private String sourceEndpointBinlogGTIDParam;
@@ -137,6 +145,14 @@ public class GetDTSTaskConfigureResponse extends Response {
     @SerializedName("Tables")
     private String tablesParam;
 
+
+    public Integer getBatchSize() {
+        return batchSizeParam;
+    }
+
+    public void setBatchSize(Integer batchSizeParam) {
+        this.batchSizeParam = batchSizeParam;
+    }
 
     public String getDTSID() {
         return dTSIDParam;
@@ -264,6 +280,14 @@ public class GetDTSTaskConfigureResponse extends Response {
 
     public void setIgnoreTables(String ignoreTablesParam) {
         this.ignoreTablesParam = ignoreTablesParam;
+    }
+
+    public DTSServiceRestartPolicy getIncrementalRestart() {
+        return incrementalRestartParam;
+    }
+
+    public void setIncrementalRestart(DTSServiceRestartPolicy incrementalRestartParam) {
+        this.incrementalRestartParam = incrementalRestartParam;
     }
 
     public String getSourceEndpointBinlogGTID() {
