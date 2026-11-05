@@ -122,6 +122,11 @@ public class CloneVMInstanceRequest extends Request {
     @UCloudStackParam("OperatorName")
     private String operatorNameParam;
 
+    /** 网卡型号，指定物理网卡的硬件型号编码，支持SR-IOV加速，仅适用于扁平网络，与内网带宽限速互斥 */
+    
+    @UCloudStackParam("PFCode")
+    private String pFCodeParam;
+
     /** 项目ID，资源所属的项目分组标识 */
     
     @UCloudStackParam("ProjectID")
@@ -336,6 +341,14 @@ public class CloneVMInstanceRequest extends Request {
 
     public void setOperatorName(String operatorNameParam) {
         this.operatorNameParam = operatorNameParam;
+    }
+
+    public String getPFCode() {
+        return pFCodeParam;
+    }
+
+    public void setPFCode(String pFCodeParam) {
+        this.pFCodeParam = pFCodeParam;
     }
 
     public String getProjectID() {

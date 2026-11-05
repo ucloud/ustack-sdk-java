@@ -67,7 +67,7 @@ public class DescribeVMInstanceRequest extends Request {
     @UCloudStackParam("Region")
     private String regionParam;
 
-    /** 搜索字段，指定关键词匹配的字段，取值：Name（名称，前缀匹配）；不传或空值表示全字段匹配 */
+    /** 搜索字段，指定关键词匹配的字段，取值：Name（名称，模糊匹配，仅匹配名称中包含关键词的虚拟机）；不传或空值表示全字段匹配 */
     
     @UCloudStackParam("SearchField")
     private String searchFieldParam;

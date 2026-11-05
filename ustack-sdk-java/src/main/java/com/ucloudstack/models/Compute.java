@@ -39,6 +39,10 @@ public class Compute {
     @SerializedName("CPUUsed")
     private Integer cPUUsedParam;
 
+    /** vCPU绑定CPU量，vCPU绑定节点预留的CPU核心数 */
+    @SerializedName("CPUVCPUBinding")
+    private Integer cPUVCPUBindingParam;
+
     /** GPU可分配，剩余可分配GPU数量 */
     @SerializedName("GPUAllocable")
     private Integer gPUAllocableParam;
@@ -86,6 +90,10 @@ public class Compute {
     /** 内存已用，已分配内存容量 */
     @SerializedName("MemoryUsed")
     private Double memoryUsedParam;
+
+    /** vCPU绑定内存量，vCPU绑定节点预留的内存容量，单位为GB */
+    @SerializedName("MemoryVCPUBinding")
+    private Double memoryVCPUBindingParam;
 
     /** 资源总数，节点资源总数 */
     @SerializedName("ResourceCount")
@@ -150,6 +158,14 @@ public class Compute {
 
     public void setCPUUsed(Integer cPUUsedParam) {
         this.cPUUsedParam = cPUUsedParam;
+    }
+
+    public Integer getCPUVCPUBinding() {
+        return cPUVCPUBindingParam;
+    }
+
+    public void setCPUVCPUBinding(Integer cPUVCPUBindingParam) {
+        this.cPUVCPUBindingParam = cPUVCPUBindingParam;
     }
 
     public Integer getGPUAllocable() {
@@ -246,6 +262,14 @@ public class Compute {
 
     public void setMemoryUsed(Double memoryUsedParam) {
         this.memoryUsedParam = memoryUsedParam;
+    }
+
+    public Double getMemoryVCPUBinding() {
+        return memoryVCPUBindingParam;
+    }
+
+    public void setMemoryVCPUBinding(Double memoryVCPUBindingParam) {
+        this.memoryVCPUBindingParam = memoryVCPUBindingParam;
     }
 
     public Integer getResourceCount() {

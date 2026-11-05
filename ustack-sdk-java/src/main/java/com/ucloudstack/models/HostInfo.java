@@ -35,6 +35,10 @@ public class HostInfo {
     @SerializedName("CPUUsed")
     private Integer cPUUsedParam;
 
+    /** vCPU绑定CPU余量，启用vCPU绑定的物理机剩余可分配CPU核心数 */
+    @SerializedName("CPUVCPUBinding")
+    private Integer cPUVCPUBindingParam;
+
     /** 创建时间，资源创建的秒级Unix时间戳 */
     @SerializedName("CreateTime")
     private Integer createTimeParam;
@@ -94,6 +98,10 @@ public class HostInfo {
     /** 已用内存，已分配的内存容量，单位GiB */
     @SerializedName("MemoryUsed")
     private Integer memoryUsedParam;
+
+    /** vCPU绑定内存余量，启用vCPU绑定的物理机剩余可分配内存，单位GiB */
+    @SerializedName("MemoryVCPUBinding")
+    private Double memoryVCPUBindingParam;
 
     /** NUMA节点数，物理机的NUMA节点数量 */
     @SerializedName("NumaNodes")
@@ -166,6 +174,14 @@ public class HostInfo {
 
     public void setCPUUsed(Integer cPUUsedParam) {
         this.cPUUsedParam = cPUUsedParam;
+    }
+
+    public Integer getCPUVCPUBinding() {
+        return cPUVCPUBindingParam;
+    }
+
+    public void setCPUVCPUBinding(Integer cPUVCPUBindingParam) {
+        this.cPUVCPUBindingParam = cPUVCPUBindingParam;
     }
 
     public Integer getCreateTime() {
@@ -286,6 +302,14 @@ public class HostInfo {
 
     public void setMemoryUsed(Integer memoryUsedParam) {
         this.memoryUsedParam = memoryUsedParam;
+    }
+
+    public Double getMemoryVCPUBinding() {
+        return memoryVCPUBindingParam;
+    }
+
+    public void setMemoryVCPUBinding(Double memoryVCPUBindingParam) {
+        this.memoryVCPUBindingParam = memoryVCPUBindingParam;
     }
 
     public Integer getNumaNodes() {

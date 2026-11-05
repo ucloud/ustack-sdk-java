@@ -73,7 +73,7 @@ public class CreateDirectConnectRequest extends Request {
     private List<String> remoteSubnetCIDRsParam;
 
     /** 标签键值对，用于资源标记和分类管理，格式为key:value的字符串，传入Base64编码的字符串 */
-    @NotEmpty
+    
     @UCloudStackParam("TagKeyValuePairs")
     private List<String> tagKeyValuePairsParam;
 
