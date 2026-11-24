@@ -63,6 +63,10 @@ public class NativeNodeInfo {
     @SerializedName("ComputeclassType")
     private String computeclassTypeParam;
 
+    /** 默认DNS，none 表示不设置；为空表示未配置，由 HH 回落到系统默认 */
+    @SerializedName("DNS")
+    private String dNSParam;
+
     /** 弹性IP */
     @SerializedName("EIP")
     private String eIPParam;
@@ -102,6 +106,26 @@ public class NativeNodeInfo {
     /** 系统类型 */
     @SerializedName("OSType")
     private String oSTypeParam;
+
+    /** 不能在线升配 CPU 的原因：空表示可以；NotReserved 表示节点虚拟机未预留 CPU 热插容量；Unsupported 表示该节点架构暂不支持；ArmUnsupported 表示 arm 节点暂不支持，需新建节点 */
+    @SerializedName("ResizeCPUBlockedReason")
+    private String resizeCPUBlockedReasonParam;
+
+    /** ResizeStatus 为 Failed 时的失败原因码，如 CPUExceedsMax */
+    @SerializedName("ResizeFailReason")
+    private String resizeFailReasonParam;
+
+    /** 在线升配 CPU 的上限（含）；为 0 且 ResizeCPUBlockedReason 为空表示未知（节点所在 kubelet 尚未上报） */
+    @SerializedName("ResizeMaxCPU")
+    private Integer resizeMaxCPUParam;
+
+    /** ResizeStatus 为 Failed 时节点侧上报的失败详情 */
+    @SerializedName("ResizeMessage")
+    private String resizeMessageParam;
+
+    /** 规格在线升配状态：空表示规格已在节点内生效；Pending 表示规格已写入但节点内尚未确认生效；Failed 表示节点内无法生效，原因见 ResizeFailReason、ResizeMessage */
+    @SerializedName("ResizeStatus")
+    private String resizeStatusParam;
 
     /**  */
     @SerializedName("SGID")
@@ -232,6 +256,14 @@ public class NativeNodeInfo {
         this.computeclassTypeParam = computeclassTypeParam;
     }
 
+    public String getDNS() {
+        return dNSParam;
+    }
+
+    public void setDNS(String dNSParam) {
+        this.dNSParam = dNSParam;
+    }
+
     public String getEIP() {
         return eIPParam;
     }
@@ -310,6 +342,46 @@ public class NativeNodeInfo {
 
     public void setOSType(String oSTypeParam) {
         this.oSTypeParam = oSTypeParam;
+    }
+
+    public String getResizeCPUBlockedReason() {
+        return resizeCPUBlockedReasonParam;
+    }
+
+    public void setResizeCPUBlockedReason(String resizeCPUBlockedReasonParam) {
+        this.resizeCPUBlockedReasonParam = resizeCPUBlockedReasonParam;
+    }
+
+    public String getResizeFailReason() {
+        return resizeFailReasonParam;
+    }
+
+    public void setResizeFailReason(String resizeFailReasonParam) {
+        this.resizeFailReasonParam = resizeFailReasonParam;
+    }
+
+    public Integer getResizeMaxCPU() {
+        return resizeMaxCPUParam;
+    }
+
+    public void setResizeMaxCPU(Integer resizeMaxCPUParam) {
+        this.resizeMaxCPUParam = resizeMaxCPUParam;
+    }
+
+    public String getResizeMessage() {
+        return resizeMessageParam;
+    }
+
+    public void setResizeMessage(String resizeMessageParam) {
+        this.resizeMessageParam = resizeMessageParam;
+    }
+
+    public String getResizeStatus() {
+        return resizeStatusParam;
+    }
+
+    public void setResizeStatus(String resizeStatusParam) {
+        this.resizeStatusParam = resizeStatusParam;
     }
 
     public String getSGID() {

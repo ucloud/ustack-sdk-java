@@ -20,23 +20,54 @@ import java.util.List;
 import java.util.Map;
 import com.ucloudstack.models.*;
 
-public class DescribePMAURLRequest extends Request {
+public class GetNativeNodeResizePriceRequest extends Request {
 
-    /** 租户ID，实例所属租户 */
+    /** 目标CPU核数，只支持扩容，不得小于当前值 */
+    @NotEmpty
+    @UCloudStackParam("CPU")
+    private Integer cPUParam;
+
+    /** 集群Id */
+    @NotEmpty
+    @UCloudStackParam("ClusterID")
+    private String clusterIDParam;
+
+    /** 租户ID */
     
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** MySQL实例ID，指定要获取PMAURL的实例；注意：资源必须为AVAILABLE */
+    /** 目标内存，单位 GiB，只支持扩容，不得小于当前值 */
     @NotEmpty
-    @UCloudStackParam("MySQLID")
-    private String mySQLIDParam;
+    @UCloudStackParam("Memory")
+    private Integer memoryParam;
 
-    /** 地域ID，实例所属地域 */
+    /** 节点名称 */
+    @NotEmpty
+    @UCloudStackParam("NodeName")
+    private String nodeNameParam;
+
+    /** 地域 */
     @NotEmpty
     @UCloudStackParam("Region")
     private String regionParam;
 
+
+    public Integer getCPU() {
+        return cPUParam;
+    }
+
+    public void setCPU(Integer cPUParam) {
+        this.cPUParam = cPUParam;
+    }
+
+    public String getClusterID() {
+        return clusterIDParam;
+    }
+
+    public void setClusterID(String clusterIDParam) {
+        this.clusterIDParam = clusterIDParam;
+    }
 
     public Integer getCompanyID() {
         return companyIDParam;
@@ -46,12 +77,20 @@ public class DescribePMAURLRequest extends Request {
         this.companyIDParam = companyIDParam;
     }
 
-    public String getMySQLID() {
-        return mySQLIDParam;
+    public Integer getMemory() {
+        return memoryParam;
     }
 
-    public void setMySQLID(String mySQLIDParam) {
-        this.mySQLIDParam = mySQLIDParam;
+    public void setMemory(Integer memoryParam) {
+        this.memoryParam = memoryParam;
+    }
+
+    public String getNodeName() {
+        return nodeNameParam;
+    }
+
+    public void setNodeName(String nodeNameParam) {
+        this.nodeNameParam = nodeNameParam;
     }
 
     public String getRegion() {

@@ -497,6 +497,8 @@ import com.ucloudstack.apis.DescribeResourceConditionRequest;
 import com.ucloudstack.apis.DescribeResourceConditionResponse;
 import com.ucloudstack.apis.DescribeResourceEventRequest;
 import com.ucloudstack.apis.DescribeResourceEventResponse;
+import com.ucloudstack.apis.DescribeVMMigrationEventRequest;
+import com.ucloudstack.apis.DescribeVMMigrationEventResponse;
 import com.ucloudstack.apis.GetOnSiteInspectionRequest;
 import com.ucloudstack.apis.GetOnSiteInspectionResponse;
 import com.ucloudstack.apis.GetResourceUsageRequest;
@@ -575,6 +577,8 @@ import com.ucloudstack.apis.DetachClusterEIPRequest;
 import com.ucloudstack.apis.DetachClusterEIPResponse;
 import com.ucloudstack.apis.ForwardClusterRequest;
 import com.ucloudstack.apis.ForwardClusterResponse;
+import com.ucloudstack.apis.GetClusterControlPlaneSpecPriceRequest;
+import com.ucloudstack.apis.GetClusterControlPlaneSpecPriceResponse;
 import com.ucloudstack.apis.GetClusterPaymentOfPremiumRequest;
 import com.ucloudstack.apis.GetClusterPaymentOfPremiumResponse;
 import com.ucloudstack.apis.GetClusterPriceRequest;
@@ -583,12 +587,20 @@ import com.ucloudstack.apis.GetContainerLogsRequest;
 import com.ucloudstack.apis.GetContainerLogsResponse;
 import com.ucloudstack.apis.GetNativeNodePriceRequest;
 import com.ucloudstack.apis.GetNativeNodePriceResponse;
+import com.ucloudstack.apis.GetNativeNodeResizePriceRequest;
+import com.ucloudstack.apis.GetNativeNodeResizePriceResponse;
 import com.ucloudstack.apis.UpdateClusterRequest;
 import com.ucloudstack.apis.UpdateClusterResponse;
 import com.ucloudstack.apis.UpdateClusterCapacityRequest;
 import com.ucloudstack.apis.UpdateClusterCapacityResponse;
+import com.ucloudstack.apis.UpdateClusterControlPlaneSpecRequest;
+import com.ucloudstack.apis.UpdateClusterControlPlaneSpecResponse;
+import com.ucloudstack.apis.UpdateNativeNodeDNSRequest;
+import com.ucloudstack.apis.UpdateNativeNodeDNSResponse;
 import com.ucloudstack.apis.UpdateNativeNodeInstanceStatusRequest;
 import com.ucloudstack.apis.UpdateNativeNodeInstanceStatusResponse;
+import com.ucloudstack.apis.UpdateNativeNodeResourcesRequest;
+import com.ucloudstack.apis.UpdateNativeNodeResourcesResponse;
 import com.ucloudstack.apis.UpdateNativeNodeWANRequest;
 import com.ucloudstack.apis.UpdateNativeNodeWANResponse;
 import com.ucloudstack.apis.UpdateSuperNodeRequest;
@@ -723,8 +735,6 @@ import com.ucloudstack.apis.DescribeMySQLParamTplsRequest;
 import com.ucloudstack.apis.DescribeMySQLParamTplsResponse;
 import com.ucloudstack.apis.DescribeMySQLSlowLogRecordsRequest;
 import com.ucloudstack.apis.DescribeMySQLSlowLogRecordsResponse;
-import com.ucloudstack.apis.DescribePMAURLRequest;
-import com.ucloudstack.apis.DescribePMAURLResponse;
 import com.ucloudstack.apis.DowngradeMySQLRequest;
 import com.ucloudstack.apis.DowngradeMySQLResponse;
 import com.ucloudstack.apis.GetMySQLPriceRequest;
@@ -4815,6 +4825,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * DescribeVMMigrationEvent - 获取虚拟机迁移事件列表
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public DescribeVMMigrationEventResponse describeVMMigrationEvent(DescribeVMMigrationEventRequest request)
+            throws UCloudStackException {
+        request.setAction("DescribeVMMigrationEvent");
+        return (DescribeVMMigrationEventResponse)
+                this.invoke(request, DescribeVMMigrationEventResponse.class);
+    }
+
+
+    /**
      * GetOnSiteInspection - 获取巡检报告详情
      *
      * @param request Request object
@@ -5361,6 +5385,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * GetClusterControlPlaneSpecPrice - 获取K8S集群控制面规格升档差价
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public GetClusterControlPlaneSpecPriceResponse getClusterControlPlaneSpecPrice(GetClusterControlPlaneSpecPriceRequest request)
+            throws UCloudStackException {
+        request.setAction("GetClusterControlPlaneSpecPrice");
+        return (GetClusterControlPlaneSpecPriceResponse)
+                this.invoke(request, GetClusterControlPlaneSpecPriceResponse.class);
+    }
+
+
+    /**
      * GetClusterPaymentOfPremium - 获取K8S修改配置后的差价
      *
      * @param request Request object
@@ -5417,6 +5455,20 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * GetNativeNodeResizePrice - 获取K8S原生节点升配差价
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public GetNativeNodeResizePriceResponse getNativeNodeResizePrice(GetNativeNodeResizePriceRequest request)
+            throws UCloudStackException {
+        request.setAction("GetNativeNodeResizePrice");
+        return (GetNativeNodeResizePriceResponse)
+                this.invoke(request, GetNativeNodeResizePriceResponse.class);
+    }
+
+
+    /**
      * UpdateCluster - 更新k8s集群
      *
      * @param request Request object
@@ -5445,6 +5497,34 @@ public class Client extends DefaultClient implements ClientInterface {
 
 
     /**
+     * UpdateClusterControlPlaneSpec - 升级k8s集群控制面规格档位（只支持升级，不支持降级）
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateClusterControlPlaneSpecResponse updateClusterControlPlaneSpec(UpdateClusterControlPlaneSpecRequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateClusterControlPlaneSpec");
+        return (UpdateClusterControlPlaneSpecResponse)
+                this.invoke(request, UpdateClusterControlPlaneSpecResponse.class);
+    }
+
+
+    /**
+     * UpdateNativeNodeDNS - 更新k8s集群NativeNode默认DNS
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateNativeNodeDNSResponse updateNativeNodeDNS(UpdateNativeNodeDNSRequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateNativeNodeDNS");
+        return (UpdateNativeNodeDNSResponse)
+                this.invoke(request, UpdateNativeNodeDNSResponse.class);
+    }
+
+
+    /**
      * UpdateNativeNodeInstanceStatus - 更新k8s集群NativeNode实例状态
      *
      * @param request Request object
@@ -5455,6 +5535,20 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("UpdateNativeNodeInstanceStatus");
         return (UpdateNativeNodeInstanceStatusResponse)
                 this.invoke(request, UpdateNativeNodeInstanceStatusResponse.class);
+    }
+
+
+    /**
+     * UpdateNativeNodeResources - 更新k8s集群NativeNode规格（在线升配，只支持扩容）
+     *
+     * @param request Request object
+     * @throws UCloudStackException Exception
+     */
+    public UpdateNativeNodeResourcesResponse updateNativeNodeResources(UpdateNativeNodeResourcesRequest request)
+            throws UCloudStackException {
+        request.setAction("UpdateNativeNodeResources");
+        return (UpdateNativeNodeResourcesResponse)
+                this.invoke(request, UpdateNativeNodeResourcesResponse.class);
     }
 
 
@@ -6393,20 +6487,6 @@ public class Client extends DefaultClient implements ClientInterface {
         request.setAction("DescribeMySQLSlowLogRecords");
         return (DescribeMySQLSlowLogRecordsResponse)
                 this.invoke(request, DescribeMySQLSlowLogRecordsResponse.class);
-    }
-
-
-    /**
-     * DescribePMAURL - 获取 PMA URL
-     *
-     * @param request Request object
-     * @throws UCloudStackException Exception
-     */
-    public DescribePMAURLResponse describePMAURL(DescribePMAURLRequest request)
-            throws UCloudStackException {
-        request.setAction("DescribePMAURL");
-        return (DescribePMAURLResponse)
-                this.invoke(request, DescribePMAURLResponse.class);
     }
 
 

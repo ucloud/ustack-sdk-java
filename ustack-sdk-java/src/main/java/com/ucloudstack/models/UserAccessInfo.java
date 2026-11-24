@@ -71,10 +71,6 @@ public class UserAccessInfo {
     @SerializedName("Phone")
     private String phoneParam;
 
-    /** API私钥，用于请求签名，需妥善保管 */
-    @SerializedName("PrivateKey")
-    private String privateKeyParam;
-
     /** 权限级别，标识账号在租户内的管理范围 */
     @SerializedName("Privileges")
     private String privilegesParam;
@@ -202,14 +198,6 @@ public class UserAccessInfo {
 
     public void setPhone(String phoneParam) {
         this.phoneParam = phoneParam;
-    }
-
-    public String getPrivateKey() {
-        return privateKeyParam;
-    }
-
-    public void setPrivateKey(String privateKeyParam) {
-        this.privateKeyParam = privateKeyParam;
     }
 
     public String getPrivileges() {

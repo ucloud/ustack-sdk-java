@@ -32,7 +32,7 @@ public class LoginByPasswordRequest extends Request {
     @UCloudStackParam("Email")
     private String emailParam;
 
-    /** 登录密码，用于认证；若使用 X-Auth-Method: plain 则需 Base64 输入，服务端转为 AES 加密 */
+    /** 登录密码，用于认证；明文传输（依赖 TLS），口令不再做前端加密；若使用 X-Auth-Method: plain 则需 Base64 输入 */
     @NotEmpty
     @UCloudStackParam("Password")
     private String passwordParam;

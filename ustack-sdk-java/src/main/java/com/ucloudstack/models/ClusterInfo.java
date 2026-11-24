@@ -63,6 +63,10 @@ public class ClusterInfo {
     @SerializedName("ComputeclassType")
     private String computeclassTypeParam;
 
+    /** 控制面规格档位，存量集群与空值统一返回 1x */
+    @SerializedName("ControlPlaneSpec")
+    private String controlPlaneSpecParam;
+
     /** 集群控制面状态 */
     @SerializedName("ControllerPlaneStatus")
     private ControllerPlaneStatus controllerPlaneStatusParam;
@@ -274,6 +278,14 @@ public class ClusterInfo {
 
     public void setComputeclassType(String computeclassTypeParam) {
         this.computeclassTypeParam = computeclassTypeParam;
+    }
+
+    public String getControlPlaneSpec() {
+        return controlPlaneSpecParam;
+    }
+
+    public void setControlPlaneSpec(String controlPlaneSpecParam) {
+        this.controlPlaneSpecParam = controlPlaneSpecParam;
     }
 
     public ControllerPlaneStatus getControllerPlaneStatus() {

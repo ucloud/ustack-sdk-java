@@ -29,6 +29,10 @@ public class ListKVMSessionsV2Response extends Response {
     @SerializedName("TotalCount")
     private Integer totalCountParam;
 
+    /** 结果是否因扫描上限被截断；为 true 时 TotalCount 不是完整总数，调用方应缩小查询范围 */
+    @SerializedName("Truncated")
+    private Boolean truncatedParam;
+
 
     public List<KVMSessionInfoV2> getInfos() {
         return infosParam;
@@ -44,6 +48,14 @@ public class ListKVMSessionsV2Response extends Response {
 
     public void setTotalCount(Integer totalCountParam) {
         this.totalCountParam = totalCountParam;
+    }
+
+    public Boolean getTruncated() {
+        return truncatedParam;
+    }
+
+    public void setTruncated(Boolean truncatedParam) {
+        this.truncatedParam = truncatedParam;
     }
 
 }
