@@ -52,6 +52,11 @@ public class CreateNativeNodeRequest extends Request {
     @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
+    /** 默认DNS，none 表示不设置，或逗号分隔的 IP 列表；为空时按地域全局配置补齐 */
+    
+    @UCloudStackParam("DNS")
+    private String dNSParam;
+
     /** 数据盘集群ID */
     
     @UCloudStackParam("DataDiskSetType")
@@ -154,6 +159,14 @@ public class CreateNativeNodeRequest extends Request {
 
     public void setComputeclassType(String computeclassTypeParam) {
         this.computeclassTypeParam = computeclassTypeParam;
+    }
+
+    public String getDNS() {
+        return dNSParam;
+    }
+
+    public void setDNS(String dNSParam) {
+        this.dNSParam = dNSParam;
     }
 
     public String getDataDiskSetType() {

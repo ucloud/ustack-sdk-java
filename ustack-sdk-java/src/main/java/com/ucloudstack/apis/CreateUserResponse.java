@@ -21,10 +21,34 @@ import com.ucloudstack.models.*;
 
 public class CreateUserResponse extends Response {
 
+    /** API私钥，主账号私钥，仅在本次创建响应中返回一次，请立即妥善保存；后续查询接口不返回 */
+    @SerializedName("PrivateKey")
+    private String privateKeyParam;
+
+    /** API公钥，主账号公钥，仅在本次创建响应中返回，后续查询接口不再返回私钥 */
+    @SerializedName("PublicKey")
+    private String publicKeyParam;
+
     /** 租户ID，创建成功后返回的租户唯一标识，用于后续查询、授权与资源管理场景 */
     @SerializedName("UserID")
     private Integer userIDParam;
 
+
+    public String getPrivateKey() {
+        return privateKeyParam;
+    }
+
+    public void setPrivateKey(String privateKeyParam) {
+        this.privateKeyParam = privateKeyParam;
+    }
+
+    public String getPublicKey() {
+        return publicKeyParam;
+    }
+
+    public void setPublicKey(String publicKeyParam) {
+        this.publicKeyParam = publicKeyParam;
+    }
 
     public Integer getUserID() {
         return userIDParam;

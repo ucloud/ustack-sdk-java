@@ -42,7 +42,7 @@ public class CreateUserRequest extends Request {
     @UCloudStackParam("Name")
     private String nameParam;
 
-    /** 登录密码，请求传入并设置为主账号初始登录密码，作为后续登录凭据；创建租户场景使用；采用Base64(AES-CBC加密)编码传入；密码长度和复杂度由系统配置决定（PASSWORD_LENGTH、PASSWORD_COMPLEXITY），支持字符包括：大小写字母、数字、特殊符号()、反引号、~!@#$%^&*-+=_|{}[]:;'<>,.?/ */
+    /** 登录密码，请求传入并设置为主账号初始登录密码，作为后续登录凭据；创建租户场景使用；明文传入（依赖 TLS 传输加密）；密码长度和复杂度由系统配置决定（PASSWORD_LENGTH、PASSWORD_COMPLEXITY），支持字符包括：大小写字母、数字、特殊符号()、反引号、~!@#$%^&*-+=_|{}[]:;'<>,.?/ */
     @NotEmpty
     @UCloudStackParam("PassWord")
     private String passWordParam;

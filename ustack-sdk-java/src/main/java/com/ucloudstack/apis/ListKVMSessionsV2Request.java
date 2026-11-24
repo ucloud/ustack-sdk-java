@@ -22,17 +22,17 @@ import com.ucloudstack.models.*;
 
 public class ListKVMSessionsV2Request extends Request {
 
-    /** 租户ID，过滤指定租户下的KVM会话 */
-    @NotEmpty
+    /** 租户ID，可选；System/Region 管理员不传或传平台管理员 CompanyID 时查看授权地域全量，传具体租户时按该租户收敛；Company 用户始终按登录租户收敛 */
+    
     @UCloudStackParam("CompanyID")
     private Integer companyIDParam;
 
-    /** 分页大小，每页返回的记录数，默认值为20，最大值为100 */
+    /** 分页大小，每页返回的记录数，默认值为10，最大值为100 */
     
     @UCloudStackParam("Limit")
     private Integer limitParam;
 
-    /** 分页偏移，指定跳过的记录数，最小值为0 */
+    /** 分页偏移，按 Limit 对齐到页窗口，最小值为0 */
     
     @UCloudStackParam("Offset")
     private Integer offsetParam;

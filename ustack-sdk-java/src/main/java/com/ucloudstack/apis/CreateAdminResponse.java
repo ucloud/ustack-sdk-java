@@ -25,6 +25,14 @@ public class CreateAdminResponse extends Response {
     @SerializedName("MemberID")
     private Integer memberIDParam;
 
+    /** API私钥，管理员私钥，仅在本次创建响应中返回一次，请立即妥善保存；后续查询接口不返回 */
+    @SerializedName("PrivateKey")
+    private String privateKeyParam;
+
+    /** API公钥，管理员公钥，仅在本次创建响应中返回 */
+    @SerializedName("PublicKey")
+    private String publicKeyParam;
+
 
     public Integer getMemberID() {
         return memberIDParam;
@@ -32,6 +40,22 @@ public class CreateAdminResponse extends Response {
 
     public void setMemberID(Integer memberIDParam) {
         this.memberIDParam = memberIDParam;
+    }
+
+    public String getPrivateKey() {
+        return privateKeyParam;
+    }
+
+    public void setPrivateKey(String privateKeyParam) {
+        this.privateKeyParam = privateKeyParam;
+    }
+
+    public String getPublicKey() {
+        return publicKeyParam;
+    }
+
+    public void setPublicKey(String publicKeyParam) {
+        this.publicKeyParam = publicKeyParam;
     }
 
 }

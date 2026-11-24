@@ -37,7 +37,7 @@ public class CreateAdminRequest extends Request {
     @UCloudStackParam("MemberName")
     private String memberNameParam;
 
-    /** 登录密码，用于管理员登录；若使用 X-Auth-Method: plain 则需 Base64 输入并在服务端转为 AES 加密；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则 */
+    /** 登录密码，用于管理员登录；明文传输（依赖 TLS）；若使用 X-Auth-Method: plain 则需 Base64 输入；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则 */
     @NotEmpty
     @UCloudStackParam("Password")
     private String passwordParam;

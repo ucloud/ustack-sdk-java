@@ -19,19 +19,7 @@ import java.util.List;
 import java.util.Map;
 import com.ucloudstack.models.*;
 
-public class DescribePMAURLResponse extends Response {
+public class UpdateNativeNodeDNSResponse extends Response {
 
-    /** PMAURL，Web管理地址 */
-    @SerializedName("PMAURL")
-    private String pMAURLParam;
-
-
-    public String getPMAURL() {
-        return pMAURLParam;
-    }
-
-    public void setPMAURL(String pMAURLParam) {
-        this.pMAURLParam = pMAURLParam;
-    }
 
 }

@@ -47,6 +47,11 @@ public class CreateClusterRequest extends Request {
     @UCloudStackParam("ComputeclassType")
     private String computeclassTypeParam;
 
+    /** 控制面规格档位，可为 1x、2x、4x，缺省为 1x */
+    
+    @UCloudStackParam("ControlPlaneSpec")
+    private String controlPlaneSpecParam;
+
     /** APIServer EIPID */
     
     @UCloudStackParam("EIPID")
@@ -156,6 +161,14 @@ public class CreateClusterRequest extends Request {
 
     public void setComputeclassType(String computeclassTypeParam) {
         this.computeclassTypeParam = computeclassTypeParam;
+    }
+
+    public String getControlPlaneSpec() {
+        return controlPlaneSpecParam;
+    }
+
+    public void setControlPlaneSpec(String controlPlaneSpecParam) {
+        this.controlPlaneSpecParam = controlPlaneSpecParam;
     }
 
     public String getEIPID() {

@@ -71,10 +71,6 @@ public class TenantTenantInfoRes {
     @SerializedName("Phone")
     private String phoneParam;
 
-    /** API私钥，API调用请求签名RSA私钥，用于请求签名 */
-    @SerializedName("PrivateKey")
-    private String privateKeyParam;
-
     /** API公钥，API调用身份验证RSA公钥，用于签名验证 */
     @SerializedName("PublicKey")
     private String publicKeyParam;
@@ -198,14 +194,6 @@ public class TenantTenantInfoRes {
 
     public void setPhone(String phoneParam) {
         this.phoneParam = phoneParam;
-    }
-
-    public String getPrivateKey() {
-        return privateKeyParam;
-    }
-
-    public void setPrivateKey(String privateKeyParam) {
-        this.privateKeyParam = privateKeyParam;
     }
 
     public String getPublicKey() {
