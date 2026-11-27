@@ -102,9 +102,12 @@ public class DefaultClient implements Client {
         }
 
         // check if return code is not zero, mark it as server exception
-        if (response != null && response.getRetCode() != 0) {
-            throw new RetCodeException(
-                    response.getRetCode(), response.getMessage(), response.getRequestId());
+        // 注意：RetCode 是 Integer，部分接口在旧版本服务端可能不返回该字段（getRetCode() 为 null），
+        // 直接拆箱会抛 NullPointerException。此处对 null 做保护：缺少 RetCode 时无法判定业务失败，
+        // 交给调用方自行解析响应体，避免 SDK 在反序列化后崩溃。
+        Integer retCode = response == null ? null : response.getRetCode();
+        if (retCode != null && retCode != 0) {
+            throw new RetCodeException(retCode, response.getMessage(), response.getRequestId());
         }
         return response;
     }

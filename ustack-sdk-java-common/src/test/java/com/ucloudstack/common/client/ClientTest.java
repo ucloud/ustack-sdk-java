@@ -28,6 +28,18 @@ public class ClientTest {
     }
 
     @Test
+    public void testCaseNullRetCode() {
+        // 旧版本服务端可能不返回 RetCode 字段，getRetCode() 为 null；
+        // SDK 不应因拆箱而抛 NullPointerException，应正常返回交由调用方解析响应体。
+        Request request = new Request();
+        request.setAction("PrometheusQuery");
+
+        Response response = new Response();
+        response.setRetCode(null);
+        this.testInvoke(request, response, null, false);
+    }
+
+    @Test
     public void testCaseNotFound() {
         Request request = new Request();
         request.setAction("NotFound");
